@@ -1,4 +1,4 @@
-# Academic Vault — Mathematics & Physical Systems
+# Academic Vault — Engineering Physics Mathematics & Physics Notes
 
 [![Repository](https://img.shields.io/badge/Status-Public_Vault-brightgreen.svg)](#)
 [![Domain](https://img.shields.io/badge/Domain-Engineering_Physics-blue.svg)](#)
@@ -10,7 +10,7 @@
 
 This vault constitutes a rigorous, non-siloed formal knowledge base spanning pure foundational mathematics and physical/engineering dynamical systems.
 
-Rather than fragmenting mathematical knowledge across ad-hoc exam syllabi (*"Analisi 1"*, *"Analisi 2"*, *"Analisi 3"*), the repository is partitioned according to **intrinsic mathematical taxonomy** and **physical system abstraction layers**. Foundational theorems are presented in their full operator-theoretic and measure-theoretic generality, creating direct bridges to state-space control, signal theory, and condensed matter physics.
+Rather than fragmenting mathematical knowledge across ad-hoc exam syllabi (*"Analisi 1"*, *"Analisi 2"*, *"Analisi 3"*), the repository is partitioned according to **intrinsic mathematical taxonomy** and **physical system abstraction layers**. 
 
 ```
 academic-vault/
