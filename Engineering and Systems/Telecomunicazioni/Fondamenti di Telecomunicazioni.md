@@ -786,7 +786,7 @@ P_{OUT} &= \; ?
 \end{align}$$
 
 $$P_{OUT} = P_{IN}*e^{-\alpha L} \implies P_{OUT, dBm} = P_{IN, dBm} - L(10\alpha \log_{2}(e))=10mW - L\left( 10\alpha \frac{\log_{10}(e)}{\log_{10}(2)} \right)=10mW - \dots$$
-- es. boh
+- Esercizio 2.7 (Calcolo Attenuazione di Tratta)
 
 $$
 \begin{align}

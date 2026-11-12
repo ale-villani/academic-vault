@@ -444,7 +444,7 @@ es. Consideriamo una molecola con legame VDW
 	- Per classificare i polimeri, si possono studiare le catene $C-C$ "nude" (senza $H$ o altri sostituenti chimici) ![[scr 2026-10-12 alle 11.14.54.png]]
 		- es. $T_{2}$ è il polietilene
 		- Più lunga è l'unità reticolare, più le strutture possono essere complicate
-		- (dispensa prof. Allegra)
+		- *(Riferimento: G. Allegra, Modelli Conformativi Macromolecolari)*
 
 ## 3.E Esercitazione
 

@@ -1092,7 +1092,7 @@ Concentriamoci inizialmente sul gate e sul semiconduttore
 					+ iii) $V_{D}>V_{PO}$ (saturazione) → $a=x_{PO}$ e $V_{A}=V_{PO}$
 			+ b) Zona di carica spaziale
 				+ Devo in questo caso risolvere l'equazione di Poisson $$\frac{d^2V}{dx^2}=\frac{eN_{A}}{\varepsilon_{Si}}$$
-					+ Siccome non so dove cade il punto di pinch-off $x_{PO}$ il problema è detto ai limiti (BVP) a frontiera libera → devo imporre 3 condizioni:  $$\begin{cases}  V(x_{PO})=V_{PO} & (\text{Dirichlet a sx}) \\  V^{\prime} (x_{PO})=-E(x_{PO})=E_{max} & \text{(Neumann a sx)}  \\   V(L)=V_{D} & \text{(Dirichlet a dx)} \end{cases}$$
+					+ Poiché la coordinata del punto di pinch-off $x_{PO}$ è incognita a priori, il problema è formulato come BVP a frontiera libera → devo imporre 3 condizioni:  $$\begin{cases}  V(x_{PO})=V_{PO} & (\text{Dirichlet a sx}) \\  V^{\prime} (x_{PO})=-E(x_{PO})=E_{max} & \text{(Neumann a sx)}  \\   V(L)=V_{D} & \text{(Dirichlet a dx)} \end{cases}$$
 				+ Risolvendo, ottengo la forma chiusa $$V(x) = V_{PO} + E_{max}\,(x - x_{PO}) + \frac{eN_A}{2\varepsilon_{Si}}(x - x_{PO})^2, \qquad x_{PO} \le x \le L$$
 					+ Oss: se $x-x_{PO} \to 0$ posso considerare la SCR puntiforme ![[scr 2026-10-24 alle 12.09.15.png]]
 						+ Ne consegue che essendo $\lambda(x_{PO})=0$ e $I_{D}=\lambda(x)E(x)$ costante, si ha che $$E(x)=(V_{D}-V_{PO})\delta(x-x_{PO})$$
