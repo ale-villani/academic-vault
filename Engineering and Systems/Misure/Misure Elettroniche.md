@@ -1340,7 +1340,7 @@ tags:
 	- Ad esempio questo permette di eseguire misure differenziali ($Z=X-Y$) oppure operazioni come la trasformata di Fourier ($Z(\omega)=\mathcal{F}\,\left[X\right](\omega)$)
 ## E - Esercizi
 
-### Esercizio 1 (Acquisizione e Condizionamento Segnali)
+es. boh
 
 4 segnali:
 - S1: riferito a massa,  banda $50 kHz$ ($[-25 kHz, 25kHz]$). La dinamica del segnale è $D= \pm 1V$. Voglio avere una risoluzione $\Delta V = 1mV$.

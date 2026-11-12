@@ -89,9 +89,12 @@ La simmetria nella nostra realtà fisica non è un'intuizione visiva, ma la prop
 
 ## 3. Sottogruppi Normali, Coniugazione ed Equazione delle Classi
 
-> [!definition] Definizione
-> Due elementi $a,b \in G$ si dicono **coniugati** se esiste $x \in G$ tale che $$b=x \star a\star x^{-1}$$
-> La classe di equiv 
+> [!definition] Coniugati e classe di coniugo
+> Sia $(G, \star)$ un gruppo. Due elementi $a,b \in G$ si dicono **coniugati** ($a \sim b$) se esiste $x \in G$ tale che $$b=x \star a\star x^{-1}$$
+> La classe di equivalenza associata ad $a$ è detta **classe di coniugo** $$\mathcal{  C  } (a):= \left\{ x \star  a \star  x^{-1}: x \in G \right\}$$
+
+> [!definition] Centralizzatore e centro di un gruppo
+> Sia $(G, \star)$ un gruppo. Si dice **centralizzatore** di $a\in G$ il sottogruppo degli elementi che commutano con a: $$C_{G}(a):=\left\{ g\in G: g\star a=a\star g \right\}\leq G$$mentre **centro** del gruppo $$Z(G):=\left\{ z\in G: z\star g=g\star z, \, \forall g\in G \right\}$$
 
 
 
