@@ -1,6 +1,6 @@
 # Academic Vault — Mathematics & Physical Systems
 
-[![Repository](https://img.shields.io/badge/Status-Private_Vault-red.svg)](#)
+[![Repository](https://img.shields.io/badge/Status-Public_Vault-brightgreen.svg)](#)
 [![Domain](https://img.shields.io/badge/Domain-Engineering_Physics-blue.svg)](#)
 [![Institution](https://img.shields.io/badge/Institution-Politecnico_di_Milano-003366.svg)](#)
 
