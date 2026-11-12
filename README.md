@@ -1,4 +1,4 @@
-# Academic Vault — Engineering Physics Mathematics & Physics Notes
+# Academic Vault — Engineering Physics Notes
 
 [![Repository](https://img.shields.io/badge/Status-Public_Vault-brightgreen.svg)](#)
 [![Domain](https://img.shields.io/badge/Domain-Engineering_Physics-blue.svg)](#)
@@ -8,9 +8,9 @@
 
 ## Architecture & Epistemic Manifesto
 
-This vault constitutes a rigorous, non-siloed formal knowledge base spanning pure foundational mathematics and physical/engineering dynamical systems.
+This vault constitutes a rigorous, formal knowledge base spanning pure foundational mathematics and physical/engineering.
 
-Rather than fragmenting mathematical knowledge across ad-hoc exam syllabi (*"Analisi 1"*, *"Analisi 2"*, *"Analisi 3"*), the repository is partitioned according to **intrinsic mathematical taxonomy** and **physical system abstraction layers**. 
+Rather than fragmenting mathematical knowledge across exam syllabi (*"Analisi 1"*, *"Analisi 2"*, *"Analisi 3"*), the repository is partitioned according to **intrinsic mathematical taxonomy** and **physical system abstraction layers**. 
 
 ```
 academic-vault/
