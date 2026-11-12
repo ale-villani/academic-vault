@@ -102,15 +102,4 @@ All notes adhere to a strict formal Markdown/LaTeX specification:
    - Vector quantities indicated via boldface or standard index notation.
 
 ---
-
-## Vault Synchronization
-
-A local synchronization utility is bundled in `sync.sh`. Running `./sync.sh` mirrors active notes from the Obsidian workspace into this repository and automatically synchronizes updates to GitHub:
-
-```bash
-chmod +x sync.sh
-./sync.sh
-```
-
----
 *Maintained by Alessandro Villani — Ingegneria Fisica, Politecnico di Milano.*
