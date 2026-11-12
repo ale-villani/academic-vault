@@ -42,6 +42,22 @@ La simmetria nella nostra realtà fisica non è un'intuizione visiva, ma la prop
 > Un gruppo $(G, \star)$ si dice **abeliano** (o **commutativo**) se vale la commutatività $$a\star b=b\star a,  \quad \forall a,b\in G$$
 
 
+
+
+> [!definition] Gruppo ciclico
+> Si dice **gruppo ciclico** un gruppo generato da un singolo elemento $g\in G$ ($(G, \star)$ gruppo) attraverso le sue potenze intere $$\braket{ g }:=\left\{ g^k: k\in \mathbb{Z} \right\} $$
+> Se $\text{ord}(g)=n$, allora $$\braket{ g  }=\left\{ e, g, g^2, \dots, g^{n-1} \right\} \cong \mathbb{Z}/n\mathbb{Z}$$
+
+> [!example] Alcuni esempi di gruppi
+> 
+| Insieme e Operazione                                                                                         | Struttura                    | Perché (o perché no)                                                                                                         |
+| :----------------------------------------------------------------------------------------------------------- | :--------------------------- | :--------------------------------------------------------------------------------------------------------------------------- |
+| $(\mathbb{Z}, +)$                                                                                            | Gruppo abeliano infinito     | Neutro: $0$. Inverso di $n$: $-n$. Chiuso e associativo.                                                                     |
+| $(\mathbb{Z}, \cdot)$                                                                                        | Non è un gruppo              | Manca l'inverso moltiplicativo! L'inverso di $2$ sarebbe $1/2 \notin \mathbb{Z}$.                                            |
+| $(\mathbb{R} \setminus \{0\}, \cdot)$                                                                        | Gruppo abeliano infinito     | Neutro: $1$. Inverso di $x$: $1/x$.                                                                                          |
+| $(\mathrm{GL}(n, \mathbb{R}), \cdot)$<br>(matrici invertibili $n \times n$, prodotto righe $\times$ colonne) | Gruppo non abeliano infinito | Neutro $\mathbf{I}_n$, inverso $\mathbf{A}^{-1}$. Non commuta.                                                               |
+| $(\mathrm{O}(3), \cdot)$                                                                                     | Gruppo di Lie compatto       | Matrici ortogonali $3 \times 3$ ($\mathbf{R}^T \mathbf{R} = \mathbf{I}_3$). Preservano lunghezze e angoli in $\mathbb{R}^3$. |
+
 > [!definition] Ordine di un gruppo
 > Sia $(G, \star)$ un gruppo. Si dice **ordine** del gruppo, e si indica con $\lvert G \rvert$, la cardinalità dell'insieme $G$. Se $|G|<+\infty$, il gruppo si dice **finito**. Altrimenti, il gruppo si dice **infinito**
 
@@ -87,6 +103,19 @@ La simmetria nella nostra realtà fisica non è un'intuizione visiva, ma la prop
 > Siccome dal lemma $\lvert g_{i}H \rvert=\lvert H \rvert$: $$\lvert G \rvert = \sum_{i=1}^k \lvert H \rvert =k\lvert H \rvert=\lvert G / H \rvert \lvert H \rvert   $$
 >$\blacksquare$
 
+> [!note] Osservazione
+> Dal teorema si evince che i sottogruppi di un gruppo non possono avere un numero arbitrario di elementi. Se un sistema ha $12$ operazioni di simmetria totali, può ammettere sotto-sommetrie solo nei divisori interi di 12
+
+> [!example] Partizione del Gruppo Modulare $(\mathbb{Z}_{6}, +)$
+> Prendiamo il gruppo dei numeri interi modulo $6$ sotto l'addizione $$G=\mathbb{Z}_{6}=\left\{ 0,1,2,3,4,5 \right\}=\mathbb{Z} / \sim$$dove $n \sim m \iff n-m = 6k, \,\,k\in \mathbb{Z}$
+> Considero ora il sottogruppo dei multipli di $2$ $$H=\left\{ 0,2,4 \right\}\implies \lvert H \rvert=3 $$
+> Calcoliamo le classi laterali (usando la notazione $gH \mapsto g+H$)
+> $g=0$: $$0 + H=\left\{ 0,2,4 \right\}=H$$
+> $g=1$: $$1+H=\left\{ 1,3,5 \right\}$$
+> $g=2$: $$2+H=\left\{ 0,2,4 \right\}=H$$
+> Quindi ho solo 2 classi distinte $$G/H=\left\{ \left\{ 0,2,4 \right\}, \left\{ 1,3,5 \right\} \right\}\implies \lvert G / H \rvert=2 $$
+> Infatti da Lagrange $$\lvert G/H \rvert = \lvert G \rvert / \lvert H \rvert  =2$$
+
 ## 3. Sottogruppi Normali, Coniugazione ed Equazione delle Classi
 
 > [!definition] Coniugati e classe di coniugo
@@ -96,6 +125,8 @@ La simmetria nella nostra realtà fisica non è un'intuizione visiva, ma la prop
 > [!definition] Centralizzatore e centro di un gruppo
 > Sia $(G, \star)$ un gruppo. Si dice **centralizzatore** di $a\in G$ il sottogruppo degli elementi che commutano con a: $$C_{G}(a):=\left\{ g\in G: g\star a=a\star g \right\}\leq G$$mentre **centro** del gruppo $$Z(G):=\left\{ z\in G: z\star g=g\star z, \, \forall g\in G \right\}$$
 
+> [!theorem] Equazione delle classi
+> Per ogni gruppo finito $(G, \star)$, la cardinalità di ogni classe di coniugio coincide con l'
 
 
 
@@ -108,23 +139,6 @@ La simmetria nella nostra realtà fisica non è un'intuizione visiva, ma la prop
 
 
 
-
-
-
-
-> [!definition] Gruppo ciclico
-> Si dice **gruppo ciclico** un gruppo generato da un singolo elemento $g\in G$ ($(G, \star)$ gruppo) attraverso le sue potenze intere $$\braket{ g }:=\left\{ g^k: k\in \mathbb{Z} \right\} $$
-> Se $\text{ord}(g)=n$, allora $$\braket{ g  }=\left\{ e, g, g^2, \dots, g^{n-1} \right\} \cong \mathbb{Z}/n\mathbb{Z}$$
-
-> [!example] Alcuni esempi di gruppi
-> 
-| Insieme e Operazione                                                                                         | Struttura                    | Perché (o perché no)                                                                                                         |
-| :----------------------------------------------------------------------------------------------------------- | :--------------------------- | :--------------------------------------------------------------------------------------------------------------------------- |
-| $(\mathbb{Z}, +)$                                                                                            | Gruppo abeliano infinito     | Neutro: $0$. Inverso di $n$: $-n$. Chiuso e associativo.                                                                     |
-| $(\mathbb{Z}, \cdot)$                                                                                        | Non è un gruppo              | Manca l'inverso moltiplicativo! L'inverso di $2$ sarebbe $1/2 \notin \mathbb{Z}$.                                            |
-| $(\mathbb{R} \setminus \{0\}, \cdot)$                                                                        | Gruppo abeliano infinito     | Neutro: $1$. Inverso di $x$: $1/x$.                                                                                          |
-| $(\mathrm{GL}(n, \mathbb{R}), \cdot)$<br>(matrici invertibili $n \times n$, prodotto righe $\times$ colonne) | Gruppo non abeliano infinito | Neutro $\mathbf{I}_n$, inverso $\mathbf{A}^{-1}$. Non commuta.                                                               |
-| $(\mathrm{O}(3), \cdot)$                                                                                     | Gruppo di Lie compatto       | Matrici ortogonali $3 \times 3$ ($\mathbf{R}^T \mathbf{R} = \mathbf{I}_3$). Preservano lunghezze e angoli in $\mathbb{R}^3$. |
 
 
 

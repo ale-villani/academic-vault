@@ -6,24 +6,6 @@
 
 ---
 
-## Capitolo 0 — Fondamenti di Logica e Teoria degli Insiemi
-**Moduli di Riferimento:** [[Logica]] | [[Teoria degli Insiemi]]
-
-- **0.1.** [[Logica#0.1. Proposizioni Logiche e Valori di Verità|Proposizioni Logiche e Valori di Verità]]
-- **0.2.** [[Logica#0.2. Connettivi Logici e Gerarchia Operazionale|Connettivi Logici e Gerarchia Operazionale]]
-- **0.3.** [[Logica#0.3. Regole di Deduzione e Forme dell'Implicazione|Regole di Deduzione e Forme dell'Implicazione]]
-- **0.4.** [[Logica#0.4. Logica dei Predicati e Quantificatori|Logica dei Predicati e Quantificatori]]
-- **0.5.** [[Teoria degli Insiemi#0.1. Concetti Primitivi, Notazione e Sottoinsiemi|Concetti Primitivi, Notazione e Sottoinsiemi]]
-- **0.6.** [[Teoria degli Insiemi#0.2. Operazioni Fondamentali tra Insiemi|Operazioni Fondamentali tra Insiemi]]
-- **0.7.** [[Teoria degli Insiemi#0.3. Antinomia di Russell e Limiti della Teoria Ingenua|Antinomia di Russell e Limiti della Teoria Ingenua]]
-- **0.8.** [[Teoria degli Insiemi#0.4. Prodotto Cartesiano e Relazioni Binarie|Prodotto Cartesiano e Relazioni Binarie]]
-- **0.9.** [[Teoria degli Insiemi#0.5. Relazioni di Equivalenza e Insieme Quoziente|Relazioni di Equivalenza e Insieme Quoziente]]
-- **0.10.** [[Teoria degli Insiemi#0.6. Funzioni e Mappe|Funzioni e Mappe]]
-- **0.11.** [[Teoria degli Insiemi#0.7. Classificazione delle Funzioni: Iniettività, Suriettività, Biettività|Classificazione delle Funzioni: Iniettività, Suriettività, Biettività]]
-- **0.12.** [[Teoria degli Insiemi#0.8. Operazioni su Funzioni: Restrizione, Composizione e Inversa|Operazioni su Funzioni: Restrizione, Composizione e Inversa]]
-- **0.13.** [[Teoria degli Insiemi#0.9. Costruzione Insiemistica dei Numeri Naturali (Ordinali di von Neumann)|Costruzione Insiemistica dei Numeri Naturali (Ordinali di von Neumann)]]
-- **0.14.** [[Teoria degli Insiemi#0.10. Operazioni Aritmetiche Insiemistiche sui Cardinali Finiti|Operazioni Aritmetiche Insiemistiche sui Cardinali Finiti]]
-
 ## Capitolo 1 — Insiemi numerici
 **Modulo di Riferimento:** [[Insiemi Numerici]]
 
