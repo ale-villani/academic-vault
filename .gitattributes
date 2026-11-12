@@ -1,0 +1,4 @@
+# Force GitHub Linguist to display Markdown in the repository language statistics bar
+*.md linguist-detectable=true
+*.md linguist-documentation=false
+*.md linguist-language=Markdown
