@@ -1,4 +1,9 @@
-# Force GitHub Linguist to display Markdown in the repository language statistics bar
+# Force GitHub Linguist to detect Markdown across root and all subdirectories
 *.md linguist-detectable=true
-*.md linguist-documentation=false
-*.md linguist-language=Markdown
+**/*.md linguist-detectable=true
+*.markdown linguist-detectable=true
+**/*.markdown linguist-detectable=true
+
+# Ignore any residual shell scripts from language statistics
+*.sh linguist-detectable=false
+*.sh linguist-vendored=true
