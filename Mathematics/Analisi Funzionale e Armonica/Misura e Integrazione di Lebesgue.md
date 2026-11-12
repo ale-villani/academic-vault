@@ -26,14 +26,14 @@ Si ricorda che uno **spazio vettoriale** su un campo $\mathbb{K}$ (con $\mathbb{
 
 > [!example] Esempi di spazi vettoriali
 > - $\mathbb{R}^n, \mathbb{C}^n$
-> - $\operatorname{Mat}_{\mathbb{R}}(n, m)$ (matrici di dimensione $n \times m$)
+> - $\mathrm{Mat}_{\mathbb{R}}(n, m)$ (matrici di dimensione $n \times m$)
 > - $\mathbb{R}[x]$ (polinomi a coefficienti reali)
 > - $\mathbb{R}[x]_{\le n}$ (polinomi di grado minore o uguale a $n$)
 > - $C^0(\Omega)$ (funzioni continue su $\Omega$)
 > - $C^\infty(\Omega)$ (funzioni indefinitamente differenziabili su $\Omega$)
 >
 > Tra questi:
-> - **Spazi a dimensione finita:** $\mathbb{R}^n, \mathbb{C}^n, \operatorname{Mat}_{\mathbb{R}}(n, m), \mathbb{R}[x]_{\le n}$;
+> - **Spazi a dimensione finita:** $\mathbb{R}^n, \mathbb{C}^n, \mathrm{Mat}_{\mathbb{R}}(n, m), \mathbb{R}[x]_{\le n}$;
 > - **Spazi a dimensione infinita:** $\mathbb{R}[x], C^0(\Omega), C^\infty(\Omega)$.
 >
 
@@ -284,7 +284,7 @@ allora:
 > [!example] Sottospazi in $\mathbb{R}^3$ con norma euclidea $\|\cdot\|_2$
 > In $\mathbb{R}^3$, i sottospazi vettoriali sono tutti del tipo:
 > $$
-> W = \operatorname{Span}\{\mathbf{v}, \mathbf{w}\}, \quad \mathbf{v}, \mathbf{w} \in \mathbb{R}^3
+> W = \mathrm{Span}\{\mathbf{v}, \mathbf{w}\}, \quad \mathbf{v}, \mathbf{w} \in \mathbb{R}^3
 > $$
 > - Se $\mathbf{v} = \mathbf{w} = \mathbf{0}$, $W = \{\mathbf{0}\}$ (un punto, chiuso);
 > - Se $\mathbf{v}, \mathbf{w}$ sono linearmente dipendenti, $W$ è una retta passante per l'origine (chiusa);
@@ -489,7 +489,7 @@ Per comprendere la potenza dell'integrale di Lebesgue, è necessario introdurre 
 > 1. **Misura di conteggio (cardinalità):**
 >    Sullo spazio misurabile $(\Omega, \mathcal{P}(\Omega))$, la cardinalità di un insieme è una misura positiva:
 >    $$
->    \mu(A) = \#(A) = \operatorname{card}(A)
+>    \mu(A) = \#(A) = \mathrm{card}(A)
 >    $$
 > 2. **Misura di Dirac:**
 >    Fissato un punto $x_0 \in \Omega$, la funzione:
@@ -718,7 +718,7 @@ Per comprendere la potenza dell'integrale di Lebesgue, è necessario introdurre 
 > $$
 > è l'espressione binaria di un numero reale in $[0, 1]$, ne consegue che:
 > $$
-> \operatorname{card}(C) = \operatorname{card}([0, 1]) = \operatorname{card}(\mathbb{R}) = \mathfrak{c}
+> \mathrm{card}(C) = \mathrm{card}([0, 1]) = \mathrm{card}(\mathbb{R}) = \mathfrak{c}
 > $$
 > 
 > **Misura di Lebesgue:**
@@ -736,7 +736,7 @@ Per comprendere la potenza dell'integrale di Lebesgue, è necessario introdurre 
 > $$
 > **Conclusione:** $C$ è **equipotente a $\mathbb{R}$**, ma ha **misura di Lebesgue nulla**:
 > $$
-> \operatorname{card}(C) = \operatorname{card}(\mathbb{R}), \qquad m(C) = 0
+> \mathrm{card}(C) = \mathrm{card}(\mathbb{R}), \qquad m(C) = 0
 > $$
 >
 ### Insieme di Vitali: non misurabilità secondo Lebesgue
@@ -1668,7 +1668,7 @@ $$
 > [!definition] Norma dell'estremo superiore essenziale
 > Sia $E \subseteq \mathbb{R}^n$ misurabile, $f: E \to \mathbb{R}$ misurabile. Si definisce la norma $L^\infty$:
 > $$
-> \|f\|_\infty := \operatorname{ess\,sup}_{\mathbf{x} \in E} |f(\mathbf{x})| := \min \left\{ M > 0 : |f(\mathbf{x})| \le M \quad \text{q.o. in } E \right\}
+> \|f\|_\infty := \mathrm{ess\,sup}_{\mathbf{x} \in E} |f(\mathbf{x})| := \min \left\{ M > 0 : |f(\mathbf{x})| \le M \quad \text{q.o. in } E \right\}
 > $$
 > Si definisce quindi:
 > $$
@@ -1682,7 +1682,7 @@ $$
 > [!example] Funzioni continue
 > Se $f$ è continua su $E$, l'estremo superiore essenziale coincide con l'estremo superiore ordinario:
 > $$
-> \operatorname{ess\,sup} |f| = \sup |f|
+> \mathrm{ess\,sup} |f| = \sup |f|
 > $$
 
 > [!example] Funzione su $\mathbb{R}$ con discrepanza tra sup ed ess sup
@@ -1692,7 +1692,7 @@ $$
 > $$
 > Poiché $\mathbb{N}$ ha misura di Lebesgue nulla ($|\mathbb{N}| = 0$), $f$ è identicamente nulla quasi ovunque. Pertanto:
 > $$
-> \operatorname{ess\,sup}_{x \in \mathbb{R}} f(x) = 0, \qquad \sup_{x \in \mathbb{R}} f(x) = +\infty
+> \mathrm{ess\,sup}_{x \in \mathbb{R}} f(x) = 0, \qquad \sup_{x \in \mathbb{R}} f(x) = +\infty
 > $$
 
 > [!theorem] Completezza di $L^\infty$
@@ -1701,7 +1701,7 @@ $$
 > [!definition] Convergenza in $L^\infty(E)$
 > Siano $\{f_n\}_{n \in \mathbb{N}} \subset L^\infty(E)$, $f \in L^\infty(E)$. La convergenza in $L^\infty$ è:
 > $$
-> f_n \xrightarrow{n \to +\infty} f \quad \text{in } L^\infty(E) \iff \|f_n - f\|_\infty \xrightarrow{n \to +\infty} 0 \iff \operatorname{ess\,sup}_{\mathbf{x} \in E} |f_n(\mathbf{x}) - f(\mathbf{x})| \xrightarrow{n \to +\infty} 0
+> f_n \xrightarrow{n \to +\infty} f \quad \text{in } L^\infty(E) \iff \|f_n - f\|_\infty \xrightarrow{n \to +\infty} 0 \iff \mathrm{ess\,sup}_{\mathbf{x} \in E} |f_n(\mathbf{x}) - f(\mathbf{x})| \xrightarrow{n \to +\infty} 0
 > $$
 >
 ## 2.12. Confronto tra spazi $L^p$
@@ -1778,7 +1778,7 @@ $$
 >   $$
 > - Se $p = 1$, $p' = \infty$, la disuguaglianza è immediata:
 >   $$
->   \|fg\|_1 \le \|f\|_1 \|g\|_\infty = \left( \operatorname{ess\,sup}_{\mathbf{x} \in E} |g(\mathbf{x})| \right) \int_E |f(\mathbf{x})|\,d\mathbf{x} \implies \int_E |fg|\,d\mathbf{x} \le \int_E |f(\mathbf{x})| \cdot \operatorname{ess\,sup}_{\mathbf{y} \in E} |g(\mathbf{y})|\,d\mathbf{x}
+>   \|fg\|_1 \le \|f\|_1 \|g\|_\infty = \left( \mathrm{ess\,sup}_{\mathbf{x} \in E} |g(\mathbf{x})| \right) \int_E |f(\mathbf{x})|\,d\mathbf{x} \implies \int_E |fg|\,d\mathbf{x} \le \int_E |f(\mathbf{x})| \cdot \mathrm{ess\,sup}_{\mathbf{y} \in E} |g(\mathbf{y})|\,d\mathbf{x}
 >   $$
 >
 ### Inclusioni su insiemi di misura finita
@@ -1855,11 +1855,11 @@ $$
 > 
 > Equivalentemente, data $\varphi: \Omega \to \mathbb{R}$, si definisce il **supporto**:
 > $$
-> \operatorname{supp} \varphi := \overline{\{ \mathbf{x} \in \Omega : \varphi(\mathbf{x}) \ne 0 \}} \quad (\text{chiusura in } \Omega)
+> \mathrm{supp} \varphi := \overline{\{ \mathbf{x} \in \Omega : \varphi(\mathbf{x}) \ne 0 \}} \quad (\text{chiusura in } \Omega)
 > $$
 > e:
 > $$
-> C_0^\infty(\Omega) := \left\{ \varphi: \Omega \to \mathbb{R} : \varphi \in C^\infty(\Omega) \text{ e } \operatorname{supp}\varphi \subset \Omega \text{ è compatto} \right\}
+> C_0^\infty(\Omega) := \left\{ \varphi: \Omega \to \mathbb{R} : \varphi \in C^\infty(\Omega) \text{ e } \mathrm{supp}\varphi \subset \Omega \text{ è compatto} \right\}
 > $$
 >
 ### Teorema di densità
@@ -1886,27 +1886,27 @@ $$
 > Se $\varphi \in C_0^\infty(\Omega) \implies \varphi \in L^p(\Omega) \quad \forall p \in [1, +\infty]$.
 > Infatti $\varphi \in C^0(\Omega)$ con supporto compatto, dunque per $L^\infty$:
 > $$
-> \|\varphi\|_\infty = \max_{\mathbf{x} \in \operatorname{supp}\varphi} |\varphi(\mathbf{x})| < +\infty
+> \|\varphi\|_\infty = \max_{\mathbf{x} \in \mathrm{supp}\varphi} |\varphi(\mathbf{x})| < +\infty
 > $$
 > e per ogni $p \in [1, +\infty)$, essendo il supporto di misura finita:
 > $$
-> \int_\Omega |\varphi|^p \,d\mathbf{x} \le \|\varphi\|_\infty^p |\operatorname{supp}\varphi| < +\infty \implies \varphi \in L^p(\Omega)
+> \int_\Omega |\varphi|^p \,d\mathbf{x} \le \|\varphi\|_\infty^p |\mathrm{supp}\varphi| < +\infty \implies \varphi \in L^p(\Omega)
 > $$
 
 > [!warning] Mancanza di densità per $L^\infty$
 > Il teorema di densità **NON** vale per $L^\infty$.
 > Ad esempio, si consideri la funzione costante $f = 1$ in $\Omega$, con $f \in L^\infty(\Omega)$.
-> Per ogni $\varphi \in C_0^\infty(\Omega)$, $\operatorname{supp}\varphi \subset \Omega$ è compatto. L'insieme complementare $\Omega \setminus \operatorname{supp}\varphi$ è aperto (aperto $\setminus$ chiuso $\rightsquigarrow$ aperto) e $|\Omega \setminus \operatorname{supp}\varphi| > 0$.
-> Per ogni $\mathbf{x} \in \Omega \setminus \operatorname{supp}\varphi$ si ha $\varphi(\mathbf{x}) = 0$ e $f(\mathbf{x}) = 1$.
+> Per ogni $\varphi \in C_0^\infty(\Omega)$, $\mathrm{supp}\varphi \subset \Omega$ è compatto. L'insieme complementare $\Omega \setminus \mathrm{supp}\varphi$ è aperto (aperto $\setminus$ chiuso $\rightsquigarrow$ aperto) e $|\Omega \setminus \mathrm{supp}\varphi| > 0$.
+> Per ogni $\mathbf{x} \in \Omega \setminus \mathrm{supp}\varphi$ si ha $\varphi(\mathbf{x}) = 0$ e $f(\mathbf{x}) = 1$.
 > Ne segue che:
 > $$
-> \|f - \varphi\|_\infty = 1 \quad \text{in } \Omega \setminus \operatorname{supp}\varphi
+> \|f - \varphi\|_\infty = 1 \quad \text{in } \Omega \setminus \mathrm{supp}\varphi
 > $$
 > e quindi:
 > $$
 > \|f - \varphi\|_\infty \ge 1
 > $$
-> perché $\Omega$ è più grande di $\Omega \setminus \operatorname{supp}\varphi$.
+> perché $\Omega$ è più grande di $\Omega \setminus \mathrm{supp}\varphi$.
 > Di conseguenza, non esistono funzioni $\varphi \in C_0^\infty(\Omega)$ arbitrariamente vicine ad $f$ (la distanza minima è $1$).
 >
 ## 2.15. Prodotto di convoluzione
@@ -1941,7 +1941,7 @@ $$
 >    $$
 >    f * g = g * f
 >    $$
-> 5. Se $\operatorname{supp} f$ e $\operatorname{supp} g$ sono compatti, allora $\operatorname{supp}(f * g)$ è un compatto.
+> 5. Se $\mathrm{supp} f$ e $\mathrm{supp} g$ sono compatti, allora $\mathrm{supp}(f * g)$ è un compatto.
 
 > [!quote]- Dimostrazione (per $n = 1$)
 > Si consideri la funzione ausiliaria:
@@ -2030,7 +2030,7 @@ $$
 > $$
 > \|f_k\|_1 = \int_{[-k, k]} |f(x)| \, dx \le \int_\mathbb{R} |f(x)| \, dx = \|f\|_1 < +\infty
 > $$
-> Inoltre $\operatorname{supp} f_k \subseteq [-k, k]$, che è un insieme compatto (essendo il supporto chiuso per definizione).
+> Inoltre $\mathrm{supp} f_k \subseteq [-k, k]$, che è un insieme compatto (essendo il supporto chiuso per definizione).
 > Si ha inoltre la maggiorazione uniforme:
 > $$
 > |f_k(x)| \le |f(x)| \quad \text{per q.o. } x \in \mathbb{R}
@@ -2060,19 +2060,19 @@ $$
 > $$
 > a partire da una funzione $\rho \in C_0^\infty(\mathbb{R})$, detta **nucleo di convoluzione**, avente le seguenti proprietà:
 > $$
-> \rho \ge 0, \quad \operatorname{supp}\rho \subseteq [-1, 1], \quad \int_\mathbb{R} \rho(x) \, dx = 1
+> \rho \ge 0, \quad \mathrm{supp}\rho \subseteq [-1, 1], \quad \int_\mathbb{R} \rho(x) \, dx = 1
 > $$
 > Dalle proprietà di $\rho$ discende che per ogni $n \in \mathbb{N}$:
 > - $\rho_n \in C_0^\infty(\mathbb{R})$;
 > - $\rho_n \ge 0$;
-> - $\operatorname{supp}\rho_n \subseteq \left[ -\frac{1}{n}, \frac{1}{n} \right]$;
+> - $\mathrm{supp}\rho_n \subseteq \left[ -\frac{1}{n}, \frac{1}{n} \right]$;
 > - $\int_\mathbb{R} \rho_n(x) \, dx = 1$.
 > 
 > *(Al divergere di $n \to +\infty$, le funzioni $\rho_n$ si concentrano progressivamente attorno all'origine, comportandosi al limite come la delta di Dirac $\delta$).*
 > 
 > Dalle proprietà generali del prodotto di convoluzione segue che:
 > - $f_K * \rho_n \in C^\infty(\mathbb{R})$;
-> - $\operatorname{supp}(f_K * \rho_n) \subseteq \operatorname{supp} f_K + \operatorname{supp}\rho_n$ è compatto (somma di due compatti).
+> - $\mathrm{supp}(f_K * \rho_n) \subseteq \mathrm{supp} f_K + \mathrm{supp}\rho_n$ è compatto (somma di due compatti).
 > 
 > Dunque $f_K * \rho_n \in C_0^\infty(\mathbb{R})$.
 > 
@@ -2120,7 +2120,7 @@ $$
 > [!example] Esempio
 > Sia $[a, b] = [-1, 1]$ e consideriamo la funzione segno:
 > $$
-> f(x) = \operatorname{sgn}(x) = \begin{cases} 
+> f(x) = \mathrm{sgn}(x) = \begin{cases} 
 > 1 & \text{se } x > 0 \\ 
 > 0 & \text{se } x = 0 \\ 
 > -1 & \text{se } x < 0 
@@ -2128,11 +2128,11 @@ $$
 > $$
 > Chiaramente $f \in L^1([-1, 1])$. La sua funzione integrale con punto iniziale $0$ è data da:
 > $$
-> F(x) = \int_0^x \operatorname{sgn}(t) \, dt = |x| \in C^0([-1, 1])
+> F(x) = \int_0^x \mathrm{sgn}(t) \, dt = |x| \in C^0([-1, 1])
 > $$
 > La funzione valore assoluto è continua su tutto $[-1, 1]$, è derivabile per ogni $x \ne 0$ e soddisfa:
 > $$
-> F'(x) = \operatorname{sgn}(x) \quad \text{per q.o. } x \in [-1, 1] \quad (x \ne 0)
+> F'(x) = \mathrm{sgn}(x) \quad \text{per q.o. } x \in [-1, 1] \quad (x \ne 0)
 > $$
 >
 ### Definizione di funzione assolutamente continua
@@ -2254,7 +2254,7 @@ $$
 > [!note] Gerarchia degli spazi di funzioni su $[a, b]$ compatto
 > Vale la seguente scala gerarchica di inclusioni su $[a, b]$:
 > $$
-> C^1([a, b]) \implies \operatorname{Lip}([a, b]) \implies AC([a, b]) \implies C_u([a, b]) \iff C^0([a, b])
+> C^1([a, b]) \implies \mathrm{Lip}([a, b]) \implies AC([a, b]) \implies C_u([a, b]) \iff C^0([a, b])
 > $$
 >
 ## 2.17. Integrali dipendenti da un parametro

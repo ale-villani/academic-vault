@@ -130,7 +130,7 @@ Il comportamento locale della funzione è interamente governato dal segno della 
 Esiste una **corrispondenza biunivoca** fondamentale tra le forme quadratiche su $\mathbb{R}^n$ e le matrici quadrate reali simmetriche $n \times n$:
 
 1. **Da matrice simmetrica a forma quadratica ($A \to q$):**
-   Sia $A \in \operatorname{Mat}_{\mathbb{R}}(n, n)$ una matrice simmetrica ($A = A^T$). Allora l'applicazione definita da:
+   Sia $A \in \mathrm{Mat}_{\mathbb{R}}(n, n)$ una matrice simmetrica ($A = A^T$). Allora l'applicazione definita da:
    $$
    q(\mathbf{x}) := \mathbf{x}^T A \mathbf{x}
    $$
@@ -172,7 +172,7 @@ Esiste una **corrispondenza biunivoca** fondamentale tra le forme quadratiche su
 >    $$
 
 > [!theorem] Teorema — Caratterizzazione spettrale delle forme quadratiche
-> Sia $q: \mathbb{R}^n \to \mathbb{R}$ una forma quadratica e sia $A \in \operatorname{Mat}_{\mathbb{R}}(n, n)$ la sua matrice rappresentativa simmetrica. Siano $\lambda_1, \dots, \lambda_n \in \mathbb{R}$ gli autovalori di $A$ (tutti reali in virtù del Teorema Spettrale). Allora:
+> Sia $q: \mathbb{R}^n \to \mathbb{R}$ una forma quadratica e sia $A \in \mathrm{Mat}_{\mathbb{R}}(n, n)$ la sua matrice rappresentativa simmetrica. Siano $\lambda_1, \dots, \lambda_n \in \mathbb{R}$ gli autovalori di $A$ (tutti reali in virtù del Teorema Spettrale). Allora:
 > 1. $q$ è **definita positiva** (rispettivamente **definita negativa**) se e solo se tutti i suoi autovalori sono strettamente positivi (rispettivamente strettamente negativi):
 >    $$
 >    \begin{aligned}
@@ -202,7 +202,7 @@ Esiste una **corrispondenza biunivoca** fondamentale tra le forme quadratiche su
 > $$
 
 > [!quote]- Dimostrazione
-> La matrice $A$ è reale e simmetrica ($A = A^T$). Per il **Teorema Spettrale**, $A$ è ortogonalmente diagonalizzabile: esiste una matrice ortogonale $S \in \operatorname{Mat}_{\mathbb{R}}(n, n)$, con $S^T = S^{-1}$ (dunque $S^T S = S S^T = I$), tale che:
+> La matrice $A$ è reale e simmetrica ($A = A^T$). Per il **Teorema Spettrale**, $A$ è ortogonalmente diagonalizzabile: esiste una matrice ortogonale $S \in \mathrm{Mat}_{\mathbb{R}}(n, n)$, con $S^T = S^{-1}$ (dunque $S^T S = S S^T = I$), tale che:
 > $$
 > S^T A S = \Lambda := \begin{pmatrix} \lambda_1 & 0 & \dots & 0 \\ 0 & \lambda_2 & \dots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \dots & \lambda_n \end{pmatrix}
 > $$
@@ -255,9 +255,9 @@ Il polinomio caratteristico associato ad $A$ è:
 $$
 \chi_A(t) = \det(A - t I) = \begin{vmatrix} a - t & b \\ b & c - t \end{vmatrix} = (a - t)(c - t) - b^2 = t^2 - (a + c)t + (ac - b^2)
 $$
-Riconosciamo la traccia $\operatorname{tr}(A) = a + c$ e il determinante $\det(A) = ac - b^2$:
+Riconosciamo la traccia $\mathrm{tr}(A) = a + c$ e il determinante $\det(A) = ac - b^2$:
 $$
-\chi_A(t) = t^2 - \operatorname{tr}(A) \, t + \det(A)
+\chi_A(t) = t^2 - \mathrm{tr}(A) \, t + \det(A)
 $$
 D'altra parte, fattorizzando il polinomio caratteristico rispetto ai due autovalori $\lambda_1, \lambda_2 \in \mathbb{R}$:
 $$
@@ -266,30 +266,30 @@ $$
 Confrontando termine a termine otteniamo le classiche relazioni:
 $$
 \begin{aligned}
-\operatorname{tr}(A) &= \lambda_1 + \lambda_2 \quad (\text{somma degli autovalori}) \\
+\mathrm{tr}(A) &= \lambda_1 + \lambda_2 \quad (\text{somma degli autovalori}) \\
 \det(A) &= \lambda_1 \lambda_2 \quad (\text{prodotto degli autovalori})
 \end{aligned}
 $$
 
 > [!proposition] Criterio di Sylvester in dimensione 2 (Traccia e Determinante)
 > Sia $q: \mathbb{R}^2 \to \mathbb{R}$ una forma quadratica con matrice simmetrica associata $A = \begin{pmatrix} a & b \\ b & c \end{pmatrix}$.
-> Il segno di $q$ è determinato unicamente da $\det(A)$ e $\operatorname{tr}(A)$ (o dal segno del primo elemento diagonale $a$):
+> Il segno di $q$ è determinato unicamente da $\det(A)$ e $\mathrm{tr}(A)$ (o dal segno del primo elemento diagonale $a$):
 >
 > 1. **Definita positiva:**
 >    $$
->    q \text{ def. positiva} \iff \begin{cases} \det(A) > 0 \\ \operatorname{tr}(A) > 0 \end{cases} \iff \begin{cases} \det(A) > 0 \\ a > 0 \end{cases}
+>    q \text{ def. positiva} \iff \begin{cases} \det(A) > 0 \\ \mathrm{tr}(A) > 0 \end{cases} \iff \begin{cases} \det(A) > 0 \\ a > 0 \end{cases}
 >    $$
 > 2. **Definita negativa:**
 >    $$
->    q \text{ def. negativa} \iff \begin{cases} \det(A) > 0 \\ \operatorname{tr}(A) < 0 \end{cases} \iff \begin{cases} \det(A) > 0 \\ a < 0 \end{cases}
+>    q \text{ def. negativa} \iff \begin{cases} \det(A) > 0 \\ \mathrm{tr}(A) < 0 \end{cases} \iff \begin{cases} \det(A) > 0 \\ a < 0 \end{cases}
 >    $$
 > 3. **Semidefinita positiva:**
 >    $$
->    q \text{ semidef. positiva} \iff \begin{cases} \det(A) = 0 \\ \operatorname{tr}(A) > 0 \end{cases}
+>    q \text{ semidef. positiva} \iff \begin{cases} \det(A) = 0 \\ \mathrm{tr}(A) > 0 \end{cases}
 >    $$
 > 4. **Semidefinita negativa:**
 >    $$
->    q \text{ semidef. negativa} \iff \begin{cases} \det(A) = 0 \\ \operatorname{tr}(A) < 0 \end{cases}
+>    q \text{ semidef. negativa} \iff \begin{cases} \det(A) = 0 \\ \mathrm{tr}(A) < 0 \end{cases}
 >    $$
 > 5. **Indefinita:**
 >    $$
@@ -447,11 +447,11 @@ Essendo $A$ un insieme aperto, cerchiamo gli estremi liberi di $g$ su $A$.
 > $$
 > Esaminiamo ora la traccia:
 > $$
-> \operatorname{tr} H_g(\mathbf{x}_0) = \alpha(\alpha-1) + \beta(\beta-1)
+> \mathrm{tr} H_g(\mathbf{x}_0) = \alpha(\alpha-1) + \beta(\beta-1)
 > $$
 > Dato che $\alpha \in (0,1)$ e $\beta \in (0,1)$, si ha $\alpha-1 < 0$ e $\beta-1 < 0$, dunque:
 > $$
-> \alpha(\alpha-1) < 0 \quad \text{e} \quad \beta(\beta-1) < 0 \implies \operatorname{tr} H_g(\mathbf{x}_0) < 0
+> \alpha(\alpha-1) < 0 \quad \text{e} \quad \beta(\beta-1) < 0 \implies \mathrm{tr} H_g(\mathbf{x}_0) < 0
 > $$
 > Avendo determinante strettamente positivo e traccia strettamente negativa, la matrice Hessiana $H_g(\mathbf{x}_0)$ è **definita negativa**.
 > Ne consegue che il punto stazionario $\mathbf{x}_0 = (1,1)$ è un punto di **massimo locale** stretto per la funzione guadagno.
@@ -492,7 +492,7 @@ Essendo $A$ un insieme aperto, cerchiamo gli estremi liberi di $g$ su $A$.
 > $$
 > f(x, g(x)) = 0, \quad \forall x \in I
 > $$
-> In tal caso, il grafico della funzione $g$, dato da $\operatorname{graph}(g) = \{(x, g(x)) : x \in I\}$, è interamente contenuto nell'insieme di livello zero $f^{-1}(0)$.
+> In tal caso, il grafico della funzione $g$, dato da $\mathrm{graph}(g) = \{(x, g(x)) : x \in I\}$, è interamente contenuto nell'insieme di livello zero $f^{-1}(0)$.
 
 > [!note] Insiemi di livello generici
 > Se l'interesse è rivolto a un generico livello $c \in \mathbb{R}$, ovvero all'equazione $f(x,y) = c$, ci si può sempre ricondurre al livello zero ridefinendo la funzione ausiliaria:
@@ -712,7 +712,7 @@ Se il vincolo è dato da:
 $$
 Z = \left\{ \mathbf{x} \in \mathbb{R}^2 : g(x,y) = 0 \right\} = g^{-1}(0)
 $$
-e troviamo una parametrizzazione globale tale che $Z = \operatorname{Im}(\mathbf{r})$, allora definendo la funzione composta di una variabile:
+e troviamo una parametrizzazione globale tale che $Z = \mathrm{Im}(\mathbf{r})$, allora definendo la funzione composta di una variabile:
 $$
 \phi(t) := f(\mathbf{r}(t)), \quad \phi: I \subseteq \mathbb{R} \to \mathbb{R}
 $$

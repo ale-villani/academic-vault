@@ -662,7 +662,7 @@ dove le componenti di $\mathbf{a}$ rappresentano i valori assunti da $L$ sui vet
 > [!definition] Grafico di una funzione
 > Sia $f: A \subseteq \mathbb{R}^n \to \mathbb{R}$. Si definisce **grafico** di $f$ il sottoinsieme dello spazio $\mathbb{R}^{n+1}$:
 > $$
-> \operatorname{Graf}(f) = \left\{ (\mathbf{x}, z) \in \mathbb{R}^{n+1} : \mathbf{x} \in A, \; z = f(\mathbf{x}) \right\}
+> \mathrm{Graf}(f) = \left\{ (\mathbf{x}, z) \in \mathbb{R}^{n+1} : \mathbf{x} \in A, \; z = f(\mathbf{x}) \right\}
 > $$
 
 > [!definition] Iperpiano tangente al grafico

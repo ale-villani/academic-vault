@@ -358,9 +358,9 @@ Nel caso della forza peso, il lavoro è indipendente dal cammino percorso propri
 Verificare la conservatività integrando su tutti i cammini o calcolando direttamente il potenziale può risultare oneroso. Introduciamo pertanto un operatore differenziale locale che fornisce una condizione necessaria di immediata applicazione.
 
 > [!definition] Operatore Rotore
-> Sia $\mathbf{F}: D \subseteq \mathbb{R}^3 \to \mathbb{R}^3$ un campo vettoriale di classe $C^1(D)$. Si definisce il **rotore** di $\mathbf{F}$ (notazione: $\operatorname{rot}\mathbf{F}$ oppure $\nabla \times \mathbf{F}$) il campo vettoriale tridimensionale espresso formalmente dal determinante simbolico:
+> Sia $\mathbf{F}: D \subseteq \mathbb{R}^3 \to \mathbb{R}^3$ un campo vettoriale di classe $C^1(D)$. Si definisce il **rotore** di $\mathbf{F}$ (notazione: $\mathrm{rot}\mathbf{F}$ oppure $\nabla \times \mathbf{F}$) il campo vettoriale tridimensionale espresso formalmente dal determinante simbolico:
 > $$
-> \operatorname{rot}\mathbf{F} = \nabla \times \mathbf{F} := \begin{vmatrix} \hat{i} & \hat{j} & \hat{k} \\ \partial_x & \partial_y & \partial_z \\ F_1 & F_2 & F_3 \end{vmatrix} = \begin{pmatrix} \partial_y F_3 - \partial_z F_2 \\ \partial_z F_1 - \partial_x F_3 \\ \partial_x F_2 - \partial_y F_1 \end{pmatrix}
+> \mathrm{rot}\mathbf{F} = \nabla \times \mathbf{F} := \begin{vmatrix} \hat{i} & \hat{j} & \hat{k} \\ \partial_x & \partial_y & \partial_z \\ F_1 & F_2 & F_3 \end{vmatrix} = \begin{pmatrix} \partial_y F_3 - \partial_z F_2 \\ \partial_z F_1 - \partial_x F_3 \\ \partial_x F_2 - \partial_y F_1 \end{pmatrix}
 > $$
 
 > [!note] Significato intuitivo del rotore
@@ -381,7 +381,7 @@ Verificare la conservatività integrando su tutti i cammini o calcolando diretta
 > &= \hat{k} (\omega - (-\omega)) = 2\omega\,\hat{k}
 > \end{aligned}
 > $$
-> Il rotore di un moto circolare rigido coincide esattamente con il doppio del vettore velocità angolare: $\operatorname{rot}\mathbf{v} = 2\boldsymbol{\omega}$.
+> Il rotore di un moto circolare rigido coincide esattamente con il doppio del vettore velocità angolare: $\mathrm{rot}\mathbf{v} = 2\boldsymbol{\omega}$.
 >
 
 ### Condizione necessaria di irrotazionalità
@@ -480,7 +480,7 @@ Verificare la conservatività integrando su tutti i cammini o calcolando diretta
 > tale che:
 > 1. $\boldsymbol{\Phi}(a, \lambda) = \mathbf{P}_a, \quad \boldsymbol{\Phi}(b, \lambda) = \mathbf{P}_b \quad \forall \lambda \in [0,1]$;
 > 2. $\boldsymbol{\Phi}(t, 0) = \mathbf{r}_1(t), \quad \boldsymbol{\Phi}(t, 1) = \mathbf{r}_2(t) \quad \forall t \in [a,b]$;
-> 3. L'immagine della deformazione appartiene interamente a $E$: $\operatorname{Im}\{\boldsymbol{\Phi}\} \subseteq E$.
+> 3. L'immagine della deformazione appartiene interamente a $E$: $\mathrm{Im}\{\boldsymbol{\Phi}\} \subseteq E$.
 
 > [!note] Significato qualitativo
 > Due curve sono omotope se l'una può essere trasformata e deformata nell'altra con continuità attraverso una famiglia continua di traiettorie $\boldsymbol{\Phi}(\cdot, \lambda)$ rimanendo sempre all'interno del dominio $E$ e senza mai muovere i punti estremi $A$ e $B$.
@@ -1094,7 +1094,7 @@ Si cerca ora una generalizzazione rigorosa del concetto di bordo orientato e di 
 > Sia $\Omega \subseteq \mathbb{R}^3$ un aperto e sia $\mathbf{F}: \Omega \to \mathbb{R}^3$ un campo vettoriale di classe $C^1(\Omega)$, con componenti $\mathbf{F} = (F_1, F_2, F_3)^T$.
 > Si definisce **divergenza** di $\mathbf{F}$ la funzione scalare ottenuta dal prodotto scalare formale dell'operatore nabla $\nabla$ con il campo $\mathbf{F}$:
 > $$
-> \nabla \cdot \mathbf{F} := \operatorname{div}(\mathbf{F}) = \frac{\partial F_1}{\partial x} + \frac{\partial F_2}{\partial y} + \frac{\partial F_3}{\partial z}
+> \nabla \cdot \mathbf{F} := \mathrm{div}(\mathbf{F}) = \frac{\partial F_1}{\partial x} + \frac{\partial F_2}{\partial y} + \frac{\partial F_3}{\partial z}
 > $$
 >
 ### Formule di Gauss-Green nello spazio
@@ -1225,7 +1225,7 @@ Si cerca ora una generalizzazione rigorosa del concetto di bordo orientato e di 
 > $$
 > Sostituendo nel teorema della divergenza:
 > $$
-> \operatorname{Vol}(V) = \iiint_V 1 \, dxdydz = \frac{1}{3} \iiint_V \nabla \cdot \begin{pmatrix} x \\ y \\ z \end{pmatrix} dxdydz = \frac{1}{3} \iint_{\partial V} \begin{pmatrix} x \\ y \\ z \end{pmatrix} \cdot \boldsymbol{\nu}_e \, dS
+> \mathrm{Vol}(V) = \iiint_V 1 \, dxdydz = \frac{1}{3} \iiint_V \nabla \cdot \begin{pmatrix} x \\ y \\ z \end{pmatrix} dxdydz = \frac{1}{3} \iint_{\partial V} \begin{pmatrix} x \\ y \\ z \end{pmatrix} \cdot \boldsymbol{\nu}_e \, dS
 > $$
 
 > [!note] Significato fisico della divergenza come densità di flusso
@@ -1574,15 +1574,15 @@ Ci poniamo la questione fondamentale: **vale il viceversa?** Ovvero, ogni campo 
 > $$
 > Pertanto l'integrale di flusso coincide semplicemente con l'area della superficie $\Sigma_r$:
 > $$
-> \iint_{\Sigma_r} \mathbf{F} \cdot \boldsymbol{\nu} \, dS = \iint_{\Sigma_r} 1 \, dS = \operatorname{Area}(\Sigma_r)
+> \iint_{\Sigma_r} \mathbf{F} \cdot \boldsymbol{\nu} \, dS = \iint_{\Sigma_r} 1 \, dS = \mathrm{Area}(\Sigma_r)
 > $$
 > D'altra parte, applicando l'ipotesi per assurdo del teorema di Stokes:
 > $$
-> \operatorname{Area}(\Sigma_r) = \oint_{\partial^+ \Sigma_r} \mathbf{A} \cdot d\mathbf{r}
+> \mathrm{Area}(\Sigma_r) = \oint_{\partial^+ \Sigma_r} \mathbf{A} \cdot d\mathbf{r}
 > $$
 > Quando il raggio della calotta tende a zero ($r \to 0^+$), la superficie $\Sigma_r$ invade l'intera sfera $S_1(\mathbf{0})$, la cui area vale:
 > $$
-> \lim_{r \to 0^+} \operatorname{Area}(\Sigma_r) = \operatorname{Area}(S_1(\mathbf{0})) = 4\pi
+> \lim_{r \to 0^+} \mathrm{Area}(\Sigma_r) = \mathrm{Area}(S_1(\mathbf{0})) = 4\pi
 > $$
 > 
 > D'altro canto, il bordo $\partial \Sigma_r$ è una circonferenza di raggio $R(r) \le r$ avente lunghezza $L(\partial \Sigma_r) \le 2\pi r$.
@@ -1593,7 +1593,7 @@ Ci poniamo la questione fondamentale: **vale il viceversa?** Ovvero, ogni campo 
 > $$
 > Passando al limite per $r \to 0^+$ nell'eguaglianza di Stokes:
 > $$
-> 4\pi = \lim_{r \to 0^+} \operatorname{Area}(\Sigma_r) = \lim_{r \to 0^+} \oint_{\partial^+ \Sigma_r} \mathbf{A} \cdot d\mathbf{r} = 0
+> 4\pi = \lim_{r \to 0^+} \mathrm{Area}(\Sigma_r) = \lim_{r \to 0^+} \oint_{\partial^+ \Sigma_r} \mathbf{A} \cdot d\mathbf{r} = 0
 > $$
 > Il che genera una palese contraddizione ($4\pi = 0$). $\blacksquare$
 > 

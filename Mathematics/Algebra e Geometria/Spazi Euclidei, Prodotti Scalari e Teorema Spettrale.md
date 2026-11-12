@@ -66,12 +66,12 @@ tags:
 > $$
 > Si può verificare che l'integrale del prodotto soddisfa tutti gli assiomi di prodotto scalare su $\mathbb{R}[t]$.
 
-> [!example] Prodotto Scalare nello Spazio delle Matrici $\operatorname{Mat}_{\mathbb{R}}(n, n)$
-> Sia $V = \operatorname{Mat}_{\mathbb{R}}(n, n)$ lo spazio delle matrici quadrate reali di ordine $n$. Per ogni $A, B \in \operatorname{Mat}_{\mathbb{R}}(n, n)$, poniamo:
+> [!example] Prodotto Scalare nello Spazio delle Matrici $\mathrm{Mat}_{\mathbb{R}}(n, n)$
+> Sia $V = \mathrm{Mat}_{\mathbb{R}}(n, n)$ lo spazio delle matrici quadrate reali di ordine $n$. Per ogni $A, B \in \mathrm{Mat}_{\mathbb{R}}(n, n)$, poniamo:
 > $$
-> \langle A, B \rangle := \operatorname{tr}(A B^T)
+> \langle A, B \rangle := \mathrm{tr}(A B^T)
 > $$
-> Tale mappa è un prodotto scalare su $\operatorname{Mat}_{\mathbb{R}}(n, n)$ (noto come prodotto scalare di Frobenius).
+> Tale mappa è un prodotto scalare su $\mathrm{Mat}_{\mathbb{R}}(n, n)$ (noto come prodotto scalare di Frobenius).
 >
 ## 6.3. Norma, Distanza e Disuguaglianze Fondamentali
 
@@ -353,7 +353,7 @@ tags:
 > Sia $H \subseteq V$ un sottospazio vettoriale di uno spazio euclideo $V$.
 > 
 > 1. $H^\perp$ è un sottospazio vettoriale di $V$.
-> 2. Se $H$ è generato da un insieme di vettori, $H = \operatorname{Span}\{\mathbf{w}_1, \dots, \mathbf{w}_d\}$, allora:
+> 2. Se $H$ è generato da un insieme di vettori, $H = \mathrm{Span}\{\mathbf{w}_1, \dots, \mathbf{w}_d\}$, allora:
 >    $$
 >    H^\perp = \{ \mathbf{v} \in V : \mathbf{v} \perp \mathbf{w}_i, \; \forall i = 1, \dots, d \}
 >    $$
@@ -377,7 +377,7 @@ tags:
 > - L'inclusione $H^\perp \subseteq \{ \mathbf{v} \in V : \mathbf{v} \perp \mathbf{w}_i, \; \forall i = 1, \dots, d \}$ è immediata, poiché se $\mathbf{v}$ è ortogonale a ogni vettore di $H$, è in particolare ortogonale ai suoi generatori $\mathbf{w}_1, \dots, \mathbf{w}_d \in H$.
 > - Mostriamo l'inclusione opposta $(\supseteq)$:
 >   Sia $\mathbf{v} \in V$ tale che $\langle \mathbf{v}, \mathbf{w}_i \rangle = 0$ per ogni $i = 1, \dots, d$.
->   Sia $\mathbf{w} \in H$ un generico vettore. Poiché $H = \operatorname{Span}\{\mathbf{w}_1, \dots, \mathbf{w}_d\}$, esistono scalari $c_1, \dots, c_d \in \mathbb{R}$ tali che $\mathbf{w} = c_1 \mathbf{w}_1 + \dots + c_d \mathbf{w}_d$. Calcoliamo:
+>   Sia $\mathbf{w} \in H$ un generico vettore. Poiché $H = \mathrm{Span}\{\mathbf{w}_1, \dots, \mathbf{w}_d\}$, esistono scalari $c_1, \dots, c_d \in \mathbb{R}$ tali che $\mathbf{w} = c_1 \mathbf{w}_1 + \dots + c_d \mathbf{w}_d$. Calcoliamo:
 >   $$
 >   \begin{aligned}
 >   \langle \mathbf{v}, \mathbf{w} \rangle &= \langle \mathbf{v}, c_1 \mathbf{w}_1 + \dots + c_d \mathbf{w}_d \rangle \\
@@ -388,7 +388,7 @@ tags:
 >   Dunque $\langle \mathbf{v}, \mathbf{w} \rangle = 0$ per ogni $\mathbf{w} \in H$, ovvero $\mathbf{v} \perp \mathbf{w}$ per ogni $\mathbf{w} \in H$. Ne segue che $\mathbf{v} \in H^\perp$. $\blacksquare$
 
 > [!example] Calcolo Esplicito del Complemento Ortogonale in $\mathbb{R}^3$
-> Sia $H = \operatorname{Span}\left\{ \begin{pmatrix} 1 \\ 1 \\ 1 \end{pmatrix}, \begin{pmatrix} 1 \\ 0 \\ 2 \end{pmatrix} \right\} \subseteq \mathbb{R}^3$. Vogliamo trovare $H^\perp$.
+> Sia $H = \mathrm{Span}\left\{ \begin{pmatrix} 1 \\ 1 \\ 1 \end{pmatrix}, \begin{pmatrix} 1 \\ 0 \\ 2 \end{pmatrix} \right\} \subseteq \mathbb{R}^3$. Vogliamo trovare $H^\perp$.
 > Sfruttando la proposizione precedente:
 > $$
 > H^\perp = \left\{ \mathbf{v} \in \mathbb{R}^3 : \mathbf{v} \perp \begin{pmatrix} 1 \\ 1 \\ 1 \end{pmatrix} \;\land\; \mathbf{v} \perp \begin{pmatrix} 1 \\ 0 \\ 2 \end{pmatrix} \right\}
@@ -414,7 +414,7 @@ tags:
 > $$
 > Ne segue che:
 > $$
-> H^\perp = \operatorname{Span}\left\{ \begin{pmatrix} -2 \\ 1 \\ 1 \end{pmatrix} \right\}
+> H^\perp = \mathrm{Span}\left\{ \begin{pmatrix} -2 \\ 1 \\ 1 \end{pmatrix} \right\}
 > $$
 > che rappresenta una retta passante per l'origine ortogonale al piano $H$.
 >
@@ -514,11 +514,11 @@ tags:
 > [!proposition] Proprietà della Proiezione Ortogonale $\pi_H$
 > Sia $\pi_H: V \to V$ la proiezione ortogonale sul sottospazio $H$. Valgono le seguenti proprietà:
 > 
-> 1. $\pi_H$ è un'applicazione lineare ($\pi_H \in \operatorname{End}(V)$).
+> 1. $\pi_H$ è un'applicazione lineare ($\pi_H \in \mathrm{End}(V)$).
 > 2. $\pi_H(\mathbf{h}) = \mathbf{h}$ per ogni $\mathbf{h} \in H$.
 > 3. L'immagine e il nucleo sono dati rispettivamente da:
 >    $$
->    \operatorname{Im}(\pi_H) = H \qquad \text{e} \qquad \operatorname{Ker}(\pi_H) = H^\perp
+>    \mathrm{Im}(\pi_H) = H \qquad \text{e} \qquad \mathrm{Ker}(\pi_H) = H^\perp
 >    $$
 > 4. $\pi_H$ è idempotente:
 >    $$
@@ -543,24 +543,24 @@ tags:
 > \mathbf{h} = \langle \mathbf{h}, \mathbf{b}_1 \rangle \mathbf{b}_1 + \dots + \langle \mathbf{h}, \mathbf{b}_n \rangle \mathbf{b}_n = \pi_H(\mathbf{h})
 > $$
 > 
-> **3. Dimostrazione dell'immagine $\operatorname{Im}(\pi_H) = H$:**
-> - Per ogni $\mathbf{v} \in V$, $\pi_H(\mathbf{v}) = \sum_{i=1}^n \langle \mathbf{v}, \mathbf{b}_i \rangle \mathbf{b}_i \in \operatorname{Span}\{\mathbf{b}_1, \dots, \mathbf{b}_n\} = H$. Quindi:
+> **3. Dimostrazione dell'immagine $\mathrm{Im}(\pi_H) = H$:**
+> - Per ogni $\mathbf{v} \in V$, $\pi_H(\mathbf{v}) = \sum_{i=1}^n \langle \mathbf{v}, \mathbf{b}_i \rangle \mathbf{b}_i \in \mathrm{Span}\{\mathbf{b}_1, \dots, \mathbf{b}_n\} = H$. Quindi:
 >   $$
->   \operatorname{Im}(\pi_H) \subseteq H
+>   \mathrm{Im}(\pi_H) \subseteq H
 >   $$
-> - Viceversa, sia $\mathbf{h} \in H$. Dal punto 2 sappiamo che $\pi_H(\mathbf{h}) = \mathbf{h}$, il che mostra che $\mathbf{h} \in \operatorname{Im}(\pi_H)$ per ogni $\mathbf{h} \in H$. Dunque:
+> - Viceversa, sia $\mathbf{h} \in H$. Dal punto 2 sappiamo che $\pi_H(\mathbf{h}) = \mathbf{h}$, il che mostra che $\mathbf{h} \in \mathrm{Im}(\pi_H)$ per ogni $\mathbf{h} \in H$. Dunque:
 >   $$
->   H \subseteq \operatorname{Im}(\pi_H)
+>   H \subseteq \mathrm{Im}(\pi_H)
 >   $$
 > Dalla doppia inclusione segue:
 > $$
-> \operatorname{Im}(\pi_H) = H
+> \mathrm{Im}(\pi_H) = H
 > $$
 > 
-> **4. Dimostrazione del nucleo $\operatorname{Ker}(\pi_H) = H^\perp$:**
+> **4. Dimostrazione del nucleo $\mathrm{Ker}(\pi_H) = H^\perp$:**
 > Per definizione di nucleo:
 > $$
-> \mathbf{v} \in \operatorname{Ker}(\pi_H) \iff \pi_H(\mathbf{v}) = \mathbf{0}
+> \mathbf{v} \in \mathrm{Ker}(\pi_H) \iff \pi_H(\mathbf{v}) = \mathbf{0}
 > $$
 > Sostituendo la definizione di $\pi_H$:
 > $$
@@ -574,13 +574,13 @@ tags:
 > $$
 > \mathbf{v} \perp \mathbf{b}_i \qquad \forall i = 1, \dots, n
 > $$
-> Poiché $H = \operatorname{Span}\{\mathbf{b}_1, \dots, \mathbf{b}_n\}$, essere ortogonale a tutti i generatori equivale ad appartenere al complemento ortogonale $H^\perp$:
+> Poiché $H = \mathrm{Span}\{\mathbf{b}_1, \dots, \mathbf{b}_n\}$, essere ortogonale a tutti i generatori equivale ad appartenere al complemento ortogonale $H^\perp$:
 > $$
 > \mathbf{v} \in H^\perp
 > $$
 > Abbiamo quindi dimostrato che:
 > $$
-> \forall \mathbf{v} \in V, \quad \mathbf{v} \in \operatorname{Ker}(\pi_H) \iff \mathbf{v} \in H^\perp \implies \operatorname{Ker}(\pi_H) = H^\perp \qquad \blacksquare
+> \forall \mathbf{v} \in V, \quad \mathbf{v} \in \mathrm{Ker}(\pi_H) \iff \mathbf{v} \in H^\perp \implies \mathrm{Ker}(\pi_H) = H^\perp \qquad \blacksquare
 > $$
 >
 ### Dimostrazione delle Proprietà della Proiezione Ortogonale (Continuazione)
@@ -613,9 +613,9 @@ Si conclude la dimostrazione del teorema fondamentale relativo alle proprietà d
 > $$
 > Ne consegue che il vettore appartiene al nucleo dell'operatore di proiezione:
 > $$
-> \mathbf{v} - \pi_H(\mathbf{v}) \in \operatorname{Ker}(\pi_H)
+> \mathbf{v} - \pi_H(\mathbf{v}) \in \mathrm{Ker}(\pi_H)
 > $$
-> Essendo stato dimostrato al punto ③ che $\operatorname{Ker}(\pi_H) = H^\perp$, si conclude direttamente che:
+> Essendo stato dimostrato al punto ③ che $\mathrm{Ker}(\pi_H) = H^\perp$, si conclude direttamente che:
 > $$
 > \mathbf{v} - \pi_H(\mathbf{v}) \in H^\perp \qquad \blacksquare
 > $$
@@ -645,16 +645,16 @@ Si conclude la dimostrazione del teorema fondamentale relativo alle proprietà d
 > 
 > 4. Decomposizione dell'identità:
 > $$
-> \forall \mathbf{v} \in V, \quad \mathbf{v} = \pi_H(\mathbf{v}) + \pi_{H^\perp}(\mathbf{v}) \iff \pi_H + \pi_{H^\perp} = \operatorname{id}_V
+> \forall \mathbf{v} \in V, \quad \mathbf{v} = \pi_H(\mathbf{v}) + \pi_{H^\perp}(\mathbf{v}) \iff \pi_H + \pi_{H^\perp} = \mathrm{id}_V
 > $$
 
 > [!quote]- Dimostrazione
 > **Dimostrazione del punto 1:**
 > Consideriamo l'operatore proiezione ortogonale $\pi_H: V \to V$. Per il Teorema della Dimensione (nullità + rango):
 > $$
-> \dim(\operatorname{Ker}(\pi_H)) + \dim(\operatorname{Im}(\pi_H)) = \dim(V)
+> \dim(\mathrm{Ker}(\pi_H)) + \dim(\mathrm{Im}(\pi_H)) = \dim(V)
 > $$
-> Poiché $\operatorname{Ker}(\pi_H) = H^\perp$ e $\operatorname{Im}(\pi_H) = H$, sostituendo si ottiene direttamente:
+> Poiché $\mathrm{Ker}(\pi_H) = H^\perp$ e $\mathrm{Im}(\pi_H) = H$, sostituendo si ottiene direttamente:
 > $$
 > \dim(H^\perp) + \dim(H) = \dim(V)
 > $$
@@ -763,7 +763,7 @@ L'algoritmo di Gram-Schmidt consente di trasformare una qualunque base di uno sp
 > 
 > **Passo 1:** Si normalizza il primo vettore:
 > $$
-> \mathbf{b}_1 = \frac{\mathbf{v}_1}{\|\mathbf{v}_1\|}, \qquad H_1 = \operatorname{Span}\{\mathbf{b}_1\} = \operatorname{Span}\{\mathbf{v}_1\}
+> \mathbf{b}_1 = \frac{\mathbf{v}_1}{\|\mathbf{v}_1\|}, \qquad H_1 = \mathrm{Span}\{\mathbf{b}_1\} = \mathrm{Span}\{\mathbf{v}_1\}
 > $$
 > 
 > **Passo 2:** Si sottrae a $\mathbf{v}_2$ la sua proiezione ortogonale su $H_1$:
@@ -772,7 +772,7 @@ L'algoritmo di Gram-Schmidt consente di trasformare una qualunque base di uno sp
 > $$
 > Per costruzione $\mathbf{w}_2 \perp \mathbf{b}_1$ e $\mathbf{w}_2 \neq \mathbf{0}$ (poiché $\mathbf{v}_2 \notin H_1$). Si normalizza quindi il vettore:
 > $$
-> \mathbf{b}_2 = \frac{\mathbf{w}_2}{\|\mathbf{w}_2\|}, \qquad H_2 = \operatorname{Span}\{\mathbf{b}_1, \mathbf{b}_2\}
+> \mathbf{b}_2 = \frac{\mathbf{w}_2}{\|\mathbf{w}_2\|}, \qquad H_2 = \mathrm{Span}\{\mathbf{b}_1, \mathbf{b}_2\}
 > $$
 > 
 > **Passo 3:** Si calcola la componente di $\mathbf{v}_3$ ortogonale a $H_2$:
@@ -781,7 +781,7 @@ L'algoritmo di Gram-Schmidt consente di trasformare una qualunque base di uno sp
 > $$
 > con $\mathbf{w}_3 \perp \mathbf{b}_1$ e $\mathbf{w}_3 \perp \mathbf{b}_2$. Si normalizza:
 > $$
-> \mathbf{b}_3 = \frac{\mathbf{w}_3}{\|\mathbf{w}_3\|}, \qquad H_3 = \operatorname{Span}\{\mathbf{b}_1, \mathbf{b}_2, \mathbf{b}_3\}
+> \mathbf{b}_3 = \frac{\mathbf{w}_3}{\|\mathbf{w}_3\|}, \qquad H_3 = \mathrm{Span}\{\mathbf{b}_1, \mathbf{b}_2, \mathbf{b}_3\}
 > $$
 > 
 > **Passo $k$ (Passo induttivo generale per $k = 2, \dots, d$):**
@@ -790,7 +790,7 @@ L'algoritmo di Gram-Schmidt consente di trasformare una qualunque base di uno sp
 > $$
 > Risultando $\mathbf{w}_k \perp \mathbf{b}_i$ per ogni $i = 1, \dots, k-1$, si normalizza:
 > $$
-> \mathbf{b}_k = \frac{\mathbf{w}_k}{\|\mathbf{w}_k\|}, \qquad H_k = \operatorname{Span}\{\mathbf{b}_1, \dots, \mathbf{b}_k\}
+> \mathbf{b}_k = \frac{\mathbf{w}_k}{\|\mathbf{w}_k\|}, \qquad H_k = \mathrm{Span}\{\mathbf{b}_1, \dots, \mathbf{b}_k\}
 > $$
 > 
 > Al termine del passo $d$, l'insieme:
@@ -830,7 +830,7 @@ L'algoritmo di Gram-Schmidt consente di trasformare una qualunque base di uno sp
 > $$
 > Pertanto, la giacitura del piano è esattamente il complemento ortogonale della direzione individuata dal vettore normale:
 > $$
-> H_\pi = \left[\operatorname{Span}\left\{\begin{pmatrix} a \\ b \\ c \end{pmatrix}\right\}\right]^\perp
+> H_\pi = \left[\mathrm{Span}\left\{\begin{pmatrix} a \\ b \\ c \end{pmatrix}\right\}\right]^\perp
 > $$
 > Di conseguenza, il vettore normale $\mathbf{n} = (a, b, c)^T$ genera lo spazio ortogonale alla giacitura del piano.
 >
@@ -867,7 +867,7 @@ L'algoritmo di Gram-Schmidt consente di trasformare una qualunque base di uno sp
 > $$
 > d(S_1, S_2) = \big\| (\mathbf{x}_1 - \mathbf{x}_2) - \pi_{H_1 + H_2}(\mathbf{x}_1 - \mathbf{x}_2) \big\|
 > $$
-> Poiché $\operatorname{id}_V - \pi_{H_1 + H_2} = \pi_{(H_1 + H_2)^\perp}$, si conclude:
+> Poiché $\mathrm{id}_V - \pi_{H_1 + H_2} = \pi_{(H_1 + H_2)^\perp}$, si conclude:
 > $$
 > d(S_1, S_2) = \left\| \pi_{(H_1 + H_2)^\perp}(\mathbf{x}_1 - \mathbf{x}_2) \right\| \qquad \blacksquare
 > $$
@@ -930,12 +930,12 @@ L'algoritmo di Gram-Schmidt consente di trasformare una qualunque base di uno sp
 > $$
 > I vettori $\{L(\mathbf{b}_1), \dots, L(\mathbf{b}_n)\}$ sono mutuamente ortogonali e normalizzati; essendo non nulli e a due a due ortogonali, sono linearmente indipendenti. In uno spazio di dimensione $n$, un insieme ortonormale di $n$ elementi è automaticamente una base ortonormale.
 > 
-> **Punto 5:** Se $L(\mathbf{v}) = \mathbf{0}$, allora $\|L(\mathbf{v})\| = \|\mathbf{v}\| = 0 \implies \mathbf{v} = \mathbf{0}$. Dunque $\operatorname{Ker}(L) = \{\mathbf{0}\}$, il che implica che $L$ è iniettiva. Trattandosi di un endomorfismo tra spazi di dimensione finita, l'iniettività implica la biiettività, rendendo $L$ un isomorfismo $\qquad \blacksquare$
+> **Punto 5:** Se $L(\mathbf{v}) = \mathbf{0}$, allora $\|L(\mathbf{v})\| = \|\mathbf{v}\| = 0 \implies \mathbf{v} = \mathbf{0}$. Dunque $\mathrm{Ker}(L) = \{\mathbf{0}\}$, il che implica che $L$ è iniettiva. Trattandosi di un endomorfismo tra spazi di dimensione finita, l'iniettività implica la biiettività, rendendo $L$ un isomorfismo $\qquad \blacksquare$
 >
 ### Matrici Ortogonali
 
 > [!definition] Matrice Ortogonale
-> Una matrice quadrata $A \in \operatorname{Mat}_{\mathbb{R}}(n, n)$ si dice **ortogonale** se il suo prodotto per la trasposta fornisce la matrice identità:
+> Una matrice quadrata $A \in \mathrm{Mat}_{\mathbb{R}}(n, n)$ si dice **ortogonale** se il suo prodotto per la trasposta fornisce la matrice identità:
 > $$
 > A^T A = I_n
 > $$
@@ -950,7 +950,7 @@ L'algoritmo di Gram-Schmidt consente di trasformare una qualunque base di uno sp
 > $$
 > (A^T)^T A^T = A A^T = I_n
 > $$
-> 3. Il prodotto di due matrici ortogonali $A, B \in \operatorname{Mat}_{\mathbb{R}}(n, n)$ è ancora una matrice ortogonale:
+> 3. Il prodotto di due matrici ortogonali $A, B \in \mathrm{Mat}_{\mathbb{R}}(n, n)$ è ancora una matrice ortogonale:
 > $$
 > (AB)^T (AB) = B^T A^T A B = B^T I_n B = B^T B = I_n
 > $$
@@ -961,7 +961,7 @@ L'algoritmo di Gram-Schmidt consente di trasformare una qualunque base di uno sp
 > $$
 
 > [!proposition] Caratterizzazione delle Matrici Ortogonali tramite Righe e Colonne
-> Sia $A \in \operatorname{Mat}_{\mathbb{R}}(n, n)$. Le seguenti affermazioni sono tra loro equivalenti:
+> Sia $A \in \mathrm{Mat}_{\mathbb{R}}(n, n)$. Le seguenti affermazioni sono tra loro equivalenti:
 > 
 > 1. $A$ è una matrice ortogonale ($A^T A = I_n$).
 > 2. Le colonne di $A$ formano una base ortonormale di $\mathbb{R}^n$ (rispetto al prodotto scalare standard).
@@ -992,7 +992,7 @@ L'algoritmo di Gram-Schmidt consente di trasformare una qualunque base di uno sp
 ### Connessione tra Isometrie e Matrici Ortogonali
 
 > [!proposition] Corrispondenza Isometrie - Matrici Ortogonali
-> Sia $A \in \operatorname{Mat}_{\mathbb{R}}(n, n)$ e sia $T_A: \mathbb{R}^n \to \mathbb{R}^n$ l'applicazione lineare indotta da $A$ (ovvero $T_A(\mathbf{v}) = A\mathbf{v}$). Allora:
+> Sia $A \in \mathrm{Mat}_{\mathbb{R}}(n, n)$ e sia $T_A: \mathbb{R}^n \to \mathbb{R}^n$ l'applicazione lineare indotta da $A$ (ovvero $T_A(\mathbf{v}) = A\mathbf{v}$). Allora:
 > $$
 > T_A \text{ è un'isometria lineare} \iff A \text{ è una matrice ortogonale}
 > $$
@@ -1062,12 +1062,12 @@ L'algoritmo di Gram-Schmidt consente di trasformare una qualunque base di uno sp
 > Sia $\mathcal{B} = \{\mathbf{b}_1, \dots, \mathbf{b}_n\}$ una base ortonormale di $\mathbb{R}^n$ e sia $\mathcal{E}$ la base canonica.
 > La matrice di transizione (o matrice di cambio base) da $\mathcal{B}$ a $\mathcal{E}$ ha come colonne le coordinate dei vettori di $\mathcal{B}$ rispetto alla base canonica:
 > $$
-> M_{\operatorname{id}_V}^{\mathcal{B}, \mathcal{E}} = \begin{pmatrix} \mathbf{b}_1 & \mathbf{b}_2 & \dots & \mathbf{b}_n \end{pmatrix}
+> M_{\mathrm{id}_V}^{\mathcal{B}, \mathcal{E}} = \begin{pmatrix} \mathbf{b}_1 & \mathbf{b}_2 & \dots & \mathbf{b}_n \end{pmatrix}
 > $$
-> Poiché le sue colonne costituiscono per ipotesi una base ortonormale, $M_{\operatorname{id}_V}^{\mathcal{B}, \mathcal{E}}$ è una **matrice ortogonale**.
+> Poiché le sue colonne costituiscono per ipotesi una base ortonormale, $M_{\mathrm{id}_V}^{\mathcal{B}, \mathcal{E}}$ è una **matrice ortogonale**.
 > Da ciò consegue immediatamente che l'inversa (ovvero la matrice di passaggio inverso da $\mathcal{E}$ a $\mathcal{B}$) coincide con la sua trasposta:
 > $$
-> M_{\operatorname{id}_V}^{\mathcal{E}, \mathcal{B}} = \big(M_{\operatorname{id}_V}^{\mathcal{B}, \mathcal{E}}\big)^{-1} = \big(M_{\operatorname{id}_V}^{\mathcal{B}, \mathcal{E}}\big)^T
+> M_{\mathrm{id}_V}^{\mathcal{E}, \mathcal{B}} = \big(M_{\mathrm{id}_V}^{\mathcal{B}, \mathcal{E}}\big)^{-1} = \big(M_{\mathrm{id}_V}^{\mathcal{B}, \mathcal{E}}\big)^T
 > $$
 
 > [!theorem] Corollario: Rappresentazione Matriciale delle Isometrie in Basi Ortonormali
@@ -1079,10 +1079,10 @@ L'algoritmo di Gram-Schmidt consente di trasformare una qualunque base di uno sp
 > [!quote]- Dimostrazione
 > Esprimiamo la matrice rappresentativa $M_L^{\mathcal{B}, \mathcal{C}}$ componendola mediante le matrici di transizione con la base canonica ortonormale $\mathcal{E}$:
 > $$
-> M_L^{\mathcal{B}, \mathcal{C}} = M_{\operatorname{id}_{\mathbb{R}^n}}^{\mathcal{E}, \mathcal{C}} \cdot M_L^{\mathcal{E}, \mathcal{E}} \cdot M_{\operatorname{id}_{\mathbb{R}^n}}^{\mathcal{B}, \mathcal{E}}
+> M_L^{\mathcal{B}, \mathcal{C}} = M_{\mathrm{id}_{\mathbb{R}^n}}^{\mathcal{E}, \mathcal{C}} \cdot M_L^{\mathcal{E}, \mathcal{E}} \cdot M_{\mathrm{id}_{\mathbb{R}^n}}^{\mathcal{B}, \mathcal{E}}
 > $$
 > Analizziamo i singoli fattori di questa catena di prodotti:
-> - Le matrici di passaggio $M_{\operatorname{id}_{\mathbb{R}^n}}^{\mathcal{E}, \mathcal{C}}$ e $M_{\operatorname{id}_{\mathbb{R}^n}}^{\mathcal{B}, \mathcal{E}}$ collegano basi ortonormali ($\mathcal{E}, \mathcal{C}$ e $\mathcal{B}, \mathcal{E}$), pertanto sono matrici ortogonali.
+> - Le matrici di passaggio $M_{\mathrm{id}_{\mathbb{R}^n}}^{\mathcal{E}, \mathcal{C}}$ e $M_{\mathrm{id}_{\mathbb{R}^n}}^{\mathcal{B}, \mathcal{E}}$ collegano basi ortonormali ($\mathcal{E}, \mathcal{C}$ e $\mathcal{B}, \mathcal{E}$), pertanto sono matrici ortogonali.
 > - La matrice centrale $M_L^{\mathcal{E}, \mathcal{E}}$ rappresenta la matrice canonica $A$ associata all'endomorfismo $L$ ($T_A = L$).
 > 
 > Per il teorema precedente, $L$ è un'isometria se e solo se $A = M_L^{\mathcal{E}, \mathcal{E}}$ è una matrice ortogonale.
@@ -1096,7 +1096,7 @@ L'algoritmo di Gram-Schmidt consente di trasformare una qualunque base di uno sp
 ### Matrici Simmetriche ed Operatori Autoaggiunti
 
 > [!definition] Matrice Simmetrica
-> Una matrice quadrata $A \in \operatorname{Mat}_{\mathbb{R}}(n, n)$ si dice **simmetrica** se coincide con la propria trasposta:
+> Una matrice quadrata $A \in \mathrm{Mat}_{\mathbb{R}}(n, n)$ si dice **simmetrica** se coincide con la propria trasposta:
 > $$
 > A^T = A
 > $$
@@ -1118,7 +1118,7 @@ L'algoritmo di Gram-Schmidt consente di trasformare una qualunque base di uno sp
 ### Teorema Spettrale Reale
 
 > [!theorem] Teorema Spettrale per Matrici Simmetriche
-> Sia $A \in \operatorname{Mat}_{\mathbb{R}}(n, n)$ una matrice reale simmetrica. Allora:
+> Sia $A \in \mathrm{Mat}_{\mathbb{R}}(n, n)$ una matrice reale simmetrica. Allora:
 > $$
 > A \text{ è simmetrica} \iff \exists \mathcal{B} \text{ base ortonormale di } \mathbb{R}^n \text{ formata da autovettori di } A
 > $$
@@ -1126,7 +1126,7 @@ L'algoritmo di Gram-Schmidt consente di trasformare una qualunque base di uno sp
 > $$
 > A \text{ è simmetrica} \iff A \text{ è ortogonalmente diagonalizzabile}
 > $$
-> Esiste cioè una matrice ortogonale $S \in \operatorname{Mat}_{\mathbb{R}}(n, n)$ (con $S^{-1} = S^T$) e una matrice diagonale $D \in \operatorname{Mat}_{\mathbb{R}}(n, n)$ tali che:
+> Esiste cioè una matrice ortogonale $S \in \mathrm{Mat}_{\mathbb{R}}(n, n)$ (con $S^{-1} = S^T$) e una matrice diagonale $D \in \mathrm{Mat}_{\mathbb{R}}(n, n)$ tali che:
 > $$
 > D = S^{-1} A S = S^T A S
 > $$
@@ -1140,7 +1140,7 @@ L'algoritmo di Gram-Schmidt consente di trasformare una qualunque base di uno sp
 > Dal Teorema Spettrale discendono due proprietà algebriche di fondamentale rilievo:
 > 
 > 1. **Realtà dello Spettro:**
-> Se $A \in \operatorname{Mat}_{\mathbb{R}}(n, n)$ è simmetrica, tutte le radici del polinomio caratteristico $\chi_A(t)$ sono reali:
+> Se $A \in \mathrm{Mat}_{\mathbb{R}}(n, n)$ è simmetrica, tutte le radici del polinomio caratteristico $\chi_A(t)$ sono reali:
 > $$
 > \sigma(A) \subset \mathbb{R}
 > $$
@@ -1306,7 +1306,7 @@ Con l'esposizione del Teorema Spettrale reale e delle proprietà algebrico-geome
 ### Mappa Sinottica delle Strutture Algebriche Fondamentali
 
 1. **Sistemi Lineari ed Eliminazione Gaussiana:**
-   - Struttura dello spazio affine delle soluzioni: $S = \mathbf{x}_0 + \operatorname{Ker}(A)$.
+   - Struttura dello spazio affine delle soluzioni: $S = \mathbf{x}_0 + \mathrm{Ker}(A)$.
    - Teorema di Rouché-Capelli e Teorema di Struttura.
 
 2. **Spazi Vettoriali e Teoria delle Basi:**
@@ -1314,7 +1314,7 @@ Con l'esposizione del Teorema Spettrale reale e delle proprietà algebrico-geome
    - Operazioni tra sottospazi: formule di Grassmann per intersezione e somma.
 
 3. **Morfismi e Teoria Spettrale Lineare:**
-   - Teorema di Nullità più Rango: $\dim(\operatorname{Ker} L) + \dim(\operatorname{Im} L) = \dim(V)$.
+   - Teorema di Nullità più Rango: $\dim(\mathrm{Ker} L) + \dim(\mathrm{Im} L) = \dim(V)$.
    - Matrici rappresentative e cambiamenti di coordinate per similitudine: $B = P^{-1} A P$.
    - Teoria degli autovalori e diagonalizzabilità algebrica: coincidenza tra molteplicità algebriche e geometriche ($m_a(\lambda) = m_g(\lambda)$).
 

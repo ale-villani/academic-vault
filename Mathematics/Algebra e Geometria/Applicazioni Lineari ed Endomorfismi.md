@@ -83,7 +83,7 @@ tags:
 ## 3.2. Mappe Lineari tra Spazi Euclidei e Matrice Associata
 
 > [!proposition] Rappresentazione delle Applicazioni Lineari su $\mathbb{R}^n$
-> Sia $A \in \operatorname{Mat}_\mathbb{R}(m, n)$ una matrice reale $m \times n$. Allora la funzione:
+> Sia $A \in \mathrm{Mat}_\mathbb{R}(m, n)$ una matrice reale $m \times n$. Allora la funzione:
 > $$
 > T_A: \mathbb{R}^n \to \mathbb{R}^m, \qquad T_A(\mathbf{v}) = A\mathbf{v}
 > $$
@@ -93,11 +93,11 @@ tags:
 > $$
 > L(\mathbf{v}) = A\mathbf{v}
 > $$
-> per un'**unica** matrice $A \in \operatorname{Mat}_\mathbb{R}(m, n)$.
+> per un'**unica** matrice $A \in \mathrm{Mat}_\mathbb{R}(m, n)$.
 
 > [!quote]- Dimostrazione
 > **Parte 1 (Ogni trasformazione matriciale è lineare):**
-> Sia $A \in \operatorname{Mat}_\mathbb{R}(m, n)$ una matrice con coefficienti $a_{i,j}$:
+> Sia $A \in \mathrm{Mat}_\mathbb{R}(m, n)$ una matrice con coefficienti $a_{i,j}$:
 > $$
 > A = \begin{pmatrix} a_{1,1} & \dots & a_{1,n} \\ \vdots & \ddots & \vdots \\ a_{m,1} & \dots & a_{m,n} \end{pmatrix}
 > $$
@@ -121,9 +121,9 @@ tags:
 > $$
 > \mathbf{e}_1 = \begin{pmatrix} 1 \\ 0 \\ \vdots \\ 0 \end{pmatrix}, \quad \mathbf{e}_2 = \begin{pmatrix} 0 \\ 1 \\ \vdots \\ 0 \end{pmatrix}, \quad \dots, \quad \mathbf{e}_n = \begin{pmatrix} 0 \\ \vdots \\ 0 \\ 1 \end{pmatrix}
 > $$
-> Si definisce la matrice $A \in \operatorname{Mat}_\mathbb{R}(m, n)$ affiancando come colonne le immagini dei vettori della base canonica:
+> Si definisce la matrice $A \in \mathrm{Mat}_\mathbb{R}(m, n)$ affiancando come colonne le immagini dei vettori della base canonica:
 > $$
-> A := \Big( L(\mathbf{e}_1) \;|\; L(\mathbf{e}_2) \;|\; \dots \;|\; L(\mathbf{e}_n) \Big) \in \operatorname{Mat}_\mathbb{R}(m, n)
+> A := \Big( L(\mathbf{e}_1) \;|\; L(\mathbf{e}_2) \;|\; \dots \;|\; L(\mathbf{e}_n) \Big) \in \mathrm{Mat}_\mathbb{R}(m, n)
 > $$
 > Sia ora un generico vettore $\mathbf{v} \in \mathbb{R}^n$:
 > $$
@@ -145,8 +145,8 @@ tags:
 
 > [!example] Esempi Geometrici nel Piano ($\mathbb{R}^2$)
 
-> [!example] Trasformazioni Lineari Geometriche in $\operatorname{Mat}_\mathbb{R}(2, 2)$
-> Si considerino matrici $A \in \operatorname{Mat}_\mathbb{R}(2, 2)$ e le corrispondenti mappe $T_A: \mathbb{R}^2 \to \mathbb{R}^2$:
+> [!example] Trasformazioni Lineari Geometriche in $\mathrm{Mat}_\mathbb{R}(2, 2)$
+> Si considerino matrici $A \in \mathrm{Mat}_\mathbb{R}(2, 2)$ e le corrispondenti mappe $T_A: \mathbb{R}^2 \to \mathbb{R}^2$:
 > 1. **Dilatazione / Omotetia:**
 >    $$
 >    A = \begin{pmatrix} c & 0 \\ 0 & c \end{pmatrix} \implies A\begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} cx \\ cy \end{pmatrix}
@@ -180,7 +180,7 @@ tags:
 > [!example] Trasposizione di Matrici
 > Si consideri l'operatore di trasposizione tra spazi di matrici:
 > $$
-> L: \operatorname{Mat}_\mathbb{R}(m, n) \to \operatorname{Mat}_\mathbb{R}(n, m), \qquad L(A) = A^T
+> L: \mathrm{Mat}_\mathbb{R}(m, n) \to \mathrm{Mat}_\mathbb{R}(n, m), \qquad L(A) = A^T
 > $$
 > Poiché per ogni coppia di matrici $A, B$ e ogni scalare $c \in \mathbb{R}$:
 > $$
@@ -189,13 +189,13 @@ tags:
 > la trasposizione è un'**applicazione lineare**.
 
 > [!example] Traccia di una Matrice Quadrata
-> Si consideri la funzione traccia sullo spazio delle matrici quadrate $\operatorname{Mat}_\mathbb{R}(n, n)$:
+> Si consideri la funzione traccia sullo spazio delle matrici quadrate $\mathrm{Mat}_\mathbb{R}(n, n)$:
 > $$
-> L: \operatorname{Mat}_\mathbb{R}(n, n) \to \mathbb{R}, \qquad L(A) = \operatorname{tr}(A) := \sum_{i=1}^n a_{ii}
+> L: \mathrm{Mat}_\mathbb{R}(n, n) \to \mathbb{R}, \qquad L(A) = \mathrm{tr}(A) := \sum_{i=1}^n a_{ii}
 > $$
 > La traccia è la somma degli elementi sulla diagonale principale della matrice. Valgono:
 > $$
-> \operatorname{tr}(A + B) = \operatorname{tr}(A) + \operatorname{tr}(B), \qquad \operatorname{tr}(cA) = c\operatorname{tr}(A)
+> \mathrm{tr}(A + B) = \mathrm{tr}(A) + \mathrm{tr}(B), \qquad \mathrm{tr}(cA) = c\mathrm{tr}(A)
 > $$
 > pertanto la traccia è un'applicazione lineare (un funzionale lineare).
 
@@ -216,7 +216,7 @@ tags:
 > Sia $L: V \to W$ un'applicazione lineare.
 > 1. Se $H \subseteq V$ è un sottospazio vettoriale di $V$, la sua **immagine** tramite $L$ è il sottoinsieme di $W$:
 >    $$
->    \operatorname{Im}(H) = L(H) := \{ L(\mathbf{v}) \in W : \mathbf{v} \in H \} \subseteq W
+>    \mathrm{Im}(H) = L(H) := \{ L(\mathbf{v}) \in W : \mathbf{v} \in H \} \subseteq W
 >    $$
 > 2. Se $J \subseteq W$ è un sottospazio vettoriale di $W$, la sua **controimmagine** (o *preimmagine*) tramite $L$ è il sottoinsieme di $V$:
 >    $$
@@ -265,55 +265,55 @@ tags:
 >
 ## 3.4. Nucleo e Immagine di un'Applicazione Lineare
 
-> [!definition] Immagine e Nucleo ($\operatorname{Im}$ e $\operatorname{Ker}$)
+> [!definition] Immagine e Nucleo ($\mathrm{Im}$ e $\mathrm{Ker}$)
 > Sia $L: V \to W$ un'applicazione lineare.
-> 1. L'**immagine** di $L$, denotata con $\operatorname{Im}(L)$, è l'immagine dell'intero spazio di partenza $V$:
+> 1. L'**immagine** di $L$, denotata con $\mathrm{Im}(L)$, è l'immagine dell'intero spazio di partenza $V$:
 >    $$
->    \operatorname{Im}(L) := L(V) = \{ L(\mathbf{v}) \in W : \mathbf{v} \in V \} \le W
+>    \mathrm{Im}(L) := L(V) = \{ L(\mathbf{v}) \in W : \mathbf{v} \in V \} \le W
 >    $$
-> 2. Il **nucleo** (o *kernel*) di $L$, denotato con $\operatorname{Ker}(L)$, è la controimmagine del sottospazio banale $\{\mathbf{0}_W\}$:
+> 2. Il **nucleo** (o *kernel*) di $L$, denotato con $\mathrm{Ker}(L)$, è la controimmagine del sottospazio banale $\{\mathbf{0}_W\}$:
 >    $$
->    \operatorname{Ker}(L) := L^{-1}(\{\mathbf{0}_W\}) = \{ \mathbf{v} \in V : L(\mathbf{v}) = \mathbf{0}_W \} \le V
+>    \mathrm{Ker}(L) := L^{-1}(\{\mathbf{0}_W\}) = \{ \mathbf{v} \in V : L(\mathbf{v}) = \mathbf{0}_W \} \le V
 >    $$
 
 > [!note] Calcolo dell'Immagine di un Sottospazio Generato
 > Sia $H \subseteq V$ un sottospazio vettoriale definito mediante un insieme di generatori:
 > $$
-> H = \operatorname{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_n\} = \left\{ \sum_{i=1}^n c_i \mathbf{v}_i : c_i \in \mathbb{R} \right\} \subseteq V
+> H = \mathrm{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_n\} = \left\{ \sum_{i=1}^n c_i \mathbf{v}_i : c_i \in \mathbb{R} \right\} \subseteq V
 > $$
 > Applicando l'applicazione lineare $L$ a ciascun vettore di $H$:
 > $$
 > \begin{aligned}
 > L(H) &= \left\{ L\left( \sum_{i=1}^n c_i \mathbf{v}_i \right) : c_i \in \mathbb{R} \right\} \\
-> &= \left\{ \sum_{i=1}^n c_i L(\mathbf{v}_i) : c_i \in \mathbb{R} \right\} = \operatorname{Span}\big( \{L(\mathbf{v}_1), \dots, L(\mathbf{v}_n)\} \big)
+> &= \left\{ \sum_{i=1}^n c_i L(\mathbf{v}_i) : c_i \in \mathbb{R} \right\} = \mathrm{Span}\big( \{L(\mathbf{v}_1), \dots, L(\mathbf{v}_n)\} \big)
 > \end{aligned}
 > $$
-> **Regola fondamentale:** Se $\{\mathbf{v}_1, \dots, \mathbf{v}_n\}$ sono generatori di $H$, le loro immagini $\{L(\mathbf{v}_1), \dots, L(\mathbf{v}_n)\}$ sono generatori di $\operatorname{Im}(H) = L(H)$:
+> **Regola fondamentale:** Se $\{\mathbf{v}_1, \dots, \mathbf{v}_n\}$ sono generatori di $H$, le loro immagini $\{L(\mathbf{v}_1), \dots, L(\mathbf{v}_n)\}$ sono generatori di $\mathrm{Im}(H) = L(H)$:
 > $$
-> H = \operatorname{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_n\} \implies L(H) = \operatorname{Span}\{L(\mathbf{v}_1), \dots, L(\mathbf{v}_n)\}
+> H = \mathrm{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_n\} \implies L(H) = \mathrm{Span}\{L(\mathbf{v}_1), \dots, L(\mathbf{v}_n)\}
 > $$
 
 > [!example] Nucleo e Immagine dell'Applicazione Matriciale $T_A$
-> Sia $A \in \operatorname{Mat}_\mathbb{R}(m, n)$ e si consideri la mappa lineare $T_A: \mathbb{R}^n \to \mathbb{R}^m$, $T_A(\mathbf{v}) = A\mathbf{v}$.
+> Sia $A \in \mathrm{Mat}_\mathbb{R}(m, n)$ e si consideri la mappa lineare $T_A: \mathbb{R}^n \to \mathbb{R}^m$, $T_A(\mathbf{v}) = A\mathbf{v}$.
 > - **Nucleo:**
 >   $$
->   \operatorname{Ker}(T_A) = \{ \mathbf{v} \in \mathbb{R}^n : T_A(\mathbf{v}) = \mathbf{0} \} = \{ \mathbf{v} \in \mathbb{R}^n : A\mathbf{v} = \mathbf{0} \} = \operatorname{Ker}(A)
+>   \mathrm{Ker}(T_A) = \{ \mathbf{v} \in \mathbb{R}^n : T_A(\mathbf{v}) = \mathbf{0} \} = \{ \mathbf{v} \in \mathbb{R}^n : A\mathbf{v} = \mathbf{0} \} = \mathrm{Ker}(A)
 >   $$
 >   Il nucleo di $T_A$ coincide esattamente con il nucleo della matrice $A$ (lo spazio delle soluzioni del sistema lineare omogeneo $A\mathbf{x} = \mathbf{0}$).
 > - **Immagine:**
->   Poiché $\mathbb{R}^n = \operatorname{Span}\{\mathbf{e}_1, \dots, \mathbf{e}_n\}$:
+>   Poiché $\mathbb{R}^n = \mathrm{Span}\{\mathbf{e}_1, \dots, \mathbf{e}_n\}$:
 >   $$
 >   \begin{aligned}
->   \operatorname{Im}(T_A) &= T_A(\mathbb{R}^n) = T_A\big(\operatorname{Span}\{\mathbf{e}_1, \dots, \mathbf{e}_n\}\big) \\
->   &= \operatorname{Span}\{T_A(\mathbf{e}_1), \dots, T_A(\mathbf{e}_n)\} = \operatorname{Span}\{A\mathbf{e}_1, \dots, A\mathbf{e}_n\} \\
->   &= \operatorname{Span}\left\{ A\begin{pmatrix} 1 \\ 0 \\ \vdots \\ 0 \end{pmatrix}, \dots, A\begin{pmatrix} 0 \\ \vdots \\ 0 \\ 1 \end{pmatrix} \right\} = \operatorname{col}(A)
+>   \mathrm{Im}(T_A) &= T_A(\mathbb{R}^n) = T_A\big(\mathrm{Span}\{\mathbf{e}_1, \dots, \mathbf{e}_n\}\big) \\
+>   &= \mathrm{Span}\{T_A(\mathbf{e}_1), \dots, T_A(\mathbf{e}_n)\} = \mathrm{Span}\{A\mathbf{e}_1, \dots, A\mathbf{e}_n\} \\
+>   &= \mathrm{Span}\left\{ A\begin{pmatrix} 1 \\ 0 \\ \vdots \\ 0 \end{pmatrix}, \dots, A\begin{pmatrix} 0 \\ \vdots \\ 0 \\ 1 \end{pmatrix} \right\} = \mathrm{col}(A)
 >   \end{aligned}
 >   $$
->   L'immagine di $T_A$ coincide con lo spazio generato dalle colonne di $A$ ($\operatorname{col} A$).
+>   L'immagine di $T_A$ coincide con lo spazio generato dalle colonne di $A$ ($\mathrm{col} A$).
 >
 > In sintesi:
 > $$
-> \operatorname{Ker}(T_A) = \operatorname{Ker}(A), \qquad \operatorname{Im}(T_A) = \operatorname{col}(A)
+> \mathrm{Ker}(T_A) = \mathrm{Ker}(A), \qquad \mathrm{Im}(T_A) = \mathrm{col}(A)
 > $$
 >
 ## 3.5. Applicazioni Lineari Iniettive, Suriettive e Isomorfismi
@@ -327,7 +327,7 @@ tags:
 > $$
 
 > [!example] Esempi di Controllo dell'Iniettività
-> 1. Si consideri la matrice $A = \begin{pmatrix} 1 & 2 \\ 2 & 4 \end{pmatrix} \in \operatorname{Mat}_\mathbb{R}(2, 2)$ e la mappa $T_A: \mathbb{R}^2 \to \mathbb{R}^2$.
+> 1. Si consideri la matrice $A = \begin{pmatrix} 1 & 2 \\ 2 & 4 \end{pmatrix} \in \mathrm{Mat}_\mathbb{R}(2, 2)$ e la mappa $T_A: \mathbb{R}^2 \to \mathbb{R}^2$.
 >    Prendendo i vettori distinti:
 >    $$
 >    \mathbf{v}_1 = \begin{pmatrix} 1 \\ 1 \end{pmatrix}, \qquad \mathbf{v}_2 = \begin{pmatrix} -1 \\ 2 \end{pmatrix}
@@ -347,12 +347,12 @@ tags:
 > [!proposition] Caratterizzazione dell'Iniettività tramite il Nucleo
 > Sia $L: V \to W$ un'applicazione lineare. Allora:
 > $$
-> L \text{ è iniettiva} \iff \operatorname{Ker}(L) = \{\mathbf{0}_V\}
+> L \text{ è iniettiva} \iff \mathrm{Ker}(L) = \{\mathbf{0}_V\}
 > $$
 
 > [!quote]- Dimostrazione
 > **Implicazione diretta ($\implies$):**
-> Sia $L$ iniettiva e sia $\mathbf{v} \in \operatorname{Ker}(L)$.
+> Sia $L$ iniettiva e sia $\mathbf{v} \in \mathrm{Ker}(L)$.
 > Per definizione di nucleo, $L(\mathbf{v}) = \mathbf{0}_W$.
 > Poiché per linearità $L(\mathbf{0}_V) = \mathbf{0}_W$, si ha:
 > $$
@@ -362,10 +362,10 @@ tags:
 > $$
 > \mathbf{v} = \mathbf{0}_V
 > $$
-> Pertanto $\operatorname{Ker}(L) = \{\mathbf{0}_V\}$.
+> Pertanto $\mathrm{Ker}(L) = \{\mathbf{0}_V\}$.
 >
 > **Implicazione inversa ($\impliedby$):**
-> Supponiamo che $\operatorname{Ker}(L) = \{\mathbf{0}_V\}$.
+> Supponiamo che $\mathrm{Ker}(L) = \{\mathbf{0}_V\}$.
 > Siano $\mathbf{v}_1, \mathbf{v}_2 \in V$ tali che $L(\mathbf{v}_1) = L(\mathbf{v}_2)$.
 > Sottraendo i due membri e sfruttando la linearità:
 > $$
@@ -373,25 +373,25 @@ tags:
 > $$
 > Ne segue che la differenza appartiene al nucleo:
 > $$
-> \mathbf{v}_1 - \mathbf{v}_2 \in \operatorname{Ker}(L) = \{\mathbf{0}_V\} \implies \mathbf{v}_1 - \mathbf{v}_2 = \mathbf{0}_V \implies \mathbf{v}_1 = \mathbf{v}_2
+> \mathbf{v}_1 - \mathbf{v}_2 \in \mathrm{Ker}(L) = \{\mathbf{0}_V\} \implies \mathbf{v}_1 - \mathbf{v}_2 = \mathbf{0}_V \implies \mathbf{v}_1 = \mathbf{v}_2
 > $$
 > Dunque $L$ è iniettiva.
 > $$
-> L \text{ è iniettiva} \iff \operatorname{Ker}(L) = \{\mathbf{0}_V\} \qquad \blacksquare
+> L \text{ è iniettiva} \iff \mathrm{Ker}(L) = \{\mathbf{0}_V\} \qquad \blacksquare
 > $$
 
 > [!corollary] Iniettività delle Mappe Matriciali $T_A$ e Rango
-> Sia $A \in \operatorname{Mat}_\mathbb{R}(m, n)$ e si consideri $T_A: \mathbb{R}^n \to \mathbb{R}^m$. Allora:
+> Sia $A \in \mathrm{Mat}_\mathbb{R}(m, n)$ e si consideri $T_A: \mathbb{R}^n \to \mathbb{R}^m$. Allora:
 > $$
-> T_A(\mathbf{v}) \text{ è iniettiva} \iff \operatorname{Ker}(T_A) = \{\mathbf{0}\} \iff \operatorname{Ker}(A) = \{\mathbf{0}\} \iff \dim(\operatorname{Ker} A) = 0
+> T_A(\mathbf{v}) \text{ è iniettiva} \iff \mathrm{Ker}(T_A) = \{\mathbf{0}\} \iff \mathrm{Ker}(A) = \{\mathbf{0}\} \iff \dim(\mathrm{Ker} A) = 0
 > $$
 > Dal **Teorema di Nullità + Rango**:
 > $$
-> n = \operatorname{rk}(A) + \underbrace{\dim(\operatorname{Ker} A)}_{= 0} \implies \operatorname{rk}(A) = n
+> n = \mathrm{rk}(A) + \underbrace{\dim(\mathrm{Ker} A)}_{= 0} \implies \mathrm{rk}(A) = n
 > $$
 > Di conseguenza:
 > $$
-> \operatorname{rk}(A) < n \iff T_A \text{ non è iniettiva}
+> \mathrm{rk}(A) < n \iff T_A \text{ non è iniettiva}
 > $$
 
 > [!example] Rango e Mancata Iniettività
@@ -400,7 +400,7 @@ tags:
 > $$
 > R_2 - 2R_1 = (2, 4) - 2(1, 2) = (0, 0)
 > $$
-> Si ha $\operatorname{rk}(A) = 1 < n = 2$, dunque $T_A$ **non è iniettiva**.
+> Si ha $\mathrm{rk}(A) = 1 < n = 2$, dunque $T_A$ **non è iniettiva**.
 >
 > Presi due vettori linearmente indipendenti $\mathbf{v}_1, \mathbf{v}_2 \in \mathbb{R}^2$, le rispettive immagini $T(\mathbf{v}_1)$ e $T(\mathbf{v}_2)$ non sono linearmente indipendenti.
 >
@@ -422,9 +422,9 @@ tags:
 > $$
 > L(c_1 \mathbf{v}_1 + \dots + c_n \mathbf{v}_n) = \mathbf{0}_W
 > $$
-> Poiché $L$ è iniettiva, $\operatorname{Ker}(L) = \{\mathbf{0}_V\}$, da cui:
+> Poiché $L$ è iniettiva, $\mathrm{Ker}(L) = \{\mathbf{0}_V\}$, da cui:
 > $$
-> c_1 \mathbf{v}_1 + \dots + c_n \mathbf{v}_n \in \operatorname{Ker}(L) = \{\mathbf{0}_V\} \implies c_1 \mathbf{v}_1 + \dots + c_n \mathbf{v}_n = \mathbf{0}_V
+> c_1 \mathbf{v}_1 + \dots + c_n \mathbf{v}_n \in \mathrm{Ker}(L) = \{\mathbf{0}_V\} \implies c_1 \mathbf{v}_1 + \dots + c_n \mathbf{v}_n = \mathbf{0}_V
 > $$
 > Di conseguenza:
 > - Se $\{\mathbf{v}_1, \dots, \mathbf{v}_n\}$ sono L.I., l'unica combinazione lineare nulla impone $c_1 = \dots = c_n = 0$, rendendo $\{L(\mathbf{v}_1), \dots, L(\mathbf{v}_n)\}$ L.I.
@@ -450,24 +450,24 @@ tags:
 > [!definition] Applicazione Lineare Suriettiva
 > Sia $L: V \to W$ un'applicazione lineare. $L$ è detta **suriettiva** se la sua immagine coincide con l'intero codominio $W$:
 > $$
-> L \text{ è suriettiva} \iff \operatorname{Im}(L) = W \iff \forall \mathbf{w} \in W, \; \exists \mathbf{v} \in V : L(\mathbf{v}) = \mathbf{w}
+> L \text{ è suriettiva} \iff \mathrm{Im}(L) = W \iff \forall \mathbf{w} \in W, \; \exists \mathbf{v} \in V : L(\mathbf{v}) = \mathbf{w}
 > $$
 
 > [!corollary] Criterio di Suriettività per Mappe Matriciali
-> Sia $A \in \operatorname{Mat}_\mathbb{R}(m, n)$ e si consideri la corrispondente applicazione lineare $T_A: \mathbb{R}^n \to \mathbb{R}^m$.
+> Sia $A \in \mathrm{Mat}_\mathbb{R}(m, n)$ e si consideri la corrispondente applicazione lineare $T_A: \mathbb{R}^n \to \mathbb{R}^m$.
 > $T_A$ è suriettiva se e solo se la dimensione dello spazio delle colonne di $A$ coincide con la dimensione del codominio:
 > $$
-> T_A \text{ è suriettiva} \iff \dim(\operatorname{col} A) = \dim(\mathbb{R}^m) = m \iff \operatorname{rk}(A) = m
+> T_A \text{ è suriettiva} \iff \dim(\mathrm{col} A) = \dim(\mathbb{R}^m) = m \iff \mathrm{rk}(A) = m
 > $$
 
 > [!example] Condizione di Non-Suriettività per $T_A$
-> Sia $A \in \operatorname{Mat}_\mathbb{R}(m, n)$ e sia $T_A: \mathbb{R}^n \to \mathbb{R}^m$:
+> Sia $A \in \mathrm{Mat}_\mathbb{R}(m, n)$ e sia $T_A: \mathbb{R}^n \to \mathbb{R}^m$:
 > $$
-> T_A \text{ è suriettiva} \iff \operatorname{Im}(T_A) = \mathbb{R}^m \iff \operatorname{col}(A) = \mathbb{R}^m \iff \dim(\operatorname{col} A) = m \iff \operatorname{rk}(A) = m
+> T_A \text{ è suriettiva} \iff \mathrm{Im}(T_A) = \mathbb{R}^m \iff \mathrm{col}(A) = \mathbb{R}^m \iff \dim(\mathrm{col} A) = m \iff \mathrm{rk}(A) = m
 > $$
 > Pertanto:
 > $$
-> \operatorname{rk}(A) < m \iff T_A \text{ non è suriettiva}
+> \mathrm{rk}(A) < m \iff T_A \text{ non è suriettiva}
 > $$
 >
 ### Isomorfismi
@@ -481,14 +481,14 @@ tags:
 > Due spazi vettoriali per cui esiste un isomorfismo si dicono **isomorfi**, e si indica con $V \cong W$.
 
 > [!example] Isomorfismi di Trasformazioni Matriciali
-> Sia $A \in \operatorname{Mat}_\mathbb{R}(m, n)$.
+> Sia $A \in \mathrm{Mat}_\mathbb{R}(m, n)$.
 > L'applicazione lineare associata $T_A: \mathbb{R}^n \to \mathbb{R}^m$ è un **isomorfismo** se e solo se:
 > $$
-> \operatorname{rk}(A) = m = n
+> \mathrm{rk}(A) = m = n
 > $$
 > ovvero quando:
 > - La matrice $A$ è **quadrata** ($m = n$).
-> - La matrice $A$ ha **rango massimo** ($\operatorname{rk}(A) = n$, cioè $\det(A) \neq 0$, ovvero $A$ è invertibile).
+> - La matrice $A$ ha **rango massimo** ($\mathrm{rk}(A) = n$, cioè $\det(A) \neq 0$, ovvero $A$ è invertibile).
 
 > [!proposition] Proprietà Fondamentali degli Isomorfismi
 > Sia $L: V \to W$ un isomorfismo tra spazi vettoriali. Allora:
@@ -514,11 +514,11 @@ tags:
 > [!example] Isomorfismo tra Matrici Riga e Matrici Colonna
 > Si consideri l'applicazione lineare di trasposizione:
 > $$
-> L: \operatorname{Mat}_\mathbb{R}(m, 1) \to \operatorname{Mat}_\mathbb{R}(1, m), \qquad L(\mathbf{v}) = \mathbf{v}^T
+> L: \mathrm{Mat}_\mathbb{R}(m, 1) \to \mathrm{Mat}_\mathbb{R}(1, m), \qquad L(\mathbf{v}) = \mathbf{v}^T
 > $$
 > $L$ è lineare ed è biettiva, dunque è un **isomorfismo**.
 >
-> **Conseguenza:** Gli spazi vettoriali $\operatorname{Mat}_\mathbb{R}(m, 1)$ e $\operatorname{Mat}_\mathbb{R}(1, m)$ sono isomorfi ("praticamente lo stesso spazio vettoriale"), il che formalizza l'interscambiabilità algebrica tra vettori riga e vettori colonna a meno dell'operazione di trasposizione.
+> **Conseguenza:** Gli spazi vettoriali $\mathrm{Mat}_\mathbb{R}(m, 1)$ e $\mathrm{Mat}_\mathbb{R}(1, m)$ sono isomorfi ("praticamente lo stesso spazio vettoriale"), il che formalizza l'interscambiabilità algebrica tra vettori riga e vettori colonna a meno dell'operazione di trasposizione.
 >
 ## 3.6. Composizione di Applicazioni Lineari
 
@@ -550,7 +550,7 @@ tags:
 > $$
 
 > [!example] Composizione di Mappe Matriciali e Prodotto tra Matrici
-> Siano $A \in \operatorname{Mat}_\mathbb{R}(m, n)$ e $B \in \operatorname{Mat}_\mathbb{R}(p, m)$, a cui corrispondono le trasformazioni lineari:
+> Siano $A \in \mathrm{Mat}_\mathbb{R}(m, n)$ e $B \in \mathrm{Mat}_\mathbb{R}(p, m)$, a cui corrispondono le trasformazioni lineari:
 > $$
 > T_A: \mathbb{R}^n \to \mathbb{R}^m, \qquad T_B: \mathbb{R}^m \to \mathbb{R}^p
 > $$
@@ -558,20 +558,20 @@ tags:
 > $$
 > (T_B \circ T_A)(\mathbf{v}) = T_B(T_A(\mathbf{v})) = T_B(A\mathbf{v}) = B(A\mathbf{v}) = (BA)\mathbf{v}
 > $$
-> dove $BA \in \operatorname{Mat}_\mathbb{R}(p, n)$ è la matrice prodotto righe per colonne.
+> dove $BA \in \mathrm{Mat}_\mathbb{R}(p, n)$ è la matrice prodotto righe per colonne.
 > Dunque la composizione tra applicazioni lineari corrisponde algebricamente alla moltiplicazione tra le matrici associate:
 > $$
 > T_B \circ T_A = T_{BA}
 > $$
 
 > [!definition] Applicazione Identità
-> Sia $V$ uno spazio vettoriale. L'**applicazione identità** su $V$, denotata con $\operatorname{id}_V$, è l'applicazione lineare:
+> Sia $V$ uno spazio vettoriale. L'**applicazione identità** su $V$, denotata con $\mathrm{id}_V$, è l'applicazione lineare:
 > $$
-> \operatorname{id}_V: V \to V
+> \mathrm{id}_V: V \to V
 > $$
 > definita ponendo:
 > $$
-> \operatorname{id}_V(\mathbf{v}) = \mathbf{v}, \qquad \forall \mathbf{v} \in V
+> \mathrm{id}_V(\mathbf{v}) = \mathbf{v}, \qquad \forall \mathbf{v} \in V
 > $$
 >
 ## 3.7. Isomorfismi e Invertibilità delle Applicazioni Lineari
@@ -579,22 +579,22 @@ tags:
 ### Proprietà dell'Applicazione Identità e Invertibilità
 
 > [!note] Identità come Isomorfismo e Matrice Identità
-> L'applicazione identità è banalmente biiettiva e lineare, dunque è un isomorfismo. Nel caso dello spazio euclideo standard $\mathbb{R}^n$, l'applicazione lineare indotta dalla matrice identità $I_n \in \operatorname{Mat}_{\mathbb{R}}(n, n)$ coincide esattamente con l'identità di $\mathbb{R}^n$:
+> L'applicazione identità è banalmente biiettiva e lineare, dunque è un isomorfismo. Nel caso dello spazio euclideo standard $\mathbb{R}^n$, l'applicazione lineare indotta dalla matrice identità $I_n \in \mathrm{Mat}_{\mathbb{R}}(n, n)$ coincide esattamente con l'identità di $\mathbb{R}^n$:
 > $$
-> T_{I_n} = \operatorname{id}_{\mathbb{R}^n}
+> T_{I_n} = \mathrm{id}_{\mathbb{R}^n}
 > $$
 
 > [!definition] Applicazione Lineare Invertibile
 > Sia $L: V \to W$ un'applicazione lineare tra due spazi vettoriali. $L$ si dice **invertibile** se esiste un'applicazione (lineare) $L^{-1}: W \to V$ tale che:
 > $$
-> L \circ L^{-1} = \operatorname{id}_W \qquad \text{e} \qquad L^{-1} \circ L = \operatorname{id}_V
+> L \circ L^{-1} = \mathrm{id}_W \qquad \text{e} \qquad L^{-1} \circ L = \mathrm{id}_V
 > $$
 > L'applicazione $L^{-1}$ è univocamente determinata ed è detta **inversa** di $L$.
 
 > [!note] Invertibilità della Matrice e dell'Applicazione Associata
-> Data una matrice quadrata $A \in \operatorname{Mat}_{\mathbb{R}}(n, n)$, essa è invertibile se e solo se l'applicazione lineare $T_A: \mathbb{R}^n \to \mathbb{R}^n$ ad essa associata è invertibile. In tal caso, l'inversa dell'applicazione lineare associata coincide con l'applicazione indotta dalla matrice inversa:
+> Data una matrice quadrata $A \in \mathrm{Mat}_{\mathbb{R}}(n, n)$, essa è invertibile se e solo se l'applicazione lineare $T_A: \mathbb{R}^n \to \mathbb{R}^n$ ad essa associata è invertibile. In tal caso, l'inversa dell'applicazione lineare associata coincide con l'applicazione indotta dalla matrice inversa:
 > $$
-> A \in \operatorname{Mat}_{\mathbb{R}}(n, n) \text{ è invertibile} \iff T_A \text{ è invertibile}, \qquad T_A^{-1} = T_{A^{-1}}
+> A \in \mathrm{Mat}_{\mathbb{R}}(n, n) \text{ è invertibile} \iff T_A \text{ è invertibile}, \qquad T_A^{-1} = T_{A^{-1}}
 > $$
 
 > [!note] Equivalenza tra Isomorfismo e Invertibilità
@@ -619,7 +619,7 @@ tags:
 > **1. Esistenza dei coefficienti $c_1, \dots, c_n$:**
 > Poiché $\mathcal{B} = \{\mathbf{b}_1, \dots, \mathbf{b}_n\}$ è per ipotesi una base di $V$, i vettori $\mathbf{b}_1, \dots, \mathbf{b}_n$ costituiscono in particolare un insieme di generatori per lo spazio vettoriale $V$. Di conseguenza:
 > $$
-> V = \operatorname{Span}\{\mathbf{b}_1, \dots, \mathbf{b}_n\} \implies \forall \mathbf{v} \in V, \;\; \mathbf{v} \in \operatorname{Span}\{\mathbf{b}_1, \dots, \mathbf{b}_n\}
+> V = \mathrm{Span}\{\mathbf{b}_1, \dots, \mathbf{b}_n\} \implies \forall \mathbf{v} \in V, \;\; \mathbf{v} \in \mathrm{Span}\{\mathbf{b}_1, \dots, \mathbf{b}_n\}
 > $$
 > Dalla definizione di sottospazio generato, esistono degli scalari $c_1, \dots, c_n \in \mathbb{R}$ tali che $\mathbf{v} = \sum_{i=1}^n c_i \mathbf{b}_i$.
 > 
@@ -708,8 +708,8 @@ tags:
 > [!example] Intersezione di Sottospazi tramite l'Isomorfismo delle Coordinate
 > Sia $V = \mathbb{R}[t]_{\le 3}$ lo spazio dei polinomi di grado al più tre e siano dati i sottospazi:
 > $$
-> H = \operatorname{Span}\{t + t^2, \; t - 1\}
-> K = \operatorname{Span}\{3t^3 - t + 1, \; t^2 - t + 1\}
+> H = \mathrm{Span}\{t + t^2, \; t - 1\}
+> K = \mathrm{Span}\{3t^3 - t + 1, \; t^2 - t + 1\}
 > $$
 > Si determini il sottospazio intersezione $H \cap K$.
 > Si fissa la base canonica ordinata $\mathcal{B} = \{t^3, t^2, t, 1\}$ di $V$. Le coordinate dei generatori rispetto a $\mathcal{B}$ sono:
@@ -719,7 +719,7 @@ tags:
 > $$
 > Essendo $Q_{\mathcal{B}}$ un isomorfismo, esso commuta con l'intersezione:
 > $$
-> Q_{\mathcal{B}}(H \cap K) = Q_{\mathcal{B}}(H) \cap Q_{\mathcal{B}}(K) = \operatorname{Span}\left\{ \begin{pmatrix} 0 \\ 1 \\ 1 \\ 0 \end{pmatrix}, \begin{pmatrix} 0 \\ 0 \\ 1 \\ -1 \end{pmatrix} \right\} \cap \operatorname{Span}\left\{ \begin{pmatrix} 3 \\ 0 \\ -1 \\ 1 \end{pmatrix}, \begin{pmatrix} 0 \\ 1 \\ -1 \\ 1 \end{pmatrix} \right\}
+> Q_{\mathcal{B}}(H \cap K) = Q_{\mathcal{B}}(H) \cap Q_{\mathcal{B}}(K) = \mathrm{Span}\left\{ \begin{pmatrix} 0 \\ 1 \\ 1 \\ 0 \end{pmatrix}, \begin{pmatrix} 0 \\ 0 \\ 1 \\ -1 \end{pmatrix} \right\} \cap \mathrm{Span}\left\{ \begin{pmatrix} 3 \\ 0 \\ -1 \\ 1 \end{pmatrix}, \begin{pmatrix} 0 \\ 1 \\ -1 \\ 1 \end{pmatrix} \right\}
 > $$
 > Ricaviamo le equazioni cartesiane per $Q_{\mathcal{B}}(H)$ e $Q_{\mathcal{B}}(K)$ in $\mathbb{R}^4$:
 > - **Per $Q_{\mathcal{B}}(H)$:**
@@ -804,7 +804,7 @@ tags:
 > $$
 > Ne segue che:
 > $$
-> Q_{\mathcal{B}} \circ P_{\mathcal{B}} = \operatorname{id}_{\mathbb{R}^n} \qquad \text{e} \qquad P_{\mathcal{B}} \circ Q_{\mathcal{B}} = \operatorname{id}_V
+> Q_{\mathcal{B}} \circ P_{\mathcal{B}} = \mathrm{id}_{\mathbb{R}^n} \qquad \text{e} \qquad P_{\mathcal{B}} \circ Q_{\mathcal{B}} = \mathrm{id}_V
 > $$
 >
 ## 3.9. Matrice Rappresentativa di un'Applicazione Lineare Generica
@@ -814,9 +814,9 @@ tags:
 > [!definition] Matrice Rappresentativa $M_L^{\mathcal{B},\mathcal{C}}$
 > Sia $L: V \to W$ un'applicazione lineare tra due spazi vettoriali reali.
 > Siano $\mathcal{B} = \{\mathbf{b}_1, \dots, \mathbf{b}_n\}$ una base di $V$ ($\dim V = n$) e $\mathcal{C} = \{\mathbf{c}_1, \dots, \mathbf{c}_m\}$ una base di $W$ ($\dim W = m$).
-> La **matrice rappresentativa** di $L$ rispetto alle basi $\mathcal{B}$ e $\mathcal{C}$ è la matrice $M_L^{\mathcal{B},\mathcal{C}} \in \operatorname{Mat}_{\mathbb{R}}(m, n)$ avente come colonne i vettori delle coordinate delle immagini dei vettori della base del dominio $\mathcal{B}$ rispetto alla base del codominio $\mathcal{C}$:
+> La **matrice rappresentativa** di $L$ rispetto alle basi $\mathcal{B}$ e $\mathcal{C}$ è la matrice $M_L^{\mathcal{B},\mathcal{C}} \in \mathrm{Mat}_{\mathbb{R}}(m, n)$ avente come colonne i vettori delle coordinate delle immagini dei vettori della base del dominio $\mathcal{B}$ rispetto alla base del codominio $\mathcal{C}$:
 > $$
-> M_L^{\mathcal{B},\mathcal{C}} = \begin{pmatrix} [L(\mathbf{b}_1)]_{\mathcal{C}} & [L(\mathbf{b}_2)]_{\mathcal{C}} & \dots & [L(\mathbf{b}_n)]_{\mathcal{C}} \end{pmatrix} \in \operatorname{Mat}_{\mathbb{R}}(m, n)
+> M_L^{\mathcal{B},\mathcal{C}} = \begin{pmatrix} [L(\mathbf{b}_1)]_{\mathcal{C}} & [L(\mathbf{b}_2)]_{\mathcal{C}} & \dots & [L(\mathbf{b}_n)]_{\mathcal{C}} \end{pmatrix} \in \mathrm{Mat}_{\mathbb{R}}(m, n)
 > $$
 
 > [!example] Calcolo della Matrice Rappresentativa tra Polinomi e $\mathbb{R}^2$
@@ -842,11 +842,11 @@ tags:
 >    $$
 > Accostando le colonne così ottenute, la matrice rappresentativa cercata è:
 > $$
-> M_L^{\mathcal{B},\mathcal{C}} = \begin{pmatrix} 3 & -2 & -1 \\ 0 & 2 & 2 \end{pmatrix} \in \operatorname{Mat}_{\mathbb{R}}(2, 3)
+> M_L^{\mathcal{B},\mathcal{C}} = \begin{pmatrix} 3 & -2 & -1 \\ 0 & 2 & 2 \end{pmatrix} \in \mathrm{Mat}_{\mathbb{R}}(2, 3)
 > $$
 
 > [!note] Caso Canonico delle Trasformazioni Matriciali
-> Sia $A \in \operatorname{Mat}_{\mathbb{R}}(m, n)$ e sia $T_A: \mathbb{R}^n \to \mathbb{R}^m$ l'applicazione lineare indotta da $A$ ($T_A(\mathbf{x}) = A\mathbf{x}$).
+> Sia $A \in \mathrm{Mat}_{\mathbb{R}}(m, n)$ e sia $T_A: \mathbb{R}^n \to \mathbb{R}^m$ l'applicazione lineare indotta da $A$ ($T_A(\mathbf{x}) = A\mathbf{x}$).
 > La matrice rappresentativa di $T_A$ rispetto alle basi canoniche $\mathcal{E}^n$ di $\mathbb{R}^n$ ed $\mathcal{E}^m$ di $\mathbb{R}^m$ coincide con la matrice $A$ stessa:
 > $$
 > M_{T_A}^{\mathcal{E}^n, \mathcal{E}^m} = A
@@ -865,7 +865,7 @@ tags:
 ### Teorema di Rappresentazione delle Applicazioni Lineari
 
 > [!theorem] Teorema di Rappresentazione
-> Sia $L: V \to W$ un'applicazione lineare, sia $\mathcal{B} = \{\mathbf{b}_1, \dots, \mathbf{b}_n\}$ una base di $V$, sia $\mathcal{C} = \{\mathbf{c}_1, \dots, \mathbf{c}_m\}$ una base di $W$ e sia $A = M_L^{\mathcal{B},\mathcal{C}} \in \operatorname{Mat}_{\mathbb{R}}(m, n)$ la matrice rappresentativa di $L$ rispetto a tali basi.
+> Sia $L: V \to W$ un'applicazione lineare, sia $\mathcal{B} = \{\mathbf{b}_1, \dots, \mathbf{b}_n\}$ una base di $V$, sia $\mathcal{C} = \{\mathbf{c}_1, \dots, \mathbf{c}_m\}$ una base di $W$ e sia $A = M_L^{\mathcal{B},\mathcal{C}} \in \mathrm{Mat}_{\mathbb{R}}(m, n)$ la matrice rappresentativa di $L$ rispetto a tali basi.
 > Allora vale la relazione:
 > $$
 > Q_{\mathcal{C}} \circ L = T_A \circ Q_{\mathcal{B}}
@@ -937,41 +937,41 @@ tags:
 > Sotto le notazioni precedenti ($A = M_L^{\mathcal{B},\mathcal{C}}$), valgono le seguenti proprietà:
 > 1. Il nucleo di $L$ è la parametrizzazione del nucleo della matrice $A$:
 >    $$
->    \operatorname{Ker}(L) = P_{\mathcal{B}}(\operatorname{Ker} A)
+>    \mathrm{Ker}(L) = P_{\mathcal{B}}(\mathrm{Ker} A)
 >    $$
 > 2. L'immagine di $L$ è la parametrizzazione dello spazio delle colonne della matrice $A$:
 >    $$
->    \operatorname{Im}(L) = P_{\mathcal{C}}(\operatorname{col} A)
+>    \mathrm{Im}(L) = P_{\mathcal{C}}(\mathrm{col} A)
 >    $$
 > 3. La dimensione del nucleo di $L$ è pari alla nullità di $A$:
 >    $$
->    \dim(\operatorname{Ker} L) = \dim(\operatorname{Ker} A) = n - \operatorname{rk}(A)
+>    \dim(\mathrm{Ker} L) = \dim(\mathrm{Ker} A) = n - \mathrm{rk}(A)
 >    $$
 > 4. La dimensione dell'immagine di $L$ è pari al rango di $A$:
 >    $$
->    \dim(\operatorname{Im} L) = \dim(\operatorname{col} A) = \operatorname{rk}(A)
+>    \dim(\mathrm{Im} L) = \dim(\mathrm{col} A) = \mathrm{rk}(A)
 >    $$
 > Dalla somma delle due dimensioni discende il **Teorema di nullità + rango** per le applicazioni lineari:
 > $$
-> \dim(\operatorname{Ker} L) + \dim(\operatorname{Im} L) = n = \dim V
+> \dim(\mathrm{Ker} L) + \dim(\mathrm{Im} L) = n = \dim V
 > $$
 > 5. **Iniettività:**
 >    $$
->    L \text{ è iniettiva} \iff \operatorname{rk}(A) = n = \dim V
+>    L \text{ è iniettiva} \iff \mathrm{rk}(A) = n = \dim V
 >    $$
 > 6. **Suriettività:**
 >    $$
->    L \text{ è suriettiva} \iff \operatorname{rk}(A) = m = \dim W
+>    L \text{ è suriettiva} \iff \mathrm{rk}(A) = m = \dim W
 >    $$
 > 7. **Isomorfismo:**
 >    $$
->    L \text{ è un isomorfismo} \iff \operatorname{rk}(A) = \dim V = \dim W
+>    L \text{ è un isomorfismo} \iff \mathrm{rk}(A) = \dim V = \dim W
 >    $$
 
 > [!note] Invertibilità di $L$ e Inversione della Matrice Rappresentativa
 > Un'applicazione lineare $L: V \to W$ tra spazi della medesima dimensione finita è un isomorfismo se e solo se la sua matrice rappresentativa è invertibile:
 > $$
-> L \text{ è un isomorfismo} \iff \operatorname{rk}(M_L^{\mathcal{B},\mathcal{C}}) = \dim V = \dim W \iff M_L^{\mathcal{B},\mathcal{C}} \text{ è invertibile} \iff T_{M_L^{\mathcal{B},\mathcal{C}}} \text{ è invertibile} \iff L \text{ è invertibile}
+> L \text{ è un isomorfismo} \iff \mathrm{rk}(M_L^{\mathcal{B},\mathcal{C}}) = \dim V = \dim W \iff M_L^{\mathcal{B},\mathcal{C}} \text{ è invertibile} \iff T_{M_L^{\mathcal{B},\mathcal{C}}} \text{ è invertibile} \iff L \text{ è invertibile}
 > $$
 > In tal caso, l'applicazione lineare inversa $L^{-1}: W \to V$ ammette l'espressione:
 > $$
@@ -984,11 +984,11 @@ tags:
 > Siano $U, V, W$ spazi vettoriali reali di dimensione finita dotati rispettivamente delle basi $\mathcal{B}, \mathcal{C}, \mathcal{D}$ (con $\dim U = n$, $\dim V = m$, $\dim W = p$).
 > Siano $L: U \to V$ ed $M: V \to W$ due applicazioni lineari aventi matrici rappresentative:
 > $$
-> M_L^{\mathcal{B},\mathcal{C}} \in \operatorname{Mat}_{\mathbb{R}}(m, n) \qquad \text{e} \qquad M_M^{\mathcal{C},\mathcal{D}} \in \operatorname{Mat}_{\mathbb{R}}(p, m)
+> M_L^{\mathcal{B},\mathcal{C}} \in \mathrm{Mat}_{\mathbb{R}}(m, n) \qquad \text{e} \qquad M_M^{\mathcal{C},\mathcal{D}} \in \mathrm{Mat}_{\mathbb{R}}(p, m)
 > $$
 > Allora l'applicazione composta $M \circ L: U \to W$ è lineare e la sua matrice rappresentativa rispetto alle basi $\mathcal{B}$ e $\mathcal{D}$ è data dal prodotto riga per colonna delle singole matrici rappresentative:
 > $$
-> M_{M \circ L}^{\mathcal{B},\mathcal{D}} = M_M^{\mathcal{C},\mathcal{D}} \cdot M_L^{\mathcal{B},\mathcal{C}} \in \operatorname{Mat}_{\mathbb{R}}(p, n)
+> M_{M \circ L}^{\mathcal{B},\mathcal{D}} = M_M^{\mathcal{C},\mathcal{D}} \cdot M_L^{\mathcal{B},\mathcal{C}} \in \mathrm{Mat}_{\mathbb{R}}(p, n)
 > $$
 >
 Il diagramma di composizione commuta interamente:

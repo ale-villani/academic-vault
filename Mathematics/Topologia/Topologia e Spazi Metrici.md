@@ -333,7 +333,7 @@ Il seguente teorema fornisce una caratterizzazione topologica completa della com
 >
 > Iterando questo processo di bisezione a partire da $E_1$, si ottiene una successione di rettangoli chiusi $\{E_k\}_{k=0}^\infty$ con $E_0 = E$ che verifica:
 > 1. $E_{k+1} \subset E_k$ per ogni $k \in \mathbb{N} \cup \{0\}$ (successione di compatti inscatolati);
-> 2. $\operatorname{Area}(E_k) = \frac{(b-a)(d-c)}{4^k} \xrightarrow{k \to \infty} 0$;
+> 2. $\mathrm{Area}(E_k) = \frac{(b-a)(d-c)}{4^k} \xrightarrow{k \to \infty} 0$;
 > 3. Per ogni $k \in \mathbb{N} \cup \{0\}$, nessuna sottofamiglia finita di $\mathcal{F}$ ricopre $E_k$.
 >
 > Per il principio di Cantor degli insiemi chiusi e limitati inscatolati a diametro infinitesimo (teorema di Bolzano-Weierstrass):

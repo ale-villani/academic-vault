@@ -389,7 +389,7 @@ Per dimostrare rigorosamente questa equivalenza premettiamo due lemmi fondamenta
 > [!theorem] Esistenza ed unicità per il problema di Neumann
 > Sotto le ipotesi della formulazione variazionale $(N)_v$, se:
 > $$
-> c(\mathbf{x}) \ge c_0 > 0 \quad \text{per q.o. } \mathbf{x} \in \Omega \quad (\operatorname{ess}\inf_\Omega c > 0)
+> c(\mathbf{x}) \ge c_0 > 0 \quad \text{per q.o. } \mathbf{x} \in \Omega \quad (\mathrm{ess}\inf_\Omega c > 0)
 > $$
 > allora esiste un'unica soluzione debole $u \in H^1(\Omega)$ tale che:
 > $$

@@ -937,7 +937,7 @@ prende il nome di **norma indotta** dal prodotto scalare $(\cdot, \cdot)$.
 > $$
 > A = D^T \Lambda D
 > $$
-> dove $D$ è una matrice ortogonale e $\Lambda = \operatorname{diag}(\lambda_1, \dots, \lambda_n)$ è la matrice diagonale degli autovalori reali.
+> dove $D$ è una matrice ortogonale e $\Lambda = \mathrm{diag}(\lambda_1, \dots, \lambda_n)$ è la matrice diagonale degli autovalori reali.
 > Se $\lambda_1, \dots, \lambda_n$ sono gli autovalori di $A$, allora la forma è **coerciva** se e solo se tutti gli autovalori sono strettamente positivi:
 > $$
 > a \text{ coerciva} \iff \min_{i=1,\dots,n} \lambda_i =: \alpha > 0 \iff A \text{ è definita positiva}

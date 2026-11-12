@@ -1214,7 +1214,7 @@ Diventa quindi necessario formalizzare accuratamente la topologia di $\mathcal{S
 > [!quote]- Dimostrazione dell'Implicazione
 > Supponiamo che $\varphi_m \xrightarrow{m \to +\infty} 0$ in $\mathcal{D}(\mathbb{R}^n)$. Per definizione di convergenza nello spazio delle funzioni test a supporto compatto, esiste un compatto $K \subset \mathbb{R}^n$ tale che:
 > $$
-> \operatorname{supp} \varphi_m \subseteq K \quad \forall m \in \mathbb{N}
+> \mathrm{supp} \varphi_m \subseteq K \quad \forall m \in \mathbb{N}
 > $$
 > e le derivate convergono uniformemente a zero: $\sup_{\mathbf{x} \in K} |D^{\boldsymbol{\beta}} \varphi_m(\mathbf{x})| \to 0$.
 > 
@@ -1236,11 +1236,11 @@ Diventa quindi necessario formalizzare accuratamente la topologia di $\mathcal{S
 > $$
 > Si consideri ad esempio una successione di campane lisce a supporto compatto che vengono progressivamente scalate in ampiezza e traslate verso l'infinito:
 > $$
-> \varphi_m(x) := \frac{1}{m} \psi(x - m), \qquad \psi \in C_0^\infty(\mathbb{R}), \ \operatorname{supp} \psi = [-1, 1]
+> \varphi_m(x) := \frac{1}{m} \psi(x - m), \qquad \psi \in C_0^\infty(\mathbb{R}), \ \mathrm{supp} \psi = [-1, 1]
 > $$
-> Il supporto di $\varphi_m$ è dato da $[m - 1, m + 1]$. Non esiste alcun compatto $K \subset \mathbb{R}$ che contenga uniformemente tutti i supporti $\operatorname{supp} \varphi_m$ al variare di $m \in \mathbb{N}$:
+> Il supporto di $\varphi_m$ è dato da $[m - 1, m + 1]$. Non esiste alcun compatto $K \subset \mathbb{R}$ che contenga uniformemente tutti i supporti $\mathrm{supp} \varphi_m$ al variare di $m \in \mathbb{N}$:
 > $$
-> \nexists K \subset \mathbb{R} \text{ compatto tale che } \bigcup_{m=1}^\infty \operatorname{supp} \varphi_m \subseteq K
+> \nexists K \subset \mathbb{R} \text{ compatto tale che } \bigcup_{m=1}^\infty \mathrm{supp} \varphi_m \subseteq K
 > $$
 > Pertanto $\varphi_m \centernot{\to} 0$ in $\mathcal{D}(\mathbb{R})$.
 > Tuttavia, poiché l'ampiezza decade come $\frac{1}{m}$ e le code dei polinomi vengono soppresse, un calcolo esplicito mostra che ogni seminorma di Schwartz tende a zero per $m \to +\infty$, garantendo che $\varphi_m \to 0$ in $\mathcal{S}(\mathbb{R})$.
@@ -1920,9 +1920,9 @@ da cui deduciamo la formula risolutiva fondamentale:
 
 > [!warning] Velocità di Propagazione Istantanea (Infinita)
 > L'equazione del calore presenta una **velocità di propagazione infinita**:
-> se il dato iniziale possiede supporto compatto $\operatorname{supp}(u_0) = K \subset \mathbb{R}$, allora per ogni tempo arbitrariamente piccolo $\varepsilon > 0$:
+> se il dato iniziale possiede supporto compatto $\mathrm{supp}(u_0) = K \subset \mathbb{R}$, allora per ogni tempo arbitrariamente piccolo $\varepsilon > 0$:
 > $$
-> \operatorname{supp}(u(\cdot, \varepsilon)) = \mathbb{R}
+> \mathrm{supp}(u(\cdot, \varepsilon)) = \mathbb{R}
 > $$
 > Infatti, per ogni $x \in \mathbb{R}$ e ogni $t > 0$, il valore $u(x, t)$ dipende strettamente dai valori di $u_0(y)$ su tutta la retta reale, poiché il nucleo gaussiano $G_t(x - y) > 0$ è ovunque positivo e non si annulla mai.
 >
@@ -2100,11 +2100,11 @@ Sommando le soluzioni parziali $v(x, t)$ e $w(x, t)$, perveniamo al risultato fo
 > $$
 > In particolare, se i dati iniziali hanno supporto compatto contenuto in un intervallo limitato:
 > $$
-> \operatorname{supp}(u_0), \; \operatorname{supp}(u_1) \subseteq [-R, R]
+> \mathrm{supp}(u_0), \; \mathrm{supp}(u_1) \subseteq [-R, R]
 > $$
 > allora per ogni tempo $t > 0$ il supporto della soluzione rimane compatto ed è contenuto in:
 > $$
-> \operatorname{supp}(u(\cdot, t)) \subseteq [-R - ct, \; R + ct]
+> \mathrm{supp}(u(\cdot, t)) \subseteq [-R - ct, \; R + ct]
 > $$
 
 > [!note] Decomposizione in Onde Progressive e Regressive
@@ -2143,7 +2143,7 @@ Sommando le soluzioni parziali $v(x, t)$ e $w(x, t)$, perveniamo al risultato fo
 > 2. **Funzione rettangolo simmetrica (finestra centrata) $\chi_{[-c, c]}(x)$:**
 >    $$
 >    \chi_{[-c,c]}(x) \;\xrightarrow[\quad\mathcal{F}\quad]{}\; \begin{cases} 
->    2 \, \dfrac{\sin(c\xi)}{\xi} = 2c \operatorname{sinc}(c\xi) & \text{se } \xi \neq 0 \\ 
+>    2 \, \dfrac{\sin(c\xi)}{\xi} = 2c \mathrm{sinc}(c\xi) & \text{se } \xi \neq 0 \\ 
 >    2c & \text{se } \xi = 0 
 >    \end{cases}
 >    $$

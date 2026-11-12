@@ -477,7 +477,7 @@ Nelle applicazioni specifiche all'analisi di Fourier sull'intervallo fondamental
 > [!note] Separabilità di $L^2$
 > Poiché le basi ortonormali $\mathcal{B}$ e $\mathcal{C}$ hanno cardinalità numerabile:
 > $$
-> \operatorname{card}(\mathcal{B}) = \operatorname{card}(\mathcal{C}) = \aleph_0 = \operatorname{card}(\mathbb{N})
+> \mathrm{card}(\mathcal{B}) = \mathrm{card}(\mathcal{C}) = \aleph_0 = \mathrm{card}(\mathbb{N})
 > $$
 > lo spazio di Hilbert funzionale $L^2([-\pi, \pi])$ ammette una base hilbertiana numerabile ed è pertanto uno spazio **separabile** (ammette un sottoinsieme denso numerabile, formato dalle combinazioni lineari a coefficienti razionali dei versori di base).
 
@@ -614,20 +614,20 @@ Nelle applicazioni specifiche all'analisi di Fourier sull'intervallo fondamental
 > $$
 > dove:
 > $$
-> M = \overline{\operatorname{Span}\{u_n\}_{n \in I}}
+> M = \overline{\mathrm{Span}\{u_n\}_{n \in I}}
 > $$
 > indica la chiusura in $\mathcal{H}$ del sottospazio lineare generato dai vettori $\{u_n\}_{n \in I}$.
 
 > [!note] Ruolo cruciale della chiusura in dimensione infinita
-> La chiusura topologica di $\operatorname{Span}\{u_n\}_{n \in I}$ è indispensabile, poiché in spazi a dimensione infinita i sottospazi vettoriali non sono in generale chiusi.
+> La chiusura topologica di $\mathrm{Span}\{u_n\}_{n \in I}$ è indispensabile, poiché in spazi a dimensione infinita i sottospazi vettoriali non sono in generale chiusi.
 > Più precisamente:
 > $$
-> M = \overline{\operatorname{Span}\{u_n\}_{n \in I}} = \left\{ v = \lim_{k \to +\infty} v_k \in \mathcal{H} : v_k \in \operatorname{Span}\{u_n\}_{n \in I}, \; k \in \mathbb{N} \right\}
+> M = \overline{\mathrm{Span}\{u_n\}_{n \in I}} = \left\{ v = \lim_{k \to +\infty} v_k \in \mathcal{H} : v_k \in \mathrm{Span}\{u_n\}_{n \in I}, \; k \in \mathbb{N} \right\}
 > $$
 
 > [!example] Proiezione ortogonale in $\mathbb{R}^3$
 > Sia $\mathcal{H} = \mathbb{R}^3$ e si consideri il sistema ortonormale incompleto formato da due soli versori $B = \{\mathbf{e_1}, \mathbf{e_2}\}$.
-> Per ogni vettore $\mathbf{u} = (u_1, u_2, u_3)^T \in \mathbb{R}^3$, la serie di Fourier rispetto a $B$ fornisce la proiezione ortogonale sul piano $M = \operatorname{Span}\{\mathbf{e_1}, \mathbf{e_2}\}$:
+> Per ogni vettore $\mathbf{u} = (u_1, u_2, u_3)^T \in \mathbb{R}^3$, la serie di Fourier rispetto a $B$ fornisce la proiezione ortogonale sul piano $M = \mathrm{Span}\{\mathbf{e_1}, \mathbf{e_2}\}$:
 > $$
 > \sum_{i=1}^2 (\mathbf{u} \cdot \mathbf{e_i}) \mathbf{e_i} = \Pi_M(\mathbf{u}) = \begin{pmatrix} u_1 \\ u_2 \\ 0 \end{pmatrix}
 > $$
@@ -635,14 +635,14 @@ Nelle applicazioni specifiche all'analisi di Fourier sull'intervallo fondamental
 > [!quote]- Dimostrazione
 > Si distinguono due casi a seconda della cardinalità dell'insieme di indici $I$:
 > 
-> **Caso 1: $\operatorname{card}(I) = n \in \mathbb{N} < +\infty$ (dimensione finita).**
+> **Caso 1: $\mathrm{card}(I) = n \in \mathbb{N} < +\infty$ (dimensione finita).**
 > La serie di Fourier è una combinazione lineare finita:
 > $$
 > \sum_{i=1}^n (u, u_i) u_i = v \in \mathcal{H}
 > $$
-> che appartiene ad $\mathcal{H}$ essendo $\mathcal{H}$ uno spazio vettoriale (e il sottospazio $M = \operatorname{Span}\{u_1, \dots, u_n\}$ è automaticamente chiuso in quanto di dimensione finita).
+> che appartiene ad $\mathcal{H}$ essendo $\mathcal{H}$ uno spazio vettoriale (e il sottospazio $M = \mathrm{Span}\{u_1, \dots, u_n\}$ è automaticamente chiuso in quanto di dimensione finita).
 > 
-> **Caso 2: $\operatorname{card}(I) = \operatorname{card}(\mathbb{N})$ (infinito numerabile).**
+> **Caso 2: $\mathrm{card}(I) = \mathrm{card}(\mathbb{N})$ (infinito numerabile).**
 > Identificato l'insieme di indici con $\mathbb{N} \setminus \{0\}$, consideriamo la successione delle somme parziali della serie di Fourier:
 > $$
 > S_N := \sum_{n=1}^N (u, u_n) u_n
@@ -676,7 +676,7 @@ Nelle applicazioni specifiche all'analisi di Fourier sull'intervallo fondamental
 > $$
 > 
 > **Identificazione del limite con la proiezione ortogonale:**
-> Resta da verificare in entrambi i casi che $v = \Pi_M(u)$, dove $M = \overline{\operatorname{Span}\{u_n\}_{n \in I}}$.
+> Resta da verificare in entrambi i casi che $v = \Pi_M(u)$, dove $M = \overline{\mathrm{Span}\{u_n\}_{n \in I}}$.
 > Essendo $M$ un sottospazio lineare chiuso, per il teorema della proiezione ortogonale è sufficiente mostrare che l'errore $u - v$ è ortogonale ad ogni elemento di $M$:
 > $$
 > (u - v, w) = 0 \quad \forall w \in M
@@ -711,7 +711,7 @@ S_n(x) := \frac{a_0}{2} + \sum_{k=1}^n \left( a_k \cos(kx) + b_k \sin(kx) \right
 $$
 Si indichi con $T_{\le n}$ il sottospazio lineare dei polinomi trigonometrici di ordine minore o uguale a $n$:
 $$
-T_{\le n} := \operatorname{Span} \{ 1, \cos(kx), \sin(kx) \}_{k=1, \dots, n}
+T_{\le n} := \mathrm{Span} \{ 1, \cos(kx), \sin(kx) \}_{k=1, \dots, n}
 $$
 
 > [!theorem] Proprietà di migliore approssimazione in media quadratica
@@ -883,7 +883,7 @@ $$
 > $$
 > soddisfa:
 > $$
-> \operatorname{card}(A) \le \operatorname{card}(\mathbb{N})
+> \mathrm{card}(A) \le \mathrm{card}(\mathbb{N})
 > $$
 
 > [!note] Appartenenza dei coefficienti a $\ell^2$
@@ -917,7 +917,7 @@ $$
 >    $$
 > 3. Il sottospazio lineare generato dal sistema è denso in $\mathcal{H}$:
 >    $$
->    M = \overline{\operatorname{Span}\{u_n\}_{n \in I}} = \mathcal{H}
+>    M = \overline{\mathrm{Span}\{u_n\}_{n \in I}} = \mathcal{H}
 >    $$
 > 4. Ogni vettore $u \in \mathcal{H}$ coincide con la somma della propria serie di Fourier:
 >    $$
@@ -968,7 +968,7 @@ $$
 > Dunque sussiste l'equivalenza (1) $\iff$ (2).
 > 
 > **(2) $\implies$ (3):**
-> Posto $M = \overline{\operatorname{Span}\{u_n\}_{n \in I}}$, sia $u \in M^\perp$.
+> Posto $M = \overline{\mathrm{Span}\{u_n\}_{n \in I}}$, sia $u \in M^\perp$.
 > Allora in particolare $(u, u_n) = 0$ per ogni $n \in I$.
 > Per l'ipotesi (2), questo implica $u = 0$, da cui:
 > $$
@@ -980,7 +980,7 @@ $$
 > $$
 > 
 > **(3) $\implies$ (4):**
-> Poiché $M = \overline{\operatorname{Span}\{u_n\}_{n \in I}} = \mathcal{H}$, applicando il Teorema di convergenza della serie di Fourier la proiezione ortogonale su $M$ coincide con l'operatore identità:
+> Poiché $M = \overline{\mathrm{Span}\{u_n\}_{n \in I}} = \mathcal{H}$, applicando il Teorema di convergenza della serie di Fourier la proiezione ortogonale su $M$ coincide con l'operatore identità:
 > $$
 > \sum_{n \in I} (u, u_n) u_n = \Pi_M(u) = \Pi_\mathcal{H}(u) = u \quad \forall u \in \mathcal{H}
 > $$
@@ -1100,9 +1100,9 @@ $$
 > **Parte 2: Completezza**
 > Dobbiamo mostrare che lo spazio generato dalle combinazioni lineari finite degli elementi di base è denso in $L^2(I)$, ossia:
 > $$
-> \overline{\operatorname{Span}\{u_0, u_n, v_n\}_{n \in \mathbb{N}\setminus\{0\}}} = L^2(I)
+> \overline{\mathrm{Span}\{u_0, u_n, v_n\}_{n \in \mathbb{N}\setminus\{0\}}} = L^2(I)
 > $$
-> Per la caratterizzazione metrica della chiusura, ciò equivale a dimostrare che per ogni funzione bersaglio $f \in L^2(I)$ e per ogni $\varepsilon > 0$, esiste un polinomio trigonometrico $g \in \operatorname{Span}\{u_0, u_n, v_n\}_{n \in \mathbb{N}\setminus\{0\}}$ tale che:
+> Per la caratterizzazione metrica della chiusura, ciò equivale a dimostrare che per ogni funzione bersaglio $f \in L^2(I)$ e per ogni $\varepsilon > 0$, esiste un polinomio trigonometrico $g \in \mathrm{Span}\{u_0, u_n, v_n\}_{n \in \mathbb{N}\setminus\{0\}}$ tale che:
 > $$
 > \|f - g\|_{L^2(I)} < \varepsilon
 > $$
@@ -1127,7 +1127,7 @@ $$
 > $$
 > \|S_N - f\|_{L^2(I)} = \|S_N - \tilde{f}\|_{L^2(I)} < \frac{\varepsilon}{2} < \varepsilon
 > $$
-> Scegliendo $g := S_N \in \operatorname{Span}\{u_0, u_n, v_n\}_{n \in \mathbb{N}\setminus\{0\}}$, l'asserto è provato per ogni $f \in C_0^\infty(I)$.
+> Scegliendo $g := S_N \in \mathrm{Span}\{u_0, u_n, v_n\}_{n \in \mathbb{N}\setminus\{0\}}$, l'asserto è provato per ogni $f \in C_0^\infty(I)$.
 > 
 > **Passo 2 (Estensione a tutto $L^2(I)$ per densità):**
 > È un teorema fondamentale della teoria dell'integrazione di Lebesgue che lo spazio delle funzioni test $C_0^\infty(I)$ è denso nello spazio di Lebesgue $L^2(I)$, vale a dire:
@@ -1138,7 +1138,7 @@ $$
 > $$
 > \|f - \varphi\|_{L^2(I)} < \frac{\varepsilon}{2}
 > $$
-> Applicando a tale $\varphi$ il risultato provato al Passo 1, esiste un polinomio trigonometrico $g \in \operatorname{Span}\{u_0, u_n, v_n\}_{n \in \mathbb{N}\setminus\{0\}}$ tale che:
+> Applicando a tale $\varphi$ il risultato provato al Passo 1, esiste un polinomio trigonometrico $g \in \mathrm{Span}\{u_0, u_n, v_n\}_{n \in \mathbb{N}\setminus\{0\}}$ tale che:
 > $$
 > \|\varphi - g\|_{L^2(I)} < \frac{\varepsilon}{2}
 > $$
@@ -1148,7 +1148,7 @@ $$
 > $$
 > Resta così stabilito che:
 > $$
-> \overline{\operatorname{Span}\{u_0, u_n, v_n\}_{n \in \mathbb{N}\setminus\{0\}}} = L^2(I)
+> \overline{\mathrm{Span}\{u_0, u_n, v_n\}_{n \in \mathbb{N}\setminus\{0\}}} = L^2(I)
 > $$
 > ovvero che il sistema trigonometrico è completo in $L^2(I)$. $\blacksquare$
 >
@@ -1218,7 +1218,7 @@ Il sistema trigonometrico non è che una delle infinite possibili basi ortonorma
 > Sia $(\mathcal{H}, (\cdot, \cdot))$ uno spazio di Hilbert e sia $\{u_n\}_{n \in I} \subset \mathcal{H}$ un sistema di vettori linearmente indipendenti, al più numerabile ($I \subseteq \mathbb{N}$).
 > Allora è possibile costruire un sistema ortonormale $\{v_n\}_{n \in I} \subset \mathcal{H}$ tale che:
 > $$
-> \operatorname{Span}\{u_n\}_{n \in J} = \operatorname{Span}\{v_n\}_{n \in J} \quad \forall J \subseteq I
+> \mathrm{Span}\{u_n\}_{n \in J} = \mathrm{Span}\{v_n\}_{n \in J} \quad \forall J \subseteq I
 > $$
 >
 Il procedimento si costruisce in maniera ricorsiva:

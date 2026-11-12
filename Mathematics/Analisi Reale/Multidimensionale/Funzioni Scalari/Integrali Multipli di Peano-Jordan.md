@@ -91,13 +91,13 @@ $$
 > $$
 > Siano ora $P_1 = \{x_0 = a, x_1, \dots, x_n = b\}$ una partizione dell'intervallo $[a,b]$ e $P_2 = \{y_0 = c, y_1, \dots, y_m = d\}$ una partizione dell'intervallo $[c,d]$ aventi calibro sufficientemente piccolo:
 > $$
-> |P_1| \le \frac{\delta}{\sqrt{2}}, \quad |P_2| \le \frac{\delta}{\sqrt{2}} \implies \operatorname{diam}(E_{ij}) = \sqrt{(x_i - x_{i-1})^2 + (y_j - y_{j-1})^2} \le \delta
+> |P_1| \le \frac{\delta}{\sqrt{2}}, \quad |P_2| \le \frac{\delta}{\sqrt{2}} \implies \mathrm{diam}(E_{ij}) = \sqrt{(x_i - x_{i-1})^2 + (y_j - y_{j-1})^2} \le \delta
 > $$
 > Indicando con $E_i$ (oppure $E_{ij} = [x_{i-1}, x_i] \times [y_{j-1}, y_j]$) i sotto-rettangoli indotti dalla partizione prodotto $P = P_1 \times P_2$, per il Teorema di Weierstrass la funzione $f$ assume su ciascun rettangolo compatto $E_i$ il proprio minimo assoluto $m_i$ ed il proprio massimo assoluto $M_i$:
 > $$
 > \exists \mathbf{x}'_i, \mathbf{x}''_i \in E_i : \quad f(\mathbf{x}'_i) = m_i = \inf_{E_i} f, \quad f(\mathbf{x}''_i) = M_i = \sup_{E_i} f
 > $$
-> Poiché $\mathbf{x}'_i, \mathbf{x}''_i \in E_i$, si ha $\|\mathbf{x}'_i - \mathbf{x}''_i\| \le \operatorname{diam}(E_i) < \delta$, e per uniforme continuità:
+> Poiché $\mathbf{x}'_i, \mathbf{x}''_i \in E_i$, si ha $\|\mathbf{x}'_i - \mathbf{x}''_i\| \le \mathrm{diam}(E_i) < \delta$, e per uniforme continuità:
 > $$
 > M_i - m_i = f(\mathbf{x}''_i) - f(\mathbf{x}'_i) < \varepsilon
 > $$
@@ -234,13 +234,13 @@ Ci si domanda sotto quali condizioni tale equivalenza sia rigorosamente valida.
 > Possiedono misura bidimensionale nulla:
 > 1. Insiemi finiti o discreti di punti;
 > 2. I sostegni di curve regolari $\gamma: [a,b] \to \mathbb{R}^2$ (e curve regolari a tratti);
-> 3. I grafici di funzioni integrabili $g: I \subset \mathbb{R} \to \mathbb{R}$, ossia l'insieme $\operatorname{Gr}(g) = \{(x, g(x)) \in \mathbb{R}^2 : x \in I\}$;
+> 3. I grafici di funzioni integrabili $g: I \subset \mathbb{R} \to \mathbb{R}$, ossia l'insieme $\mathrm{Gr}(g) = \{(x, g(x)) \in \mathbb{R}^2 : x \in I\}$;
 > 4. Unioni finite e sottoinsiemi di insiemi a misura nulla: se $|\Gamma_i| = 0$ per $i = 1, \dots, n$, allora $\left| \bigcup_{i=1}^n \Gamma_i \right| = 0$ e per ogni $S \subseteq \Gamma_i$ si ha $|S| = 0$.
 
 > [!definition] Funzione generalmente continua (continua quasi ovunque)
 > Sia $D = [a,b] \times [c,d]$ e sia $f: D \to \mathbb{R}$ limitata. Si dice che $f$ è **generalmente continua** (o **continua quasi ovunque**, q.o.) se l'insieme dei suoi punti di discontinuità ha misura nulla:
 > $$
-> |\operatorname{Discont}(f)| = 0
+> |\mathrm{Discont}(f)| = 0
 > $$
 
 > [!theorem] Integrabilità delle funzioni generalmente continue

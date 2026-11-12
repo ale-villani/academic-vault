@@ -17,7 +17,7 @@ tags:
 > Un'applicazione lineare $L: V \to V$ avente come dominio e codominio il medesimo spazio vettoriale $V$ si definisce **endomorfismo** (o operatore lineare su $V$).
 
 > [!example] Endomorfismo Indotto da Matrice Quadrata
-> Se $A \in \operatorname{Mat}_{\mathbb{R}}(n, n)$, l'applicazione lineare indotta:
+> Se $A \in \mathrm{Mat}_{\mathbb{R}}(n, n)$, l'applicazione lineare indotta:
 > $$
 > T_A: \mathbb{R}^n \to \mathbb{R}^n, \qquad T_A(\mathbf{x}) = A\mathbf{x}
 > $$
@@ -35,7 +35,7 @@ tags:
 > - $\mathbf{v}$ è detto **autovettore** di $L$ associato all'autovalore $\lambda$.
 
 > [!note] Autovalori e Autovettori per Matrici Quadrate
-> Nel caso particolare in cui l'endomorfismo sia associato a una matrice quadrata $A \in \operatorname{Mat}_{\mathbb{R}}(n, n)$ tramite $L = T_A$, l'equazione agli autovalori assume la forma:
+> Nel caso particolare in cui l'endomorfismo sia associato a una matrice quadrata $A \in \mathrm{Mat}_{\mathbb{R}}(n, n)$ tramite $L = T_A$, l'equazione agli autovalori assume la forma:
 > $$
 > A \mathbf{v} = \lambda \mathbf{v}, \qquad \mathbf{v} \neq \mathbf{0}
 > $$
@@ -52,7 +52,7 @@ tags:
 > [!example] Verifica di Autovalori e Autovettori
 > Sia data la matrice simmetrica $2 \times 2$:
 > $$
-> A = \begin{pmatrix} 1 & 2 \\ 2 & 4 \end{pmatrix} \in \operatorname{Mat}_{\mathbb{R}}(2, 2)
+> A = \begin{pmatrix} 1 & 2 \\ 2 & 4 \end{pmatrix} \in \mathrm{Mat}_{\mathbb{R}}(2, 2)
 > $$
 > L'equazione agli autovalori è:
 > $$
@@ -76,7 +76,7 @@ tags:
 Come si determinano sistematicamente tutti gli autovalori e autovettori di una matrice in generale?
 
 > [!definition] Polinomio Caratteristico
-> Sia $A \in \operatorname{Mat}_{\mathbb{R}}(n, n)$ una matrice quadrata. Si definisce **polinomio caratteristico** di $A$ il polinomio $\chi_A(t)$ nella variabile formale $t$ dato dal determinante:
+> Sia $A \in \mathrm{Mat}_{\mathbb{R}}(n, n)$ una matrice quadrata. Si definisce **polinomio caratteristico** di $A$ il polinomio $\chi_A(t)$ nella variabile formale $t$ dato dal determinante:
 > $$
 > \chi_A(t) := \det(A - t I_n)
 > $$
@@ -84,7 +84,7 @@ Come si determinano sistematicamente tutti gli autovalori e autovettori di una m
 > [!example] Calcolo del Polinomio Caratteristico per una Matrice $2 \times 2$
 > Sia la matrice:
 > $$
-> A = \begin{pmatrix} 1 & 2 \\ 3 & 0 \end{pmatrix} \in \operatorname{Mat}_{\mathbb{R}}(2, 2)
+> A = \begin{pmatrix} 1 & 2 \\ 3 & 0 \end{pmatrix} \in \mathrm{Mat}_{\mathbb{R}}(2, 2)
 > $$
 > Il suo polinomio caratteristico è:
 > $$
@@ -96,7 +96,7 @@ Come si determinano sistematicamente tutti gli autovalori e autovettori di una m
 > $$
 
 > [!note] Grado del Polinomio Caratteristico
-> Per ogni matrice quadrata $A \in \operatorname{Mat}_{\mathbb{R}}(n, n)$, il polinomio caratteristico $\chi_A(t)$ è un polinomio di grado esattamente $n$:
+> Per ogni matrice quadrata $A \in \mathrm{Mat}_{\mathbb{R}}(n, n)$, il polinomio caratteristico $\chi_A(t)$ è un polinomio di grado esattamente $n$:
 > $$
 > \deg(\chi_A(t)) = n
 > $$
@@ -104,7 +104,7 @@ Come si determinano sistematicamente tutti gli autovalori e autovettori di una m
 ### Caratterizzazione degli Autovalori
 
 > [!proposition] Radici del Polinomio Caratteristico come Autovalori
-> Sia $A \in \operatorname{Mat}_{\mathbb{R}}(n, n)$ e sia $\chi_A(t)$ il suo polinomio caratteristico. Uno scalare $\lambda \in \mathbb{R}$ è autovalore di $A$ se e solo se è radice del polinomio caratteristico:
+> Sia $A \in \mathrm{Mat}_{\mathbb{R}}(n, n)$ e sia $\chi_A(t)$ il suo polinomio caratteristico. Uno scalare $\lambda \in \mathbb{R}$ è autovalore di $A$ se e solo se è radice del polinomio caratteristico:
 > $$
 > \lambda \text{ è autovalore di } A \iff \chi_A(\lambda) = 0
 > $$
@@ -120,23 +120,23 @@ Come si determinano sistematicamente tutti gli autovalori e autovettori di una m
 > $$
 > Ciò equivale a dire che il vettore $\mathbf{v}$ appartiene al nucleo della matrice $A - \lambda I_n$:
 > $$
-> \mathbf{v} \in \operatorname{Ker}(A - \lambda I_n)
+> \mathbf{v} \in \mathrm{Ker}(A - \lambda I_n)
 > $$
 > L'esistenza di un autovettore non nullo $\mathbf{v} \neq \mathbf{0}$ è dunque equivalente alla non banalità del nucleo:
 > $$
-> \exists \mathbf{v} \in \operatorname{Ker}(A - \lambda I_n) \text{ con } \mathbf{v} \neq \mathbf{0} \iff \operatorname{Ker}(A - \lambda I_n) \neq \{\mathbf{0}\}
+> \exists \mathbf{v} \in \mathrm{Ker}(A - \lambda I_n) \text{ con } \mathbf{v} \neq \mathbf{0} \iff \mathrm{Ker}(A - \lambda I_n) \neq \{\mathbf{0}\}
 > $$
 > La non banalità del nucleo corrisponde ad avere dimensione strettamente positiva:
 > $$
-> \dim \operatorname{Ker}(A - \lambda I_n) > 0
+> \dim \mathrm{Ker}(A - \lambda I_n) > 0
 > $$
 > Per il Teorema della Dimensione (nullità + rango):
 > $$
-> \dim \operatorname{Ker}(A - \lambda I_n) + \operatorname{rk}(A - \lambda I_n) = n \implies \operatorname{rk}(A - \lambda I_n) < n
+> \dim \mathrm{Ker}(A - \lambda I_n) + \mathrm{rk}(A - \lambda I_n) = n \implies \mathrm{rk}(A - \lambda I_n) < n
 > $$
 > Per il criterio del rango massimo sui determinanti, una matrice quadrata ha rango strettamente inferiore ad $n$ se e solo se il suo determinante è nullo:
 > $$
-> \operatorname{rk}(A - \lambda I_n) < n \iff \det(A - \lambda I_n) = 0 \iff \chi_A(\lambda) = 0 \qquad \blacksquare
+> \mathrm{rk}(A - \lambda I_n) < n \iff \det(A - \lambda I_n) = 0 \iff \chi_A(\lambda) = 0 \qquad \blacksquare
 > $$
 
 > [!example] Ricerca degli Autovalori tramite Radici
@@ -158,20 +158,20 @@ Come si determinano sistematicamente tutti gli autovalori e autovettori di una m
 > $$
 > \begin{align}
 > L(\mathbf{v}) = \lambda \mathbf{v} &\iff L(\mathbf{v}) - \lambda \mathbf{v} = \mathbf{0} \\
-> &\iff L(\mathbf{v}) - \lambda \operatorname{id}_V(\mathbf{v}) = \mathbf{0} \\
-> &\iff (L - \lambda \operatorname{id}_V)(\mathbf{v}) = \mathbf{0} \\
-> &\iff \mathbf{v} \in \operatorname{Ker}(L - \lambda \operatorname{id}_V)
+> &\iff L(\mathbf{v}) - \lambda \mathrm{id}_V(\mathbf{v}) = \mathbf{0} \\
+> &\iff (L - \lambda \mathrm{id}_V)(\mathbf{v}) = \mathbf{0} \\
+> &\iff \mathbf{v} \in \mathrm{Ker}(L - \lambda \mathrm{id}_V)
 > \end{align}
 > $$
 
 > [!definition] Autospazio
-> Sia $\lambda \in \mathbb{R}$ un autovalore di un endomorfismo $L: V \to V$. Si definisce **autospazio** di $L$ associato a $\lambda$, e si denota con $V_\lambda$ (oppure $E(\lambda)$), il nucleo dell'applicazione lineare $L - \lambda \operatorname{id}_V$:
+> Sia $\lambda \in \mathbb{R}$ un autovalore di un endomorfismo $L: V \to V$. Si definisce **autospazio** di $L$ associato a $\lambda$, e si denota con $V_\lambda$ (oppure $E(\lambda)$), il nucleo dell'applicazione lineare $L - \lambda \mathrm{id}_V$:
 > $$
-> V_\lambda := \operatorname{Ker}(L - \lambda \operatorname{id}_V) = \{ \mathbf{v} \in V : L(\mathbf{v}) = \lambda \mathbf{v} \}
+> V_\lambda := \mathrm{Ker}(L - \lambda \mathrm{id}_V) = \{ \mathbf{v} \in V : L(\mathbf{v}) = \lambda \mathbf{v} \}
 > $$
-> Nel contesto matriciale in cui $L = T_A$ per $A \in \operatorname{Mat}_{\mathbb{R}}(n, n)$, l'autospazio associato all'autovalore $\lambda$ coincide con lo spazio delle soluzioni del sistema lineare omogeneo associato alla matrice $A - \lambda I_n$:
+> Nel contesto matriciale in cui $L = T_A$ per $A \in \mathrm{Mat}_{\mathbb{R}}(n, n)$, l'autospazio associato all'autovalore $\lambda$ coincide con lo spazio delle soluzioni del sistema lineare omogeneo associato alla matrice $A - \lambda I_n$:
 > $$
-> V_\lambda = \operatorname{Ker}(A - \lambda I_n) = \{ \mathbf{x} \in \mathbb{R}^n : (A - \lambda I_n)\mathbf{x} = \mathbf{0} \}
+> V_\lambda = \mathrm{Ker}(A - \lambda I_n) = \{ \mathbf{x} \in \mathbb{R}^n : (A - \lambda I_n)\mathbf{x} = \mathbf{0} \}
 > $$
 >
 ## 5.3. Diagonalizzabilità e Criteri di Similitudine
@@ -189,7 +189,7 @@ Uno dei problemi centrali dell'algebra lineare consiste nel trovare, per un dato
 > $$
 
 > [!definition] Matrice Diagonalizzabile
-> Una matrice quadrata $A \in \operatorname{Mat}_{\mathbb{R}}(n, n)$ si dice **diagonalizzabile** su $\mathbb{R}$ se l'endomorfismo $T_A: \mathbb{R}^n \to \mathbb{R}^n$ ad essa canonicamente associato (definito da $T_A(\mathbf{x}) = A\mathbf{x}$) è un endomorfismo diagonalizzabile.
+> Una matrice quadrata $A \in \mathrm{Mat}_{\mathbb{R}}(n, n)$ si dice **diagonalizzabile** su $\mathbb{R}$ se l'endomorfismo $T_A: \mathbb{R}^n \to \mathbb{R}^n$ ad essa canonicamente associato (definito da $T_A(\mathbf{x}) = A\mathbf{x}$) è un endomorfismo diagonalizzabile.
 
 > [!example] Diagonalizzabilità di un Endomorfismo in $\mathbb{R}^2$
 > Si consideri l'endomorfismo $L: \mathbb{R}^2 \to \mathbb{R}^2$ definito dall'assegnazione:
@@ -275,7 +275,7 @@ Sorge spontaneo il problema fondamentale: *come identificare sistematicamente un
 > **Parte 2 ($\Rightarrow$):**
 > Viceversa, supponiamo che $L$ sia diagonalizzabile. Allora per definizione esiste una base $\mathcal{B} = \{\mathbf{b}_1, \dots, \mathbf{b}_n\}$ di $V$ rispetto alla quale la matrice $M_L^{\mathcal{B},\mathcal{B}}$ è diagonale:
 > $$
-> M_L^{\mathcal{B},\mathcal{B}} = \operatorname{diag}(\lambda_1, \dots, \lambda_n)
+> M_L^{\mathcal{B},\mathcal{B}} = \mathrm{diag}(\lambda_1, \dots, \lambda_n)
 > $$
 > Leggendo l'$i$-esima colonna di tale matrice, troviamo le coordinate di $L(\mathbf{b}_i)$ rispetto a $\mathcal{B}$:
 > $$
@@ -294,7 +294,7 @@ Siano $\mathcal{B}$ e $\mathcal{C}$ due basi distinte dello spazio vettoriale $V
 *Quale relazione algebrica lega le due matrici rappresentative $M_L^{\mathcal{B},\mathcal{B}}$ e $M_L^{\mathcal{C},\mathcal{C}}$ dello stesso operatore?*
 
 > [!definition] Matrici Simili
-> Due matrici quadrate $A, B \in \operatorname{Mat}_{\mathbb{R}}(n, n)$ si dicono **simili** (notazione: $A \sim B$) se esiste una matrice invertibile $S \in \operatorname{Mat}_{\mathbb{R}}(n, n)$ tale che:
+> Due matrici quadrate $A, B \in \mathrm{Mat}_{\mathbb{R}}(n, n)$ si dicono **simili** (notazione: $A \sim B$) se esiste una matrice invertibile $S \in \mathrm{Mat}_{\mathbb{R}}(n, n)$ tale che:
 > $$
 > B = S^{-1} A S \iff S B = A S
 > $$
@@ -305,16 +305,16 @@ Siano $\mathcal{B}$ e $\mathcal{C}$ due basi distinte dello spazio vettoriale $V
 ### Proprietà delle Matrici Simili
 
 > [!proposition] Invarianti per Similitudine
-> Siano $A, B \in \operatorname{Mat}_{\mathbb{R}}(n, n)$ due matrici simili, ovvero tali che $B = S^{-1} A S$ per qualche matrice invertibile $S$. Allora sussistono le seguenti proprietà:
+> Siano $A, B \in \mathrm{Mat}_{\mathbb{R}}(n, n)$ due matrici simili, ovvero tali che $B = S^{-1} A S$ per qualche matrice invertibile $S$. Allora sussistono le seguenti proprietà:
 > 1. **Potenze:** $A^k$ e $B^k$ sono simili per ogni intero $k \in \mathbb{N}$ (e si ha $B^k = S^{-1} A^k S$).
 > 2. **Trasposta:** $A^T$ e $B^T$ sono simili.
 > 3. **Invertibilità:** $A$ è invertibile $\iff B$ è invertibile; in tal caso le matrici inverse $A^{-1}$ e $B^{-1}$ sono simili 
-> 4. **Rango:** $\operatorname{rk}(A) = \operatorname{rk}(B)$.
+> 4. **Rango:** $\mathrm{rk}(A) = \mathrm{rk}(B)$.
 > 5. **Determinante:** $\det(A) = \det(B)$.
-> 6. **Nullità (dimensione del nucleo):** $\dim(\operatorname{Ker} A) = \dim(\operatorname{Ker} B)$.
+> 6. **Nullità (dimensione del nucleo):** $\dim(\mathrm{Ker} A) = \dim(\mathrm{Ker} B)$.
 > 7. **Polinomio caratteristico:** $\chi_A(t) = \chi_B(t)$.
 > 8. **Autovalori e Spettro:** $A$ e $B$ hanno esattamente gli stessi autovalori, con le medesime molteplicità algebriche e geometriche.
-> 9. **Traccia:** $\operatorname{tr}(A) = \operatorname{tr}(B)$.
+> 9. **Traccia:** $\mathrm{tr}(A) = \mathrm{tr}(B)$.
 
 > [!note] Condizioni Necessarie vs Sufficienti
 > Le proprietà sopra elencate costituiscono condizioni **necessarie** per la similitudine: se due matrici differiscono anche solo per la traccia, per il determinante o per il polinomio caratteristico, esse **non possono essere simili**.
@@ -367,7 +367,7 @@ Siano $\mathcal{B}$ e $\mathcal{C}$ due basi distinte dello spazio vettoriale $V
 > **4. Dimostrazione della Proprietà 4 (Rango):**
 > Il rango di una matrice coincide con la dimensione dello spazio generato dalle sue colonne (spazio colonna), ovvero con la dimensione dell'immagine della trasformazione lineare associata:
 > $$
-> \operatorname{rk}(B) = \dim(\operatorname{col}(B)) = \dim(\operatorname{Im}(T_B)) = \dim(\operatorname{Im}(T_{S^{-1} A S}))
+> \mathrm{rk}(B) = \dim(\mathrm{col}(B)) = \dim(\mathrm{Im}(T_B)) = \dim(\mathrm{Im}(T_{S^{-1} A S}))
 > $$
 > Poiché l'applicazione associata al prodotto matriciale coincide con la composizione degli operatori associati ($T_{M N} = T_M \circ T_N$):
 > $$
@@ -375,29 +375,29 @@ Siano $\mathcal{B}$ e $\mathcal{C}$ due basi distinte dello spazio vettoriale $V
 > $$
 > Pertanto:
 > $$
-> \dim(\operatorname{Im}(T_B)) = \dim\left( T_{S^{-1}}\left( T_A\left( T_S(\mathbb{R}^n) \right) \right) \right)
+> \dim(\mathrm{Im}(T_B)) = \dim\left( T_{S^{-1}}\left( T_A\left( T_S(\mathbb{R}^n) \right) \right) \right)
 > $$
 > Poiché $S$ è una matrice invertibile, l'applicazione lineare $T_S: \mathbb{R}^n \to \mathbb{R}^n$ è un isomorfismo, dunque suriettiva: $T_S(\mathbb{R}^n) = \mathbb{R}^n$. L'espressione diventa:
 > $$
-> \dim(\operatorname{Im}(T_B)) = \dim\left( T_{S^{-1}}\left( T_A(\mathbb{R}^n) \right) \right)
+> \dim(\mathrm{Im}(T_B)) = \dim\left( T_{S^{-1}}\left( T_A(\mathbb{R}^n) \right) \right)
 > $$
 > Analogamente, anche $S^{-1}$ è invertibile, quindi $T_{S^{-1}}: \mathbb{R}^n \to \mathbb{R}^n$ è un isomorfismo. Poiché ogni isomorfismo conserva la dimensione di qualunque sottospazio vettoriale su cui agisce:
 > $$
-> \dim\left( T_{S^{-1}}\left( T_A(\mathbb{R}^n) \right) \right) = \dim(T_A(\mathbb{R}^n)) = \dim(\operatorname{col}(A)) = \operatorname{rk}(A)
+> \dim\left( T_{S^{-1}}\left( T_A(\mathbb{R}^n) \right) \right) = \dim(T_A(\mathbb{R}^n)) = \dim(\mathrm{col}(A)) = \mathrm{rk}(A)
 > $$
 > Abbiamo quindi dimostrato che:
 > $$
-> \operatorname{rk}(B) = \operatorname{rk}(A)
+> \mathrm{rk}(B) = \mathrm{rk}(A)
 > $$
 > 
 > **5. Dimostrazione della Proprietà 6 (Nullità / Dimensione del Nucleo):**
 > Per il Teorema della Dimensione (Teorema del Rango e della Nullità):
 > $$
-> \dim(\operatorname{Ker} A) = n - \operatorname{rk}(A), \qquad \dim(\operatorname{Ker} B) = n - \operatorname{rk}(B)
+> \dim(\mathrm{Ker} A) = n - \mathrm{rk}(A), \qquad \dim(\mathrm{Ker} B) = n - \mathrm{rk}(B)
 > $$
-> Essendo $\operatorname{rk}(A) = \operatorname{rk}(B)$, segue immediatamente:
+> Essendo $\mathrm{rk}(A) = \mathrm{rk}(B)$, segue immediatamente:
 > $$
-> \dim(\operatorname{Ker} A) = \dim(\operatorname{Ker} B)
+> \dim(\mathrm{Ker} A) = \dim(\mathrm{Ker} B)
 > $$
 > 
 > **6. Dimostrazione della Proprietà 7 (Polinomio Caratteristico):**
@@ -419,13 +419,13 @@ Siano $\mathcal{B}$ e $\mathcal{C}$ due basi distinte dello spazio vettoriale $V
 > Poiché gli autovalori di una matrice sono le radici nel campo del rispettivo polinomio caratteristico, e dato che $\chi_A(t) \equiv \chi_B(t)$, le matrici $A$ e $B$ ammettono esattamente lo stesso spettro di autovalori con identiche molteplicità algebriche ($a_\lambda(A) = a_\lambda(B)$).
 > Inoltre, per ogni autovalore $\lambda$, le matrici $(A - \lambda I_n)$ e $(B - \lambda I_n)$ sono simili. Per la Proprietà 6, la dimensione del loro nucleo (molteplicità geometrica) coincide:
 > $$
-> g_\lambda(A) = \dim(\operatorname{Ker}(A - \lambda I_n)) = \dim(\operatorname{Ker}(B - \lambda I_n)) = g_\lambda(B)
+> g_\lambda(A) = \dim(\mathrm{Ker}(A - \lambda I_n)) = \dim(\mathrm{Ker}(B - \lambda I_n)) = g_\lambda(B)
 > $$
 > 
 > **8. Dimostrazione della Proprietà 9 (Traccia):**
-> Ricordando che il coefficiente del termine di grado $n-1$ nel polinomio caratteristico $\chi_M(t) = \det(M - t I_n) = (-1)^n t^n + (-1)^{n-1} \operatorname{tr}(M) t^{n-1} + \dots + \det(M)$ è univocamente legato alla traccia della matrice, e poiché $\chi_A(t) = \chi_B(t)$, ne discende necessariamente che:
+> Ricordando che il coefficiente del termine di grado $n-1$ nel polinomio caratteristico $\chi_M(t) = \det(M - t I_n) = (-1)^n t^n + (-1)^{n-1} \mathrm{tr}(M) t^{n-1} + \dots + \det(M)$ è univocamente legato alla traccia della matrice, e poiché $\chi_A(t) = \chi_B(t)$, ne discende necessariamente che:
 > $$
-> \operatorname{tr}(A) = \operatorname{tr}(B) \qquad \blacksquare
+> \mathrm{tr}(A) = \mathrm{tr}(B) \qquad \blacksquare
 > $$
 >
 ## 5.6. Matrice del Cambio di Base
@@ -435,11 +435,11 @@ Siano $\mathcal{B}$ e $\mathcal{C}$ due basi distinte dello spazio vettoriale $V
 Sia $V$ uno spazio vettoriale su $\mathbb{R}$ di dimensione finita $n$, e siano $\mathcal{B} = \{\mathbf{b}_1, \dots, \mathbf{b}_n\}$ e $\mathcal{C} = \{\mathbf{c}_1, \dots, \mathbf{c}_n\}$ due sue basi distinte.
 
 > [!definition] Matrice del Cambio di Base
-> Si definisce **matrice del cambio di base** da $\mathcal{B}$ a $\mathcal{C}$ (o matrice di passaggio dalla base $\mathcal{B}$ alla base $\mathcal{C}$) la matrice associata all'applicazione identità $\operatorname{id}_V: V \to V$ considerando $\mathcal{B}$ come base del dominio e $\mathcal{C}$ come base del codominio:
+> Si definisce **matrice del cambio di base** da $\mathcal{B}$ a $\mathcal{C}$ (o matrice di passaggio dalla base $\mathcal{B}$ alla base $\mathcal{C}$) la matrice associata all'applicazione identità $\mathrm{id}_V: V \to V$ considerando $\mathcal{B}$ come base del dominio e $\mathcal{C}$ come base del codominio:
 > $$
-> M_{\operatorname{id}_V}^{\mathcal{B},\mathcal{C}} = \begin{pmatrix} [\mathbf{b}_1]_{\mathcal{C}} & [\mathbf{b}_2]_{\mathcal{C}} & \dots & [\mathbf{b}_n]_{\mathcal{C}} \end{pmatrix} \in \operatorname{Mat}_{\mathbb{R}}(n, n)
+> M_{\mathrm{id}_V}^{\mathcal{B},\mathcal{C}} = \begin{pmatrix} [\mathbf{b}_1]_{\mathcal{C}} & [\mathbf{b}_2]_{\mathcal{C}} & \dots & [\mathbf{b}_n]_{\mathcal{C}} \end{pmatrix} \in \mathrm{Mat}_{\mathbb{R}}(n, n)
 > $$
-> Le colonne di $M_{\operatorname{id}_V}^{\mathcal{B},\mathcal{C}}$ sono i vettori colonna formati dalle coordinate degli elementi della vecchia base $\mathcal{B}$ espressi rispetto alla nuova base $\mathcal{C}$.
+> Le colonne di $M_{\mathrm{id}_V}^{\mathcal{B},\mathcal{C}}$ sono i vettori colonna formati dalle coordinate degli elementi della vecchia base $\mathcal{B}$ espressi rispetto alla nuova base $\mathcal{C}$.
 
 > [!note] Formula di Trasformazione delle Coordinate
 > Dal teorema fondamentale di rappresentazione delle applicazioni lineari, per ogni vettore $\mathbf{v} \in V$ il diagramma seguente commuta:
@@ -456,17 +456,17 @@ Sia $V$ uno spazio vettoriale su $\mathbb{R}$ di dimensione finita $n$, e siano 
 > 
 > Esprimendo la relazione in termini algebrici:
 > $$
-> [\mathbf{v}]_{\mathcal{C}} = [\operatorname{id}_V(\mathbf{v})]_{\mathcal{C}} = T_{M_{\operatorname{id}_V}^{\mathcal{B},\mathcal{C}}}(Q_{\mathcal{B}}(\mathbf{v})) = M_{\operatorname{id}_V}^{\mathcal{B},\mathcal{C}} [\mathbf{v}]_{\mathcal{B}}
+> [\mathbf{v}]_{\mathcal{C}} = [\mathrm{id}_V(\mathbf{v})]_{\mathcal{C}} = T_{M_{\mathrm{id}_V}^{\mathcal{B},\mathcal{C}}}(Q_{\mathcal{B}}(\mathbf{v})) = M_{\mathrm{id}_V}^{\mathcal{B},\mathcal{C}} [\mathbf{v}]_{\mathcal{B}}
 > $$
 > Si ha dunque la formula fondamentale del cambio di coordinate:
 > $$
-> \forall \mathbf{v} \in V, \qquad [\mathbf{v}]_{\mathcal{C}} = M_{\operatorname{id}_V}^{\mathcal{B},\mathcal{C}} [\mathbf{v}]_{\mathcal{B}}
+> \forall \mathbf{v} \in V, \qquad [\mathbf{v}]_{\mathcal{C}} = M_{\mathrm{id}_V}^{\mathcal{B},\mathcal{C}} [\mathbf{v}]_{\mathcal{B}}
 > $$
 
 > [!note] Invertibilità della Matrice di Cambio di Base
-> Poiché l'applicazione identità $\operatorname{id}_V: V \to V$ è un isomorfismo (lineare e biiettivo), la matrice $M_{\operatorname{id}_V}^{\mathcal{B},\mathcal{C}}$ è sempre **invertibile**. Inoltre, l'inversa della matrice di passaggio da $\mathcal{B}$ a $\mathcal{C}$ coincide esattamente con la matrice di passaggio inverso da $\mathcal{C}$ a $\mathcal{B}$:
+> Poiché l'applicazione identità $\mathrm{id}_V: V \to V$ è un isomorfismo (lineare e biiettivo), la matrice $M_{\mathrm{id}_V}^{\mathcal{B},\mathcal{C}}$ è sempre **invertibile**. Inoltre, l'inversa della matrice di passaggio da $\mathcal{B}$ a $\mathcal{C}$ coincide esattamente con la matrice di passaggio inverso da $\mathcal{C}$ a $\mathcal{B}$:
 > $$
-> \left( M_{\operatorname{id}_V}^{\mathcal{B},\mathcal{C}} \right)^{-1} = M_{\operatorname{id}_V}^{\mathcal{C},\mathcal{B}}
+> \left( M_{\mathrm{id}_V}^{\mathcal{B},\mathcal{C}} \right)^{-1} = M_{\mathrm{id}_V}^{\mathcal{C},\mathcal{B}}
 > $$
 
 > [!example] Esempio di Calcolo del Cambio di Base in $\mathbb{R}^2$
@@ -476,7 +476,7 @@ Sia $V$ uno spazio vettoriale su $\mathbb{R}$ di dimensione finita $n$, e siano 
 > $$
 > \mathcal{B} = \left\{ \begin{pmatrix} 1 \\ 1 \end{pmatrix}, \begin{pmatrix} 1 \\ -1 \end{pmatrix} \right\} = \{\mathbf{b}_1, \mathbf{b}_2\}, \qquad \mathcal{C} = \left\{ \begin{pmatrix} 1 \\ 0 \end{pmatrix}, \begin{pmatrix} 2 \\ 1 \end{pmatrix} \right\} = \{\mathbf{c}_1, \mathbf{c}_2\}
 > $$
-> Vogliamo determinare la matrice di passaggio $M_{\operatorname{id}_V}^{\mathcal{B},\mathcal{C}} = \begin{pmatrix} [\mathbf{b}_1]_{\mathcal{C}} & [\mathbf{b}_2]_{\mathcal{C}} \end{pmatrix}$.
+> Vogliamo determinare la matrice di passaggio $M_{\mathrm{id}_V}^{\mathcal{B},\mathcal{C}} = \begin{pmatrix} [\mathbf{b}_1]_{\mathcal{C}} & [\mathbf{b}_2]_{\mathcal{C}} \end{pmatrix}$.
 > 
 > **1. Espressione di $\mathbf{b}_1 = \begin{pmatrix} 1 \\ 1 \end{pmatrix}$ nella base $\mathcal{C}$:**
 > Cerchiamo gli scalari $x_1, y_1 \in \mathbb{R}$ tali che:
@@ -501,7 +501,7 @@ Sia $V$ uno spazio vettoriale su $\mathbb{R}$ di dimensione finita $n$, e siano 
 > **3. Costruzione della matrice del cambio di base:**
 > Accostando le colonne trovate:
 > $$
-> M_{\operatorname{id}_V}^{\mathcal{B},\mathcal{C}} = \begin{pmatrix} -1 & 3 \\ 1 & -1 \end{pmatrix}
+> M_{\mathrm{id}_V}^{\mathcal{B},\mathcal{C}} = \begin{pmatrix} -1 & 3 \\ 1 & -1 \end{pmatrix}
 > $$
 > 
 > **4. Verifica della formula delle coordinate:**
@@ -511,7 +511,7 @@ Sia $V$ uno spazio vettoriale su $\mathbb{R}$ di dimensione finita $n$, e siano 
 > $$
 > Calcoliamo le coordinate rispetto a $\mathcal{C}$ mediante la matrice di passaggio:
 > $$
-> [\mathbf{v}]_{\mathcal{C}} = M_{\operatorname{id}_V}^{\mathcal{B},\mathcal{C}} [\mathbf{v}]_{\mathcal{B}} = \begin{pmatrix} -1 & 3 \\ 1 & -1 \end{pmatrix} \begin{pmatrix} 2 \\ 3 \end{pmatrix} = \begin{pmatrix} -1(2) + 3(3) \\ 1(2) + (-1)(3) \end{pmatrix} = \begin{pmatrix} -2 + 9 \\ 2 - 3 \end{pmatrix} = \begin{pmatrix} 7 \\ -1 \end{pmatrix}
+> [\mathbf{v}]_{\mathcal{C}} = M_{\mathrm{id}_V}^{\mathcal{B},\mathcal{C}} [\mathbf{v}]_{\mathcal{B}} = \begin{pmatrix} -1 & 3 \\ 1 & -1 \end{pmatrix} \begin{pmatrix} 2 \\ 3 \end{pmatrix} = \begin{pmatrix} -1(2) + 3(3) \\ 1(2) + (-1)(3) \end{pmatrix} = \begin{pmatrix} -2 + 9 \\ 2 - 3 \end{pmatrix} = \begin{pmatrix} 7 \\ -1 \end{pmatrix}
 > $$
 > Verifichiamo calcolando la combinazione lineare nella base $\mathcal{C}$:
 > $$
@@ -525,9 +525,9 @@ Sia $V$ uno spazio vettoriale su $\mathbb{R}$ di dimensione finita $n$, e siano 
 > Sia $L: V \to V$ un endomorfismo di uno spazio vettoriale $V$ di dimensione finita $n$, e siano $\mathcal{B}$ e $\mathcal{C}$ due sue basi.
 > Allora la relazione tra le matrici rappresentative dell'endomorfismo $L$ nelle basi $\mathcal{B}$ e $\mathcal{C}$ è data da:
 > $$
-> M_L^{\mathcal{C},\mathcal{C}} = M_{\operatorname{id}_V}^{\mathcal{B},\mathcal{C}} \cdot M_L^{\mathcal{B},\mathcal{B}} \cdot M_{\operatorname{id}_V}^{\mathcal{C},\mathcal{B}}
+> M_L^{\mathcal{C},\mathcal{C}} = M_{\mathrm{id}_V}^{\mathcal{B},\mathcal{C}} \cdot M_L^{\mathcal{B},\mathcal{B}} \cdot M_{\mathrm{id}_V}^{\mathcal{C},\mathcal{B}}
 > $$
-> Ricordando che $M_{\operatorname{id}_V}^{\mathcal{B},\mathcal{C}} = \left( M_{\operatorname{id}_V}^{\mathcal{C},\mathcal{B}} \right)^{-1}$, ponendo $S := M_{\operatorname{id}_V}^{\mathcal{C},\mathcal{B}}$ si ottiene la relazione:
+> Ricordando che $M_{\mathrm{id}_V}^{\mathcal{B},\mathcal{C}} = \left( M_{\mathrm{id}_V}^{\mathcal{C},\mathcal{B}} \right)^{-1}$, ponendo $S := M_{\mathrm{id}_V}^{\mathcal{C},\mathcal{B}}$ si ottiene la relazione:
 > $$
 > M_L^{\mathcal{C},\mathcal{C}} = S^{-1} \cdot M_L^{\mathcal{B},\mathcal{B}} \cdot S
 > $$
@@ -539,7 +539,7 @@ Sia $V$ uno spazio vettoriale su $\mathbb{R}$ di dimensione finita $n$, e siano 
 > [!note] Diagramma Commutativo Globale
 > Il risultato discende direttamente dalla decomposizione dell'applicazione lineare $L$ attraverso le mappe identità:
 > $$
-> L = \operatorname{id}_V \circ L \circ \operatorname{id}_V
+> L = \mathrm{id}_V \circ L \circ \mathrm{id}_V
 > $$
 > e dalla corrispondente commutatività del diagramma su $\mathbb{R}^n$:
 > 
@@ -573,7 +573,7 @@ Sia $V$ uno spazio vettoriale su $\mathbb{R}$ di dimensione finita $n$, e siano 
 >   $$
 > - **Traccia di $L$:**
 >   $$
->   \operatorname{tr}(L) := \operatorname{tr}(M_L^{\mathcal{B},\mathcal{B}})
+>   \mathrm{tr}(L) := \mathrm{tr}(M_L^{\mathcal{B},\mathcal{B}})
 >   $$
 > - **Polinomio Caratteristico di $L$:**
 >   $$
@@ -584,7 +584,7 @@ Sia $V$ uno spazio vettoriale su $\mathbb{R}$ di dimensione finita $n$, e siano 
 ## 5.8. Caratterizzazione Matriciale della Diagonalizzazione
 
 > [!proposition] Condizione di Diagonalizzabilità Matriciale
-> Una matrice quadrata $A \in \operatorname{Mat}_{\mathbb{R}}(n, n)$ è **diagonalizzabile** se e solo se è **simile a una matrice diagonale** $D$:
+> Una matrice quadrata $A \in \mathrm{Mat}_{\mathbb{R}}(n, n)$ è **diagonalizzabile** se e solo se è **simile a una matrice diagonale** $D$:
 > $$
 > A \text{ è diagonalizzabile} \iff \exists D \text{ diagonale, } S \text{ invertibile tale che } D = S^{-1} A S
 > $$
@@ -609,7 +609,7 @@ Sia $V$ uno spazio vettoriale su $\mathbb{R}$ di dimensione finita $n$, e siano 
 > 
 > Per il Primo Criterio di diagonalizzabilità, $T_A$ è diagonalizzabile se e solo se esiste una base $\mathcal{B} = \{\mathbf{b}_1, \dots, \mathbf{b}_n\}$ di $\mathbb{R}^n$ interamente formata da autovettori di $T_A$. Rispetto a tale base, la matrice rappresentativa $M_{T_A}^{\mathcal{B},\mathcal{B}}$ è diagonale:
 > $$
-> M_{T_A}^{\mathcal{B},\mathcal{B}} = D = \operatorname{diag}(\lambda_1, \dots, \lambda_n)
+> M_{T_A}^{\mathcal{B},\mathcal{B}} = D = \mathrm{diag}(\lambda_1, \dots, \lambda_n)
 > $$
 > Denotiamo con $\mathcal{E} = \{\mathbf{e}_1, \dots, \mathbf{e}_n\}$ la base canonica standard di $\mathbb{R}^n$. Per definizione di applicazione indotta, la matrice rappresentativa di $T_A$ nella base canonica coincide esattamente con $A$:
 > $$
@@ -617,15 +617,15 @@ Sia $V$ uno spazio vettoriale su $\mathbb{R}$ di dimensione finita $n$, e siano 
 > $$
 > Applicando la formula del cambio di base:
 > $$
-> M_{T_A}^{\mathcal{B},\mathcal{B}} = M_{\operatorname{id}_{\mathbb{R}^n}}^{\mathcal{E},\mathcal{B}} \cdot M_{T_A}^{\mathcal{E},\mathcal{E}} \cdot M_{\operatorname{id}_{\mathbb{R}^n}}^{\mathcal{B},\mathcal{E}}
+> M_{T_A}^{\mathcal{B},\mathcal{B}} = M_{\mathrm{id}_{\mathbb{R}^n}}^{\mathcal{E},\mathcal{B}} \cdot M_{T_A}^{\mathcal{E},\mathcal{E}} \cdot M_{\mathrm{id}_{\mathbb{R}^n}}^{\mathcal{B},\mathcal{E}}
 > $$
 > Definendo la matrice modale $S$ come la matrice del cambio di base dalla base di autovettori $\mathcal{B}$ alla base canonica $\mathcal{E}$:
 > $$
-> S := M_{\operatorname{id}_{\mathbb{R}^n}}^{\mathcal{B},\mathcal{E}} = \begin{pmatrix} [\mathbf{b}_1]_{\mathcal{E}} & [\mathbf{b}_2]_{\mathcal{E}} & \dots & [\mathbf{b}_n]_{\mathcal{E}} \end{pmatrix} = \begin{pmatrix} \mathbf{b}_1 & \mathbf{b}_2 & \dots & \mathbf{b}_n \end{pmatrix}
+> S := M_{\mathrm{id}_{\mathbb{R}^n}}^{\mathcal{B},\mathcal{E}} = \begin{pmatrix} [\mathbf{b}_1]_{\mathcal{E}} & [\mathbf{b}_2]_{\mathcal{E}} & \dots & [\mathbf{b}_n]_{\mathcal{E}} \end{pmatrix} = \begin{pmatrix} \mathbf{b}_1 & \mathbf{b}_2 & \dots & \mathbf{b}_n \end{pmatrix}
 > $$
 > La matrice di passaggio inverso è:
 > $$
-> M_{\operatorname{id}_{\mathbb{R}^n}}^{\mathcal{E},\mathcal{B}} = \left( M_{\operatorname{id}_{\mathbb{R}^n}}^{\mathcal{B},\mathcal{E}} \right)^{-1} = S^{-1}
+> M_{\mathrm{id}_{\mathbb{R}^n}}^{\mathcal{E},\mathcal{B}} = \left( M_{\mathrm{id}_{\mathbb{R}^n}}^{\mathcal{B},\mathcal{E}} \right)^{-1} = S^{-1}
 > $$
 > Sostituendo tali espressioni:
 > $$
@@ -633,14 +633,14 @@ Sia $V$ uno spazio vettoriale su $\mathbb{R}$ di dimensione finita $n$, e siano 
 > $$
 
 > [!note] Corollario: Determinante e Traccia come Invarianti Spettrali
-> Poiché ogni matrice diagonalizzabile $A \in \operatorname{Mat}_{\mathbb{R}}(n, n)$ è simile alla matrice diagonale dei suoi autovalori $D = \operatorname{diag}(\lambda_1, \dots, \lambda_n)$, e dato che determinante e traccia sono invarianti per similitudine:
+> Poiché ogni matrice diagonalizzabile $A \in \mathrm{Mat}_{\mathbb{R}}(n, n)$ è simile alla matrice diagonale dei suoi autovalori $D = \mathrm{diag}(\lambda_1, \dots, \lambda_n)$, e dato che determinante e traccia sono invarianti per similitudine:
 > - Il **determinante** di $A$ è pari al **prodotto di tutti i suoi autovalori**:
 >   $$
 >   \det(A) = \det(D) = \prod_{i=1}^n \lambda_i = \lambda_1 \cdot \lambda_2 \cdots \lambda_n
 >   $$
 > - La **traccia** di $A$ è pari alla **somma di tutti i suoi autovalori**:
 >   $$
->   \operatorname{tr}(A) = \operatorname{tr}(D) = \sum_{i=1}^n \lambda_i = \lambda_1 + \lambda_2 + \dots + \lambda_n
+>   \mathrm{tr}(A) = \mathrm{tr}(D) = \sum_{i=1}^n \lambda_i = \lambda_1 + \lambda_2 + \dots + \lambda_n
 >   $$
 
 > [!note] Calcolo Rapido delle Potenze di una Matrice
@@ -676,7 +676,7 @@ Sia $V$ uno spazio vettoriale su $\mathbb{R}$ di dimensione finita $n$, e siano 
 > **Passo 2: Determinazione degli autospazi e delle basi di autovettori.**
 > - **Autospazio $E_0$ associato a $\lambda_1 = 0$:**
 >   $$
->   E_0 = \operatorname{Ker}(A - 0 I_2) = \operatorname{Ker} \begin{pmatrix} 1 & 1 \\ 1 & 1 \end{pmatrix}
+>   E_0 = \mathrm{Ker}(A - 0 I_2) = \mathrm{Ker} \begin{pmatrix} 1 & 1 \\ 1 & 1 \end{pmatrix}
 >   $$
 >   Risolviamo il sistema lineare omogeneo associato:
 >   $$
@@ -684,11 +684,11 @@ Sia $V$ uno spazio vettoriale su $\mathbb{R}$ di dimensione finita $n$, e siano 
 >   $$
 >   I vettori soluzione hanno forma $\begin{pmatrix} x \\ -x \end{pmatrix} = x \begin{pmatrix} 1 \\ -1 \end{pmatrix}$. Dunque:
 >   $$
->   E_0 = \operatorname{Span}\left\{ \begin{pmatrix} 1 \\ -1 \end{pmatrix} \right\} \implies \mathbf{v}_1 = \begin{pmatrix} 1 \\ -1 \end{pmatrix}
+>   E_0 = \mathrm{Span}\left\{ \begin{pmatrix} 1 \\ -1 \end{pmatrix} \right\} \implies \mathbf{v}_1 = \begin{pmatrix} 1 \\ -1 \end{pmatrix}
 >   $$
 > - **Autospazio $E_2$ associato a $\lambda_2 = 2$:**
 >   $$
->   E_2 = \operatorname{Ker}(A - 2 I_2) = \operatorname{Ker} \begin{pmatrix} 1-2 & 1 \\ 1 & 1-2 \end{pmatrix} = \operatorname{Ker} \begin{pmatrix} -1 & 1 \\ 1 & -1 \end{pmatrix}
+>   E_2 = \mathrm{Ker}(A - 2 I_2) = \mathrm{Ker} \begin{pmatrix} 1-2 & 1 \\ 1 & 1-2 \end{pmatrix} = \mathrm{Ker} \begin{pmatrix} -1 & 1 \\ 1 & -1 \end{pmatrix}
 >   $$
 >   Risolviamo il sistema:
 >   $$
@@ -696,7 +696,7 @@ Sia $V$ uno spazio vettoriale su $\mathbb{R}$ di dimensione finita $n$, e siano 
 >   $$
 >   Dunque:
 >   $$
->   E_2 = \operatorname{Span}\left\{ \begin{pmatrix} 1 \\ 1 \end{pmatrix} \right\} \implies \mathbf{v}_2 = \begin{pmatrix} 1 \\ 1 \end{pmatrix}
+>   E_2 = \mathrm{Span}\left\{ \begin{pmatrix} 1 \\ 1 \end{pmatrix} \right\} \implies \mathbf{v}_2 = \begin{pmatrix} 1 \\ 1 \end{pmatrix}
 >   $$
 > 
 > **Passo 3: Costruzione della base e delle matrici $D$ ed $S$.**
@@ -740,17 +740,17 @@ Sia $V$ uno spazio vettoriale su $\mathbb{R}$ di dimensione finita $n$, e siano 
 >
 ### Definizioni delle Molteplicità
 
-Sia $L: V \to V$ un endomorfismo su uno spazio vettoriale reale $V$ di dimensione finita $n$ (oppure sia $A \in \operatorname{Mat}_{\mathbb{R}}(n, n)$), e sia $\lambda \in \mathbb{R}$ un autovalore di $L$.
+Sia $L: V \to V$ un endomorfismo su uno spazio vettoriale reale $V$ di dimensione finita $n$ (oppure sia $A \in \mathrm{Mat}_{\mathbb{R}}(n, n)$), e sia $\lambda \in \mathbb{R}$ un autovalore di $L$.
 
 > [!definition] Molteplicità Algebrica e Molteplicità Geometrica
 > 1. Si definisce **molteplicità algebrica** dell'autovalore $\lambda$, denotata con $a_\lambda$ oppure $m_a(\lambda)$, la molteplicità di $\lambda$ come radice del polinomio caratteristico $\chi_L(t)$ (ovvero la massima potenza con cui il termine $(t - \lambda)$ o $(\lambda - t)$ divide $\chi_L(t)$).
 > 2. Si definisce **molteplicità geometrica** dell'autovalore $\lambda$, denotata con $g_\lambda$ oppure $m_g(\lambda)$, la dimensione dell'autospazio associato a $\lambda$:
 >    $$
->    g_\lambda := \dim(E_\lambda) = \dim(\operatorname{Ker}(L - \lambda \operatorname{id}_V))
+>    g_\lambda := \dim(E_\lambda) = \dim(\mathrm{Ker}(L - \lambda \mathrm{id}_V))
 >    $$
 >    Nel contesto matriciale:
 >    $$
->    g_\lambda = n - \operatorname{rk}(A - \lambda I_n)
+>    g_\lambda = n - \mathrm{rk}(A - \lambda I_n)
 >    $$
 >
 ### La Disuguaglianza Fondamentale tra le Molteplicità
@@ -765,7 +765,7 @@ Sia $L: V \to V$ un endomorfismo su uno spazio vettoriale reale $V$ di dimension
 > **1. Verifica di $1 \le g_\lambda$:**
 > Per definizione di autovalore, esiste almeno un autovettore non nullo $\mathbf{v} \neq \mathbf{0}$ tale che $L(\mathbf{v}) = \lambda \mathbf{v}$. Di conseguenza:
 > $$
-> E_\lambda = \operatorname{Ker}(L - \lambda \operatorname{id}_V) \neq \{\mathbf{0}\} \implies g_\lambda = \dim(E_\lambda) \ge 1
+> E_\lambda = \mathrm{Ker}(L - \lambda \mathrm{id}_V) \neq \{\mathbf{0}\} \implies g_\lambda = \dim(E_\lambda) \ge 1
 > $$
 > 
 > **2. Verifica di $g_\lambda \le a_\lambda$:**
@@ -785,7 +785,7 @@ Sia $L: V \to V$ un endomorfismo su uno spazio vettoriale reale $V$ di dimension
 > 0 & C
 > \end{pmatrix}
 > $$
-> dove $\lambda I_g \in \operatorname{Mat}_{\mathbb{R}}(g, g)$ è una matrice scalare, $0 \in \operatorname{Mat}_{\mathbb{R}}(n-g, g)$ è il blocco nullo, $B \in \operatorname{Mat}_{\mathbb{R}}(g, n-g)$ e $C \in \operatorname{Mat}_{\mathbb{R}}(n-g, n-g)$.
+> dove $\lambda I_g \in \mathrm{Mat}_{\mathbb{R}}(g, g)$ è una matrice scalare, $0 \in \mathrm{Mat}_{\mathbb{R}}(n-g, g)$ è il blocco nullo, $B \in \mathrm{Mat}_{\mathbb{R}}(g, n-g)$ e $C \in \mathrm{Mat}_{\mathbb{R}}(n-g, n-g)$.
 > 
 > Calcoliamo ora il polinomio caratteristico $\chi_L(t)$ usando la matrice a blocchi:
 > $$
@@ -856,8 +856,8 @@ Sia $L: V \to V$ un endomorfismo su uno spazio vettoriale reale $V$ di dimension
 > [!example] Esempio 1: Matrice Diagonalizzabile
 > Si riprenda la matrice simmetrica $A = \begin{pmatrix} 1 & 1 \\ 1 & 1 \end{pmatrix}$.
 > Il polinomio caratteristico è $\chi_A(t) = t(t - 2)$. Gli autovalori sono $\lambda_1 = 2$ e $\lambda_2 = 0$.
-> - Per $\lambda_1 = 2$: la molteplicità algebrica è $a_{\lambda_1} = 1$. L'autospazio è $E_2 = \operatorname{Span}\left\{ \begin{pmatrix} 1 \\ 1 \end{pmatrix} \right\}$, per cui $g_{\lambda_1} = \dim(E_2) = 1$.
-> - Per $\lambda_2 = 0$: la molteplicità algebrica è $a_{\lambda_2} = 1$. L'autospazio è $E_0 = \operatorname{Span}\left\{ \begin{pmatrix} 1 \\ -1 \end{pmatrix} \right\}$, per cui $g_{\lambda_2} = \dim(E_0) = 1$.
+> - Per $\lambda_1 = 2$: la molteplicità algebrica è $a_{\lambda_1} = 1$. L'autospazio è $E_2 = \mathrm{Span}\left\{ \begin{pmatrix} 1 \\ 1 \end{pmatrix} \right\}$, per cui $g_{\lambda_1} = \dim(E_2) = 1$.
+> - Per $\lambda_2 = 0$: la molteplicità algebrica è $a_{\lambda_2} = 1$. L'autospazio è $E_0 = \mathrm{Span}\left\{ \begin{pmatrix} 1 \\ -1 \end{pmatrix} \right\}$, per cui $g_{\lambda_2} = \dim(E_0) = 1$.
 > 
 > Verifichiamo le due condizioni del Secondo Criterio:
 > 1. $\sum_{i=1}^2 a_{\lambda_i} = a_{\lambda_1} + a_{\lambda_2} = 1 + 1 = 2 = \dim(\mathbb{R}^2)$ (polinomio completamente scisso in $\mathbb{R}$).
@@ -868,7 +868,7 @@ Sia $L: V \to V$ un endomorfismo su uno spazio vettoriale reale $V$ di dimension
 > [!example] Esempio 2: Matrice Non Diagonalizzabile su $\mathbb{R}$ (Assenza di Autovalori Reali)
 > Si consideri la matrice di rotazione oraria di $\frac{\pi}{2}$:
 > $$
-> B = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix} \in \operatorname{Mat}_{\mathbb{R}}(2, 2)
+> B = \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix} \in \mathrm{Mat}_{\mathbb{R}}(2, 2)
 > $$
 > Calcoliamo il polinomio caratteristico:
 > $$
@@ -930,11 +930,11 @@ Quando la condizione di diagonalizzabilità non è soddisfatta (ad esempio perch
 >   Dunque il primo vettore $\mathbf{v}_1$ (detto *capocatena*) è a tutti gli effetti un **autovettore ordinario** di $L$ associato all'autovalore $\lambda$ ($\mathbf{v}_1 \in E_\lambda$).
 > - Per gli indici successivi $i = 2, \dots, m$, riscrivendo la relazione nella forma:
 >   $$
->   (L - \lambda \operatorname{id}_V)(\mathbf{v}_i) = \mathbf{v}_{i-1}
+>   (L - \lambda \mathrm{id}_V)(\mathbf{v}_i) = \mathbf{v}_{i-1}
 >   $$
->   si nota che l'operatore $(L - \lambda \operatorname{id}_V)$ agisce come un operatore di "abbassamento" che sposta ciascun vettore della catena sul precedente, annullando infine il capocatena:
+>   si nota che l'operatore $(L - \lambda \mathrm{id}_V)$ agisce come un operatore di "abbassamento" che sposta ciascun vettore della catena sul precedente, annullando infine il capocatena:
 >   $$
->   (L - \lambda \operatorname{id}_V)^k(\mathbf{v}_k) = \mathbf{0}
+>   (L - \lambda \mathrm{id}_V)^k(\mathbf{v}_k) = \mathbf{0}
 >   $$
 >
 ### La Base di Jordan e il Blocco di Jordan
@@ -962,14 +962,14 @@ Quando la condizione di diagonalizzabilità non è soddisfatta (ad esempio perch
 > \vdots & \vdots & \ddots & \ddots & \vdots \\
 > 0 & 0 & \dots & \lambda & 1 \\
 > 0 & 0 & \dots & 0 & \lambda
-> \end{pmatrix} \in \operatorname{Mat}_{\mathbb{R}}(m, m)
+> \end{pmatrix} \in \mathrm{Mat}_{\mathbb{R}}(m, m)
 > $$
 > Se invece la base $\mathcal{B}$ di $V$ è composta dall'unione di più catene di Jordan disgiunte, la matrice $M_L^{\mathcal{B},\mathcal{B}}$ assume una struttura **diagonale a blocchi**, costituita da una sequenza di blocchi di Jordan disposti lungo la diagonale principale.
 >
 ### La Forma Canonica di Jordan
 
 > [!definition] Blocco di Jordan e Matrice di Jordan
-> 1. La matrice quadrata $J_m(\lambda) \in \operatorname{Mat}_{\mathbb{R}}(m, m)$ avente l'autovalore $\lambda$ lungo tutta la diagonale principale, il valore $1$ sulla sopradiagonale immediatamente superiore e $0$ altrove è detta **blocco di Jordan** di ordine $m$ associato a $\lambda$ $$J_{m}=\begin{pmatrix}  1 & 1 & 0  & 0 & \dots & 0 \\ 0 & 1 & 1  & 0 & \dots & 0 \\  0 & 0 & 1 & 1 & \dots & 0 \\  \vdots & \vdots & \vdots & \vdots &   \ddots & \vdots  \\  0 & 0 & 0 & 0 & \dots & 1   \end{pmatrix}$$
+> 1. La matrice quadrata $J_m(\lambda) \in \mathrm{Mat}_{\mathbb{R}}(m, m)$ avente l'autovalore $\lambda$ lungo tutta la diagonale principale, il valore $1$ sulla sopradiagonale immediatamente superiore e $0$ altrove è detta **blocco di Jordan** di ordine $m$ associato a $\lambda$ $$J_{m}=\begin{pmatrix}  1 & 1 & 0  & 0 & \dots & 0 \\ 0 & 1 & 1  & 0 & \dots & 0 \\  0 & 0 & 1 & 1 & \dots & 0 \\  \vdots & \vdots & \vdots & \vdots &   \ddots & \vdots  \\  0 & 0 & 0 & 0 & \dots & 1   \end{pmatrix}$$
 > 2. Una matrice quadrata $J$ diagonale a blocchi della forma:
 >    $$
 >    J = \begin{pmatrix}
@@ -999,7 +999,7 @@ Quando la condizione di diagonalizzabilità non è soddisfatta (ad esempio perch
 > Sia $L: V \to V$ un endomorfismo triangolabile, e sia $\lambda_0 \in \mathbb{R}$ un suo autovalore.
 > Posto, per ogni $k \in \mathbb{N}$:
 > $$
-> s_k := \operatorname{rk}(L - \lambda_0 \operatorname{id}_V)^k
+> s_k := \mathrm{rk}(L - \lambda_0 \mathrm{id}_V)^k
 > $$
 > Allora ogni base di Jordan di $L$ contiene esattamente:
 > $$

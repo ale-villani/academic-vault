@@ -35,7 +35,7 @@ Si formalizza il concetto di proprietà soddisfatta definitivamente nel contesto
 > - **Intorno di $-\infty$**: un intervallo del tipo $(-\infty, a)$ oppure $(-\infty, a]$.
 
 > [!definition] Punto di accumulazione a $+\infty$ e $-\infty$
-> Si dice che $+\infty$ (rispettivamente $-\infty$) è **punto di accumulazione** per l'insieme di definizione $X = \operatorname{dom}(f)$ se:
+> Si dice che $+\infty$ (rispettivamente $-\infty$) è **punto di accumulazione** per l'insieme di definizione $X = \mathrm{dom}(f)$ se:
 > $$
 > \forall M > 0, \; \exists x \in X : x > M \quad \big(\text{risp. } x < -M\big)
 > $$
@@ -90,9 +90,9 @@ $$
 Si ottiene così la caratterizzazione metrica formale di limite finito al finito:
 
 > [!definition] Definizione metrica ($\varepsilon$-$\delta$) di limite finito per $x \to x_0$ finito
-> Siano $x_0, l \in \mathbb{R}$, con $x_0$ punto di accumulazione per $\operatorname{dom}(f)$. Si ha:
+> Siano $x_0, l \in \mathbb{R}$, con $x_0$ punto di accumulazione per $\mathrm{dom}(f)$. Si ha:
 > $$
-> \lim_{x \to x_0} f(x) = l \iff \forall \varepsilon > 0, \; \exists \delta > 0 : \forall x \in \operatorname{dom}(f), \; 0 < |x - x_0| < \delta \implies |f(x) - l| < \varepsilon
+> \lim_{x \to x_0} f(x) = l \iff \forall \varepsilon > 0, \; \exists \delta > 0 : \forall x \in \mathrm{dom}(f), \; 0 < |x - x_0| < \delta \implies |f(x) - l| < \varepsilon
 > $$
 
 > [!note] Disuguaglianze deboli e strette
@@ -445,7 +445,7 @@ Siano date due funzioni $g : B \subseteq \mathbb{R} \to \mathbb{R}$ e $f : A \su
 
 > [!example] Condizione di componibilità
 > Siano $g(x) = -x^2$ definita su $\mathbb{R}$ e $f(y) = \ln y$ definita su $(0, +\infty)$.
-> Poiché $\operatorname{Im}(g) = (-\infty, 0]$, non esiste alcun valore reale $x$ tale che $g(x) > 0$. Ne segue che l'espressione $f(g(x)) = \ln(-x^2)$ non è definita per alcun $x \in \mathbb{R}$ (campo di esistenza vuoto).
+> Poiché $\mathrm{Im}(g) = (-\infty, 0]$, non esiste alcun valore reale $x$ tale che $g(x) > 0$. Ne segue che l'espressione $f(g(x)) = \ln(-x^2)$ non è definita per alcun $x \in \mathbb{R}$ (campo di esistenza vuoto).
 >
 **La fallacia intuitiva della sostituzione diretta**
 
@@ -490,7 +490,7 @@ $$
 Per ripristinare la validità della regola di cambio di variabile è indispensabile garantire che la funzione interna $g(x)$ non assuma definitivamente il valore limite $l$, oppure che la funzione esterna $f$ sia **continua** in $l$.
 
 > [!theorem] Teorema del limite di funzioni composte
-> Siano $g : B \subseteq \mathbb{R} \to \mathbb{R}$ e $f : A \subseteq \mathbb{R} \to \mathbb{R}$, con $\operatorname{Im}(g) \subseteq A$ tale che $f \circ g$ sia ben definita su $B$.
+> Siano $g : B \subseteq \mathbb{R} \to \mathbb{R}$ e $f : A \subseteq \mathbb{R} \to \mathbb{R}$, con $\mathrm{Im}(g) \subseteq A$ tale che $f \circ g$ sia ben definita su $B$.
 > Sia $x_0$ punto di accumulazione per $B$. Supponiamo che:
 > 1. Esista il limite della funzione interna:
 >    $$

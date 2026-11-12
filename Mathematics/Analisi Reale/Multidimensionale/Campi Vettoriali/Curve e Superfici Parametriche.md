@@ -162,7 +162,7 @@ Dalla definizione di limite discende naturalmente la nozione di continuità:
 > [!example] Esempio 5: Curve cartesiane (Grafico di funzione reale)
 > Ogni funzione reale scalare $f: \mathbb{R} \longrightarrow \mathbb{R}$ continua definisce naturalmente una curva cartesiana in $\mathbb{R}^2$:
 > $$
-> \mathbf{r}(t) = \begin{bmatrix} t \\ f(t) \end{bmatrix}, \quad t \in \operatorname{dom}(f)
+> \mathbf{r}(t) = \begin{bmatrix} t \\ f(t) \end{bmatrix}, \quad t \in \mathrm{dom}(f)
 > $$
 > il cui sostegno coincide esattamente con il grafico cartesiano della funzione $f$.
 
@@ -304,7 +304,7 @@ Dal punto di vista cinematico e geometrico:
 > $$
 > \mathbf{r}'(t) = \mathbf{0} \iff \begin{cases} 2t = 0 \\ 3t^2 = 0 \end{cases} \iff t = 0
 > $$
-> Dunque $\mathbf{r}$ è regolare su qualsiasi intervallo tale che $0 \notin \operatorname{dom}(\mathbf{r})$. Nel punto $t = 0$ la curva fallisce la regolarità (presenza geometrica di una cuspide).
+> Dunque $\mathbf{r}$ è regolare su qualsiasi intervallo tale che $0 \notin \mathrm{dom}(\mathbf{r})$. Nel punto $t = 0$ la curva fallisce la regolarità (presenza geometrica di una cuspide).
 
 > [!example] Esempio 3: Moto degenere con punto di arresto
 > Sia data:
@@ -444,7 +444,7 @@ L'impiego dell'estremo superiore è motivato dal fatto che ogni poligonale appro
 > Per mostrare la disuguaglianza opposta (e quindi l'uguaglianza con l'integrale) si ricorre alla continuità uniforme della derivata $\mathbf{r}'$ garantita dal teorema di Heine-Cantor su $[a, b]$, unitamente a reiterate applicazioni della disuguaglianza triangolare. $\blacksquare$
 
 > [!note] Lunghezza della curva vs lunghezza del sostegno
-> La lunghezza di una curva è un invariante cinematico che in generale **non coincide** con la misura geometrica unidimensionale del suo sostegno $\operatorname{Im}(\mathbf{r})$.
+> La lunghezza di una curva è un invariante cinematico che in generale **non coincide** con la misura geometrica unidimensionale del suo sostegno $\mathrm{Im}(\mathbf{r})$.
 > **Esempio:** Se il sostegno (ad esempio una circonferenza di raggio $R$) viene percorso $n$ volte dal vettore posizione $\mathbf{r}(t)$, la lunghezza calcolata della curva risulterà pari a $n$ volte la lunghezza del sostegno:
 > $$
 > L = n \cdot (2\pi R)
@@ -522,12 +522,12 @@ L'impiego dell'estremo superiore è motivato dal fatto che ogni poligonale appro
 > $$
 > Risolvendo mediante la sostituzione con funzioni iperboliche $\theta = \sinh w$, $d\theta = \cosh w \, dw$:
 > $$
-> L = A \int_0^{\operatorname{arcsinh}(2\pi)} \sqrt{1 + \sinh^2 w} \cosh w \, dw = A \int_0^{\operatorname{arcsinh}(2\pi)} \cosh^2 w \, dw
+> L = A \int_0^{\mathrm{arcsinh}(2\pi)} \sqrt{1 + \sinh^2 w} \cosh w \, dw = A \int_0^{\mathrm{arcsinh}(2\pi)} \cosh^2 w \, dw
 > $$
 > Utilizzando la formula di duplicazione $\cosh^2 w = \frac{1 + \cosh(2w)}{2}$:
 > $$
-> L = A \int_0^{\operatorname{arcsinh}(2\pi)} \left( \frac{1}{2}\cosh(2w) + \frac{1}{2} \right) dw = A \left[ \frac{1}{4}\sinh(2w) + \frac{1}{2}w \right]_0^{\operatorname{arcsinh}(2\pi)}
-> = A \left[ \frac{1}{4}\sinh\big(2\operatorname{arcsinh}(2\pi)\big) + \frac{\operatorname{arcsinh}(2\pi)}{2} \right]
+> L = A \int_0^{\mathrm{arcsinh}(2\pi)} \left( \frac{1}{2}\cosh(2w) + \frac{1}{2} \right) dw = A \left[ \frac{1}{4}\sinh(2w) + \frac{1}{2}w \right]_0^{\mathrm{arcsinh}(2\pi)}
+> = A \left[ \frac{1}{4}\sinh\big(2\mathrm{arcsinh}(2\pi)\big) + \frac{\mathrm{arcsinh}(2\pi)}{2} \right]
 > $$
 
 > [!example] Esempio 2: Elica cilindrica
@@ -728,7 +728,7 @@ La parametrizzazione in lunghezza d'arco costituisce il punto di partenza natura
 > Poiché $\mathbf{N}(s) \perp \mathbf{T}(s)$ per costruzione, i due vettori sono linearmente indipendenti.
 > Lo spazio vettoriale generato:
 > $$
-> \Pi_{\text{osc}}(s) := \operatorname{Span}\big\{ \mathbf{T}(s), \mathbf{N}(s) \big\}
+> \Pi_{\text{osc}}(s) := \mathrm{Span}\big\{ \mathbf{T}(s), \mathbf{N}(s) \big\}
 > $$
 > individua il **piano osculatore** della curva nel punto $\mathbf{r}(s)$:
 > - È il piano affine passante per $\mathbf{r}(s)$ che **approssima al secondo ordine** (al meglio) la traiettoria spaziale della curva;

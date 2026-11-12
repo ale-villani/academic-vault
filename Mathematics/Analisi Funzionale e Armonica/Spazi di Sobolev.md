@@ -692,7 +692,7 @@ Presentiamo i teoremi cardine che consentono di approssimare funzioni dello spaz
 > Data una funzione arbitraria $g \in L^2(\partial\Omega)$, esiste sempre una funzione $u \in H^1(\Omega)$ tale che $\tau_0 u = g$? In altri termini, l'operatore di traccia $\tau_0$ è suriettivo su $L^2(\partial\Omega)$?
 > $\rightsquigarrow$ **NO**: l'immagine di $\tau_0$ è un sottospazio vettoriale proprio:
 > $$
-> \operatorname{Im} \tau_0 \subsetneq L^2(\partial\Omega)
+> \mathrm{Im} \tau_0 \subsetneq L^2(\partial\Omega)
 > $$
 > Le tracce al bordo delle funzioni di $H^1(\Omega)$ conservano una frazione di regolarità differenziale ("mezza derivata") che una generica funzione di $L^2(\partial\Omega)$ non possiede.
 

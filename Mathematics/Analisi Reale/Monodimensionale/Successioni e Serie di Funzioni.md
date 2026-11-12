@@ -939,7 +939,7 @@ Le serie di potenze rappresentano la classe più importante e versatile di serie
 > [!note] Convergenza nel campo complesso
 > Nel caso di una serie a termini complessi, la serie converge (nel senso desiderato: puntuale, uniforme, assoluto) se e solo se convergono separatamente le serie delle parti reali e delle parti immaginarie:
 > $$
-> \sum_{n=0}^{+\infty} a_n (z - z_0)^n = \sum_{n=0}^{+\infty} \operatorname{Re}\left( a_n (z - z_0)^n \right) + i \sum_{n=0}^{+\infty} \operatorname{Im}\left( a_n (z - z_0)^n \right)
+> \sum_{n=0}^{+\infty} a_n (z - z_0)^n = \sum_{n=0}^{+\infty} \mathrm{Re}\left( a_n (z - z_0)^n \right) + i \sum_{n=0}^{+\infty} \mathrm{Im}\left( a_n (z - z_0)^n \right)
 > $$
 > oppure, in modo equivalente (come si può rigorosamente dimostrare), se converge la serie dei moduli:
 > $$

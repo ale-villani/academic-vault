@@ -129,7 +129,7 @@ Siano $A$ e $B$ due sottoinsiemi di un generico universo. Si definiscono le segu
 > - Se $X = Y$, la relazione si definisce **relazione binaria interna** sull'insieme $X$.
 
 > [!definition] Grafico di una Relazione
-> Il **grafico** della relazione $r$, denotato con $R$ oppure $\operatorname{graf}(r)$, è il sottoinsieme del prodotto cartesiano $X \times Y$ costituito da tutte e sole le coppie ordinate che soddisfano la relazione:
+> Il **grafico** della relazione $r$, denotato con $R$ oppure $\mathrm{graf}(r)$, è il sottoinsieme del prodotto cartesiano $X \times Y$ costituito da tutte e sole le coppie ordinate che soddisfano la relazione:
 > $$R := \{(x, y) \in X \times Y \mid r(x, y) \text{ è vera}\}$$
 > 
 > Dal punto di vista della teoria assiomatica, una relazione binaria si identifica esaustivamente con il suo grafico $R \subseteq X \times Y$.
@@ -166,7 +166,7 @@ Le relazioni di equivalenza permettono di "classificare" e raggruppare gli eleme
 
 > [!definition] Funzione (Applicazione)
 > Siano $X$ e $Y$ due insiemi. Una **funzione** $f : X \to Y$ è una relazione binaria tra $X$ e $Y$ che associa a **ogni** elemento di $X$ **uno ed un solo** elemento di $Y$:
-> $$\forall x \in X, \quad \exists! y \in Y \mid (x, y) \in \operatorname{graf}(f)$$
+> $$\forall x \in X, \quad \exists! y \in Y \mid (x, y) \in \mathrm{graf}(f)$$
 > 
 > Tale elemento unico $y$ viene denotato con la notazione analitica:
 > $$y = f(x)$$
@@ -185,19 +185,19 @@ Le relazioni di equivalenza permettono di "classificare" e raggruppare gli eleme
 
 > [!definition] Dominio, Codominio e Immagine
 > Data una funzione $f : X \to Y$:
-> - $X$ costituisce il **dominio** (o insieme di partenza): $X = \operatorname{dom}(f)$.
-> - $Y$ costituisce il **codominio** (o insieme di arrivo): $Y = \operatorname{cod}(f)$.
-> - L'**insieme immagine** (o rango) di $f$, denotato con $\operatorname{im}(f)$ o $f(X)$, è il sottoinsieme del codominio costituito da tutte le immagini effettive degli elementi del dominio:
->   $$\operatorname{im}(f) := \{y \in Y \mid \exists x \in X : f(x) = y\}$$
+> - $X$ costituisce il **dominio** (o insieme di partenza): $X = \mathrm{dom}(f)$.
+> - $Y$ costituisce il **codominio** (o insieme di arrivo): $Y = \mathrm{cod}(f)$.
+> - L'**insieme immagine** (o rango) di $f$, denotato con $\mathrm{im}(f)$ o $f(X)$, è il sottoinsieme del codominio costituito da tutte le immagini effettive degli elementi del dominio:
+>   $$\mathrm{im}(f) := \{y \in Y \mid \exists x \in X : f(x) = y\}$$
 ### Uguaglianza tra Funzioni
 
 > [!important] Criterio di Coincidenza Funzionale
 > Due funzioni $f$ e $g$ sono rigorosamente **uguali** ($f = g$) se e solo se:
-> 1. Condividono lo stesso dominio: $\operatorname{dom}(f) = \operatorname{dom}(g)$.
-> 2. Condividono lo stesso codominio: $\operatorname{cod}(f) = \operatorname{cod}(g)$.
-> 3. Condividono la medesima legge di assegnazione: $\forall x \in \operatorname{dom}(f), \, f(x) = g(x)$.
+> 1. Condividono lo stesso dominio: $\mathrm{dom}(f) = \mathrm{dom}(g)$.
+> 2. Condividono lo stesso codominio: $\mathrm{cod}(f) = \mathrm{cod}(g)$.
+> 3. Condividono la medesima legge di assegnazione: $\forall x \in \mathrm{dom}(f), \, f(x) = g(x)$.
 > 
-> *Nota operativa sul grafico:* Dal punto di vista relazionale, due funzioni con la stessa legge e lo stesso dominio generano lo stesso identico grafico $\operatorname{graf}(f) = \operatorname{graf}(g) \subseteq X \times Y$.
+> *Nota operativa sul grafico:* Dal punto di vista relazionale, due funzioni con la stessa legge e lo stesso dominio generano lo stesso identico grafico $\mathrm{graf}(f) = \mathrm{graf}(g) \subseteq X \times Y$.
 > 
 > *Esempio:*
 > Consideriamo $f : \mathbb{R} \to \mathbb{R}$ con $f(x) = x^2$ e $g : \mathbb{R} \to \mathbb{R}_+ \cup \{0\}$ con $g(x) = x^2$. Esse possiedono lo stesso identico grafico cartesiano ma codomini formali differenti. Nella prassi operativa dell'analisi, quando il focus è puramente sulla corrispondenza numerica, le due mappe vengono spesso identificate per comodità, pur restando formalmente distinte sotto il profilo categoriale della suriettività.
@@ -225,7 +225,7 @@ Sia data la funzione generica $f : X \to Y$.
 
 > [!definition] Funzione Suriettiva
 > La funzione $f$ è **suriettiva** se ogni elemento del codominio è immagine di almeno un elemento del dominio:
-> $$\forall y \in Y, \quad \exists x \in X \mid f(x) = y \iff \operatorname{im}(f) = Y$$
+> $$\forall y \in Y, \quad \exists x \in X \mid f(x) = y \iff \mathrm{im}(f) = Y$$
 > Geometricamente: ogni retta orizzontale $y = c$ interseca il grafico in **almeno un punto**.
 
 > [!definition] Funzione Biettiva (Biunivoca o Invertibile)
@@ -237,15 +237,15 @@ Sia data la funzione generica $f : X \to Y$.
 
 > [!tip] Ristrizione Locale per Iniettività e Suriettività
 > Funzioni che non risultano globalmente iniettive o suriettive su tutto il loro dominio naturale possono diventarlo restringendo opportunamente il dominio o il codominio:
-> - Riducendo il codominio all'immagine ($Y' = \operatorname{im}(f)$), qualunque funzione diventa suriettiva.
+> - Riducendo il codominio all'immagine ($Y' = \mathrm{im}(f)$), qualunque funzione diventa suriettiva.
 > - Riducendo il dominio a un intervallo di stretta monotonia, funzioni non iniettive (come $f(x) = x^2$ su $[0, +\infty)$ o $f(x) = \sin(x)$ su $[-\frac{\pi}{2}, \frac{\pi}{2}]$) divengono iniettive e quindi localmente invertibili.
 ## 0.8. Operazioni su Funzioni: Restrizione, Composizione e Inversa
 
 ### Funzioni Particolari
 
 > [!definition] Funzione Identità, Restrizione e Proiezione
-> 1. **Funzione Identità**: La mappa $\operatorname{id}_X : X \to X$ che associa ciascun elemento a se stesso:
->    $$\operatorname{id}_X(x) = x, \quad \forall x \in X$$
+> 1. **Funzione Identità**: La mappa $\mathrm{id}_X : X \to X$ che associa ciascun elemento a se stesso:
+>    $$\mathrm{id}_X(x) = x, \quad \forall x \in X$$
 > 2. **Restrizione**: Dato un sottoinsieme $Z \subseteq X$ e una funzione $f : X \to Y$, si definisce restrizione di $f$ a $Z$, indicata con $f|_Z : Z \to Y$, la funzione avente la medesima legge analitica ma limitata a $Z$:
 >    $$f|_Z(x) := f(x), \quad \forall x \in Z$$
 > 3. **Proiezione Canonica**: Sul prodotto cartesiano $X \times Y$, la proiezione sul primo fattore è la funzione suriettiva:
@@ -256,7 +256,7 @@ Sia data la funzione generica $f : X \to Y$.
 > [!definition] Funzione Composta
 > Siano date due funzioni $f : X \to Z$ e $g : W \to Y$. 
 > La funzione composta $g \circ f$ (letta *"g composto f"*) è ben definita se e solo se l'immagine di $f$ è contenuta nel dominio di $g$:
-> $$\operatorname{im}(f) \subseteq W = \operatorname{dom}(g)$$
+> $$\mathrm{im}(f) \subseteq W = \mathrm{dom}(g)$$
 > 
 > Sotto tale condizione, si definisce la funzione $h = g \circ f : X \to Y$ che opera mediante applicazione sequenziale:
 > $$(g \circ f)(x) := g(f(x)), \quad \forall x \in X$$
@@ -290,8 +290,8 @@ Sia data la funzione generica $f : X \to Y$.
 > La composizione di una funzione invertibile con la propria inversa restituisce l'operatore identità sui rispettivi insiemi di definizione:
 > $$
 > \begin{align}
-> (f^{-1} \circ f)(x) &= f^{-1}(f(x)) = x = \operatorname{id}_X(x), \quad \forall x \in X \\
-> (f \circ f^{-1})(y) &= f(f^{-1}(y)) = y = \operatorname{id}_Y(y), \quad \forall y \in Y
+> (f^{-1} \circ f)(x) &= f^{-1}(f(x)) = x = \mathrm{id}_X(x), \quad \forall x \in X \\
+> (f \circ f^{-1})(y) &= f(f^{-1}(y)) = y = \mathrm{id}_Y(y), \quad \forall y \in Y
 > \end{align}
 > $$
 
@@ -303,7 +303,7 @@ Sia data la funzione generica $f : X \to Y$.
 > Due insiemi $A$ e $B$ si dicono **equipotenti** (o equinumerosi), e si scrive $A \sim B$, se possono essere posti in corrispondenza biunivoca:
 > $$A \sim B \iff \exists f : A \to B \text{ biettiva}$$
 > 
-> Poiché l'equipotenza definisce una relazione di equivalenza sulla classe di tutti gli insiemi, si definisce **cardinalità** (o potenza) di un insieme $A$, denotata con $\operatorname{card}(A)$ o $|A|$, la classe di equivalenza di tutti gli insiemi equipotenti ad $A$.
+> Poiché l'equipotenza definisce una relazione di equivalenza sulla classe di tutti gli insiemi, si definisce **cardinalità** (o potenza) di un insieme $A$, denotata con $\mathrm{card}(A)$ o $|A|$, la classe di equivalenza di tutti gli insiemi equipotenti ad $A$.
 ### Il Successore Insiemistico e la Gerarchia di von Neumann
 
 Come è possibile fondare il concetto ontologico di "numero" a partire dal puro vuoto insiemistico $\emptyset$? John von Neumann propose una costruzione geniale basata sull'operatore di **successore**:
@@ -316,7 +316,7 @@ Definiamo ora la sequenza formale dei numeri naturali ponendo lo zero come cardi
 
 $$
 \begin{align}
-0 &:= \emptyset \implies \operatorname{card}(\emptyset) = 0 \\
+0 &:= \emptyset \implies \mathrm{card}(\emptyset) = 0 \\
 1 &:= 0^+ = 0 \cup \{0\} = \emptyset \cup \{\emptyset\} = \{\emptyset\} = \{0\} \\
 2 &:= 1^+ = 1 \cup \{1\} = \{0\} \cup \{1\} = \{0, 1\} = \{\emptyset, \{\emptyset\}\} \\
 3 &:= 2^+ = 2 \cup \{2\} = \{0, 1\} \cup \{2\} = \{0, 1, 2\} = \{\emptyset, \{\emptyset\}, \{\emptyset, \{\emptyset\}\}\} \\
@@ -328,14 +328,14 @@ $$
 > [!important] Struttura Fondamentale degli Ordinali di von Neumann
 > In questa formulazione rigorosa:
 > 1. Ogni numero naturale $n$ **è un insieme**.
-> 2. Ciascun numero $n$ contiene esattamente $n$ elementi: $\operatorname{card}(n) = n$.
+> 2. Ciascun numero $n$ contiene esattamente $n$ elementi: $\mathrm{card}(n) = n$.
 > 3. Ogni numero naturale coincide con **l'insieme di tutti i numeri naturali che lo precedono**:
 >    $$n = \{k \in \mathbb{N} \mid k < n\}$$
 > 4. La relazione d'ordine canonico coincide con l'appartenenza insiemistica:
 >    $$m < n \iff m \in n \iff m \subsetneq n$$
 
 > [!definition] Insiemi Finiti e Infiniti
-> Un insieme $X$ si definisce **finito** se esiste un numero naturale $n \in \mathbb{N}$ tale per cui $X$ è equipotente ad $n$ ($\operatorname{card}(X) = n$).
+> Un insieme $X$ si definisce **finito** se esiste un numero naturale $n \in \mathbb{N}$ tale per cui $X$ è equipotente ad $n$ ($\mathrm{card}(X) = n$).
 > In caso contrario, l'insieme $X$ si definisce **infinito**.
 
 ## 0.10. Operazioni Aritmetiche Insiemistiche sui Cardinali Finiti
@@ -343,17 +343,17 @@ $$
 Le quattro operazioni dell'aritmetica elementare emergono in modo del tutto naturale a partire dalle operazioni insiemistiche fondamentali:
 
 > [!theorem] Definizione Insiemistica delle Operazioni Aritmetiche
-> Siano $m, n \in \mathbb{N}$ e siano $A$ e $B$ due insiemi finiti tali che $\operatorname{card}(A) = m$ e $\operatorname{card}(B) = n$:
+> Siano $m, n \in \mathbb{N}$ e siano $A$ e $B$ due insiemi finiti tali che $\mathrm{card}(A) = m$ e $\mathrm{card}(B) = n$:
 > 
 > 1. **Addizione (Somma)**: Definita tramite l'unione di insiemi disgiunti:
->    $$m + n := \operatorname{card}(A \cup B), \quad \text{con } A \cap B = \emptyset$$
+>    $$m + n := \mathrm{card}(A \cup B), \quad \text{con } A \cap B = \emptyset$$
 > 
 > 2. **Moltiplicazione (Prodotto)**: Definita tramite il prodotto cartesiano:
->    $$m \cdot n := \operatorname{card}(A \times B)$$
+>    $$m \cdot n := \mathrm{card}(A \times B)$$
 > 
 > 3. **Sottrazione (Differenza)**: Definita per $n \le m$, considerando $B \subseteq A$:
->    $$m - n := \operatorname{card}(A \setminus B), \quad \text{con } B \subseteq A$$
+>    $$m - n := \mathrm{card}(A \setminus B), \quad \text{con } B \subseteq A$$
 > 
 > 4. **Divisione Esatta (Quoziente)**: Sia $n \le m$ con $n \ne 0$. Se è possibile partizionare l'insieme $A$ in sottoinsiemi mutuamente disgiunti $A_i$ aventi tutti cardinalità identica $n$ (inducendo una relazione di equivalenza $\sim$ su $A$ con classi equipotenti a $B$):
->    $$\frac{m}{n} := \operatorname{card}(A / \sim)$$
+>    $$\frac{m}{n} := \mathrm{card}(A / \sim)$$
 >    Il quoziente coincide con la cardinalità dell'insieme quoziente, ovvero con il numero totale di blocchi della partizione.

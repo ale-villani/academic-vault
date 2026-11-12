@@ -71,9 +71,9 @@ tags:
 >    $$
 >    I vettori possono essere indifferentemente scritti per riga o per colonna.
 >
-> 2. **Spazio delle Matrici $\operatorname{Mat}_{\mathbb{R}}(m, n)$:**
+> 2. **Spazio delle Matrici $\mathrm{Mat}_{\mathbb{R}}(m, n)$:**
 >    $$
->    V = \operatorname{Mat}_{\mathbb{R}}(m, n)
+>    V = \mathrm{Mat}_{\mathbb{R}}(m, n)
 >    $$
 >    I cui vettori (elementi dello spazio $V$) sono matrici reali di dimensione $m \times n$. La somma coincide con la somma termine a termine tra matrici e il prodotto per scalare con la moltiplicazione di ogni entrata per lo scalare.
 >
@@ -227,7 +227,7 @@ Nel piano cartesiano individuato dagli assi $x_2$ (orizzontale) e $x_1$ (vertica
 > [!definition] Span Lineare
 > L'insieme di **tutte** le possibili combinazioni lineari dei vettori $\mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_n \in V$ è detto **copertura lineare** o **Span** dei vettori:
 > $$
-> \operatorname{Span}(\mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_n) := \left\{ \sum_{i=1}^n c_i \mathbf{v}_i \;\middle|\; c_i \in \mathbb{R} \right\}
+> \mathrm{Span}(\mathbf{v}_1, \mathbf{v}_2, \dots, \mathbf{v}_n) := \left\{ \sum_{i=1}^n c_i \mathbf{v}_i \;\middle|\; c_i \in \mathbb{R} \right\}
 > $$
 
 > [!example] Esempio Geometrico in $\mathbb{R}^3$
@@ -237,14 +237,14 @@ Nel piano cartesiano individuato dagli assi $x_2$ (orizzontale) e $x_1$ (vertica
 > $$
 > Lo Span generato da questi due vettori è:
 > $$
-> \operatorname{Span}\left[ \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix}, \begin{pmatrix} 1 \\ 0 \\ 2 \end{pmatrix} \right] = \left\{ t \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix} + s \begin{pmatrix} 1 \\ 0 \\ 2 \end{pmatrix} \;\middle|\; t, s \in \mathbb{R} \right\}
+> \mathrm{Span}\left[ \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix}, \begin{pmatrix} 1 \\ 0 \\ 2 \end{pmatrix} \right] = \left\{ t \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix} + s \begin{pmatrix} 1 \\ 0 \\ 2 \end{pmatrix} \;\middle|\; t, s \in \mathbb{R} \right\}
 > $$
 > Geometricamente, questo insieme rappresenta un **piano in forma parametrica passante per l'origine** $O(0, 0, 0)$.
 >
 ### Lo Span come Sottospazio Vettoriale
 
 > [!proposition] Struttura di Sottospazio dello Span
-> Siano $\mathbf{v}_1, \dots, \mathbf{v}_n \in V$. Allora $\operatorname{Span}(\mathbf{v}_1, \dots, \mathbf{v}_n)$ è un **sottospazio vettoriale** di $V$.
+> Siano $\mathbf{v}_1, \dots, \mathbf{v}_n \in V$. Allora $\mathrm{Span}(\mathbf{v}_1, \dots, \mathbf{v}_n)$ è un **sottospazio vettoriale** di $V$.
 
 > [!quote]- Dimostrazione
 > Si verificano le tre proprietà che caratterizzano i sottospazi vettoriali:
@@ -252,11 +252,11 @@ Nel piano cartesiano individuato dagli assi $x_2$ (orizzontale) e $x_1$ (vertica
 > 1. **Presenza del vettore nullo $\mathbf{0}$:**
 >    Ponendo tutti i coefficienti scalari nulli $c_1 = c_2 = \dots = c_n = 0$, si ottiene:
 >    $$
->    0\mathbf{v}_1 + 0\mathbf{v}_2 + \dots + 0\mathbf{v}_n = \mathbf{0} \in \operatorname{Span}(\mathbf{v}_1, \dots, \mathbf{v}_n)
+>    0\mathbf{v}_1 + 0\mathbf{v}_2 + \dots + 0\mathbf{v}_n = \mathbf{0} \in \mathrm{Span}(\mathbf{v}_1, \dots, \mathbf{v}_n)
 >    $$
 >
 > 2. **Chiusura rispetto alla somma vettoriale:**
->    Siano $\mathbf{u}, \mathbf{w} \in \operatorname{Span}(\mathbf{v}_1, \dots, \mathbf{v}_n)$. Per definizione di Span, esistono coefficienti $c_1, \dots, c_n \in \mathbb{R}$ e $d_1, \dots, d_n \in \mathbb{R}$ tali che:
+>    Siano $\mathbf{u}, \mathbf{w} \in \mathrm{Span}(\mathbf{v}_1, \dots, \mathbf{v}_n)$. Per definizione di Span, esistono coefficienti $c_1, \dots, c_n \in \mathbb{R}$ e $d_1, \dots, d_n \in \mathbb{R}$ tali che:
 >    $$
 >    \mathbf{u} = \sum_{i=1}^n c_i \mathbf{v}_i, \qquad \mathbf{w} = \sum_{i=1}^n d_i \mathbf{v}_i
 >    $$
@@ -266,17 +266,17 @@ Nel piano cartesiano individuato dagli assi $x_2$ (orizzontale) e $x_1$ (vertica
 >    $$
 >    Poiché $(c_i + d_i) \in \mathbb{R}$ per ogni $i$, il vettore risultante è ancora una combinazione lineare degli elementi $\{\mathbf{v}_1, \dots, \mathbf{v}_n\}$:
 >    $$
->    \mathbf{u} + \mathbf{w} \in \operatorname{Span}(\mathbf{v}_1, \dots, \mathbf{v}_n)
+>    \mathbf{u} + \mathbf{w} \in \mathrm{Span}(\mathbf{v}_1, \dots, \mathbf{v}_n)
 >    $$
 >
 > 3. **Chiusura rispetto al prodotto per scalare:**
->    Sia $\mathbf{x} \in \operatorname{Span}(\mathbf{v}_1, \dots, \mathbf{v}_n)$ e sia $c \in \mathbb{R}$. Il vettore $\mathbf{x}$ si esprime come $\mathbf{x} = \sum_{i=1}^n f_i \mathbf{v}_i$ per opportuni scalari $f_i \in \mathbb{R}$. Moltiplicando per $c$:
+>    Sia $\mathbf{x} \in \mathrm{Span}(\mathbf{v}_1, \dots, \mathbf{v}_n)$ e sia $c \in \mathbb{R}$. Il vettore $\mathbf{x}$ si esprime come $\mathbf{x} = \sum_{i=1}^n f_i \mathbf{v}_i$ per opportuni scalari $f_i \in \mathbb{R}$. Moltiplicando per $c$:
 >    $$
 >    c\mathbf{x} = c \sum_{i=1}^n f_i \mathbf{v}_i = \sum_{i=1}^n (c f_i) \mathbf{v}_i
 >    $$
 >    Essendo $c f_i \in \mathbb{R}$ per ogni $i$, segue che:
 >    $$
->    c\mathbf{x} \in \operatorname{Span}(\mathbf{v}_1, \dots, \mathbf{v}_n) \qquad \blacksquare
+>    c\mathbf{x} \in \mathrm{Span}(\mathbf{v}_1, \dots, \mathbf{v}_n) \qquad \blacksquare
 >    $$
 >
 ### Insiemi di Generatori
@@ -284,7 +284,7 @@ Nel piano cartesiano individuato dagli assi $x_2$ (orizzontale) e $x_1$ (vertica
 > [!definition] Generatori di un Sottospazio
 > Sia $H \subseteq V$ un sottospazio vettoriale. Se esiste un insieme di vettori $\mathbf{v}_1, \dots, \mathbf{v}_n \in V$ tale che:
 > $$
-> H = \operatorname{Span}(\mathbf{v}_1, \dots, \mathbf{v}_n)
+> H = \mathrm{Span}(\mathbf{v}_1, \dots, \mathbf{v}_n)
 > $$
 > allora si dice che:
 > - $H$ è **generato** da $\mathbf{v}_1, \dots, \mathbf{v}_n$.
@@ -312,7 +312,7 @@ Quando un sottospazio vettoriale è assegnato mediante una o più equazioni cart
 > $$
 > Ne consegue che ogni elemento di $S$ è combinazione lineare dei due vettori trovati:
 > $$
-> S = \operatorname{Span}\left[ \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix}, \begin{pmatrix} -2 \\ 0 \\ 1 \end{pmatrix} \right] = \left\{ t \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix} + s \begin{pmatrix} -2 \\ 0 \\ 1 \end{pmatrix} \;\middle|\; t, s \in \mathbb{R} \right\} \subseteq \mathbb{R}^3
+> S = \mathrm{Span}\left[ \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix}, \begin{pmatrix} -2 \\ 0 \\ 1 \end{pmatrix} \right] = \left\{ t \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix} + s \begin{pmatrix} -2 \\ 0 \\ 1 \end{pmatrix} \;\middle|\; t, s \in \mathbb{R} \right\} \subseteq \mathbb{R}^3
 > $$
 > I vettori $\begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix}$ e $\begin{pmatrix} -2 \\ 0 \\ 1 \end{pmatrix}$ sono i **generatori** del sottospazio piano $S$.
 >
@@ -325,7 +325,7 @@ Quando un sottospazio vettoriale è assegnato mediante una o più equazioni cart
 > $$
 > Infatti, qualsiasi generico vettore $\begin{pmatrix} a \\ b \\ c \end{pmatrix} \in \mathbb{R}^3$ può essere scritto come:
 > $$
-> \operatorname{Span}(\mathbf{e}_1, \mathbf{e}_2, \mathbf{e}_3) = \left\{ a\mathbf{e}_1 + b\mathbf{e}_2 + c\mathbf{e}_3 \;\middle|\; a, b, c \in \mathbb{R} \right\} = \left\{ \begin{pmatrix} a \\ b \\ c \end{pmatrix} \;\middle|\; a, b, c \in \mathbb{R} \right\} = \mathbb{R}^3
+> \mathrm{Span}(\mathbf{e}_1, \mathbf{e}_2, \mathbf{e}_3) = \left\{ a\mathbf{e}_1 + b\mathbf{e}_2 + c\mathbf{e}_3 \;\middle|\; a, b, c \in \mathbb{R} \right\} = \left\{ \begin{pmatrix} a \\ b \\ c \end{pmatrix} \;\middle|\; a, b, c \in \mathbb{R} \right\} = \mathbb{R}^3
 > $$
 
 > [!note] Non Unicità dell'Insieme di Generatori
@@ -343,18 +343,18 @@ Quando un sottospazio vettoriale è assegnato mediante una o più equazioni cart
 >
 ### Sottospazi Fondamentali Associati a una Matrice
 
-Sia $A \in \operatorname{Mat}_{\mathbb{R}}(m, n)$ una matrice reale di dimensioni $m \times n$. È possibile partizionare la matrice per righe o per colonne:
+Sia $A \in \mathrm{Mat}_{\mathbb{R}}(m, n)$ una matrice reale di dimensioni $m \times n$. È possibile partizionare la matrice per righe o per colonne:
 
 $$
 A = \begin{pmatrix} R_1 \\ \vdots \\ R_m \end{pmatrix} = \begin{pmatrix} C_1 & \dots & C_n \end{pmatrix}
 $$
 
 dove:
-- $R_i \in \operatorname{Mat}_{\mathbb{R}}(1, n)$ denota la $i$-esima riga di $A$ (vettore riga con $n$ componenti, identificabile con un vettore di $\mathbb{R}^n$).
-- $C_j \in \operatorname{Mat}_{\mathbb{R}}(m, 1)$ denota la $j$-esima colonna di $A$ (vettore colonna con $m$ componenti, identificabile con un vettore di $\mathbb{R}^m$).
+- $R_i \in \mathrm{Mat}_{\mathbb{R}}(1, n)$ denota la $i$-esima riga di $A$ (vettore riga con $n$ componenti, identificabile con un vettore di $\mathbb{R}^n$).
+- $C_j \in \mathrm{Mat}_{\mathbb{R}}(m, 1)$ denota la $j$-esima colonna di $A$ (vettore colonna con $m$ componenti, identificabile con un vettore di $\mathbb{R}^m$).
 
 > [!example] Partizione di una Matrice $2 \times 3$
-> Data la matrice $A = \begin{pmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{pmatrix} \in \operatorname{Mat}_{\mathbb{R}}(2, 3)$:
+> Data la matrice $A = \begin{pmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{pmatrix} \in \mathrm{Mat}_{\mathbb{R}}(2, 3)$:
 > - I vettori riga sono:
 >   $$
 >   R_1 = \begin{pmatrix} 1 & 2 & 3 \end{pmatrix}, \qquad R_2 = \begin{pmatrix} 4 & 5 & 6 \end{pmatrix}
@@ -365,26 +365,26 @@ dove:
 >   $$
 
 > [!definition] Spazio delle Righe e Spazio delle Colonne
-> Sia $A \in \operatorname{Mat}_{\mathbb{R}}(m, n)$. Si definiscono:
+> Sia $A \in \mathrm{Mat}_{\mathbb{R}}(m, n)$. Si definiscono:
 > 1. **Spazio delle Righe di $A$:** è il sottospazio di $\mathbb{R}^n$ generato dai vettori riga di $A$:
 >    $$
->    \operatorname{row}(A) := \operatorname{Span}(R_1, \dots, R_m) \subseteq \operatorname{Mat}_{\mathbb{R}}(1, n) \cong \mathbb{R}^n
+>    \mathrm{row}(A) := \mathrm{Span}(R_1, \dots, R_m) \subseteq \mathrm{Mat}_{\mathbb{R}}(1, n) \cong \mathbb{R}^n
 >    $$
 > 2. **Spazio delle Colonne di $A$:** è il sottospazio di $\mathbb{R}^m$ generato dai vettori colonna di $A$:
 >    $$
->    \operatorname{col}(A) := \operatorname{Span}(C_1, \dots, C_n) \subseteq \operatorname{Mat}_{\mathbb{R}}(m, 1) \cong \mathbb{R}^m
+>    \mathrm{col}(A) := \mathrm{Span}(C_1, \dots, C_n) \subseteq \mathrm{Mat}_{\mathbb{R}}(m, 1) \cong \mathbb{R}^m
 >    $$
 
 > [!example] Spazio delle Righe e Colonne per Matrice $2 \times 3$
 > Per la matrice $A = \begin{pmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \end{pmatrix}$:
 > $$
-> \operatorname{row}(A) = \operatorname{Span}\left[ \begin{pmatrix} 1 & 2 & 3 \end{pmatrix}, \begin{pmatrix} 4 & 5 & 6 \end{pmatrix} \right] \subseteq \mathbb{R}^3
-> \operatorname{col}(A) = \operatorname{Span}\left[ \begin{pmatrix} 1 \\ 4 \end{pmatrix}, \begin{pmatrix} 2 \\ 5 \end{pmatrix}, \begin{pmatrix} 3 \\ 6 \end{pmatrix} \right] \subseteq \mathbb{R}^2
+> \mathrm{row}(A) = \mathrm{Span}\left[ \begin{pmatrix} 1 & 2 & 3 \end{pmatrix}, \begin{pmatrix} 4 & 5 & 6 \end{pmatrix} \right] \subseteq \mathbb{R}^3
+> \mathrm{col}(A) = \mathrm{Span}\left[ \begin{pmatrix} 1 \\ 4 \end{pmatrix}, \begin{pmatrix} 2 \\ 5 \end{pmatrix}, \begin{pmatrix} 3 \\ 6 \end{pmatrix} \right] \subseteq \mathbb{R}^2
 > $$
 >
 ### Insieme delle Soluzioni di Sistemi Lineari e Nucleo (Ker)
 
-Si consideri un sistema lineare arbitrario di $m$ equazioni in $n$ incognite scritto in forma matriciale $A\mathbf{x} = \mathbf{b}$, con $A \in \operatorname{Mat}_{\mathbb{R}}(m, n)$ e vettore dei termini noti $\mathbf{b} \in \mathbb{R}^m$.
+Si consideri un sistema lineare arbitrario di $m$ equazioni in $n$ incognite scritto in forma matriciale $A\mathbf{x} = \mathbf{b}$, con $A \in \mathrm{Mat}_{\mathbb{R}}(m, n)$ e vettore dei termini noti $\mathbf{b} \in \mathbb{R}^m$.
 
 L'insieme delle soluzioni del sistema è definito dal sottoinsieme:
 $$
@@ -396,7 +396,7 @@ $$
 > 
 > In tal caso, il sottospazio prende il nome di **Nucleo** (o **Kernel**) della matrice $A$:
 > $$
-> S = \operatorname{Ker}(A) = \left\{ \mathbf{x} \in \mathbb{R}^n : A\mathbf{x} = \mathbf{0} \right\}
+> S = \mathrm{Ker}(A) = \left\{ \mathbf{x} \in \mathbb{R}^n : A\mathbf{x} = \mathbf{0} \right\}
 > $$
 
 > [!quote]- Dimostrazione
@@ -413,17 +413,17 @@ $$
 > Quindi il sistema deve essere omogeneo.
 >
 > **Sufficienza ($\impliedby$):**
-> Si supponga che $\mathbf{b} = \mathbf{0}$, ovvero che $S = \operatorname{Ker}(A) = \{ \mathbf{x} \in \mathbb{R}^n : A\mathbf{x} = \mathbf{0} \}$. Si verificano le proprietà di sottospazio:
+> Si supponga che $\mathbf{b} = \mathbf{0}$, ovvero che $S = \mathrm{Ker}(A) = \{ \mathbf{x} \in \mathbb{R}^n : A\mathbf{x} = \mathbf{0} \}$. Si verificano le proprietà di sottospazio:
 > 
 > (I) **Presenza dell'elemento neutro:**
 > $$
-> A\mathbf{0} = \mathbf{0} \implies \mathbf{0} \in S = \operatorname{Ker}(A)
+> A\mathbf{0} = \mathbf{0} \implies \mathbf{0} \in S = \mathrm{Ker}(A)
 > $$
 > 
 > (II) **Chiusura rispetto alla somma:**
-> Siano $\mathbf{v}_1, \mathbf{v}_2 \in S = \operatorname{Ker}(A)$. Per ipotesi si ha $A\mathbf{v}_1 = \mathbf{0}$ e $A\mathbf{v}_2 = \mathbf{0}$. Sfruttando la linearità del prodotto matrice-vettore:
+> Siano $\mathbf{v}_1, \mathbf{v}_2 \in S = \mathrm{Ker}(A)$. Per ipotesi si ha $A\mathbf{v}_1 = \mathbf{0}$ e $A\mathbf{v}_2 = \mathbf{0}$. Sfruttando la linearità del prodotto matrice-vettore:
 > $$
-> A(\mathbf{v}_1 + \mathbf{v}_2) = \underbrace{A\mathbf{v}_1}_{\in \operatorname{Ker}(A) \implies = \mathbf{0}} + \underbrace{A\mathbf{v}_2}_{\in \operatorname{Ker}(A) \implies = \mathbf{0}} = \mathbf{0} + \mathbf{0} = \mathbf{0}
+> A(\mathbf{v}_1 + \mathbf{v}_2) = \underbrace{A\mathbf{v}_1}_{\in \mathrm{Ker}(A) \implies = \mathbf{0}} + \underbrace{A\mathbf{v}_2}_{\in \mathrm{Ker}(A) \implies = \mathbf{0}} = \mathbf{0} + \mathbf{0} = \mathbf{0}
 > $$
 > Dunque:
 > $$
@@ -431,13 +431,13 @@ $$
 > $$
 > 
 > (III) **Chiusura rispetto al prodotto per scalare:**
-> Sia $c \in \mathbb{R}$ e sia $\mathbf{v} \in S = \operatorname{Ker}(A)$ (dunque $A\mathbf{v} = \mathbf{0}$). Allora:
+> Sia $c \in \mathbb{R}$ e sia $\mathbf{v} \in S = \mathrm{Ker}(A)$ (dunque $A\mathbf{v} = \mathbf{0}$). Allora:
 > $$
-> A(c\mathbf{v}) = c \underbrace{(A\mathbf{v})}_{\in \operatorname{Ker}(A) \implies = \mathbf{0}} = c \cdot \mathbf{0} = \mathbf{0}
+> A(c\mathbf{v}) = c \underbrace{(A\mathbf{v})}_{\in \mathrm{Ker}(A) \implies = \mathbf{0}} = c \cdot \mathbf{0} = \mathbf{0}
 > $$
 > Dunque:
 > $$
-> c\mathbf{v} \in S = \operatorname{Ker}(A) \qquad \blacksquare
+> c\mathbf{v} \in S = \mathrm{Ker}(A) \qquad \blacksquare
 > $$
 >
 ## 2.3. Basi e Dimensione
@@ -545,7 +545,7 @@ $$
 > Siano dati i vettori $\mathbf{v}_1, \dots, \mathbf{v}_n \in V$.
 > I vettori $\mathbf{v}_1, \dots, \mathbf{v}_n$ sono **linearmente dipendenti** (L.D.) se e soltanto se uno di essi è combinazione lineare degli altri:
 > $$
-> \mathbf{v}_1, \dots, \mathbf{v}_n \text{ sono L.D.} \iff \exists j \in \{1, \dots, n\} : \mathbf{v}_j \in \operatorname{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_{j-1}, \mathbf{v}_{j+1}, \dots, \mathbf{v}_n\}
+> \mathbf{v}_1, \dots, \mathbf{v}_n \text{ sono L.D.} \iff \exists j \in \{1, \dots, n\} : \mathbf{v}_j \in \mathrm{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_{j-1}, \mathbf{v}_{j+1}, \dots, \mathbf{v}_n\}
 > $$
 >
 ### Il Lemma di Scarto
@@ -553,16 +553,16 @@ $$
 > [!lemma] Lemma di Scarto
 > Siano $\mathbf{v}_1, \dots, \mathbf{v}_n \in V$ un insieme di vettori **linearmente dipendenti** e **generatori** di uno spazio vettoriale $V$:
 > $$
-> V = \operatorname{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_n\}
+> V = \mathrm{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_n\}
 > $$
-> Allora uno di essi può essere "scartato" senza modificare lo spazio generato ($\operatorname{Span}$).
+> Allora uno di essi può essere "scartato" senza modificare lo spazio generato ($\mathrm{Span}$).
 > In particolare, se (a meno di riordinare gli indici) il vettore $\mathbf{v}_n$ è combinazione lineare dei precedenti:
 > $$
 > \mathbf{v}_n = c_1 \mathbf{v}_1 + \dots + c_{n-1} \mathbf{v}_{n-1}
 > $$
 > allora:
 > $$
-> \operatorname{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_n\} = \operatorname{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_{n-1}\}
+> \mathrm{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_n\} = \mathrm{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_{n-1}\}
 > $$
 > Di conseguenza, i rimanenti vettori $\{\mathbf{v}_1, \dots, \mathbf{v}_{n-1}\}$ continuano a essere generatori di $V$.
 
@@ -571,10 +571,10 @@ $$
 > $$
 > \mathbf{v}_n = c_1 \mathbf{v}_1 + \dots + c_{n-1} \mathbf{v}_{n-1}, \qquad c_i \in \mathbb{R}
 > $$
-> Dobbiamo dimostrare la doppia inclusione insiemistica tra $\operatorname{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_n\}$ e $\operatorname{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_{n-1}\}$.
+> Dobbiamo dimostrare la doppia inclusione insiemistica tra $\mathrm{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_n\}$ e $\mathrm{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_{n-1}\}$.
 >
-> **1. Prima inclusione: $\operatorname{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_n\} \subseteq \operatorname{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_{n-1}\}$**
-> Sia $\mathbf{w} \in \operatorname{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_n\}$. Per definizione di $\operatorname{Span}$, esistono coefficienti $a_1, \dots, a_n \in \mathbb{R}$ tali che:
+> **1. Prima inclusione: $\mathrm{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_n\} \subseteq \mathrm{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_{n-1}\}$**
+> Sia $\mathbf{w} \in \mathrm{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_n\}$. Per definizione di $\mathrm{Span}$, esistono coefficienti $a_1, \dots, a_n \in \mathbb{R}$ tali che:
 > $$
 > \mathbf{w} = a_1 \mathbf{v}_1 + \dots + a_{n-1} \mathbf{v}_{n-1} + a_n \mathbf{v}_n
 > $$
@@ -587,26 +587,26 @@ $$
 > $$
 > Poiché i coefficienti $(a_i + a_n c_i)$ sono ancora scalari reali, il vettore $\mathbf{w}$ è espresso come combinazione lineare di $\mathbf{v}_1, \dots, \mathbf{v}_{n-1}$, il che significa:
 > $$
-> \mathbf{w} \in \operatorname{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_{n-1}\}
+> \mathbf{w} \in \mathrm{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_{n-1}\}
 > $$
 > Risulta quindi provata l'inclusione:
 > $$
-> \operatorname{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_n\} \subseteq \operatorname{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_{n-1}\}
+> \mathrm{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_n\} \subseteq \mathrm{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_{n-1}\}
 > $$
 >
-> **2. Seconda inclusione: $\operatorname{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_{n-1}\} \subseteq \operatorname{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_n\}$**
+> **2. Seconda inclusione: $\mathrm{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_{n-1}\} \subseteq \mathrm{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_n\}$**
 > L'inclusione opposta è immediata. Infatti ogni combinazione lineare di $\mathbf{v}_1, \dots, \mathbf{v}_{n-1}$ può essere riscritta aggiungendo il termine con coefficiente nullo $0 \cdot \mathbf{v}_n$:
 > $$
 > c_1 \mathbf{v}_1 + \dots + c_{n-1} \mathbf{v}_{n-1} = c_1 \mathbf{v}_1 + \dots + c_{n-1} \mathbf{v}_{n-1} + 0 \cdot \mathbf{v}_n
 > $$
 > Da cui segue direttamente:
 > $$
-> \operatorname{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_{n-1}\} \subseteq \operatorname{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_n\}
+> \mathrm{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_{n-1}\} \subseteq \mathrm{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_n\}
 > $$
 >
 > Concludendo, per la doppia inclusione si ha l'uguaglianza degli spazi generati:
 > $$
-> \operatorname{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_n\} = \operatorname{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_{n-1}\} \qquad \blacksquare
+> \mathrm{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_n\} = \mathrm{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_{n-1}\} \qquad \blacksquare
 > $$
 >
 ### Il Lemma di Aggiunta
@@ -622,11 +622,11 @@ $$
 > [!quote]- Dimostrazione
 > Poiché per ipotesi i vettori $\mathbf{v}_1, \dots, \mathbf{v}_n$ non sono generatori di $V$, il loro span è un sottospazio proprio di $V$:
 > $$
-> \operatorname{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_n\} \subset V \quad (\text{inclusione stretta})
+> \mathrm{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_n\} \subset V \quad (\text{inclusione stretta})
 > $$
 > Ne consegue che esiste almeno un vettore $\mathbf{v}_{n+1} \in V$ che non appartiene a tale sottospazio:
 > $$
-> \exists \, \mathbf{v}_{n+1} \in V \quad \text{tale che} \quad \mathbf{v}_{n+1} \notin \operatorname{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_n\} \qquad (*)
+> \exists \, \mathbf{v}_{n+1} \in V \quad \text{tale che} \quad \mathbf{v}_{n+1} \notin \mathrm{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_n\} \qquad (*)
 > $$
 > Dimostriamo che la famiglia $\{\mathbf{v}_1, \dots, \mathbf{v}_n, \mathbf{v}_{n+1}\}$ è linearmente indipendente.
 >
@@ -646,7 +646,7 @@ $$
 > $$
 > Tale relazione esprimerebbe $\mathbf{v}_{n+1}$ come combinazione lineare di $\{\mathbf{v}_1, \dots, \mathbf{v}_n\}$, implicando che:
 > $$
-> \mathbf{v}_{n+1} \in \operatorname{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_n\}
+> \mathbf{v}_{n+1} \in \mathrm{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_n\}
 > $$
 > Questo contraddice formalmente la condizione $(*)$ di scelta del vettore $\mathbf{v}_{n+1}$.
 > Essendo giunti a un **ASSURDO**, l'ipotesi $c_{n+1} \ne 0$ è falsa, e deve quindi valere:
@@ -680,10 +680,10 @@ $$
 >
 > Per il Lemma di Aggiunta, esiste un vettore $\mathbf{v}_3 \in \mathbb{R}^3$ tale che $\{\mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3\}$ risultino linearmente indipendenti.
 >
-> Per determinare $\mathbf{v}_3$, è sufficiente scegliere un vettore che non appartenga a $\operatorname{Span}\{\mathbf{v}_1, \mathbf{v}_2\}$.
-> Calcoliamo esplicitamente l'equazione cartesiana di $\operatorname{Span}\{\mathbf{v}_1, \mathbf{v}_2\}$:
+> Per determinare $\mathbf{v}_3$, è sufficiente scegliere un vettore che non appartenga a $\mathrm{Span}\{\mathbf{v}_1, \mathbf{v}_2\}$.
+> Calcoliamo esplicitamente l'equazione cartesiana di $\mathrm{Span}\{\mathbf{v}_1, \mathbf{v}_2\}$:
 > $$
-> \begin{pmatrix} x \\ y \\ z \end{pmatrix} \in \operatorname{Span}\left\{ \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix}, \begin{pmatrix} 0 \\ 1 \\ 2 \end{pmatrix} \right\} \iff \begin{pmatrix} x \\ y \\ z \end{pmatrix} = a \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix} + b \begin{pmatrix} 0 \\ 1 \\ 2 \end{pmatrix} = \begin{pmatrix} a \\ b \\ a + 2b \end{pmatrix}
+> \begin{pmatrix} x \\ y \\ z \end{pmatrix} \in \mathrm{Span}\left\{ \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix}, \begin{pmatrix} 0 \\ 1 \\ 2 \end{pmatrix} \right\} \iff \begin{pmatrix} x \\ y \\ z \end{pmatrix} = a \begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix} + b \begin{pmatrix} 0 \\ 1 \\ 2 \end{pmatrix} = \begin{pmatrix} a \\ b \\ a + 2b \end{pmatrix}
 > $$
 > Esplicitando per componenti:
 > $$
@@ -697,14 +697,14 @@ $$
 > Dunque un vettore appartiene allo span se e solo se soddisfa la relazione lineare $z = x + 2y$.
 > Se scegliamo un vettore per cui $z \ne x + 2y$, esso non apparterrà allo span:
 > $$
-> z \ne x + 2y \implies \mathbf{v} \notin \operatorname{Span}\{\mathbf{v}_1, \mathbf{v}_2\}
+> z \ne x + 2y \implies \mathbf{v} \notin \mathrm{Span}\{\mathbf{v}_1, \mathbf{v}_2\}
 > $$
 > Scegliendo ad esempio:
 > $$
 > \mathbf{v}_3 = \begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}
 > $$
 > si ha $z = 1$, mentre $x + 2y = 0 + 2(0) = 0 \ne 1$.
-> Pertanto $\mathbf{v}_3 \notin \operatorname{Span}\{\mathbf{v}_1, \mathbf{v}_2\}$, e la terna $\{\mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3\}$ è linearmente indipendente in $\mathbb{R}^3$.
+> Pertanto $\mathbf{v}_3 \notin \mathrm{Span}\{\mathbf{v}_1, \mathbf{v}_2\}$, e la terna $\{\mathbf{v}_1, \mathbf{v}_2, \mathbf{v}_3\}$ è linearmente indipendente in $\mathbb{R}^3$.
 >
 ### Basi di uno Spazio Vettoriale
 
@@ -712,7 +712,7 @@ $$
 > Dato uno spazio vettoriale $V$, una **base** di $V$ è un insieme ordinato di vettori $\mathcal{B} = \{\mathbf{v}_1, \dots, \mathbf{v}_n\} \subseteq V$ tale che:
 > 1. $\mathbf{v}_1, \dots, \mathbf{v}_n$ **generano** $V$, ovvero:
 >    $$
->    \operatorname{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_n\} = V
+>    \mathrm{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_n\} = V
 >    $$
 > 2. $\mathbf{v}_1, \dots, \mathbf{v}_n$ sono **linearmente indipendenti** (L.I.).
 
@@ -761,16 +761,16 @@ $$
 > [!proposition] Esistenza di una Base
 > Sia $V$ uno spazio vettoriale finitamente generato da un insieme di vettori $\{\mathbf{v}_1, \dots, \mathbf{v}_n\}$:
 > $$
-> V = \operatorname{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_n\}
+> V = \mathrm{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_n\}
 > $$
 > Allora esiste un sottoinsieme $U \subseteq \{\mathbf{v}_1, \dots, \mathbf{v}_n\}$ che costituisce una **base** di $V$.
 >
-> *(Dimostrazione costruttiva per applicazione iterata del Lemma di Scarto: se l'insieme $\{\mathbf{v}_1, \dots, \mathbf{v}_n\}$ è L.I., esso è già una base; se è L.D., per il Lemma di Scarto è possibile rimuovere un vettore mantenendo invariato lo $\operatorname{Span}$. Ripetendo la procedura un numero finito di volte, si giunge a un insieme massimale di vettori L.I. che generano ancora $V$, ossia a una base).*
+> *(Dimostrazione costruttiva per applicazione iterata del Lemma di Scarto: se l'insieme $\{\mathbf{v}_1, \dots, \mathbf{v}_n\}$ è L.I., esso è già una base; se è L.D., per il Lemma di Scarto è possibile rimuovere un vettore mantenendo invariato lo $\mathrm{Span}$. Ripetendo la procedura un numero finito di volte, si giunge a un insieme massimale di vettori L.I. che generano ancora $V$, ossia a una base).*
 >
 ### Il Lemma di Steinitz (Lemma di Scambio)
 
 > [!lemma] Lemma di Steinitz
-> Sia $V = \operatorname{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_m\}$ uno spazio vettoriale avente come base l'insieme $\{\mathbf{v}_1, \dots, \mathbf{v}_m\}$.
+> Sia $V = \mathrm{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_m\}$ uno spazio vettoriale avente come base l'insieme $\{\mathbf{v}_1, \dots, \mathbf{v}_m\}$.
 > Siano $\mathbf{w}_1, \dots, \mathbf{w}_n \in V$ un insieme di vettori arbitrari in $V$.
 > Se:
 > $$
@@ -779,38 +779,38 @@ $$
 > allora i vettori $\mathbf{w}_1, \dots, \mathbf{w}_n$ sono **linearmente dipendenti** (L.D.).
 
 > [!quote]- Dimostrazione
-> Poiché $\{\mathbf{v}_1, \dots, \mathbf{v}_m\}$ è una base di $V$, ogni vettore $\mathbf{w}_j$ (per $j = 1, \dots, n$) appartiene a $\operatorname{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_m\}$ e può essere espresso in modo unico come combinazione lineare dei vettori di base:
+> Poiché $\{\mathbf{v}_1, \dots, \mathbf{v}_m\}$ è una base di $V$, ogni vettore $\mathbf{w}_j$ (per $j = 1, \dots, n$) appartiene a $\mathrm{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_m\}$ e può essere espresso in modo unico come combinazione lineare dei vettori di base:
 > $$
 > \mathbf{w}_j = \sum_{i=1}^m a_{ij} \mathbf{v}_i, \qquad a_{ij} \in \mathbb{R}, \quad \forall j \in \{1, \dots, n\}
 > $$
 >
-> Si consideri la matrice $A \in \operatorname{Mat}(m, n)$ avente per colonne i coefficienti delle combinazioni lineari dei vettori $\mathbf{w}_j$ rispetto alla base $\{\mathbf{v}_1, \dots, \mathbf{v}_m\}$:
+> Si consideri la matrice $A \in \mathrm{Mat}(m, n)$ avente per colonne i coefficienti delle combinazioni lineari dei vettori $\mathbf{w}_j$ rispetto alla base $\{\mathbf{v}_1, \dots, \mathbf{v}_m\}$:
 > $$
 > A = (a_{ij}) = \begin{pmatrix} 
 > a_{11} & a_{12} & \dots & a_{1n} \\ 
 > a_{21} & a_{22} & \dots & a_{2n} \\ 
 > \vdots & \vdots & \ddots & \vdots \\ 
 > a_{m1} & a_{m2} & \dots & a_{mn} 
-> \end{pmatrix} \in \operatorname{Mat}(m, n)
+> \end{pmatrix} \in \mathrm{Mat}(m, n)
 > $$
 > Per le proprietà del rango di una matrice, il rango di $A$ è limitato superiormente dal minimo tra il numero di righe e il numero di colonne:
 > $$
-> 0 \le \operatorname{rk}(A) \le \min(m, n)
+> 0 \le \mathrm{rk}(A) \le \min(m, n)
 > $$
 > Essendo per ipotesi $n > m$, si ha $\min(m, n) = m$, da cui:
 > $$
-> \operatorname{rk}(A) \le m < n \implies \operatorname{rk}(A) < n
+> \mathrm{rk}(A) \le m < n \implies \mathrm{rk}(A) < n
 > $$
 > Consideriamo ora il sistema lineare omogeneo associato alla matrice $A$:
 > $$
 > A \mathbf{x} = \mathbf{0}
 > $$
 > dove $\mathbf{x} \in \mathbb{R}^n$.
-> Per il **Teorema di Rouché-Capelli**, un sistema lineare omogeneo con matrice dei coefficienti $A \in \operatorname{Mat}(m, n)$ avente $\operatorname{rk}(A) < n$ ammette:
+> Per il **Teorema di Rouché-Capelli**, un sistema lineare omogeneo con matrice dei coefficienti $A \in \mathrm{Mat}(m, n)$ avente $\mathrm{rk}(A) < n$ ammette:
 > $$
-> \infty^{n - \operatorname{rk}(A)} \text{ soluzioni}
+> \infty^{n - \mathrm{rk}(A)} \text{ soluzioni}
 > $$
-> Poiché $n - \operatorname{rk}(A) \ge n - m > 0$, esistono soluzioni non banali del sistema omogeneo.
+> Poiché $n - \mathrm{rk}(A) \ge n - m > 0$, esistono soluzioni non banali del sistema omogeneo.
 > Esiste pertanto un vettore di coefficienti $\mathbf{c} \in \mathbb{R}^n$ **non nullo**:
 > $$
 > \exists \, \mathbf{c} = \begin{pmatrix} c_1 \\ \vdots \\ c_n \end{pmatrix} \ne \begin{pmatrix} 0 \\ \vdots \\ 0 \end{pmatrix} \quad \text{tale che} \quad A \mathbf{c} = \mathbf{0}
@@ -874,7 +874,7 @@ $$
 > [!example] Esempio 2: Spazio dei Polinomi $\mathbb{R}[t]_{\le 1}$
 > Si consideri lo spazio dei polinomi di grado al più 1 a coefficienti reali:
 > $$
-> V = \mathbb{R}[t]_{\le 1} = \{at + b : a, b \in \mathbb{R}\} = \operatorname{Span}\{t, 1\}
+> V = \mathbb{R}[t]_{\le 1} = \{at + b : a, b \in \mathbb{R}\} = \mathrm{Span}\{t, 1\}
 > $$
 > Una base di $V$ è data dall'insieme $\{t, 1\}$, che contiene $m = 2$ elementi.
 > Si considerino i 3 polinomi ($n = 3$):
@@ -903,7 +903,7 @@ $$
 
 > [!quote]- Dimostrazione
 > **Dimostrazione del punto 1:**
-> Poiché $\mathcal{B} = \{\mathbf{b}_1, \dots, \mathbf{b}_n\}$ è una base di $V$, si ha $V = \operatorname{Span}\{\mathbf{b}_1, \dots, \mathbf{b}_n\}$.
+> Poiché $\mathcal{B} = \{\mathbf{b}_1, \dots, \mathbf{b}_n\}$ è una base di $V$, si ha $V = \mathrm{Span}\{\mathbf{b}_1, \dots, \mathbf{b}_n\}$.
 > Se per assurdo fosse $m > n$, applicando direttamente il Lemma di Steinitz ai vettori $\mathbf{u}_1, \dots, \mathbf{u}_m$ nello spazio generato dagli $n$ vettori di base, risulterebbe che $\mathbf{u}_1, \dots, \mathbf{u}_m$ sono linearmente dipendenti.
 > Questo contraddice l'ipotesi di lineare indipendenza di $\{\mathbf{u}_1, \dots, \mathbf{u}_m\}$.
 > Essendo giunti a un **ASSURDO**, deve valere:
@@ -914,10 +914,10 @@ $$
 > **Dimostrazione del punto 2:**
 > Supponiamo che $\{\mathbf{u}_1, \dots, \mathbf{u}_m\}$ sia un insieme di generatori di $V$, ovvero:
 > $$
-> V = \operatorname{Span}\{\mathbf{u}_1, \dots, \mathbf{u}_m\}
+> V = \mathrm{Span}\{\mathbf{u}_1, \dots, \mathbf{u}_m\}
 > $$
 > Per la proposizione sull'esistenza di una base, è possibile estrarre da $\{\mathbf{u}_1, \dots, \mathbf{u}_m\}$ una base $\mathcal{B}' \subseteq \{\mathbf{u}_1, \dots, \mathbf{u}_m\}$ formata da $k$ elementi, con $k \le m$.
-> D'altra parte, l'insieme $\mathcal{B} = \{\mathbf{b}_1, \dots, \mathbf{b}_n\}$ è formato da vettori linearmente indipendenti in $V = \operatorname{Span}(\mathcal{B}')$.
+> D'altra parte, l'insieme $\mathcal{B} = \{\mathbf{b}_1, \dots, \mathbf{b}_n\}$ è formato da vettori linearmente indipendenti in $V = \mathrm{Span}(\mathcal{B}')$.
 > Applicando il punto 1 con la base $\mathcal{B}'$ (avente $k$ elementi) e i vettori linearmente indipendenti $\mathbf{b}_1, \dots, \mathbf{b}_n$, si ottiene:
 > $$
 > n \le k \le m \implies m \ge n
@@ -955,22 +955,22 @@ $$
 >    $$
 >    La dimensione è $n$ in quanto la base canonica $\{\mathbf{e}_1, \dots, \mathbf{e}_n\}$ conta esattamente $n$ vettori.
 >
-> 2. **Spazio delle matrici $\operatorname{Mat}(m, n)$:**
+> 2. **Spazio delle matrici $\mathrm{Mat}(m, n)$:**
 >    $$
->    \dim(\operatorname{Mat}(m, n)) = m \cdot n
+>    \dim(\mathrm{Mat}(m, n)) = m \cdot n
 >    $$
->    Esiste infatti una base standard di $\operatorname{Mat}(m, n)$ formata da $m \cdot n$ elementi:
+>    Esiste infatti una base standard di $\mathrm{Mat}(m, n)$ formata da $m \cdot n$ elementi:
 >    $$
 >    \mathcal{B} = \{E_{11}, E_{12}, \dots, E_{1n}, E_{21}, \dots, E_{mn}\}
 >    $$
->    dove ogni matrice elementare $E_{ij} \in \operatorname{Mat}_{\mathbb{R}}(m, n)$ è definita componente per componente da:
+>    dove ogni matrice elementare $E_{ij} \in \mathrm{Mat}_{\mathbb{R}}(m, n)$ è definita componente per componente da:
 >    $$
 >    (E_{ij})_{a, b} = \begin{cases} 
 >    1 & \text{se } a = i \land b = j \\ 
 >    0 & \text{altrimenti} 
 >    \end{cases}
 >    $$
->    Ad esempio, in $\operatorname{Mat}(m, n)$, la matrice elementare $E_{21}$ ha la forma:
+>    Ad esempio, in $\mathrm{Mat}(m, n)$, la matrice elementare $E_{21}$ ha la forma:
 >    $$
 >    E_{21} = \begin{pmatrix} 
 >    0 & 0 & \dots & 0 \\ 
@@ -1022,10 +1022,10 @@ $$
 
 ### Ripasso: Spazio delle Righe
 
-Dato una matrice $A \in \operatorname{Mat}(m, n)$, siano $R_1, \dots, R_m \in \mathbb{R}^n$ i suoi vettori riga.
-Lo **spazio delle righe** di $A$, indicato con $\operatorname{row}(A)$, è il sottospazio vettoriale di $\mathbb{R}^n$ generato da tutte le sue righe:
+Dato una matrice $A \in \mathrm{Mat}(m, n)$, siano $R_1, \dots, R_m \in \mathbb{R}^n$ i suoi vettori riga.
+Lo **spazio delle righe** di $A$, indicato con $\mathrm{row}(A)$, è il sottospazio vettoriale di $\mathbb{R}^n$ generato da tutte le sue righe:
 $$
-\operatorname{row}(A) = \operatorname{Span}\{R_1, \dots, R_m\} \subseteq \mathbb{R}^n
+\mathrm{row}(A) = \mathrm{Span}\{R_1, \dots, R_m\} \subseteq \mathbb{R}^n
 $$
 
 ### Invarianza per Mosse di Gauss
@@ -1033,11 +1033,11 @@ $$
 > [!proposition] Invarianza dello Spazio delle Righe per Mosse di Gauss
 > Le operazioni elementari di riga dell'algoritmo di eliminazione di Gauss (scambio di righe, moltiplicazione di una riga per uno scalare non nullo, somma a una riga di un multiplo di un'altra riga) **preservano lo spazio delle righe**:
 > $$
-> A \xrightarrow{\text{Gauss}} A' \implies \operatorname{row}(A) = \operatorname{row}(A')
+> A \xrightarrow{\text{Gauss}} A' \implies \mathrm{row}(A) = \mathrm{row}(A')
 > $$
 
-> [!example] Esempio di Riduzione a Scala e Calcolo di $\operatorname{row}(A)$
-> Si consideri la matrice $A \in \operatorname{Mat}(3, 3)$:
+> [!example] Esempio di Riduzione a Scala e Calcolo di $\mathrm{row}(A)$
+> Si consideri la matrice $A \in \mathrm{Mat}(3, 3)$:
 > $$
 > A = \begin{pmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{pmatrix}
 > $$
@@ -1071,47 +1071,47 @@ $$
 >
 > In virtù della proposizione precedente:
 > $$
-> \operatorname{row}(A) = \operatorname{row}(A') = \operatorname{Span}\{(1, 2, 3), (0, -3, -6), (0, 0, 0)\}
+> \mathrm{row}(A) = \mathrm{row}(A') = \mathrm{Span}\{(1, 2, 3), (0, -3, -6), (0, 0, 0)\}
 > $$
 > Eliminando il vettore nullo $(0, 0, 0)$, che non contribuisce allo span:
 > $$
-> \operatorname{row}(A) = \operatorname{Span}\{(1, 2, 3), (0, -3, -6)\}
+> \mathrm{row}(A) = \mathrm{Span}\{(1, 2, 3), (0, -3, -6)\}
 > $$
 > I due vettori riga $(1, 2, 3)$ e $(0, -3, -6)$ sono linearmente indipendenti (grazie alla struttura a scala con pivot non nulli in colonne distinte).
 > Di conseguenza:
 > $$
-> \{(1, 2, 3), (0, -3, -6)\} \quad \text{è una base di } \operatorname{row}(A)
+> \{(1, 2, 3), (0, -3, -6)\} \quad \text{è una base di } \mathrm{row}(A)
 > $$
-> In particolare si ha $\dim(\operatorname{row}(A)) = 2$.
+> In particolare si ha $\dim(\mathrm{row}(A)) = 2$.
 >
 ### Determinazione di una Base dello Spazio delle Righe
 
 > [!proposition] Base dello Spazio delle Righe da Matrice a Scala
 > Sia $A'$ una matrice a scala per righe ottenuta da una matrice $A$ mediante operazioni elementari di Gauss.
-> Allora le **righe non nulle** di $A'$ formano una **base** dello spazio delle righe $\operatorname{row}(A)$.
+> Allora le **righe non nulle** di $A'$ formano una **base** dello spazio delle righe $\mathrm{row}(A)$.
 > In particolare, la dimensione dello spazio delle righe coincide con il numero di pivot non nulli, ossia con il rango per righe di $A$:
 > $$
-> \dim(\operatorname{row}(A)) = \operatorname{rk}(A)
+> \dim(\mathrm{row}(A)) = \mathrm{rk}(A)
 > $$
 >
 ### Metodologia: Studio di un Sottospazio Vettoriale
 
 > [!note] Come Studiare un Sottospazio Vettoriale Generato da Vettori
-> Per studiare un generico sottospazio $H = \operatorname{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_m\} \subseteq \mathbb{R}^n$, descritto tramite i suoi generatori $\mathbf{v}_1, \dots, \mathbf{v}_m \in \mathbb{R}^n$:
+> Per studiare un generico sottospazio $H = \mathrm{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_m\} \subseteq \mathbb{R}^n$, descritto tramite i suoi generatori $\mathbf{v}_1, \dots, \mathbf{v}_m \in \mathbb{R}^n$:
 >
 > 1. **Costruzione della matrice dei vettori riga:**
->    Si costruisce una matrice $A \in \operatorname{Mat}(m, n)$ disponendo i vettori generatori $\mathbf{v}_1, \dots, \mathbf{v}_m$ come **righe** di $A$:
+>    Si costruisce una matrice $A \in \mathrm{Mat}(m, n)$ disponendo i vettori generatori $\mathbf{v}_1, \dots, \mathbf{v}_m$ come **righe** di $A$:
 >    $$
 >    A = \begin{pmatrix} 
 >    \text{---} & \mathbf{v}_1 & \text{---} \\ 
 >    \text{---} & \mathbf{v}_2 & \text{---} \\ 
 >    & \vdots & \\ 
 >    \text{---} & \mathbf{v}_m & \text{---} 
->    \end{pmatrix} \in \operatorname{Mat}(m, n)
+>    \end{pmatrix} \in \mathrm{Mat}(m, n)
 >    $$
 >    In questo modo, il sottospazio $H$ coincide per definizione con lo spazio delle righe di $A$:
 >    $$
->    H = \operatorname{row}(A)
+>    H = \mathrm{row}(A)
 >    $$
 >
 > 2. **Riduzione a scala con l'algoritmo di Gauss:**
@@ -1119,50 +1119,50 @@ $$
 >
 > 3. **Estrazione della base e calcolo della dimensione:**
 >    - Le righe non nulle di $A'$ costituiscono una **base** del sottospazio $H$.
->    - Il numero di tali righe non nulle (numero di pivot) fornisce immediatamente la **dimensione** $\dim(H) = \operatorname{rk}(A)$.
+>    - Il numero di tali righe non nulle (numero di pivot) fornisce immediatamente la **dimensione** $\dim(H) = \mathrm{rk}(A)$.
 >
    In particolare, i vettori originari $\mathbf{v}_1, \dots, \mathbf{v}_m$ sono linearmente indipendenti (L.I.) se e solo se il rango è massimo sulle righe:
    $$
-   \mathbf{v}_1, \dots, \mathbf{v}_m \text{ sono L.I.} \iff \operatorname{rk}(A) = m
+   \mathbf{v}_1, \dots, \mathbf{v}_m \text{ sono L.I.} \iff \mathrm{rk}(A) = m
    $$
 
 ### Spazio delle Colonne di una Matrice
 
 > [!definition] Spazio delle Colonne
-> Sia $A \in \operatorname{Mat}_{\mathbb{R}}(m, n)$ una matrice a elementi reali con colonne denotate da $\mathbf{c}_1, \mathbf{c}_2, \dots, \mathbf{c}_n \in \mathbb{R}^m$, tale che:
+> Sia $A \in \mathrm{Mat}_{\mathbb{R}}(m, n)$ una matrice a elementi reali con colonne denotate da $\mathbf{c}_1, \mathbf{c}_2, \dots, \mathbf{c}_n \in \mathbb{R}^m$, tale che:
 > $$
 > A = \begin{pmatrix} \mathbf{c}_1 & \mathbf{c}_2 & \dots & \mathbf{c}_n \end{pmatrix}
 > $$
-> Si definisce **spazio delle colonne** di $A$, denotato con $\operatorname{col}(A)$, il sottospazio vettoriale di $\mathbb{R}^m$ generato da tutte le colonne di $A$:
+> Si definisce **spazio delle colonne** di $A$, denotato con $\mathrm{col}(A)$, il sottospazio vettoriale di $\mathbb{R}^m$ generato da tutte le colonne di $A$:
 > $$
-> \operatorname{col}(A) := \operatorname{Span}\{\mathbf{c}_1, \mathbf{c}_2, \dots, \mathbf{c}_n\} \subseteq \mathbb{R}^m
+> \mathrm{col}(A) := \mathrm{Span}\{\mathbf{c}_1, \mathbf{c}_2, \dots, \mathbf{c}_n\} \subseteq \mathbb{R}^m
 > $$
 
 > [!note] Non Preservazione dello Spazio delle Colonne tramite Gauss
 > A differenza dello spazio delle righe, le operazioni elementari di riga (eliminazione di Gauss) **NON** preservano lo spazio delle colonne di una matrice. Ovvero, se $A \xrightarrow{\text{Gauss}} A'$, in generale:
 > $$
-> \operatorname{col}(A) \neq \operatorname{col}(A')
+> \mathrm{col}(A) \neq \mathrm{col}(A')
 > $$
-> Tuttavia, le operazioni elementari di riga preservano le relazioni di dipendenza e indipendenza lineare tra le colonne; pertanto, le colonne di $A$ corrispondenti alle posizioni dei pivot nella matrice a scala $A'$ formano una base per lo spazio delle colonne originario $\operatorname{col}(A)$.
+> Tuttavia, le operazioni elementari di riga preservano le relazioni di dipendenza e indipendenza lineare tra le colonne; pertanto, le colonne di $A$ corrispondenti alle posizioni dei pivot nella matrice a scala $A'$ formano una base per lo spazio delle colonne originario $\mathrm{col}(A)$.
 
 > [!theorem] Dimensione dello Spazio delle Colonne
-> Per ogni matrice $A \in \operatorname{Mat}_{\mathbb{R}}(m, n)$, la dimensione dello spazio delle colonne coincide con il rango della matrice:
+> Per ogni matrice $A \in \mathrm{Mat}_{\mathbb{R}}(m, n)$, la dimensione dello spazio delle colonne coincide con il rango della matrice:
 > $$
-> \dim(\operatorname{col}(A)) = \operatorname{rk}(A)
+> \dim(\mathrm{col}(A)) = \mathrm{rk}(A)
 > $$
 
 > [!proposition] Uguaglianza tra Rango per Righe e Rango per Colonne
-> Dal momento che $\dim(\operatorname{row}(A)) = \operatorname{rk}(A)$ e $\dim(\operatorname{col}(A)) = \operatorname{rk}(A)$, e ricordando che lo spazio delle colonne di $A$ corrisponde allo spazio delle righe della matrice trasposta $A^T$, vale l'identità fondamentale:
+> Dal momento che $\dim(\mathrm{row}(A)) = \mathrm{rk}(A)$ e $\dim(\mathrm{col}(A)) = \mathrm{rk}(A)$, e ricordando che lo spazio delle colonne di $A$ corrisponde allo spazio delle righe della matrice trasposta $A^T$, vale l'identità fondamentale:
 > $$
-> \operatorname{rk}(A^T) = \operatorname{rk}(A)
+> \mathrm{rk}(A^T) = \mathrm{rk}(A)
 > $$
 >
 ### Il Teorema di Nullità + Rango (Teorema della Dimensione per Matrici)
 
 > [!theorem] Teorema di Nullità + Rango
-> Sia $A \in \operatorname{Mat}_{\mathbb{R}}(m, n)$ una matrice a $m$ righe e $n$ colonne. Vale la relazione fondamentale tra la dimensione del nucleo (nullità) e la dimensione dell'immagine/spazio delle colonne (rango):
+> Sia $A \in \mathrm{Mat}_{\mathbb{R}}(m, n)$ una matrice a $m$ righe e $n$ colonne. Vale la relazione fondamentale tra la dimensione del nucleo (nullità) e la dimensione dell'immagine/spazio delle colonne (rango):
 > $$
-> \dim(\operatorname{Ker} A) + \operatorname{rk}(A) = n
+> \dim(\mathrm{Ker} A) + \mathrm{rk}(A) = n
 > $$
 
 > [!quote]- Dimostrazione
@@ -1172,7 +1172,7 @@ $$
 > $$
 > Per il Teorema di Rouché-Capelli, il sistema omogeneo è sempre compatibile e lo spazio delle sue soluzioni dipende da un numero di parametri liberi pari a:
 > $$
-> s = n - \operatorname{rk}(A)
+> s = n - \mathrm{rk}(A)
 > $$
 > L'insieme $S$ delle soluzioni di un generico sistema lineare compatibile $A\mathbf{x} = \mathbf{b}$ si esprime in forma parametrica mediante una soluzione particolare $\mathbf{v}_0$ e $s$ vettori direttori $\mathbf{v}_1, \dots, \mathbf{v}_s$:
 > $$
@@ -1182,27 +1182,27 @@ $$
 >
 > D'altra parte, per il Teorema di Struttura delle soluzioni dei sistemi lineari, essendo $\mathbf{v}_0$ una soluzione fissata del sistema, l'insieme $S$ coincide con la traslazione del nucleo di $A$:
 > $$
-> S = \{\mathbf{v}_0 + \mathbf{w} : \mathbf{w} \in \operatorname{Ker} A\}
+> S = \{\mathbf{v}_0 + \mathbf{w} : \mathbf{w} \in \mathrm{Ker} A\}
 > $$
 > Confrontando le due espressioni:
 > $$
-> \{\mathbf{v}_0 + t_1 \mathbf{v}_1 + \dots + t_s \mathbf{v}_s : t_i \in \mathbb{R}\} = \{\mathbf{v}_0 + \mathbf{w} : \mathbf{w} \in \operatorname{Ker} A\}
+> \{\mathbf{v}_0 + t_1 \mathbf{v}_1 + \dots + t_s \mathbf{v}_s : t_i \in \mathbb{R}\} = \{\mathbf{v}_0 + \mathbf{w} : \mathbf{w} \in \mathrm{Ker} A\}
 > $$
 > da cui segue immediatamente che:
 > $$
-> \operatorname{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_s\} = \operatorname{Ker} A
+> \mathrm{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_s\} = \mathrm{Ker} A
 > $$
-> Essendo $\{\mathbf{v}_1, \dots, \mathbf{v}_s\}$ linearmente indipendenti e generatori di $\operatorname{Ker} A$, essi costituiscono una base per $\operatorname{Ker} A$. Di conseguenza, la dimensione del nucleo è esattamente uguale al numero di parametri liberi $s$:
+> Essendo $\{\mathbf{v}_1, \dots, \mathbf{v}_s\}$ linearmente indipendenti e generatori di $\mathrm{Ker} A$, essi costituiscono una base per $\mathrm{Ker} A$. Di conseguenza, la dimensione del nucleo è esattamente uguale al numero di parametri liberi $s$:
 > $$
-> \dim(\operatorname{Ker} A) = s
+> \dim(\mathrm{Ker} A) = s
 > $$
-> Sostituendo la relazione fornita da Rouché-Capelli $s = n - \operatorname{rk}(A)$, si ottiene:
+> Sostituendo la relazione fornita da Rouché-Capelli $s = n - \mathrm{rk}(A)$, si ottiene:
 > $$
-> \dim(\operatorname{Ker} A) = n - \operatorname{rk}(A) \implies \dim(\operatorname{Ker} A) + \operatorname{rk}(A) = n \qquad \blacksquare
+> \dim(\mathrm{Ker} A) = n - \mathrm{rk}(A) \implies \dim(\mathrm{Ker} A) + \mathrm{rk}(A) = n \qquad \blacksquare
 > $$
 
 > [!example] Calcolo della Dimensione del Nucleo da Matrice a Scala
-> Si consideri la matrice $A \in \operatorname{Mat}_{\mathbb{R}}(3, 5)$ già ridotta in forma a scala:
+> Si consideri la matrice $A \in \mathrm{Mat}_{\mathbb{R}}(3, 5)$ già ridotta in forma a scala:
 > $$
 > A = \begin{pmatrix}
 > \boxed{1} & 0 & 1 & 0 & -2 \\
@@ -1211,14 +1211,14 @@ $$
 > \end{pmatrix}
 > $$
 > - Il numero totale di colonne (variabili del sistema) è $n = 5$.
-> - I pivot non nulli si trovano sulla prima, seconda e quarta colonna; pertanto il rango è $\operatorname{rk}(A) = 3$.
+> - I pivot non nulli si trovano sulla prima, seconda e quarta colonna; pertanto il rango è $\mathrm{rk}(A) = 3$.
 > - Per il Teorema di Nullità + Rango, la dimensione del nucleo è data da:
 >   $$
->   \dim(\operatorname{Ker} A) = n - \operatorname{rk}(A) = 5 - 3 = 2
+>   \dim(\mathrm{Ker} A) = n - \mathrm{rk}(A) = 5 - 3 = 2
 >   $$
 > Ne consegue che il nucleo di $A$ è generato da una base di due vettori linearmente indipendenti:
 > $$
-> \operatorname{Ker}(A) = \operatorname{Span}\{\mathbf{v}_1, \mathbf{v}_2\}
+> \mathrm{Ker}(A) = \mathrm{Span}\{\mathbf{v}_1, \mathbf{v}_2\}
 > $$
 > Per determinare esplicitamente i vettori $\mathbf{v}_1$ e $\mathbf{v}_2$, è sufficiente risolvere il sistema lineare omogeneo associato $A\mathbf{x} = \mathbf{0}$, esplicitando le variabili legate (pivot) in funzione delle variabili libere $x_3$ e $x_5$.
 >
@@ -1229,15 +1229,15 @@ $$
 Dato uno spazio euclideo $\mathbb{R}^n$, un sottospazio vettoriale $H \subseteq \mathbb{R}^n$ può essere descritto e manipolato attraverso due rappresentazioni duali:
 
 1. **Forma Cartesiana (Implicita):**
-   Il sottospazio $H$ è definito come il luogo degli zeri di un sistema di equazioni lineari omogenee, ovvero come il nucleo di un'opportuna matrice $A \in \operatorname{Mat}_{\mathbb{R}}(m, n)$:
+   Il sottospazio $H$ è definito come il luogo degli zeri di un sistema di equazioni lineari omogenee, ovvero come il nucleo di un'opportuna matrice $A \in \mathrm{Mat}_{\mathbb{R}}(m, n)$:
    $$
-   H = \{\mathbf{x} \in \mathbb{R}^n : A\mathbf{x} = \mathbf{0}\} = \operatorname{Ker}(A)
+   H = \{\mathbf{x} \in \mathbb{R}^n : A\mathbf{x} = \mathbf{0}\} = \mathrm{Ker}(A)
    $$
 
 2. **Forma Parametrica (Esplicita):**
    Il sottospazio $H$ è espresso come l'insieme di tutte le combinazioni lineari di un insieme finito di vettori generatori $\{\mathbf{v}_1, \dots, \mathbf{v}_m\} \subseteq \mathbb{R}^n$:
    $$
-   H = \{t_1 \mathbf{v}_1 + \dots + t_m \mathbf{v}_m : t_i \in \mathbb{R}\} = \operatorname{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_m\}
+   H = \{t_1 \mathbf{v}_1 + \dots + t_m \mathbf{v}_m : t_i \in \mathbb{R}\} = \mathrm{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_m\}
    $$
 
 ### Algoritmi di Conversione tra Forma Cartesiana e Forma Parametrica
@@ -1249,21 +1249,21 @@ Dato uno spazio euclideo $\mathbb{R}^n$, un sottospazio vettoriale $H \subseteq 
 > 3. Si risolve il sistema lineare a ritroso esprimendo le variabili pivot in funzione dei parametri liberi.
 > 4. Si decompone la soluzione generale come combinazione lineare dei parametri liberi: i vettori moltiplicati dai parametri costituiscono una base di $H$, fornendone la forma parametrica:
 >    $$
->    H = \operatorname{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_s\}
+>    H = \mathrm{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_s\}
 >    $$
 
 > [!proposition] Algoritmo di Conversione: Da Parametrica a Cartesiana
 > Sia assegnato il sottospazio $H$ in forma parametrica tramite un insieme di generatori:
 > $$
-> H = \operatorname{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_p\} \subseteq \mathbb{R}^n
+> H = \mathrm{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_p\} \subseteq \mathbb{R}^n
 > $$
-> Si cerca una matrice $A \in \operatorname{Mat}_{\mathbb{R}}(m, n)$ tale che $\operatorname{Ker}(A) = H$.
+> Si cerca una matrice $A \in \mathrm{Mat}_{\mathbb{R}}(m, n)$ tale che $\mathrm{Ker}(A) = H$.
 > 
 > Esprimendo la matrice $A$ riga per riga:
 > $$
 > A = \begin{pmatrix} R_1 \\ R_2 \\ \vdots \\ R_m \end{pmatrix}, \qquad R_i = i\text{-esima riga di } A
 > $$
-> La condizione di appartenenza di ciascun generatore al nucleo, $\mathbf{v}_j \in \operatorname{Ker} A$ per ogni $j = 1, \dots, p$, equivale all'annullamento del prodotto matrice-vettore:
+> La condizione di appartenenza di ciascun generatore al nucleo, $\mathbf{v}_j \in \mathrm{Ker} A$ per ogni $j = 1, \dots, p$, equivale all'annullamento del prodotto matrice-vettore:
 > $$
 > A \mathbf{v}_j = \mathbf{0} \implies \begin{pmatrix} R_1 \\ R_2 \\ \vdots \\ R_m \end{pmatrix} \mathbf{v}_j = \begin{pmatrix} 0 \\ 0 \\ \vdots \\ 0 \end{pmatrix} \iff \begin{cases} R_1 \mathbf{v}_j = 0 \\ R_2 \mathbf{v}_j = 0 \\ \vdots \\ R_m \mathbf{v}_j = 0 \end{cases} \iff R_i \mathbf{v}_j = 0 \quad \forall i, j
 > $$
@@ -1278,7 +1278,7 @@ Dato uno spazio euclideo $\mathbb{R}^n$, un sottospazio vettoriale $H \subseteq 
 > [!example] Determinazione della Forma Cartesiana di uno Span in $\mathbb{R}^5$
 > Si consideri il sottospazio $H \subseteq \mathbb{R}^5$ dato in forma parametrica dai seguenti tre vettori generatori:
 > $$
-> H = \operatorname{Span}\left\{
+> H = \mathrm{Span}\left\{
 > \mathbf{v}_1 = \begin{pmatrix} 1 \\ 1 \\ 0 \\ 0 \\ 0 \end{pmatrix}, \quad
 > \mathbf{v}_2 = \begin{pmatrix} 0 \\ 1 \\ 0 \\ 1 \\ 0 \end{pmatrix}, \quad
 > \mathbf{v}_3 = \begin{pmatrix} 0 \\ 0 \\ 1 \\ 2 \\ 0 \end{pmatrix}
@@ -1397,8 +1397,8 @@ Dato uno spazio euclideo $\mathbb{R}^n$, un sottospazio vettoriale $H \subseteq 
 > [!example] Controesempio dell'Unione di Due Rette in $\mathbb{R}^2$
 > Si consideri lo spazio vettoriale $V = \mathbb{R}^2$ e i due sottospazi unidimensionali (rette passanti per l'origine):
 > $$
-> H_1 = \operatorname{Span}\left\{ \begin{pmatrix} 1 \\ 1 \end{pmatrix} \right\} = \left\{ t \begin{pmatrix} 1 \\ 1 \end{pmatrix} : t \in \mathbb{R} \right\}
-> H_2 = \operatorname{Ker}\begin{pmatrix} 1 & 2 \end{pmatrix} = \left\{ \begin{pmatrix} x_1 \\ x_2 \end{pmatrix} \in \mathbb{R}^2 : x_1 + 2x_2 = 0 \right\} = \operatorname{Span}\left\{ \begin{pmatrix} -2 \\ 1 \end{pmatrix} \right\} = \left\{ t \begin{pmatrix} -2 \\ 1 \end{pmatrix} : t \in \mathbb{R} \right\}
+> H_1 = \mathrm{Span}\left\{ \begin{pmatrix} 1 \\ 1 \end{pmatrix} \right\} = \left\{ t \begin{pmatrix} 1 \\ 1 \end{pmatrix} : t \in \mathbb{R} \right\}
+> H_2 = \mathrm{Ker}\begin{pmatrix} 1 & 2 \end{pmatrix} = \left\{ \begin{pmatrix} x_1 \\ x_2 \end{pmatrix} \in \mathbb{R}^2 : x_1 + 2x_2 = 0 \right\} = \mathrm{Span}\left\{ \begin{pmatrix} -2 \\ 1 \end{pmatrix} \right\} = \left\{ t \begin{pmatrix} -2 \\ 1 \end{pmatrix} : t \in \mathbb{R} \right\}
 > $$
 > 
 > L'unione insiemistica $H_1 \cup H_2$ rappresenta graficamente l'insieme dei punti appartenenti all'una o all'altra retta.
@@ -1449,30 +1449,30 @@ Dato uno spazio euclideo $\mathbb{R}^n$, un sottospazio vettoriale $H \subseteq 
 > $$
 > Dal punto di vista reticolare:
 > - $H_1 \cap H_2$ è il **più grande** sottospazio vettoriale contenuto contemporaneamente sia in $H_1$ sia in $H_2$.
-> - $H_1 + H_2$ è il **più piccolo** sottospazio vettoriale che contiene contemporaneamente sia $H_1$ sia $H_2$ (coincide infatti con il sottospazio generato dall'unione $\operatorname{Span}(H_1 \cup H_2)$).
+> - $H_1 + H_2$ è il **più piccolo** sottospazio vettoriale che contiene contemporaneamente sia $H_1$ sia $H_2$ (coincide infatti con il sottospazio generato dall'unione $\mathrm{Span}(H_1 \cup H_2)$).
 >
 ### Calcolo Operativo della Somma di Sottospazi (Forma Parametrica)
 
 Per determinare una base e la dimensione della somma $H_1 + H_2$, conviene esprimere entrambi i sottospazi in **forma parametrica** mediante generatori:
 $$
-H_1 = \operatorname{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_p\} \subseteq V, \qquad H_2 = \operatorname{Span}\{\mathbf{w}_1, \dots, \mathbf{w}_q\} \subseteq V
+H_1 = \mathrm{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_p\} \subseteq V, \qquad H_2 = \mathrm{Span}\{\mathbf{w}_1, \dots, \mathbf{w}_q\} \subseteq V
 $$
 La somma è generata dall'unione di tutti i vettori generatori:
 $$
-H_1 + H_2 = \operatorname{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_p, \mathbf{w}_1, \dots, \mathbf{w}_q\}
+H_1 + H_2 = \mathrm{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_p, \mathbf{w}_1, \dots, \mathbf{w}_q\}
 $$
 Si estraggono poi i generatori linearmente indipendenti riducendo a scala per righe la matrice che li contiene.
 
 > [!example] Esempio di Calcolo della Somma in $\mathbb{R}^3$
 > Si considerino i sottospazi $H_1, H_2 \subseteq \mathbb{R}^3$ definiti da:
 > $$
-> H_1 = \operatorname{Span}\left\{ \mathbf{v}_1 = \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix}, \quad \mathbf{v}_2 = \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix} \right\}
-> H_2 = \operatorname{Span}\left\{ \mathbf{w}_1 = \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix}, \quad \mathbf{w}_2 = \begin{pmatrix} 0 \\ 1 \\ 1 \end{pmatrix} \right\}
+> H_1 = \mathrm{Span}\left\{ \mathbf{v}_1 = \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix}, \quad \mathbf{v}_2 = \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix} \right\}
+> H_2 = \mathrm{Span}\left\{ \mathbf{w}_1 = \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix}, \quad \mathbf{w}_2 = \begin{pmatrix} 0 \\ 1 \\ 1 \end{pmatrix} \right\}
 > $$
 > 
 > La somma è generata dall'accostamento dei quattro vettori:
 > $$
-> H_1 + H_2 = \operatorname{Span}\left\{ \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix}, \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix}, \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix}, \begin{pmatrix} 0 \\ 1 \\ 1 \end{pmatrix} \right\}
+> H_1 + H_2 = \mathrm{Span}\left\{ \begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix}, \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix}, \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix}, \begin{pmatrix} 0 \\ 1 \\ 1 \end{pmatrix} \right\}
 > $$
 > Si osserva immediatamente la relazione di dipendenza lineare:
 > $$
@@ -1480,7 +1480,7 @@ Si estraggono poi i generatori linearmente indipendenti riducendo a scala per ri
 > $$
 > Pertanto il vettore $\mathbf{v}_1$ è ridondante e può essere rimosso:
 > $$
-> H_1 + H_2 = \operatorname{Span}\left\{ \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix}, \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix}, \begin{pmatrix} 0 \\ 1 \\ 1 \end{pmatrix} \right\}
+> H_1 + H_2 = \mathrm{Span}\left\{ \begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix}, \begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix}, \begin{pmatrix} 0 \\ 1 \\ 1 \end{pmatrix} \right\}
 > $$
 > I tre vettori rimanenti sono linearmente indipendenti e formano una base di $H_1 + H_2$, che ha dunque dimensione 3 e coincide con $\mathbb{R}^3$.
 >
@@ -1488,7 +1488,7 @@ Si estraggono poi i generatori linearmente indipendenti riducendo a scala per ri
 
 Per determinare l'intersezione $H_1 \cap H_2$, conviene esprimere entrambi i sottospazi in **forma cartesiana**:
 $$
-H_1 = \operatorname{Ker}(A), \qquad H_2 = \operatorname{Ker}(B)
+H_1 = \mathrm{Ker}(A), \qquad H_2 = \mathrm{Ker}(B)
 $$
 Un vettore $\mathbf{x}$ appartiene a $H_1 \cap H_2$ se e solo se soddisfa contemporaneamente le equazioni di $A$ e quelle di $B$:
 $$
@@ -1496,19 +1496,19 @@ $$
 $$
 Di conseguenza, l'intersezione coincide con il nucleo della matrice a blocchi ottenuta impilando le matrici dei vincoli:
 $$
-H_1 \cap H_2 = \operatorname{Ker}\begin{pmatrix} A \\ B \end{pmatrix}
+H_1 \cap H_2 = \mathrm{Ker}\begin{pmatrix} A \\ B \end{pmatrix}
 $$
 
 > [!example] Esempio di Calcolo dell'Intersezione in $\mathbb{R}^3$
 > Si considerino i sottospazi $H_1, H_2 \subseteq \mathbb{R}^3$ assegnati in forma cartesiana:
 > $$
-> H_1 = \operatorname{Ker}\begin{pmatrix} 1 & -2 & 1 \end{pmatrix} = \left\{ \begin{pmatrix} x \\ y \\ z \end{pmatrix} \in \mathbb{R}^3 : x - 2y + z = 0 \right\}
-> H_2 = \operatorname{Ker}\begin{pmatrix} 1 & 0 & -1 \\ 0 & 1 & 1 \end{pmatrix} = \left\{ \begin{pmatrix} x \\ y \\ z \end{pmatrix} \in \mathbb{R}^3 : \begin{cases} x - z = 0 \\ y + z = 0 \end{cases} \right\}
+> H_1 = \mathrm{Ker}\begin{pmatrix} 1 & -2 & 1 \end{pmatrix} = \left\{ \begin{pmatrix} x \\ y \\ z \end{pmatrix} \in \mathbb{R}^3 : x - 2y + z = 0 \right\}
+> H_2 = \mathrm{Ker}\begin{pmatrix} 1 & 0 & -1 \\ 0 & 1 & 1 \end{pmatrix} = \left\{ \begin{pmatrix} x \\ y \\ z \end{pmatrix} \in \mathbb{R}^3 : \begin{cases} x - z = 0 \\ y + z = 0 \end{cases} \right\}
 > $$
 > 
 > L'intersezione si ottiene unificando le equazioni cartesiane in un unico sistema lineare omogeneo:
 > $$
-> H_1 \cap H_2 = \operatorname{Ker}\begin{pmatrix} 1 & -2 & 1 \\ 1 & 0 & -1 \\ 0 & 1 & 1 \end{pmatrix} = \left\{ \begin{pmatrix} x \\ y \\ z \end{pmatrix} \in \mathbb{R}^3 : \begin{cases} x - 2y + z = 0 \\ x - z = 0 \\ y + z = 0 \end{cases} \right\} \subseteq \mathbb{R}^3
+> H_1 \cap H_2 = \mathrm{Ker}\begin{pmatrix} 1 & -2 & 1 \\ 1 & 0 & -1 \\ 0 & 1 & 1 \end{pmatrix} = \left\{ \begin{pmatrix} x \\ y \\ z \end{pmatrix} \in \mathbb{R}^3 : \begin{cases} x - 2y + z = 0 \\ x - z = 0 \\ y + z = 0 \end{cases} \right\} \subseteq \mathbb{R}^3
 > $$
 >
 ### La Formula di Grassmann
@@ -1532,9 +1532,9 @@ $$
 > [!example] Esempio di Sottospazio Affine in $\mathbb{R}^2$
 > In $\mathbb{R}^2$, si consideri il sottoinsieme:
 > $$
-> S = \begin{pmatrix} 0 \\ 1 \end{pmatrix} + \operatorname{Span}\left\{ \begin{pmatrix} 2 \\ 1 \end{pmatrix} \right\} = \left\{ \begin{pmatrix} 0 \\ 1 \end{pmatrix} + t \begin{pmatrix} 2 \\ 1 \end{pmatrix} : t \in \mathbb{R} \right\} \subseteq \mathbb{R}^2
+> S = \begin{pmatrix} 0 \\ 1 \end{pmatrix} + \mathrm{Span}\left\{ \begin{pmatrix} 2 \\ 1 \end{pmatrix} \right\} = \left\{ \begin{pmatrix} 0 \\ 1 \end{pmatrix} + t \begin{pmatrix} 2 \\ 1 \end{pmatrix} : t \in \mathbb{R} \right\} \subseteq \mathbb{R}^2
 > $$
-> Geometricamente, $S$ rappresenta la retta affine passante per il punto $(0, 1)^T$ avente direzione parallela al vettore $(2, 1)^T$. Poiché non passa per l'origine $(0, 0)^T$, essa non è un sottospazio vettoriale, ma un sottospazio affine ottenuto traslando il sottospazio vettoriale $H = \operatorname{Span}\{(2, 1)^T\}$.
+> Geometricamente, $S$ rappresenta la retta affine passante per il punto $(0, 1)^T$ avente direzione parallela al vettore $(2, 1)^T$. Poiché non passa per l'origine $(0, 0)^T$, essa non è un sottospazio vettoriale, ma un sottospazio affine ottenuto traslando il sottospazio vettoriale $H = \mathrm{Span}\{(2, 1)^T\}$.
 >
 ### La Giacitura di un Sottospazio Affine
 
@@ -1567,17 +1567,17 @@ $$
 > Sulla base della dimensione si classificano i principali oggetti geometrici affini:
 > - Una **retta affine** è un sottospazio affine di dimensione 1:
 >   $$
->   \dim(S) = 1 \implies S = \mathbf{x}_0 + \operatorname{Span}\{\mathbf{v}\} \quad (\mathbf{v} \neq \mathbf{0})
+>   \dim(S) = 1 \implies S = \mathbf{x}_0 + \mathrm{Span}\{\mathbf{v}\} \quad (\mathbf{v} \neq \mathbf{0})
 >   $$
 > - Un **piano affine** è un sottospazio affine di dimensione 2:
 >   $$
->   \dim(S) = 2 \implies S = \mathbf{x}_0 + \operatorname{Span}\{\mathbf{v}_1, \mathbf{v}_2\} \quad (\mathbf{v}_1, \mathbf{v}_2 \text{ linearmente indipendenti})
+>   \dim(S) = 2 \implies S = \mathbf{x}_0 + \mathrm{Span}\{\mathbf{v}_1, \mathbf{v}_2\} \quad (\mathbf{v}_1, \mathbf{v}_2 \text{ linearmente indipendenti})
 >   $$
 >
 ### Sistemi Lineari e Sottospazi Affini
 
 > [!proposition] L'Insieme delle Soluzioni di un Sistema Lineare è un Sottospazio Affine
-> Siano assegnati una matrice dei coefficienti $A \in \operatorname{Mat}_{\mathbb{R}}(m, n)$ e un vettore dei termini noti $\mathbf{b} \in \mathbb{R}^m$. Se il sistema lineare $A\mathbf{x} = \mathbf{b}$ è compatibile, allora l'insieme di tutte le sue soluzioni:
+> Siano assegnati una matrice dei coefficienti $A \in \mathrm{Mat}_{\mathbb{R}}(m, n)$ e un vettore dei termini noti $\mathbf{b} \in \mathbb{R}^m$. Se il sistema lineare $A\mathbf{x} = \mathbf{b}$ è compatibile, allora l'insieme di tutte le sue soluzioni:
 > $$
 > S = \{\mathbf{x} \in \mathbb{R}^n : A\mathbf{x} = \mathbf{b}\} \subseteq \mathbb{R}^n
 > $$
@@ -1594,19 +1594,19 @@ $$
 > $$
 > Ciò implica che la differenza $\mathbf{w} := \mathbf{x} - \mathbf{x}_0$ appartiene al nucleo della matrice $A$:
 > $$
-> \mathbf{w} \in \operatorname{Ker}(A) \implies \mathbf{x} = \mathbf{x}_0 + \mathbf{w} \quad \text{con } \mathbf{w} \in \operatorname{Ker}(A)
+> \mathbf{w} \in \mathrm{Ker}(A) \implies \mathbf{x} = \mathbf{x}_0 + \mathbf{w} \quad \text{con } \mathbf{w} \in \mathrm{Ker}(A)
 > $$
-> Viceversa, per ogni vettore $\mathbf{w} \in \operatorname{Ker}(A)$, il vettore $\mathbf{x} = \mathbf{x}_0 + \mathbf{w}$ è soluzione del sistema:
+> Viceversa, per ogni vettore $\mathbf{w} \in \mathrm{Ker}(A)$, il vettore $\mathbf{x} = \mathbf{x}_0 + \mathbf{w}$ è soluzione del sistema:
 > $$
 > A(\mathbf{x}_0 + \mathbf{w}) = A\mathbf{x}_0 + A\mathbf{w} = \mathbf{b} + \mathbf{0} = \mathbf{b}
 > $$
 > Ne consegue che l'insieme delle soluzioni si esprime come:
 > $$
-> S = \mathbf{x}_0 + \operatorname{Ker}(A)
+> S = \mathbf{x}_0 + \mathrm{Ker}(A)
 > $$
-> Essendo $\operatorname{Ker}(A)$ un sottospazio vettoriale di $\mathbb{R}^n$, $S$ è per definizione un sottospazio affine avente come giacitura proprio il nucleo della matrice:
+> Essendo $\mathrm{Ker}(A)$ un sottospazio vettoriale di $\mathbb{R}^n$, $S$ è per definizione un sottospazio affine avente come giacitura proprio il nucleo della matrice:
 > $$
-> H = \operatorname{Ker}(A) \qquad \blacksquare
+> H = \mathrm{Ker}(A) \qquad \blacksquare
 > $$
 >
 ### Rappresentazione Cartesiana e Parametrica di Sottospazi Affini
@@ -1616,7 +1616,7 @@ Come per i sottospazi vettoriali, anche per i sottospazi affini sussistono due d
 1. **Forma Parametrica:**
    Assegnato un punto base $\mathbf{x}_0 \in \mathbb{R}^n$ e una base $\{\mathbf{v}_1, \dots, \mathbf{v}_k\}$ della giacitura:
    $$
-   S = \mathbf{x}_0 + \operatorname{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_k\} = \{\mathbf{x}_0 + t_1 \mathbf{v}_1 + \dots + t_k \mathbf{v}_k : t_i \in \mathbb{R}\}
+   S = \mathbf{x}_0 + \mathrm{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_k\} = \{\mathbf{x}_0 + t_1 \mathbf{v}_1 + \dots + t_k \mathbf{v}_k : t_i \in \mathbb{R}\}
    $$
 
 2. **Forma Cartesiana:**
@@ -1626,13 +1626,13 @@ Come per i sottospazi vettoriali, anche per i sottospazi affini sussistono due d
    $$
 
 **Conversione da Cartesiana a Parametrica:**
-Si risolve il sistema lineare non omogeneo $A\mathbf{x} = \mathbf{b}$ mediante eliminazione di Gauss-Jordan: la scomposizione della soluzione generale fornisce automaticamente una soluzione particolare $\mathbf{x}_0$ e i vettori di base della giacitura $\operatorname{Ker}(A)$.
+Si risolve il sistema lineare non omogeneo $A\mathbf{x} = \mathbf{b}$ mediante eliminazione di Gauss-Jordan: la scomposizione della soluzione generale fornisce automaticamente una soluzione particolare $\mathbf{x}_0$ e i vettori di base della giacitura $\mathrm{Ker}(A)$.
 
 **Conversione da Parametrica a Cartesiana:**
-Sia dato $S = \mathbf{x}_0 + \operatorname{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_k\}$:
-1. **Determinazione della giacitura cartesiana:** Si applica l'algoritmo di conversione parametrica $\to$ cartesiana al sottospazio vettoriale $H = \operatorname{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_k\}$, determinando una matrice $A$ tale che:
+Sia dato $S = \mathbf{x}_0 + \mathrm{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_k\}$:
+1. **Determinazione della giacitura cartesiana:** Si applica l'algoritmo di conversione parametrica $\to$ cartesiana al sottospazio vettoriale $H = \mathrm{Span}\{\mathbf{v}_1, \dots, \mathbf{v}_k\}$, determinando una matrice $A$ tale che:
    $$
-   H = \operatorname{Ker}(A)
+   H = \mathrm{Ker}(A)
    $$
 2. **Determinazione del termine noto:** Si calcola il vettore $\mathbf{b} \in \mathbb{R}^m$ imponendo che il punto $\mathbf{x}_0$ appartenga a $S$, ovvero moltiplicando la matrice $A$ per il punto base:
    $$

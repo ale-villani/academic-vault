@@ -1182,7 +1182,7 @@ Geometricamente, $S$ rappresenta un **piano affine** bidimensionale immerso in $
 > [!theorem] Teorema di Risolubilità dei Sistemi a Scala
 > Sia dato un sistema lineare ridotto a scala di $m$ equazioni in $n$ incognite. Siano:
 > - $n$ il numero di variabili (incognite);
-> - $r$ il numero di pivot della matrice dei coefficienti ($r = \operatorname{rk}(A)$).
+> - $r$ il numero di pivot della matrice dei coefficienti ($r = \mathrm{rk}(A)$).
 > 
 > Allora:
 > 1. **Condizione di compatibilità:** Il sistema ammette almeno una soluzione se e solo se non compaiono equazioni degeneri impossibili del tipo $0 = 1$ (ovvero $0 = b$ con $b \neq 0$).
@@ -1381,19 +1381,19 @@ $$
 > $$
 
 > [!example] Esempio: Calcolo del Prodotto e Non Commutatività
-> Siano date le matrici quadrate $A, B \in \operatorname{Mat}_{\mathbb{R}}(2, 2)$:
+> Siano date le matrici quadrate $A, B \in \mathrm{Mat}_{\mathbb{R}}(2, 2)$:
 > $$
 > A = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}_{2 \times \mathbf{2}}, \qquad B = \begin{pmatrix} 5 & 3 \\ 2 & 1 \end{pmatrix}_{\mathbf{2} \times 2}
 > $$
 > 
 > Calcoliamo il prodotto $A B$:
 > $$
-> A B = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix} \begin{pmatrix} 5 & 3 \\ 2 & 1 \end{pmatrix} = \begin{pmatrix} 1 \cdot 5 + 2 \cdot 2 & 1 \cdot 3 + 2 \cdot 1 \\ 3 \cdot 5 + 4 \cdot 2 & 3 \cdot 3 + 4 \cdot 1 \end{pmatrix} = \begin{pmatrix} 9 & 5 \\ 23 & 13 \end{pmatrix} \in \operatorname{Mat}_{\mathbb{R}}(2, 2)
+> A B = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix} \begin{pmatrix} 5 & 3 \\ 2 & 1 \end{pmatrix} = \begin{pmatrix} 1 \cdot 5 + 2 \cdot 2 & 1 \cdot 3 + 2 \cdot 1 \\ 3 \cdot 5 + 4 \cdot 2 & 3 \cdot 3 + 4 \cdot 1 \end{pmatrix} = \begin{pmatrix} 9 & 5 \\ 23 & 13 \end{pmatrix} \in \mathrm{Mat}_{\mathbb{R}}(2, 2)
 > $$
 > 
 > Calcoliamo ora il prodotto invertendo l'ordine, $B A$:
 > $$
-> B A = \begin{pmatrix} 5 & 3 \\ 2 & 1 \end{pmatrix} \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix} = \begin{pmatrix} 5 \cdot 1 + 3 \cdot 3 & 5 \cdot 2 + 3 \cdot 4 \\ 2 \cdot 1 + 1 \cdot 3 & 2 \cdot 2 + 1 \cdot 4 \end{pmatrix} = \begin{pmatrix} 14 & 22 \\ 5 & 8 \end{pmatrix} \in \operatorname{Mat}_{\mathbb{R}}(2, 2)
+> B A = \begin{pmatrix} 5 & 3 \\ 2 & 1 \end{pmatrix} \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix} = \begin{pmatrix} 5 \cdot 1 + 3 \cdot 3 & 5 \cdot 2 + 3 \cdot 4 \\ 2 \cdot 1 + 1 \cdot 3 & 2 \cdot 2 + 1 \cdot 4 \end{pmatrix} = \begin{pmatrix} 14 & 22 \\ 5 & 8 \end{pmatrix} \in \mathrm{Mat}_{\mathbb{R}}(2, 2)
 > $$
 > 
 > Si osserva immediatamente che:
@@ -1467,7 +1467,7 @@ $$
 4. **Esistenza dell'Elemento Neutro:**
 
 > [!definition] Matrice Identità
-> Esiste una matrice quadrata $I_n \in \operatorname{Mat}_{\mathbb{R}}(n \times n)$, detta **matrice identità**, definita da:
+> Esiste una matrice quadrata $I_n \in \mathrm{Mat}_{\mathbb{R}}(n \times n)$, detta **matrice identità**, definita da:
 > $$
 > I_n = \begin{pmatrix} 1 & 0 & \dots & 0 \\ 0 & 1 & \dots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \dots & 1 \end{pmatrix}
 > $$
@@ -1477,7 +1477,7 @@ $$
 > $$
 
 > [!proposition] Neutralità della Matrice Identità
-> Sia $A \in \operatorname{Mat}_{\mathbb{R}}(m, n)$. Allora la moltiplicazione per la matrice identità della dimensione opportuna lascia la matrice invariata:
+> Sia $A \in \mathrm{Mat}_{\mathbb{R}}(m, n)$. Allora la moltiplicazione per la matrice identità della dimensione opportuna lascia la matrice invariata:
 > $$
 > I_m A = A I_n = A
 > $$
@@ -1491,13 +1491,13 @@ $$
 > $$
 
 > [!quote]- Dimostrazione
-> Sia $A \in \operatorname{Mat}_{\mathbb{R}}(m \times n)$ con generico elemento $a_{i, j}$:
+> Sia $A \in \mathrm{Mat}_{\mathbb{R}}(m \times n)$ con generico elemento $a_{i, j}$:
 > $$
 > A = \begin{pmatrix} a_{1, 1} & \dots & a_{1, n} \\ \vdots & \ddots & \vdots \\ a_{m, 1} & \dots & a_{m, n} \end{pmatrix}
 > $$
 > 
 > **Passo 1: Prima uguaglianza ($I_m A = A$)**
-> Si ha $I_m A \in \operatorname{Mat}_{\mathbb{R}}(m \times n)$. Calcoliamo l'elemento generico di posto $(i, j)$:
+> Si ha $I_m A \in \mathrm{Mat}_{\mathbb{R}}(m \times n)$. Calcoliamo l'elemento generico di posto $(i, j)$:
 > $$
 > (I_m A)_{i, j} = \sum_{k=1}^m (I_m)_{i, k} \, a_{k, j}
 > $$
@@ -1508,7 +1508,7 @@ $$
 > Di conseguenza, $(I_m A)_{i, j} = a_{i, j}$ per ogni $i, j$, da cui segue $I_m A = A$.
 > 
 > **Passo 2: Seconda uguaglianza ($A I_n = A$)**
-> Calcoliamo l'elemento generico di posto $(i, j)$ del prodotto $A I_n \in \operatorname{Mat}_{\mathbb{R}}(m \times n)$:
+> Calcoliamo l'elemento generico di posto $(i, j)$ del prodotto $A I_n \in \mathrm{Mat}_{\mathbb{R}}(m \times n)$:
 > $$
 > (A I_n)_{i, j} = \sum_{k=1}^n a_{i, k} (I_n)_{k, j}
 > $$
@@ -1537,7 +1537,7 @@ $$
 > $$
 
 > [!quote]- Dimostrazione
-> Siano $A \in \operatorname{Mat}_{\mathbb{R}}(m, p)$ e $B \in \operatorname{Mat}_{\mathbb{R}}(p, n)$.
+> Siano $A \in \mathrm{Mat}_{\mathbb{R}}(m, p)$ e $B \in \mathrm{Mat}_{\mathbb{R}}(p, n)$.
 > Per definizione di prodotto matriciale:
 > $$
 > (A B)_{i, j} = \sum_{k=1}^p a_{i, k} b_{k, j}
@@ -1548,7 +1548,7 @@ $$
 > $$
 > 
 > Consideriamo ora $B^T A^T$:
-> Si ha $B^T \in \operatorname{Mat}_{\mathbb{R}}(n, p)$ e $A^T \in \operatorname{Mat}_{\mathbb{R}}(p, m)$. Poiché il numero di colonne di $B^T$ è pari al numero di righe di $A^T$ ($p = p$), il prodotto $B^T A^T$ esiste ed appartiene a $\operatorname{Mat}_{\mathbb{R}}(n, m)$.
+> Si ha $B^T \in \mathrm{Mat}_{\mathbb{R}}(n, p)$ e $A^T \in \mathrm{Mat}_{\mathbb{R}}(p, m)$. Poiché il numero di colonne di $B^T$ è pari al numero di righe di $A^T$ ($p = p$), il prodotto $B^T A^T$ esiste ed appartiene a $\mathrm{Mat}_{\mathbb{R}}(n, m)$.
 > 
 > Per comodità di notazione, poniamo:
 > $$
@@ -1586,7 +1586,7 @@ $$
 Si definiscono le seguenti entità:
 1. **Matrice dei coefficienti:**
    $$
-   A = \begin{pmatrix} a_{1, 1} & \dots & a_{1, n} \\ \vdots & \ddots & \vdots \\ a_{m, 1} & \dots & a_{m, n} \end{pmatrix} \in \operatorname{Mat}_{\mathbb{R}}(m, n)
+   A = \begin{pmatrix} a_{1, 1} & \dots & a_{1, n} \\ \vdots & \ddots & \vdots \\ a_{m, 1} & \dots & a_{m, n} \end{pmatrix} \in \mathrm{Mat}_{\mathbb{R}}(m, n)
    $$
 2. **Vettore (colonna) dei termini noti:**
    $$
@@ -1598,7 +1598,7 @@ Si definiscono le seguenti entità:
    $$
 4. **Matrice completa del sistema:**
    $$
-   (A \mid \mathbf{b}) \in \operatorname{Mat}_{\mathbb{R}}(m, n+1)
+   (A \mid \mathbf{b}) \in \mathrm{Mat}_{\mathbb{R}}(m, n+1)
    $$
 
 Il sistema si esprime in forma matriciale compatta come:
@@ -1617,7 +1617,7 @@ $$
 ## 1.22. Rango di una Matrice e Proprietà
 
 > [!definition] Rango di una Matrice
-> Il **rango** di una matrice $A \in \operatorname{Mat}_{\mathbb{R}}(m, n)$, denotato con $\operatorname{rk}(A)$, corrisponde al **numero di pivot** presenti in una riduzione a scala della matrice $A$.
+> Il **rango** di una matrice $A \in \mathrm{Mat}_{\mathbb{R}}(m, n)$, denotato con $\mathrm{rk}(A)$, corrisponde al **numero di pivot** presenti in una riduzione a scala della matrice $A$.
 
 > [!example] Esempio: Calcolo del Rango mediante Riduzione a Scala
 > Sia data la matrice:
@@ -1630,23 +1630,23 @@ $$
 > $$
 > La forma a scala presenta un solo pivot non nullo (nella posizione $(1, 1)$), pertanto:
 > $$
-> \operatorname{rk}(A) = 1
+> \mathrm{rk}(A) = 1
 > $$
 
 > [!note] Osservazioni sul Rango
-> 1. $\operatorname{rk}(0) = 0$ per la matrice nulla di qualsiasi dimensione, mentre $\operatorname{rk}(I_n) = n$ per la matrice identità $n \times n$.
+> 1. $\mathrm{rk}(0) = 0$ per la matrice nulla di qualsiasi dimensione, mentre $\mathrm{rk}(I_n) = n$ per la matrice identità $n \times n$.
 > 2. Esistono diverse possibili riduzioni a scala per una stessa matrice, ma si dimostra che, tra tutte le riduzioni possibili, il **rango rimane invariato**.
 > 3. Le mosse di Gauss preservano il rango.
-> 4. Se $A \in \operatorname{Mat}_{\mathbb{R}}(m, n)$, vale la limitazione fondamentale:
+> 4. Se $A \in \mathrm{Mat}_{\mathbb{R}}(m, n)$, vale la limitazione fondamentale:
 >    $$
->    0 \le \operatorname{rk}(A) \le \min(m, n)
+>    0 \le \mathrm{rk}(A) \le \min(m, n)
 >    $$
 >    *Motivazione geometrico-algebrica:* In una forma a scala non può mai esistere più di un pivot all'interno della stessa riga o della stessa colonna.
 >
 ## 1.23. Teorema di Rouché-Capelli
 
 > [!theorem] Teorema di Rouché-Capelli
-> Sia $A \mathbf{x} = \mathbf{b}$ un sistema lineare con $A \in \operatorname{Mat}_{\mathbb{R}}(m, n)$ e $\mathbf{b} \in \mathbb{R}^m$, dove:
+> Sia $A \mathbf{x} = \mathbf{b}$ un sistema lineare con $A \in \mathrm{Mat}_{\mathbb{R}}(m, n)$ e $\mathbf{b} \in \mathbb{R}^m$, dove:
 > - $m = \# \text{ equazioni}$
 > - $n = \# \text{ incognite (variabili)}$
 > 
@@ -1654,17 +1654,17 @@ $$
 > 1. **Condizione di compatibilità (Esistenza delle soluzioni):**
 >    Il sistema ammette soluzioni se e solo se il rango della matrice dei coefficienti coincide con il rango della matrice completa:
 >    $$
->    S \neq \emptyset \iff \operatorname{rk}(A) = \operatorname{rk}(A \mid \mathbf{b})
+>    S \neq \emptyset \iff \mathrm{rk}(A) = \mathrm{rk}(A \mid \mathbf{b})
 >    $$
 > 2. **Struttura delle soluzioni (Gradi di libertà):**
->    Se il sistema è compatibile, l'insieme delle soluzioni possiede una dimensionalità parametrica (indicata simbolicamente con "$\infty^s$ soluzioni"), ed esistono dei vettori $\mathbf{w}, \mathbf{v}_1, \dots, \mathbf{v}_s \in \mathbb{R}^n$, con $s = n - \operatorname{rk}(A)$, tali che lo spazio delle soluzioni è:
+>    Se il sistema è compatibile, l'insieme delle soluzioni possiede una dimensionalità parametrica (indicata simbolicamente con "$\infty^s$ soluzioni"), ed esistono dei vettori $\mathbf{w}, \mathbf{v}_1, \dots, \mathbf{v}_s \in \mathbb{R}^n$, con $s = n - \mathrm{rk}(A)$, tali che lo spazio delle soluzioni è:
 >    $$
 >    S = \left\{ \mathbf{w} + t_1 \mathbf{v}_1 + \dots + t_s \mathbf{v}_s, \; t_i \in \mathbb{R} \right\} \subseteq \mathbb{R}^n
 >    $$
 > 3. **Unicità della soluzione:**
 >    Il sistema ammette un'**unica soluzione** se e solo se:
 >    $$
->    \operatorname{rk}(A) = \operatorname{rk}(A \mid \mathbf{b}) = n
+>    \mathrm{rk}(A) = \mathrm{rk}(A \mid \mathbf{b}) = n
 >    $$
 
 > [!quote]- Dimostrazione
@@ -1675,7 +1675,7 @@ $$
 > La matrice $(A' \mid \mathbf{b}')$ è una riduzione a scala della matrice completa originale $(A \mid \mathbf{b})$.
 > Per definizione di rango:
 > $$
-> \operatorname{rk}(A' \mid \mathbf{b}') = \operatorname{rk}(A \mid \mathbf{b}) \qquad \text{e} \qquad \operatorname{rk}(A') = \operatorname{rk}(A)
+> \mathrm{rk}(A' \mid \mathbf{b}') = \mathrm{rk}(A \mid \mathbf{b}) \qquad \text{e} \qquad \mathrm{rk}(A') = \mathrm{rk}(A)
 > $$
 > 
 > Dimostriamo i tre punti:
@@ -1688,19 +1688,19 @@ $$
 > Quindi non ci sono pivot in $\mathbf{b}'$, il che significa che **tutti i pivot** di $(A' \mid \mathbf{b}')$ appartengono alla sottomatrice $A'$.
 > Ne consegue:
 > $$
-> \operatorname{rk}(A' \mid \mathbf{b}') = \operatorname{rk}(A') \iff \operatorname{rk}(A \mid \mathbf{b}) = \operatorname{rk}(A)
+> \mathrm{rk}(A' \mid \mathbf{b}') = \mathrm{rk}(A') \iff \mathrm{rk}(A \mid \mathbf{b}) = \mathrm{rk}(A)
 > $$
 > 
 > **Punto 2:**
-> Il sistema ridotto a scala $A' \mathbf{x} = \mathbf{b}'$ permette di esprimere le $\operatorname{rk}(A)$ variabili pivot in funzione delle rimanenti $[n - \operatorname{rk}(A)]$ variabili libere.
+> Il sistema ridotto a scala $A' \mathbf{x} = \mathbf{b}'$ permette di esprimere le $\mathrm{rk}(A)$ variabili pivot in funzione delle rimanenti $[n - \mathrm{rk}(A)]$ variabili libere.
 > Il numero di parametri liberi indipendenti è dunque:
 > $$
-> s = n - \operatorname{rk}(A)
+> s = n - \mathrm{rk}(A)
 > $$
 > Assegnando alle variabili libere i parametri $t_1, \dots, t_s \in \mathbb{R}$, ogni soluzione $\mathbf{x}$ si decompone nella somma di un vettore costante $\mathbf{w}$ e di una combinazione lineare di $s$ vettori linearmente indipendenti $\mathbf{v}_1, \dots, \mathbf{v}_s$.
 > 
 > **Punto 3:**
-> Se $\operatorname{rk}(A) = \operatorname{rk}(A \mid \mathbf{b}) = n$, il numero di parametri liberi è:
+> Se $\mathrm{rk}(A) = \mathrm{rk}(A \mid \mathbf{b}) = n$, il numero di parametri liberi è:
 > $$
 > s = n - n = 0
 > $$
@@ -1730,9 +1730,9 @@ $$
 > $$
 > Si determinano i ranghi:
 > $$
-> \operatorname{rk}(A) = 1, \qquad \operatorname{rk}(A \mid \mathbf{b}) = 2
+> \mathrm{rk}(A) = 1, \qquad \mathrm{rk}(A \mid \mathbf{b}) = 2
 > $$
-> Poiché $\operatorname{rk}(A) \neq \operatorname{rk}(A \mid \mathbf{b})$, per il Teorema di Rouché-Capelli il sistema è **impossibile**:
+> Poiché $\mathrm{rk}(A) \neq \mathrm{rk}(A \mid \mathbf{b})$, per il Teorema di Rouché-Capelli il sistema è **impossibile**:
 > $$
 > S = \emptyset
 > $$
@@ -1759,11 +1759,11 @@ $$
 > $$
 > I ranghi sono:
 > $$
-> \operatorname{rk}(A) = \operatorname{rk}(A \mid \mathbf{b}) = 2
+> \mathrm{rk}(A) = \mathrm{rk}(A \mid \mathbf{b}) = 2
 > $$
 > Poiché $n = 4$ variabili, il numero di parametri liberi è:
 > $$
-> s = n - \operatorname{rk}(A) = 4 - 2 = 2 \quad (\infty^2 \text{ soluzioni})
+> s = n - \mathrm{rk}(A) = 4 - 2 = 2 \quad (\infty^2 \text{ soluzioni})
 > $$
 > Normalizziamo la seconda riga dividendo per $5$ ($R_2 \to R_2 / 5$):
 > $$
@@ -1790,27 +1790,27 @@ $$
 ## 1.25. Definizione e Nucleo di una Matrice
 
 > [!definition] Sistema Lineare Omogeneo e Nucleo
-> Sia data una matrice $A \in \operatorname{Mat}_{\mathbb{R}}(m, n)$. Il sistema lineare avente vettore dei termini noti nullo:
+> Sia data una matrice $A \in \mathrm{Mat}_{\mathbb{R}}(m, n)$. Il sistema lineare avente vettore dei termini noti nullo:
 > $$
 > A \mathbf{x} = \mathbf{0}
 > $$
 > è detto **sistema lineare omogeneo**.
 > L'insieme di tutte le soluzioni del sistema omogeneo è detto **nucleo** (o **kernel**) di $A$:
 > $$
-> \operatorname{Ker}(A) = \left\{ \mathbf{x} \in \mathbb{R}^n \mid A \mathbf{x} = \mathbf{0} \right\} \subseteq \mathbb{R}^n
+> \mathrm{Ker}(A) = \left\{ \mathbf{x} \in \mathbb{R}^n \mid A \mathbf{x} = \mathbf{0} \right\} \subseteq \mathbb{R}^n
 > $$
 
 > [!note] Osservazione: Compatibilità Incondizionata
 > Un sistema omogeneo **NON PUÒ MAI ESSERE IMPOSSIBILE**, in quanto:
 > $$
-> \mathbf{0} \in \operatorname{Ker}(A) \quad \text{poiché } A \mathbf{0} = \mathbf{0}
+> \mathbf{0} \in \mathrm{Ker}(A) \quad \text{poiché } A \mathbf{0} = \mathbf{0}
 > $$
 > Il vettore nullo $\mathbf{x} = \mathbf{0}$ costituisce sempre la **soluzione banale** del sistema.
 
 > [!example] Esempio: Calcolo del Nucleo
 > Determinare il nucleo della matrice:
 > $$
-> \operatorname{Ker} \begin{pmatrix} 1 & 2 & 3 \\ 0 & 1 & 2 \end{pmatrix} = ?
+> \mathrm{Ker} \begin{pmatrix} 1 & 2 & 3 \\ 0 & 1 & 2 \end{pmatrix} = ?
 > $$
 > Il sistema omogeneo associato $A \mathbf{x} = \mathbf{0}$ è già in forma a gradini:
 > $$
@@ -1833,7 +1833,7 @@ $$
 > $$
 > Lo spazio delle soluzioni si scrive dunque come:
 > $$
-> \operatorname{Ker} \begin{pmatrix} 1 & 2 & 3 \\ 0 & 1 & 2 \end{pmatrix} = \left\{ \mathbf{0} + t \begin{pmatrix} 1 \\ -2 \\ 1 \end{pmatrix}, \; t \in \mathbb{R} \right\}
+> \mathrm{Ker} \begin{pmatrix} 1 & 2 & 3 \\ 0 & 1 & 2 \end{pmatrix} = \left\{ \mathbf{0} + t \begin{pmatrix} 1 \\ -2 \\ 1 \end{pmatrix}, \; t \in \mathbb{R} \right\}
 > $$
 >
 ## 1.26. Teorema di Struttura delle Soluzioni di un Sistema Lineare
@@ -1841,15 +1841,15 @@ $$
 > [!theorem] Teorema di Struttura delle Soluzioni
 > Sia $A \mathbf{x} = \mathbf{b}$ un sistema lineare. Si supponga che il sistema sia compatibile ($S \neq \emptyset$), e sia $\mathbf{v} \in S$ una **soluzione particolare** fissata del sistema (ovvero $A \mathbf{v} = \mathbf{b}$).
 > 
-> Allora, l'intero insieme delle soluzioni $S$ di $A \mathbf{x} = \mathbf{b}$ è ottenuto traslando il nucleo $\operatorname{Ker}(A)$ mediante la soluzione particolare $\mathbf{v}$:
+> Allora, l'intero insieme delle soluzioni $S$ di $A \mathbf{x} = \mathbf{b}$ è ottenuto traslando il nucleo $\mathrm{Ker}(A)$ mediante la soluzione particolare $\mathbf{v}$:
 > $$
-> S = \left\{ \mathbf{v} + \mathbf{w}, \; \forall \mathbf{w} \in \operatorname{Ker}(A) \right\}
+> S = \left\{ \mathbf{v} + \mathbf{w}, \; \forall \mathbf{w} \in \mathrm{Ker}(A) \right\}
 > $$
 
 > [!quote]- Dimostrazione
 > Dimostriamo la doppia implicazione:
 > $$
-> \mathbf{u} \in S \subseteq \mathbb{R}^n \iff \mathbf{u} \in \left\{ \mathbf{v} + \mathbf{w}, \; \forall \mathbf{w} \in \operatorname{Ker}(A) \right\}
+> \mathbf{u} \in S \subseteq \mathbb{R}^n \iff \mathbf{u} \in \left\{ \mathbf{v} + \mathbf{w}, \; \forall \mathbf{w} \in \mathrm{Ker}(A) \right\}
 > $$
 > 
 > Poiché $\mathbf{v}$ è una soluzione particolare fissata, si ha:
@@ -1866,15 +1866,15 @@ $$
 > $$
 > Dunque, la differenza $\mathbf{u} - \mathbf{v}$ è soluzione del sistema omogeneo associato:
 > $$
-> \mathbf{u} - \mathbf{v} \in \operatorname{Ker}(A)
+> \mathbf{u} - \mathbf{v} \in \mathrm{Ker}(A)
 > $$
-> Ponendo $\mathbf{w} := \mathbf{u} - \mathbf{v} \in \operatorname{Ker}(A)$, abbiamo:
+> Ponendo $\mathbf{w} := \mathbf{u} - \mathbf{v} \in \mathrm{Ker}(A)$, abbiamo:
 > $$
 > \mathbf{u} = \mathbf{v} + (\mathbf{u} - \mathbf{v}) = \mathbf{v} + \mathbf{w}
 > $$
-> Pertanto, ogni soluzione $\mathbf{u}$ si scrive come $\mathbf{v} + \mathbf{w}$ con $\mathbf{w} \in \operatorname{Ker}(A)$, e viceversa:
+> Pertanto, ogni soluzione $\mathbf{u}$ si scrive come $\mathbf{v} + \mathbf{w}$ con $\mathbf{w} \in \mathrm{Ker}(A)$, e viceversa:
 > $$
-> \mathbf{u} = \mathbf{v} + \mathbf{w}, \quad \mathbf{w} \in \operatorname{Ker}(A) \qquad \blacksquare
+> \mathbf{u} = \mathbf{v} + \mathbf{w}, \quad \mathbf{w} \in \mathrm{Ker}(A) \qquad \blacksquare
 > $$
 >
 ## 1.27. Matrice Inversa
@@ -1882,16 +1882,16 @@ $$
 ## 1.28. Condizioni di Invertibilità per Matrici Quadrate
 
 > [!theorem] Teorema di Invertibilità
-> Sia $A \in \operatorname{Mat}_{\mathbb{R}}(n, n)$ una matrice quadrata. Le seguenti condizioni sono reciprocamente equivalenti:
+> Sia $A \in \mathrm{Mat}_{\mathbb{R}}(n, n)$ una matrice quadrata. Le seguenti condizioni sono reciprocamente equivalenti:
 > 1. Il rango di $A$ è massimo:
 >    $$
->    \operatorname{rk}(A) = n
+>    \mathrm{rk}(A) = n
 >    $$
-> 2. Esiste un'inversa sinistra $S \in \operatorname{Mat}_{\mathbb{R}}(n, n)$ tale che:
+> 2. Esiste un'inversa sinistra $S \in \mathrm{Mat}_{\mathbb{R}}(n, n)$ tale che:
 >    $$
 >    S A = I_n
 >    $$
-> 3. Esiste un'inversa destra $D \in \operatorname{Mat}_{\mathbb{R}}(n, n)$ tale che:
+> 3. Esiste un'inversa destra $D \in \mathrm{Mat}_{\mathbb{R}}(n, n)$ tale che:
 >    $$
 >    A D = I_n
 >    $$
@@ -1912,7 +1912,7 @@ $$
 > $$
 > Si giunge ad una palese **contraddizione** ($1 = 0$). Non esiste alcuna matrice inversa poiché:
 > $$
-> \operatorname{rk}(A) = 1 \neq 2
+> \mathrm{rk}(A) = 1 \neq 2
 > $$
 
 > [!note] Osservazione: Coincidenza dell'Inversa Destra e Sinistra
@@ -1934,9 +1934,9 @@ $$
 >
 ## 1.29. Calcolo della Matrice Inversa tramite Algoritmo di Gauss-Jordan
 
-Sia $A \in \operatorname{Mat}_{\mathbb{R}}(n, n)$ con $\operatorname{rk}(A) = n$. Per determinare la matrice inversa $A^{-1}$, si accosta alla matrice $A$ la matrice identità $I_n$, formando la matrice a blocchi:
+Sia $A \in \mathrm{Mat}_{\mathbb{R}}(n, n)$ con $\mathrm{rk}(A) = n$. Per determinare la matrice inversa $A^{-1}$, si accosta alla matrice $A$ la matrice identità $I_n$, formando la matrice a blocchi:
 $$
-(A \mid I_n) \in \operatorname{Mat}_{\mathbb{R}}(n, 2n)
+(A \mid I_n) \in \mathrm{Mat}_{\mathbb{R}}(n, 2n)
 $$
 Applicando l'algoritmo di Gauss-Jordan per trasformare il blocco di sinistra nella matrice identità $I_n$, il blocco di destra si trasforma automaticamente nella matrice inversa $A^{-1}$:
 $$
@@ -1948,7 +1948,7 @@ $$
 > $$
 > A = \begin{pmatrix} 1 & 0 \\ 2 & 2 \end{pmatrix}
 > $$
-> Poiché $\operatorname{rk}(A) = 2 = n$, la matrice $A$ è invertibile. Si affianca la matrice identità $I_2$:
+> Poiché $\mathrm{rk}(A) = 2 = n$, la matrice $A$ è invertibile. Si affianca la matrice identità $I_2$:
 > $$
 > (A \mid I_2) = \begin{pmatrix} 1 & 0 & 1 & 0 \\ 2 & 2 & 0 & 1 \end{pmatrix}
 > $$
@@ -1972,7 +1972,7 @@ $$
 ### Proprietà Fondamentali delle Matrici Invertibili
 
 > [!proposition] Proprietà del Prodotto e della Trasposta di Matrici Invertibili
-> Siano $A, B \in \operatorname{Mat}_{\mathbb{R}}(n, n)$ matrici invertibili. Allora:
+> Siano $A, B \in \mathrm{Mat}_{\mathbb{R}}(n, n)$ matrici invertibili. Allora:
 > 1. Il prodotto $AB$ è invertibile e la sua inversa è data dall'inversione invertita dei singoli fattori:
 >    $$
 >    (AB)^{-1} = B^{-1} A^{-1}

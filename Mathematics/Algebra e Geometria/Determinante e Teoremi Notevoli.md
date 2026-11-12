@@ -11,19 +11,19 @@ tags:
 > [!definition] Il Determinante
 > Il **determinante** è una funzione scalare definita sull'insieme delle matrici quadrate a coefficienti reali:
 > $$
-> \det: \operatorname{Mat}_{\mathbb{R}}(n, n) \to \mathbb{R}
+> \det: \mathrm{Mat}_{\mathbb{R}}(n, n) \to \mathbb{R}
 > $$
 > definita ricorsivamente (per induzione sull'ordine $n$ della matrice) come segue:
 > 
 > - **Caso base $n = 1$:**
->   Sia $A = (a_{1,1}) \in \operatorname{Mat}_{\mathbb{R}}(1, 1)$. Si pone:
+>   Sia $A = (a_{1,1}) \in \mathrm{Mat}_{\mathbb{R}}(1, 1)$. Si pone:
 >   $$
 >   \det(A) := a_{1,1}
 >   $$
 > 
 > - **Caso induttivo $n > 1$:**
->   Sia $A = (a_{i,j})_{1 \le i, j \le n} \in \operatorname{Mat}_{\mathbb{R}}(n, n)$.
->   Si denota con $\widehat{A}_{i,j} \in \operatorname{Mat}_{\mathbb{R}}(n-1, n-1)$ la sottomatrice quadrata ottenuta da $A$ eliminando la riga $i$-esima e la colonna $j$-esima (matrice del minore complementare di posizione $(i, j)$).
+>   Sia $A = (a_{i,j})_{1 \le i, j \le n} \in \mathrm{Mat}_{\mathbb{R}}(n, n)$.
+>   Si denota con $\widehat{A}_{i,j} \in \mathrm{Mat}_{\mathbb{R}}(n-1, n-1)$ la sottomatrice quadrata ottenuta da $A$ eliminando la riga $i$-esima e la colonna $j$-esima (matrice del minore complementare di posizione $(i, j)$).
 > 
 > Il determinante può essere calcolato indifferentemente in due modi:
 > 1. Si fissa una riga $i$ qualsiasi e si effettua lo **sviluppo lungo la riga $i$ (Formula di Laplace):**
@@ -40,7 +40,7 @@ tags:
 
 Data una generica matrice quadrata d'ordine 2:
 $$
-A = \begin{pmatrix} a_{1,1} & a_{1,2} \\ a_{2,1} & a_{2,2} \end{pmatrix} \in \operatorname{Mat}_{\mathbb{R}}(2, 2)
+A = \begin{pmatrix} a_{1,1} & a_{1,2} \\ a_{2,1} & a_{2,2} \end{pmatrix} \in \mathrm{Mat}_{\mathbb{R}}(2, 2)
 $$
 Scegliendo di sviluppare lungo la prima riga ($i = 1$):
 $$
@@ -53,13 +53,13 @@ $$
 $$
 Sostituendo tali valori:
 $$
-\det(A) = a_{1,1} a_{2,2} - a_{1,2} a_{2,1} \qquad \forall A \in \operatorname{Mat}_{\mathbb{R}}(2, 2)
+\det(A) = a_{1,1} a_{2,2} - a_{1,2} a_{2,1} \qquad \forall A \in \mathrm{Mat}_{\mathbb{R}}(2, 2)
 $$
 
 ## 4.3. Interpretazione Geometrica del Determinante $2 \times 2$
 
 > [!note] Area del Parallelogramma nel Piano
-> Il determinante di una matrice $A \in \operatorname{Mat}_{\mathbb{R}}(2, 2)$ possiede una diretta interpretazione geometrica nel piano cartesiano $\mathbb{R}^2$.
+> Il determinante di una matrice $A \in \mathrm{Mat}_{\mathbb{R}}(2, 2)$ possiede una diretta interpretazione geometrica nel piano cartesiano $\mathbb{R}^2$.
 > Considerata la matrice $A = \begin{pmatrix} a_{1,1} & a_{1,2} \\ a_{2,1} & a_{2,2} \end{pmatrix}$, i suoi due vettori colonna:
 > $$
 > \mathbf{v}_1 = \begin{pmatrix} a_{1,1} \\ a_{2,1} \end{pmatrix}, \qquad \mathbf{v}_2 = \begin{pmatrix} a_{1,2} \\ a_{2,2} \end{pmatrix}
@@ -67,11 +67,11 @@ $$
 > individuano nel piano un parallelogramma con un vertice nell'origine $O(0,0)$ e gli altri vertici in $A(a_{1,1}, a_{2,1})$, $B(a_{1,2}, a_{2,2})$ e $C = A + B$.
 > Il valore assoluto del determinante coincide esattamente con l'area di tale parallelogramma:
 > $$
-> \operatorname{Area}_{OABC} = |\det(A)|
+> \mathrm{Area}_{OABC} = |\det(A)|
 > $$
 > In particolare:
 > $$
-> \operatorname{Area}_{OABC} = 0 \iff \begin{pmatrix} a_{1,1} \\ a_{2,1} \end{pmatrix} \text{ e } \begin{pmatrix} a_{1,2} \\ a_{2,2} \end{pmatrix} \text{ sono linearmente dipendenti}
+> \mathrm{Area}_{OABC} = 0 \iff \begin{pmatrix} a_{1,1} \\ a_{2,1} \end{pmatrix} \text{ e } \begin{pmatrix} a_{1,2} \\ a_{2,2} \end{pmatrix} \text{ sono linearmente dipendenti}
 > $$
 
 > [!corollary] Criterio di Dipendenza Lineare in $\mathbb{R}^2$
@@ -84,7 +84,7 @@ $$
 
 Data una generica matrice quadrata d'ordine 3:
 $$
-A = \begin{pmatrix} a_{1,1} & a_{1,2} & a_{1,3} \\ a_{2,1} & a_{2,2} & a_{2,3} \\ a_{3,1} & a_{3,2} & a_{3,3} \end{pmatrix} \in \operatorname{Mat}_{\mathbb{R}}(3, 3)
+A = \begin{pmatrix} a_{1,1} & a_{1,2} & a_{1,3} \\ a_{2,1} & a_{2,2} & a_{2,3} \\ a_{3,1} & a_{3,2} & a_{3,3} \end{pmatrix} \in \mathrm{Mat}_{\mathbb{R}}(3, 3)
 $$
 Il calcolo di $\det(A)$ può essere condotto con due approcci:
 1. **Formula di Laplace:** sviluppando lungo una riga o una colonna scelta convenientemente (ad esempio quella contenente il maggior numero di zeri).
@@ -121,7 +121,7 @@ Il calcolo di $\det(A)$ può essere condotto con due approcci:
 > -1 & 0 & 1 & 2 \\
 > 2 & 0 & -1 & -1 \\
 > -3 & 1 & 0 & 1
-> \end{pmatrix} \in \operatorname{Mat}_{\mathbb{R}}(4, 4)
+> \end{pmatrix} \in \mathrm{Mat}_{\mathbb{R}}(4, 4)
 > $$
 > Per minimizzare i calcoli, si sceglie la riga o la colonna contenente il maggior numero di zeri. In questo caso si seleziona la seconda colonna ($j = 2$):
 > $$
@@ -216,13 +216,13 @@ Il calcolo di $\det(A)$ può essere condotto con due approcci:
 > $$
 
 > [!note] Non Linearità del Determinante rispetto alla Somma
-> Il determinante **NON** è un'applicazione lineare da $\operatorname{Mat}_{\mathbb{R}}(n, n)$ a $\mathbb{R}$. In particolare, per matrici arbitrarie $A, B \in \operatorname{Mat}_{\mathbb{R}}(n, n)$, in generale il determinante della somma differisce dalla somma dei determinanti:
+> Il determinante **NON** è un'applicazione lineare da $\mathrm{Mat}_{\mathbb{R}}(n, n)$ a $\mathbb{R}$. In particolare, per matrici arbitrarie $A, B \in \mathrm{Mat}_{\mathbb{R}}(n, n)$, in generale il determinante della somma differisce dalla somma dei determinanti:
 > $$
 > \det(A + B) \neq \det(A) + \det(B)
 > $$
 
 > [!example] Controesempio alla Linearità della Somma
-> Si considerino le due matrici diagonali in $\operatorname{Mat}_{\mathbb{R}}(2, 2)$:
+> Si considerino le due matrici diagonali in $\mathrm{Mat}_{\mathbb{R}}(2, 2)$:
 > $$
 > A = \begin{pmatrix} 1 & 0 \\ 0 & 0 \end{pmatrix}, \qquad B = \begin{pmatrix} 0 & 0 \\ 0 & 1 \end{pmatrix}
 > $$
@@ -250,7 +250,7 @@ Il calcolo di $\det(A)$ può essere condotto con due approcci:
 ### Invarianza per Trasposizione
 
 > [!proposition] Invarianza rispetto alla Trasposizione
-> Per ogni matrice quadrata $A \in \operatorname{Mat}_{\mathbb{R}}(n, n)$, il determinante coincide con quello della matrice trasposta:
+> Per ogni matrice quadrata $A \in \mathrm{Mat}_{\mathbb{R}}(n, n)$, il determinante coincide con quello della matrice trasposta:
 > $$
 > \det(A) = \det(A^T)
 > $$
@@ -261,7 +261,7 @@ Il calcolo di $\det(A)$ può essere condotto con due approcci:
 ### Multilinearità del Determinante
 
 > [!proposition] Multilinearità rispetto a Righe e Colonne
-> Sia $A \in \operatorname{Mat}_{\mathbb{R}}(n, n)$ scritta mediante le sue righe:
+> Sia $A \in \mathrm{Mat}_{\mathbb{R}}(n, n)$ scritta mediante le sue righe:
 > $$
 > A = \begin{pmatrix} R_1 \\ \vdots \\ R_n \end{pmatrix}, \qquad R_j \in \mathbb{R}^n \quad \forall j = 1, \dots, n
 > $$
@@ -283,7 +283,7 @@ Il calcolo di $\det(A)$ può essere condotto con due approcci:
 > La comparsa di zeri nelle matrici decomposte semplifica notevolmente il calcolo dei determinanti tramite Laplace.
 
 > [!corollary] Determinante del Prodotto per uno Scalare
-> Se $A \in \operatorname{Mat}_{\mathbb{R}}(n, n)$ e $c \in \mathbb{R}$, allora:
+> Se $A \in \mathrm{Mat}_{\mathbb{R}}(n, n)$ e $c \in \mathbb{R}$, allora:
 > $$
 > \det(cA) = c^n \det(A)
 > $$
@@ -328,7 +328,7 @@ Il calcolo di $\det(A)$ può essere condotto con due approcci:
 ### Proprietà Alternante
 
 > [!proposition] Proprietà Alternante
-> Sia $A \in \operatorname{Mat}_{\mathbb{R}}(n, n)$ e sia $B \in \operatorname{Mat}_{\mathbb{R}}(n, n)$ la matrice ottenuta scambiando tra loro due righe o due colonne di $A$. Allora:
+> Sia $A \in \mathrm{Mat}_{\mathbb{R}}(n, n)$ e sia $B \in \mathrm{Mat}_{\mathbb{R}}(n, n)$ la matrice ottenuta scambiando tra loro due righe o due colonne di $A$. Allora:
 > $$
 > \det(B) = - \det(A)
 > $$
@@ -344,7 +344,7 @@ Il calcolo di $\det(A)$ può essere condotto con due approcci:
 > $$
 
 > [!corollary] Determinante Nullo con Righe o Colonne Uguali
-> Se una matrice quadrata $A \in \operatorname{Mat}_{\mathbb{R}}(n, n)$ possiede due righe o due colonne identiche, allora il suo determinante è nullo:
+> Se una matrice quadrata $A \in \mathrm{Mat}_{\mathbb{R}}(n, n)$ possiede due righe o due colonne identiche, allora il suo determinante è nullo:
 > $$
 > \det(A) = 0
 > $$
@@ -368,7 +368,7 @@ Il calcolo di $\det(A)$ può essere condotto con due approcci:
 ### Definizioni Strutturali
 
 > [!definition] Matrici Triangolari e Diagonali
-> Sia $A = (a_{i,j}) \in \operatorname{Mat}_{\mathbb{R}}(n, n)$. La matrice $A$ si dice:
+> Sia $A = (a_{i,j}) \in \mathrm{Mat}_{\mathbb{R}}(n, n)$. La matrice $A$ si dice:
 > 1. **Triangolare superiore** se tutti gli elementi situati sotto la diagonale principale sono nulli:
 >    $$
 >    a_{i,j} = 0 \quad \forall i > j
@@ -392,7 +392,7 @@ Il calcolo di $\det(A)$ può essere condotto con due approcci:
 ### Determinante di Matrici Triangolari e Diagonali
 
 > [!proposition] Determinante di una Matrice Triangolare o Diagonale
-> Sia $A \in \operatorname{Mat}_{\mathbb{R}}(n, n)$. Se $A$ è triangolare superiore, triangolare inferiore oppure diagonale, il suo determinante è pari al prodotto degli elementi sulla diagonale principale:
+> Sia $A \in \mathrm{Mat}_{\mathbb{R}}(n, n)$. Se $A$ è triangolare superiore, triangolare inferiore oppure diagonale, il suo determinante è pari al prodotto degli elementi sulla diagonale principale:
 > $$
 > \det(A) = \prod_{i=1}^n a_{i,i} = a_{1,1} \cdot a_{2,2} \cdots a_{n,n}
 > $$
@@ -415,7 +415,7 @@ Il calcolo di $\det(A)$ può essere condotto con due approcci:
 > $$
 > \det(A) = (-1)^2 a_{1,1} \det(\hat{A}_{1,1}) = a_{1,1} \det(\hat{A}_{1,1})
 > $$
-> La sottomatrice $\hat{A}_{1,1} \in \operatorname{Mat}_{\mathbb{R}}(n-1, n-1)$ è data da:
+> La sottomatrice $\hat{A}_{1,1} \in \mathrm{Mat}_{\mathbb{R}}(n-1, n-1)$ è data da:
 > $$
 > \hat{A}_{1,1} = \begin{pmatrix}
 > a_{2,2} & a_{2,3} & \cdots & a_{2,n} \\
@@ -438,7 +438,7 @@ Il calcolo di $\det(A)$ può essere condotto con due approcci:
 ### Effetto delle Operazioni Elementari di Riga
 
 > [!proposition] Determinante e Mosse di Gauss
-> Sia $A \in \operatorname{Mat}_{\mathbb{R}}(n, n)$ e sia $A'$ la matrice ottenuta applicando una mossa di Gauss sulle righe:
+> Sia $A \in \mathrm{Mat}_{\mathbb{R}}(n, n)$ e sia $A'$ la matrice ottenuta applicando una mossa di Gauss sulle righe:
 > 1. **Scambio di due righe ($R_i \leftrightarrow R_j$):**
 >    $$
 >    A \xrightarrow{R_i \leftrightarrow R_j} A' \implies \det(A') = - \det(A)
@@ -469,32 +469,32 @@ Il calcolo di $\det(A)$ può essere condotto con due approcci:
 ### Determinante e Rango di Matrici Quadrate
 
 > [!corollary] Criterio di Rango Massimo
-> Sia $A \in \operatorname{Mat}_{\mathbb{R}}(n, n)$. Allora:
+> Sia $A \in \mathrm{Mat}_{\mathbb{R}}(n, n)$. Allora:
 > $$
-> \det(A) \neq 0 \iff \operatorname{rk}(A) = n
+> \det(A) \neq 0 \iff \mathrm{rk}(A) = n
 > $$
 > Di conseguenza:
 > $$
-> \det(A) = 0 \iff \operatorname{rk}(A) < n \iff A \text{ ha righe o colonne linearmente dipendenti}
+> \det(A) = 0 \iff \mathrm{rk}(A) < n \iff A \text{ ha righe o colonne linearmente dipendenti}
 > $$
 >
 ### Teorema delle Condizioni Equivalenti per Matrici Quadrate
 
 > [!theorem] Condizioni Equivalenti per l'Invertibilità
-> Sia $A \in \operatorname{Mat}_{\mathbb{R}}(n, n)$ una matrice quadrata d'ordine $n$. Le seguenti condizioni sono mutuamente equivalenti:
+> Sia $A \in \mathrm{Mat}_{\mathbb{R}}(n, n)$ una matrice quadrata d'ordine $n$. Le seguenti condizioni sono mutuamente equivalenti:
 > 1. $\det(A) \neq 0$;
-> 2. $\operatorname{rk}(A) = n$;
+> 2. $\mathrm{rk}(A) = n$;
 > 3. La matrice $A$ è invertibile;
 > 4. Il sistema lineare $A\mathbf{x} = \mathbf{b}$ ammette una e una sola soluzione per ogni $\mathbf{b} \in \mathbb{R}^n$;
-> 5. Il nucleo della matrice è banale: $\operatorname{Ker}(A) = \{\mathbf{0}\}$;
+> 5. Il nucleo della matrice è banale: $\mathrm{Ker}(A) = \{\mathbf{0}\}$;
 > 6. Le righe e le colonne di $A$ sono linearmente indipendenti (L.I.);
-> 7. $\operatorname{col}(A) = \mathbb{R}^n$ e $\operatorname{row}(A) = \mathbb{R}^n$;
+> 7. $\mathrm{col}(A) = \mathbb{R}^n$ e $\mathrm{row}(A) = \mathbb{R}^n$;
 > 8. L'applicazione lineare associata $T_A: \mathbb{R}^n \to \mathbb{R}^n$ è un isomorfismo.
 >
 ### Inversa di una Matrice $2 \times 2$
 
 > [!proposition] Formula Esplicita dell'Inversa di Ordine 2
-> Sia $A = \begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \operatorname{Mat}_{\mathbb{R}}(2, 2)$. La matrice $A$ è invertibile se e solo se:
+> Sia $A = \begin{pmatrix} a & b \\ c & d \end{pmatrix} \in \mathrm{Mat}_{\mathbb{R}}(2, 2)$. La matrice $A$ è invertibile se e solo se:
 > $$
 > \det(A) \neq 0 \iff ad - bc \neq 0
 > $$
@@ -519,13 +519,13 @@ Il calcolo di $\det(A)$ può essere condotto con due approcci:
 ### Teorema di Binet e Determinante dell'Inversa
 
 > [!theorem] Teorema di Binet
-> Siano $A, B \in \operatorname{Mat}_{\mathbb{R}}(n, n)$. Il determinante del prodotto di due matrici quadrate è il prodotto dei singoli determinanti:
+> Siano $A, B \in \mathrm{Mat}_{\mathbb{R}}(n, n)$. Il determinante del prodotto di due matrici quadrate è il prodotto dei singoli determinanti:
 > $$
 > \det(AB) = \det(A) \det(B)
 > $$
 
 > [!corollary] Determinante della Matrice Inversa
-> Sia $A \in \operatorname{Mat}_{\mathbb{R}}(n, n)$ invertibile. Allora:
+> Sia $A \in \mathrm{Mat}_{\mathbb{R}}(n, n)$ invertibile. Allora:
 > $$
 > \det(A^{-1}) = \frac{1}{\det(A)}
 > $$
@@ -543,10 +543,10 @@ Il calcolo di $\det(A)$ può essere condotto con due approcci:
 ### Teorema degli Orlati (Kronecker)
 
 > [!theorem] Teorema degli Orlati
-> Sia $A \in \operatorname{Mat}_{\mathbb{R}}(m, n)$ una matrice rettangolare non necessariamente quadrata.
+> Sia $A \in \mathrm{Mat}_{\mathbb{R}}(m, n)$ una matrice rettangolare non necessariamente quadrata.
 > Il rango di $A$ è pari alla massima dimensione di una sottomatrice quadrata estratta da $A$ avente determinante non nullo:
 > $$
-> \operatorname{rk}(A) = \max \left\{ r \in \mathbb{N} : \exists B \subseteq A \text{ con } B \in \operatorname{Mat}_{\mathbb{R}}(r, r) \land \det(B) \neq 0 \right\}
+> \mathrm{rk}(A) = \max \left\{ r \in \mathbb{N} : \exists B \subseteq A \text{ con } B \in \mathrm{Mat}_{\mathbb{R}}(r, r) \land \det(B) \neq 0 \right\}
 > $$
 
 > [!example] Calcolo del Rango tramite Sottomatrici
@@ -558,14 +558,14 @@ Il calcolo di $\det(A)$ può essere condotto con due approcci:
 > 3 & 6 & 9 & 12
 > \end{pmatrix}
 > $$
-> Si nota immediatamente che la terza riga è tre volte la prima ($R_3 = 3 R_1$), pertanto le righe sono linearmente dipendenti e $\operatorname{rk}(A) < 3$.
+> Si nota immediatamente che la terza riga è tre volte la prima ($R_3 = 3 R_1$), pertanto le righe sono linearmente dipendenti e $\mathrm{rk}(A) < 3$.
 > Per verificare se il rango è 2, si cerca una sottomatrice $2 \times 2$ con determinante non nullo. Considerando le colonne 3 e 4 e le prime due righe:
 > $$
 > B = \begin{pmatrix} 3 & 4 \\ 6 & 0 \end{pmatrix} \subseteq A \implies \det(B) = (3)(0) - (4)(6) = -24 \neq 0
 > $$
 > Poiché esiste una sottomatrice $2 \times 2$ invertibile e tutte le sottomatrici $3 \times 3$ hanno determinante nullo (a causa di $R_3 = 3 R_1$), si conclude che:
 > $$
-> \operatorname{rk}(A) = 2
+> \mathrm{rk}(A) = 2
 > $$
 >
 ### Studio del Rango di una Matrice Parametrica
@@ -577,9 +577,9 @@ Il calcolo di $\det(A)$ può essere condotto con due approcci:
 > 1 & k+2 & 0 \\
 > k^2-1 & 0 & 4-k \\
 > 1 & 2k-3 & 0
-> \end{pmatrix} \in \operatorname{Mat}_{\mathbb{R}}(3, 3)
+> \end{pmatrix} \in \mathrm{Mat}_{\mathbb{R}}(3, 3)
 > $$
-> Si determini $\operatorname{rk}(A)$ al variare di $k \in \mathbb{R}$.
+> Si determini $\mathrm{rk}(A)$ al variare di $k \in \mathbb{R}$.
 > 
 > **Calcolo di $\det(A)$ con la regola di Sarrus:**
 > $$
@@ -611,7 +611,7 @@ Il calcolo di $\det(A)$ può essere condotto con due approcci:
 > - **Caso 1 ($k \neq 4$ e $k \neq 5$):**
 >   Il determinante è non nullo:
 >   $$
->   (4-k)(5-k) \neq 0 \iff k \neq 4 \land k \neq 5 \iff \operatorname{rk}(A) = 3
+>   (4-k)(5-k) \neq 0 \iff k \neq 4 \land k \neq 5 \iff \mathrm{rk}(A) = 3
 >   $$
 > - **Caso 2 ($k = 4$):**
 >   Sostituendo $k = 4$ nella matrice di partenza:
@@ -636,7 +636,7 @@ Il calcolo di $\det(A)$ può essere condotto con due approcci:
 >   $$
 >   Esiste la sottomatrice $2 \times 2$ con determinante non nullo:
 >   $$
->   \det \begin{pmatrix} 1 & 6 \\ 15 & 0 \end{pmatrix} = -90 \neq 0 \implies \operatorname{rk}(A) = 2
+>   \det \begin{pmatrix} 1 & 6 \\ 15 & 0 \end{pmatrix} = -90 \neq 0 \implies \mathrm{rk}(A) = 2
 >   $$
 > - **Caso 3 ($k = 5$):**
 >   Sostituendo $k = 5$ nella matrice di partenza:
@@ -656,6 +656,6 @@ Il calcolo di $\det(A)$ può essere condotto con due approcci:
 >   $$
 >   Le due righe superstiti sono linearmente indipendenti (minore $\det \begin{pmatrix} 1 & 7 \\ 24 & 0 \end{pmatrix} = -168 \neq 0$), dunque:
 >   $$
->   \operatorname{rk}(A) = 2
+>   \mathrm{rk}(A) = 2
 >   $$
 >

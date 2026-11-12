@@ -41,7 +41,7 @@ tags:
 >   $$
 > - **Coerciva:** se la sua parte reale controlla la norma quadratica:
 >   $$
->   \exists \alpha > 0 : \quad \operatorname{Re}\left\{ a(v, v) \right\} \ge \alpha \, \|v\|^2 \qquad \forall v \in V
+>   \exists \alpha > 0 : \quad \mathrm{Re}\left\{ a(v, v) \right\} \ge \alpha \, \|v\|^2 \qquad \forall v \in V
 >   $$
 
 > [!definition] Spazio di Hilbert Complesso
@@ -69,7 +69,7 @@ tags:
 > [!note] Teorema di Proiezione e Teoremi Fondamentali in Campo Complesso
 > - **Caratterizzazione della Proiezione:** Sia $K \subseteq \mathcal{H}$ un sottospazio chiuso (o un convesso chiuso). La condizione di caratterizzazione della proiezione $\pi_K(u)$ di un vettore $u \in \mathcal{H}$ sul sottoinsieme $K$ diventa:
 >   $$
->   \operatorname{Re}\left\langle u - \pi_K(u), \; v - \pi_K(u) \right\rangle \le 0 \qquad \forall v \in K
+>   \mathrm{Re}\left\langle u - \pi_K(u), \; v - \pi_K(u) \right\rangle \le 0 \qquad \forall v \in K
 >   $$
 > - **Estensione dei Teoremi di Riesz e Lax-Milgram:** I celebri teoremi di rappresentazione di Riesz e di Lax-Milgram si estendono immediatamente al setting complesso sostituendo l'ipotesi di simmetria reale con la condizione di simmetria hermitiana:
 >   $$
@@ -158,7 +158,7 @@ tags:
 >    $$
 >    u \in D_A \qquad \text{e} \qquad A u = v
 >    $$
->    (ovvero il grafico di $A$, $\operatorname{Gr}(A) = \{ (u, Au) : u \in D_A \}$, è un sottospazio chiuso in $\mathcal{H} \times \mathcal{H}$).
+>    (ovvero il grafico di $A$, $\mathrm{Gr}(A) = \{ (u, Au) : u \in D_A \}$, è un sottospazio chiuso in $\mathcal{H} \times \mathcal{H}$).
 > 
 > 2. $A$ si dice **chiudibile** se ammette un'estensione chiusa. In tal caso, la più piccola estensione chiusa (rispetto all'inclusione dei grafici) prende il nome di **chiusura** di $A$ e si denota con $\bar{A}$.
 
@@ -248,7 +248,7 @@ tags:
 
 > [!note] Parallelo con l'Algebra Lineare Finita
 > L'operazione di aggiunzione generalizza al contesto infinito-dimensionale e complesso la trasposizione e la coniugazione hermitiana.
-> Infatti, se $A \in \operatorname{Mat}_\mathbb{R}(n, n)$ è una matrice reale:
+> Infatti, se $A \in \mathrm{Mat}_\mathbb{R}(n, n)$ è una matrice reale:
 > $$
 > \mathbf{v} \cdot (A\mathbf{u}) = \mathbf{v}^T A \mathbf{u} = (\mathbf{v}^T A) \mathbf{u} = (A^T \mathbf{v})^T \mathbf{u} = A^T \mathbf{v} \cdot \mathbf{u}
 > $$
@@ -322,11 +322,11 @@ tags:
 > Sia $A \in \mathcal{L}(D_A, \mathcal{H})$ un operatore lineare. Si definiscono:
 > - **Nucleo di $A$ (Kernel):**
 >   $$
->   \operatorname{Ker} A := \left\{ u \in D_A : A u = 0 \right\}
+>   \mathrm{Ker} A := \left\{ u \in D_A : A u = 0 \right\}
 >   $$
 > - **Immagine di $A$ (Image / Range):**
 >   $$
->   \operatorname{Im} A := \left\{ v \in \mathcal{H} : \exists u \in D_A \text{ tale che } v = A u \right\}
+>   \mathrm{Im} A := \left\{ v \in \mathcal{H} : \exists u \in D_A \text{ tale che } v = A u \right\}
 >   $$
 
 > [!definition] Operatore Invertibile
@@ -339,17 +339,17 @@ tags:
 > [!theorem] Criterio di Invertibilità per Operatori Lineari
 > Sia $A \in \mathcal{L}(D_A, \mathcal{H})$ un operatore lineare chiuso. Allora $A$ è **invertibile** (con inverso limitato su tutto $\mathcal{H}$) se e solo se l'immagine di $A$ è densa in $\mathcal{H}$ ed esiste una costante $C > 0$ tale che $A$ sia **limitato dal basso**:
 > $$
-> A \text{ è invertibile} \iff \overline{\operatorname{Im} A} = \mathcal{H} \quad \text{ed} \quad \exists C > 0 : \; \|A u\| \ge C \, \|u\| \quad \forall u \in D_A
+> A \text{ è invertibile} \iff \overline{\mathrm{Im} A} = \mathcal{H} \quad \text{ed} \quad \exists C > 0 : \; \|A u\| \ge C \, \|u\| \quad \forall u \in D_A
 > $$
 
 > [!note] Iniettività Implicata dalla Limitazione dal Basso
 > La condizione di limitazione dal basso $\|A u\| \ge C \|u\|$ implica banalmente l'iniettività dell'operatore $A$:
 > $$
-> u \in \operatorname{Ker} A \implies A u = 0 \implies 0 = \|A u\| \ge C \|u\| \implies \|u\| = 0 \implies u = 0
+> u \in \mathrm{Ker} A \implies A u = 0 \implies 0 = \|A u\| \ge C \|u\| \implies \|u\| = 0 \implies u = 0
 > $$
 > dunque:
 > $$
-> \operatorname{Ker} A = \{ 0 \}
+> \mathrm{Ker} A = \{ 0 \}
 > $$
 >
 ## 6.9. Operatori Simmetrici, Essenzialmente Autoaggiunti e Autoaggiunti
@@ -532,7 +532,7 @@ $$
 >    $$
 > 2. **Operatore Unitario**, se è un'isometria ed è suriettivo:
 >    $$
->    \operatorname{Im}(U) = \mathcal{H}'
+>    \mathrm{Im}(U) = \mathcal{H}'
 >    $$
 
 > [!proposition] Caratterizzazione degli Operatori Unitari
@@ -600,46 +600,46 @@ Studiamo ora alcuni potenti criteri operativi per determinare l'autoaggiunzione 
 > **1. Condizioni per l'autoaggiunzione ($A = A^\dagger$):**
 > Sono tra loro equivalenti le seguenti affermazioni:
 > - $A$ è autoaggiunto ($A = A^\dagger$);
-> - $A$ è chiuso e $\operatorname{Ker}(A^\dagger \pm i I) = \{0\}$;
-> - $\operatorname{Im}(A \pm i I) = \mathcal{H}$.
+> - $A$ è chiuso e $\mathrm{Ker}(A^\dagger \pm i I) = \{0\}$;
+> - $\mathrm{Im}(A \pm i I) = \mathcal{H}$.
 > 
 > **2. Condizioni per l'autoaggiunzione essenziale ($\overline{A} = A^\dagger$):**
 > Sono tra loro equivalenti le seguenti affermazioni:
 > - $A$ è essenzialmente autoaggiunto;
-> - $\operatorname{Ker}(A^\dagger \pm i I) = \{0\}$;
-> - $\operatorname{Im}(A \pm i I)$ è denso in $\mathcal{H}$ (ovvero $\operatorname{Im}(\overline{A} \pm i I) = \mathcal{H}$).
+> - $\mathrm{Ker}(A^\dagger \pm i I) = \{0\}$;
+> - $\mathrm{Im}(A \pm i I)$ è denso in $\mathcal{H}$ (ovvero $\mathrm{Im}(\overline{A} \pm i I) = \mathcal{H}$).
 
 > [!note] Estensione a Valori Spettrali Complessi Arbitrari
-> La proposizione precedente rimane valida sostituendo la costante immaginaria $\pm i$ con un qualsiasi numero complesso non reale $\pm z$ con $z \in \mathbb{C} \setminus \mathbb{R}$ ($\operatorname{Im}(z) \neq 0$).
+> La proposizione precedente rimane valida sostituendo la costante immaginaria $\pm i$ con un qualsiasi numero complesso non reale $\pm z$ con $z \in \mathbb{C} \setminus \mathbb{R}$ ($\mathrm{Im}(z) \neq 0$).
 > 
-> Sia infatti $z \in \mathbb{C}$ con $\operatorname{Im}(z) \neq 0$. Valutiamo la norma quadrata dell'operatore $A - z I$:
+> Sia infatti $z \in \mathbb{C}$ con $\mathrm{Im}(z) \neq 0$. Valutiamo la norma quadrata dell'operatore $A - z I$:
 > $$
 > \begin{aligned}
-> \|(A - z) u\|^2 &= \langle (A - \operatorname{Re}(z) - i \operatorname{Im}(z)) u, (A - \operatorname{Re}(z) - i \operatorname{Im}(z)) u \rangle \\
-> &= \langle (A - \operatorname{Re}(z)) u, (A - \operatorname{Re}(z)) u \rangle + \langle -i \operatorname{Im}(z) u, -i \operatorname{Im}(z) u \rangle \\
-> &\quad + \langle (A - \operatorname{Re}(z)) u, -i \operatorname{Im}(z) u \rangle + \langle -i \operatorname{Im}(z) u, (A - \operatorname{Re}(z)) u \rangle
+> \|(A - z) u\|^2 &= \langle (A - \mathrm{Re}(z) - i \mathrm{Im}(z)) u, (A - \mathrm{Re}(z) - i \mathrm{Im}(z)) u \rangle \\
+> &= \langle (A - \mathrm{Re}(z)) u, (A - \mathrm{Re}(z)) u \rangle + \langle -i \mathrm{Im}(z) u, -i \mathrm{Im}(z) u \rangle \\
+> &\quad + \langle (A - \mathrm{Re}(z)) u, -i \mathrm{Im}(z) u \rangle + \langle -i \mathrm{Im}(z) u, (A - \mathrm{Re}(z)) u \rangle
 > \end{aligned}
 > $$
-> Analizzando i termini incrociati, sfruttando la simmetria di $A - \operatorname{Re}(z)$ e l'antilinearità del primo argomento:
+> Analizzando i termini incrociati, sfruttando la simmetria di $A - \mathrm{Re}(z)$ e l'antilinearità del primo argomento:
 > $$
-> \langle (A - \operatorname{Re}(z)) u, -i \operatorname{Im}(z) u \rangle = -i \operatorname{Im}(z) \langle (A - \operatorname{Re}(z)) u, u \rangle
-> \langle -i \operatorname{Im}(z) u, (A - \operatorname{Re}(z)) u \rangle = (-i \operatorname{Im}(z))^* \langle u, (A - \operatorname{Re}(z)) u \rangle = +i \operatorname{Im}(z) \langle u, (A - \operatorname{Re}(z)) u \rangle
+> \langle (A - \mathrm{Re}(z)) u, -i \mathrm{Im}(z) u \rangle = -i \mathrm{Im}(z) \langle (A - \mathrm{Re}(z)) u, u \rangle
+> \langle -i \mathrm{Im}(z) u, (A - \mathrm{Re}(z)) u \rangle = (-i \mathrm{Im}(z))^* \langle u, (A - \mathrm{Re}(z)) u \rangle = +i \mathrm{Im}(z) \langle u, (A - \mathrm{Re}(z)) u \rangle
 > $$
 > I due termini incrociati sono opposti e si cancellano esattamente:
 > $$
-> -i \operatorname{Im}(z) \langle (A - \operatorname{Re}(z)) u, u \rangle + i \operatorname{Im}(z) \langle u, (A - \operatorname{Re}(z)) u \rangle = 0
+> -i \mathrm{Im}(z) \langle (A - \mathrm{Re}(z)) u, u \rangle + i \mathrm{Im}(z) \langle u, (A - \mathrm{Re}(z)) u \rangle = 0
 > $$
 > Pertanto si ottiene la fondamentale stima a priori:
 > $$
-> \|(A - z) u\|^2 = \|(A - \operatorname{Re}(z)) u\|^2 + |\operatorname{Im}(z)|^2 \|u\|^2 \ge |\operatorname{Im}(z)|^2 \|u\|^2
+> \|(A - z) u\|^2 = \|(A - \mathrm{Re}(z)) u\|^2 + |\mathrm{Im}(z)|^2 \|u\|^2 \ge |\mathrm{Im}(z)|^2 \|u\|^2
 > $$
 > Estraendo la radice quadrata:
 > $$
-> \|(A - z) u\| \ge |\operatorname{Im}(z)| \|u\| \qquad \forall u \in D_A
+> \|(A - z) u\| \ge |\mathrm{Im}(z)| \|u\| \qquad \forall u \in D_A
 > $$
-> La costante $C = |\operatorname{Im}(z)| > 0$ assicura che l'operatore $A - z I$ è iniettivo e ammette inverso continuo sul suo rango. Inoltre l'operatore risolvente associato $(A - z I)^{-1}$ è limitato con norma vincolata da:
+> La costante $C = |\mathrm{Im}(z)| > 0$ assicura che l'operatore $A - z I$ è iniettivo e ammette inverso continuo sul suo rango. Inoltre l'operatore risolvente associato $(A - z I)^{-1}$ è limitato con norma vincolata da:
 > $$
-> \|(A - z I)^{-1}\| \le \frac{1}{|\operatorname{Im}(z)|}
+> \|(A - z I)^{-1}\| \le \frac{1}{|\mathrm{Im}(z)|}
 > $$
 > relazione che si ricava ponendo $v = (A - z I) u \implies u = (A - z I)^{-1} v$.
 >
@@ -647,7 +647,7 @@ Studiamo ora alcuni potenti criteri operativi per determinare l'autoaggiunzione 
 
 > [!example] Autoaggiunzione Essenziale di $Q$ tramite Densità dell'Immagine
 > Si consideri l'operatore posizione $(Q u)(x) = x u(x)$ su $D_Q = C_0^\infty(\mathbb{R})$.
-> Applichiamo il criterio di densità dell'immagine verificando se $\operatorname{Im}(Q \pm i I)$ è denso in $L^2(\mathbb{R})$.
+> Applichiamo il criterio di densità dell'immagine verificando se $\mathrm{Im}(Q \pm i I)$ è denso in $L^2(\mathbb{R})$.
 > Sia $\varphi \in C_0^\infty(\mathbb{R})$; la funzione:
 > $$
 > \psi(x) := \frac{\varphi(x)}{x \pm i}
@@ -657,12 +657,12 @@ Studiamo ora alcuni potenti criteri operativi per determinare l'autoaggiunzione 
 > $$
 > (Q \pm i I) \psi(x) = (x \pm i) \frac{\varphi(x)}{x \pm i} = \varphi(x)
 > $$
-> Di conseguenza $C_0^\infty(\mathbb{R}) \subseteq \operatorname{Im}(Q \pm i I)$. Poiché $C_0^\infty(\mathbb{R})$ è denso in $L^2(\mathbb{R})$, l'immagine $\operatorname{Im}(Q \pm i I)$ è densa in $L^2(\mathbb{R})$, il che dimostra rigorosamente che $Q$ è essenzialmente autoaggiunto.
+> Di conseguenza $C_0^\infty(\mathbb{R}) \subseteq \mathrm{Im}(Q \pm i I)$. Poiché $C_0^\infty(\mathbb{R})$ è denso in $L^2(\mathbb{R})$, l'immagine $\mathrm{Im}(Q \pm i I)$ è densa in $L^2(\mathbb{R})$, il che dimostra rigorosamente che $Q$ è essenzialmente autoaggiunto.
 
 > [!example] Analisi di $P$ tramite il Nucleo dell'Aggiunto
 > Si consideri l'operatore momento $P u = -i \frac{\partial u}{\partial x}$. Applichiamo il criterio del nucleo:
 > $$
-> \varphi \in \operatorname{Ker}(P^\dagger \pm i I) \iff P^\dagger \varphi = \mp i \varphi
+> \varphi \in \mathrm{Ker}(P^\dagger \pm i I) \iff P^\dagger \varphi = \mp i \varphi
 > $$
 > Nel senso delle distribuzioni/funzioni assolutamente continue:
 > $$
@@ -671,14 +671,14 @@ Studiamo ora alcuni potenti criteri operativi per determinare l'autoaggiunzione 
 > 1. **Su $\mathbb{R}$:**
 >    Le funzioni esponenziali $\varphi(x) = C e^{\pm x}$ non appartengono a $L^2(\mathbb{R})$ per alcuna costante $C \neq 0$ (divergono esponenzialmente a $+\infty$ o $-\infty$). L'unica soluzione a quadrato sommabile è $\varphi \equiv 0$:
 >    $$
->    \operatorname{Ker}(P^\dagger \pm i I) = \{0\}
+>    \mathrm{Ker}(P^\dagger \pm i I) = \{0\}
 >    $$
 >    Ne segue che $P$ è essenzialmente autoaggiunto su $L^2(\mathbb{R})$ con dominio iniziale $C_0^\infty(\mathbb{R})$.
 > 
 > 2. **Sull'intervallo $(0,1)$:**
 >    Se avessimo scelto $D_P = C_0^\infty((0,1))$, le soluzioni esponenziali $\varphi(x) = C e^{\pm x}$ appartengono perfettamente a $L^2((0,1))$ (e a $H^1((0,1))$) per qualunque costante $C$. Pertanto:
 >    $$
->    \operatorname{dim} \operatorname{Ker}(P^\dagger \pm i I) = 1 \neq 0
+>    \mathrm{dim} \mathrm{Ker}(P^\dagger \pm i I) = 1 \neq 0
 >    $$
 >    e l'operatore $P$ **non è essenzialmente autoaggiunto** su $C_0^\infty((0,1))$.
 >
@@ -857,13 +857,13 @@ Abbiamo già mostrato che $\pi_K$ è un operatore lineare limitato ($\|\pi_K\| \
 > $$
 > u = P u + (I - P) u
 > $$
-> Ponendo $v = P u \in \operatorname{Im}(P)$ e $w = (I - P) u$, verifichiamo la loro ortogonalità:
+> Ponendo $v = P u \in \mathrm{Im}(P)$ e $w = (I - P) u$, verifichiamo la loro ortogonalità:
 > $$
 > \langle v, w \rangle = \langle P u, (I - P) u \rangle = \langle u, P^\dagger (I - P) u \rangle = \langle u, P(I - P) u \rangle = \langle u, 0 \rangle = 0
 > $$
-> Dal teorema di decomposizione ortogonale, lo spazio si decompone in somma diretta ortogonale $\mathcal{H} = K \oplus K^\perp$ dove $K = \operatorname{Im}(P)$ è chiuso, e $P$ coincide con il proiettore ortogonale su $K$.
+> Dal teorema di decomposizione ortogonale, lo spazio si decompone in somma diretta ortogonale $\mathcal{H} = K \oplus K^\perp$ dove $K = \mathrm{Im}(P)$ è chiuso, e $P$ coincide con il proiettore ortogonale su $K$.
 > $$
-> P^\dagger = P \quad \text{e} \quad P^2 = P \implies P = \pi_{\operatorname{Im}(P)} \qquad \blacksquare
+> P^\dagger = P \quad \text{e} \quad P^2 = P \implies P = \pi_{\mathrm{Im}(P)} \qquad \blacksquare
 > $$
 >
 ## 6.15. Incertezza e Teorema di Indeterminazione di Heisenberg
@@ -1057,7 +1057,7 @@ Come si generalizzano in dimensione infinita i concetti di autovalore, autovetto
 > [!note] Differenza Cruciale tra Dimensione Finita e Infinita
 > In dimensione finita ($\mathcal{H} = \mathbb{C}^N$), l'operatore $A - \lambda I$ è rappresentato da una matrice quadrata $N \times N$. Per il teorema del rango-nullità:
 > $$
-> \det(A - \lambda I) = 0 \iff \operatorname{Ker}(A - \lambda I) \neq \{0\} \iff A - \lambda I \text{ non è iniettivo}
+> \det(A - \lambda I) = 0 \iff \mathrm{Ker}(A - \lambda I) \neq \{0\} \iff A - \lambda I \text{ non è iniettivo}
 > $$
 > In dimensione finita, la mancata invertibilità equivale sempre all'esistenza di autovettori non nulli: l'intero spettro è costituito unicamente da autovalori discreti.
 > In dimensione infinita, l'operatore $A - \lambda I$ può essere **iniettivo ma non suriettivo**, oppure può avere immagine densa ma ammettere un inverso **non limitato**. Ne discende una classificazione spettrale più ricca e articolata.
@@ -1071,7 +1071,7 @@ Sia $A \in \mathcal{L}(D_A, \mathcal{H})$ e sia $\lambda \in \sigma(A)$. Lo spet
 > **1. Spettro Puntuale (Autovalori) $\sigma_p(A)$:**
 > L'operatore $A - \lambda I$ **non è iniettivo**:
 > $$
-> \operatorname{Ker}(A - \lambda I) \neq \{0\} \iff \exists u \in D_A, \, u \neq 0 : A u = \lambda u
+> \mathrm{Ker}(A - \lambda I) \neq \{0\} \iff \exists u \in D_A, \, u \neq 0 : A u = \lambda u
 > $$
 > Il valore $\lambda$ è un **autovalore** e $u$ è il corrispondente **autovettore**. Tale insieme è denotato con:
 > $$
@@ -1079,9 +1079,9 @@ Sia $A \in \mathcal{L}(D_A, \mathcal{H})$ e sia $\lambda \in \sigma(A)$. Lo spet
 > $$
 > 
 > **2. Spettro Continuo $\sigma_c(A)$:**
-> L'operatore $A - \lambda I$ **è iniettivo**, l'immagine $\operatorname{Im}(A - \lambda I)$ **è densa** in $\mathcal{H}$, ma l'inverso $(A - \lambda I)^{-1}$ **non è limitato** (ovvero $A - \lambda I$ non è limitato dal basso):
+> L'operatore $A - \lambda I$ **è iniettivo**, l'immagine $\mathrm{Im}(A - \lambda I)$ **è densa** in $\mathcal{H}$, ma l'inverso $(A - \lambda I)^{-1}$ **non è limitato** (ovvero $A - \lambda I$ non è limitato dal basso):
 > $$
-> \operatorname{Ker}(A - \lambda I) = \{0\}, \qquad \overline{\operatorname{Im}(A - \lambda I)} = \mathcal{H}, \qquad \operatorname{Im}(A - \lambda I) \neq \mathcal{H}
+> \mathrm{Ker}(A - \lambda I) = \{0\}, \qquad \overline{\mathrm{Im}(A - \lambda I)} = \mathcal{H}, \qquad \mathrm{Im}(A - \lambda I) \neq \mathcal{H}
 > $$
 > Non essere limitato dal basso significa che:
 > $$
@@ -1104,7 +1104,7 @@ Sia $A \in \mathcal{L}(D_A, \mathcal{H})$ e sia $\lambda \in \sigma(A)$. Lo spet
 > **3. Spettro Residuo $\sigma_r(A)$:**
 > L'operatore $A - \lambda I$ è iniettivo, ma la sua immagine **NON è densa** in $\mathcal{H}$:
 > $$
-> \operatorname{Ker}(A - \lambda I) = \{0\} \qquad \text{e} \qquad \overline{\operatorname{Im}(A - \lambda I)} \subsetneq \mathcal{H}
+> \mathrm{Ker}(A - \lambda I) = \{0\} \qquad \text{e} \qquad \overline{\mathrm{Im}(A - \lambda I)} \subsetneq \mathcal{H}
 > $$
 > In tal caso:
 > $$
@@ -1116,9 +1116,9 @@ Sia $A \in \mathcal{L}(D_A, \mathcal{H})$ e sia $\lambda \in \sigma(A)$. Lo spet
 > $$
 > \sigma_r(A) = \emptyset
 > $$
-> Infatti vale l'identità fondamentale $\overline{\operatorname{Im}(A - \lambda I)}^\perp = \operatorname{Ker}(A^\dagger - \bar{\lambda} I)$. Poiché per un operatore autoaggiunto gli autovalori sono reali ($\lambda \in \mathbb{R}$) e $A = A^\dagger$, la densità dell'immagine equivale all'iniettività:
+> Infatti vale l'identità fondamentale $\overline{\mathrm{Im}(A - \lambda I)}^\perp = \mathrm{Ker}(A^\dagger - \bar{\lambda} I)$. Poiché per un operatore autoaggiunto gli autovalori sono reali ($\lambda \in \mathbb{R}$) e $A = A^\dagger$, la densità dell'immagine equivale all'iniettività:
 > $$
-> \operatorname{Ker}(A - \lambda I) = \{0\} \iff \overline{\operatorname{Im}(A - \lambda I)} = \mathcal{H}
+> \mathrm{Ker}(A - \lambda I) = \{0\} \iff \overline{\mathrm{Im}(A - \lambda I)} = \mathcal{H}
 > $$
 > Pertanto lo spettro di un operatore autoaggiunto si decompone unicamente in spettro puntuale e continuo:
 > $$
@@ -1460,7 +1460,7 @@ $$
 > $$
 > Inoltre vale la caratterizzazione dello spettro:
 > $$
-> \sigma(M_f) = \overline{\operatorname{Im}(f)}
+> \sigma(M_f) = \overline{\mathrm{Im}(f)}
 > $$
 > Infatti:
 > $$
@@ -1468,7 +1468,7 @@ $$
 > $$
 
 > [!note] Probabilità su Sottoinsiemi dello Spettro
-> Sia $I \subseteq \operatorname{Im}(f)$ un intervallo o boreliano dello spettro. Allora la probabilità che l'osservabile associata a $M_f$ assuma valori in $I$ è:
+> Sia $I \subseteq \mathrm{Im}(f)$ un intervallo o boreliano dello spettro. Allora la probabilità che l'osservabile associata a $M_f$ assuma valori in $I$ è:
 > $$
 > \mathbb{P}\{M_f \in I\} = \int_{f^{-1}(I)} |u(\mathbf{x})|^2 \, d\mathbf{x}
 > $$
@@ -1609,7 +1609,7 @@ $$
 >    $$
 > 2. **Monotonia:**
 >    $$
->    \lambda \le \mu \implies E(\lambda) \le E(\mu) \quad (\text{ovvero } \operatorname{Ran} E(\lambda) \subseteq \operatorname{Ran} E(\mu))
+>    \lambda \le \mu \implies E(\lambda) \le E(\mu) \quad (\text{ovvero } \mathrm{Ran} E(\lambda) \subseteq \mathrm{Ran} E(\mu))
 >    $$
 > 3. **Continuità forte da destra:**
 >    $$
@@ -1671,7 +1671,7 @@ Per cogliere appieno il significato matematico e probabilistico delle famiglie s
 > [!note] Supporto della Misura Spettrale e Cambio di Variabile
 > Si noti che se un insieme $I \in \mathcal{B}$ non interseca lo spettro dell'operatore moltiplicativo, $I \cap \sigma(M_f) = \emptyset$, allora la sua controimmagine è vuota $f^{-1}(I) = \emptyset$, da cui:
 > $$
-> \nu_u(I) = 0 \implies \operatorname{supp}(\nu_u) \subseteq \sigma(M_f)
+> \nu_u(I) = 0 \implies \mathrm{supp}(\nu_u) \subseteq \sigma(M_f)
 > $$
 > La misura spettrale $\nu_u$ realizza un rigoroso "cambio di variabile" rispetto alla misura Lebesgue originaria nello spazio fisico:
 > $$
@@ -1738,7 +1738,7 @@ Grazie alla misura spettrale, è possibile mappare isometricamente lo spazio di 
 > [!note] Isomorfismo Spettrale per un Singolo Vettore Ciclico
 > Fissato $u_0 \in \mathcal{H}$ con $\|u_0\| = 1$, consideriamo il sottospazio chiuso generato dall'azione dei polinomi dell'operatore $M_f$ su $u_0$ (sottospazio ciclico):
 > $$
-> H_0 := \overline{\operatorname{Span}\{M_f^k u_0\}_{k \in \mathbb{N}}} = \overline{P(M_f) u_0}
+> H_0 := \overline{\mathrm{Span}\{M_f^k u_0\}_{k \in \mathbb{N}}} = \overline{P(M_f) u_0}
 > $$
 > Un elemento generico $v \in H_0$ è caratterizzato dalla proprietà:
 > $$

@@ -228,11 +228,11 @@ $$
 > La nilpotenza della derivata esterna unifica i due grandi teoremi differenziali del calcolo vettoriale:
 > 1. Applicata a una 0-forma scalare $f \in \Omega^0$:
 >    $$
->    d(df) = 0 \iff \nabla \times (\nabla f) = \mathbf{0} \quad (\operatorname{rot}(\operatorname{grad} f) = \mathbf{0})
+>    d(df) = 0 \iff \nabla \times (\nabla f) = \mathbf{0} \quad (\mathrm{rot}(\mathrm{grad} f) = \mathbf{0})
 >    $$
 > 2. Applicata alla 1-forma $\omega$ associata a $\mathbf{F}$:
 >    $$
->    d(d\omega) = 0 \iff \nabla \cdot (\nabla \times \mathbf{F}) = 0 \quad (\operatorname{div}(\operatorname{rot} \mathbf{F}) = 0)
+>    d(d\omega) = 0 \iff \nabla \cdot (\nabla \times \mathbf{F}) = 0 \quad (\mathrm{div}(\mathrm{rot} \mathbf{F}) = 0)
 >    $$
 >
 ### Integrazione di forme e Teorema generale di Stokes

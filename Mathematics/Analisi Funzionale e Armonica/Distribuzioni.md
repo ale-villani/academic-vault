@@ -54,7 +54,7 @@ tags:
 >    $$
 >    ovvero:
 >    $$
->    \operatorname{supp} \varphi_n \subseteq K \quad \forall n \in \mathbb{N}
+>    \mathrm{supp} \varphi_n \subseteq K \quad \forall n \in \mathbb{N}
 >    $$
 > 2. **Convergenza uniforme di tutte le derivate:** Per ogni multi-indice $\boldsymbol{\alpha} \in \mathbb{N}^n$:
 >    $$
@@ -77,7 +77,7 @@ tags:
 > $$
 
 > [!note] Proprietà topologiche di $\mathcal{D}(\Omega)$
-> Lo spazio $\mathcal{D}(\Omega)$ è uno spazio vettoriale topologico localmente convesso, definibile formalmente come il limite induttivo stretto degli spazi di Fréchet $\mathcal{D}_K(\Omega) = \{ \varphi \in C^\infty(\Omega) : \operatorname{supp}\varphi \subseteq K \}$ al variare dei compatti $K \subset \Omega$ (spazio LF).
+> Lo spazio $\mathcal{D}(\Omega)$ è uno spazio vettoriale topologico localmente convesso, definibile formalmente come il limite induttivo stretto degli spazi di Fréchet $\mathcal{D}_K(\Omega) = \{ \varphi \in C^\infty(\Omega) : \mathrm{supp}\varphi \subseteq K \}$ al variare dei compatti $K \subset \Omega$ (spazio LF).
 
 > [!example] Successione scalata a supporto compatto fisso
 > Sia $\Omega = (-1, 1) \subset \mathbb{R}$. Sia $\varphi \in \mathcal{D}((-1, 1))$ una funzione test e consideriamo la successione:
@@ -88,7 +88,7 @@ tags:
 > Verifichiamo le due condizioni di convergenza in $\mathcal{D}((-1, 1))$:
 > 1. Il supporto è identico per ogni termine della successione:
 >    $$
->    \operatorname{supp} \varphi_n = \operatorname{supp} \varphi = [-K, K] \subset (-1, 1) \quad \text{compatto (con } K < 1)
+>    \mathrm{supp} \varphi_n = \mathrm{supp} \varphi = [-K, K] \subset (-1, 1) \quad \text{compatto (con } K < 1)
 >    $$
 > 2. Per ogni derivata di ordine $\alpha \in \mathbb{N}$:
 >    $$
@@ -107,11 +107,11 @@ tags:
 > $$
 > Il supporto di $\varphi_n$ risulta traslato rigidamente:
 > $$
-> \operatorname{supp} \varphi_n = \{y \in \mathbb{R} : y = n + x, \; x \in \operatorname{supp} \varphi\}
+> \mathrm{supp} \varphi_n = \{y \in \mathbb{R} : y = n + x, \; x \in \mathrm{supp} \varphi\}
 > $$
 > All'aumentare di $n$, i supporti si allontanano indefinitamente verso $+\infty$. Di conseguenza:
 > $$
-> \not\exists K \subset \mathbb{R} \text{ compatto tale che } \operatorname{supp} \varphi_n \subseteq K \quad \forall n \in \mathbb{N}
+> \not\exists K \subset \mathbb{R} \text{ compatto tale che } \mathrm{supp} \varphi_n \subseteq K \quad \forall n \in \mathbb{N}
 > $$
 > Venendo a mancare l'esistenza di un compatto comune, si ha che:
 > $$
@@ -121,7 +121,7 @@ tags:
 > $$
 > \lim_{n \to +\infty} \varphi_n(x) = 0 \quad \forall x \in \mathbb{R}
 > $$
-> *(per ogni $x$ fissato, per $n$ sufficientemente grande $x - n \notin \operatorname{supp}\varphi$, dunque $\varphi_n(x) = 0$ definitivamente)*.
+> *(per ogni $x$ fissato, per $n$ sufficientemente grande $x - n \notin \mathrm{supp}\varphi$, dunque $\varphi_n(x) = 0$ definitivamente)*.
 >
 ### Definizione di distribuzione e spazio duale $\mathcal{D}^*(\Omega)$
 
@@ -185,7 +185,7 @@ tags:
 > **1. Buona positura del funzionale:**
 > Poiché $\varphi \in C^\infty_0(\Omega)$, il prodotto $u\varphi$ è una funzione misurabile. Inoltre, essendo $\varphi$ a supporto compatto:
 > $$
-> \int_\Omega |u\varphi| \, d\mathbf{x} = \int_{\operatorname{supp}\varphi} |u\varphi| \, d\mathbf{x} \le \max_{\operatorname{supp}\varphi} |\varphi| \int_\Omega |u| \, d\mathbf{x} = \max_{\operatorname{supp}\varphi} |\varphi| \, \|u\|_1 < +\infty
+> \int_\Omega |u\varphi| \, d\mathbf{x} = \int_{\mathrm{supp}\varphi} |u\varphi| \, d\mathbf{x} \le \max_{\mathrm{supp}\varphi} |\varphi| \int_\Omega |u| \, d\mathbf{x} = \max_{\mathrm{supp}\varphi} |\varphi| \, \|u\|_1 < +\infty
 > $$
 > Ne segue che $u\varphi \in L^1(\Omega)$ e dunque il funzionale è finito e ben posto.
 > 
@@ -207,11 +207,11 @@ tags:
 > $$
 > Stimiamo il valore assoluto del crochet:
 > $$
-> |\langle T_u, \varphi_n \rangle| = \left| \int_\Omega u \varphi_n \, d\mathbf{x} \right| \le \int_\Omega |u \varphi_n| \, d\mathbf{x} = \int_{\operatorname{supp}\varphi_n} |u \varphi_n| \, d\mathbf{x}
+> |\langle T_u, \varphi_n \rangle| = \left| \int_\Omega u \varphi_n \, d\mathbf{x} \right| \le \int_\Omega |u \varphi_n| \, d\mathbf{x} = \int_{\mathrm{supp}\varphi_n} |u \varphi_n| \, d\mathbf{x}
 > $$
 > Essendo $\varphi_n \to 0$ in $\mathcal{D}(\Omega)$, esiste un compatto fisso $K \subset \Omega$ tale che:
 > $$
-> \operatorname{supp} \varphi_n \subseteq K \quad \forall n \in \mathbb{N} \quad \text{e} \quad \max_{\mathbf{x} \in K} |\varphi_n(\mathbf{x})| \xrightarrow{n \to +\infty} 0
+> \mathrm{supp} \varphi_n \subseteq K \quad \forall n \in \mathbb{N} \quad \text{e} \quad \max_{\mathbf{x} \in K} |\varphi_n(\mathbf{x})| \xrightarrow{n \to +\infty} 0
 > $$
 > Possiamo quindi maggiorare:
 > $$
@@ -332,7 +332,7 @@ tags:
 > $$
 > Tale relazione deve valere in particolare per tutte le funzioni test $\varphi \in \mathcal{D}(\Omega)$ il cui supporto non contiene il punto $\mathbf{x}_0$, ossia:
 > $$
-> \operatorname{supp} \varphi \subset \Omega \setminus \{\mathbf{x}_0\}
+> \mathrm{supp} \varphi \subset \Omega \setminus \{\mathbf{x}_0\}
 > $$
 > Per ciascuna di tali funzioni si ha identicamente:
 > $$
@@ -340,7 +340,7 @@ tags:
 > $$
 > Ne discende che:
 > $$
-> |\langle T_u, \varphi \rangle| = \left| \int_\Omega u\varphi \, d\mathbf{x} \right| \le \int_\Omega |u\varphi| \, d\mathbf{x} = \int_{\operatorname{supp}\varphi} |u\varphi| \, d\mathbf{x} = 0
+> |\langle T_u, \varphi \rangle| = \left| \int_\Omega u\varphi \, d\mathbf{x} \right| \le \int_\Omega |u\varphi| \, d\mathbf{x} = \int_{\mathrm{supp}\varphi} |u\varphi| \, d\mathbf{x} = 0
 > $$
 > da cui segue che $u = 0$ quasi ovunque su ogni compatto contenuto in $\Omega \setminus \{\mathbf{x}_0\}$.
 > Poiché $\Omega \setminus \{\mathbf{x}_0\}$ è unione numerabile di compatti, deduciamo:
@@ -348,7 +348,7 @@ tags:
 > u = 0 \quad \text{q.o. in } \Omega \setminus \{\mathbf{x}_0\} \implies u = 0 \quad \text{q.o. in } \Omega
 > $$
 > *(essendo il punto singolo $\{\mathbf{x}_0\}$ un insieme di misura di Lebesgue nulla)*.
-> Ma se $u = 0$ q.o. in $\Omega$, allora per qualsiasi funzione test $\varphi \in \mathcal{D}(\Omega)$ per la quale $\mathbf{x}_0 \in \operatorname{supp}\varphi$ e $\varphi(\mathbf{x}_0) \ne 0$, calcolando il crochet si avrebbe:
+> Ma se $u = 0$ q.o. in $\Omega$, allora per qualsiasi funzione test $\varphi \in \mathcal{D}(\Omega)$ per la quale $\mathbf{x}_0 \in \mathrm{supp}\varphi$ e $\varphi(\mathbf{x}_0) \ne 0$, calcolando il crochet si avrebbe:
 > $$
 > \langle T_u, \varphi \rangle = \int_\Omega 0 \cdot \varphi \, d\mathbf{x} = 0
 > $$
@@ -472,7 +472,7 @@ tags:
 > La successione diverge e non ammette alcun limite distribuzionale. Questo dimostra che il prodotto tra distribuzioni singolari non è banale né genericamente definibile.
 
 > [!definition] Prodotto di una distribuzione per una funzione $C^\infty(\Omega)$
-> Se invece moltiplichiamo una distribuzione per una funzione $\psi$ dotata di regolarità liscia $\psi \in C^\infty(\Omega)$, allora per ogni funzione test $\varphi \in \mathcal{D}(\Omega)$ il prodotto $\psi\varphi$ appartiene ancora a $\mathcal{D}(\Omega)$ (essendo infinitamente differenziabile e a supporto compatto $\operatorname{supp}(\psi\varphi) \subseteq \operatorname{supp}\varphi$).
+> Se invece moltiplichiamo una distribuzione per una funzione $\psi$ dotata di regolarità liscia $\psi \in C^\infty(\Omega)$, allora per ogni funzione test $\varphi \in \mathcal{D}(\Omega)$ il prodotto $\psi\varphi$ appartiene ancora a $\mathcal{D}(\Omega)$ (essendo infinitamente differenziabile e a supporto compatto $\mathrm{supp}(\psi\varphi) \subseteq \mathrm{supp}\varphi$).
 > Si definisce allora la distribuzione prodotto $T\psi$ trasponendo l'azione della moltiplicazione sulla funzione test:
 > $$
 > \langle T\psi, \varphi \rangle := \langle T, \psi\varphi \rangle \quad \forall \varphi \in \mathcal{D}(\Omega)
@@ -548,12 +548,12 @@ tags:
 > 1. **Supporto compatto uniforme:**
 >    Poiché $\varphi_n \to 0$ in $\mathcal{D}(\Omega')$, esiste un compatto fisso $K' \subset \Omega'$ tale che:
 >    $$
->    \operatorname{supp} \varphi_n \subseteq K' \quad \forall n \in \mathbb{N}
+>    \mathrm{supp} \varphi_n \subseteq K' \quad \forall n \in \mathbb{N}
 >    $$
 >    Essendo $\mathbf{F}$ continua, l'immagine $K := \mathbf{F}(K')$ è un sottoinsieme compatto di $\Omega$.
 >    Ne segue che:
 >    $$
->    \operatorname{supp} \varphi_n^* = \mathbf{F}(\operatorname{supp} \varphi_n) \subseteq \mathbf{F}(K') = K \subset \Omega \quad \forall n \in \mathbb{N}
+>    \mathrm{supp} \varphi_n^* = \mathbf{F}(\mathrm{supp} \varphi_n) \subseteq \mathbf{F}(K') = K \subset \Omega \quad \forall n \in \mathbb{N}
 >    $$
 > 
 > 2. **Convergenza uniforme delle derivate:**
@@ -591,7 +591,7 @@ tags:
 > $$
 > \widetilde{\varphi}(\mathbf{x}) := \begin{cases} \varphi(\mathbf{x}) & \text{se } \mathbf{x} \in \Omega' \\ 0 & \text{se } \mathbf{x} \in \Omega \setminus \Omega' \end{cases} = \varphi(\mathbf{x}) \chi_{\Omega'}(\mathbf{x}) \quad \forall \mathbf{x} \in \Omega
 > $$
-> *(Poiché $\operatorname{supp}\varphi$ è compatto e interamente contenuto nell'aperto $\Omega'$, l'estensione $\widetilde{\varphi}$ preserva la regolarità $C^\infty$ e ha supporto compatto in $\Omega$, dunque $\widetilde{\varphi} \in \mathcal{D}(\Omega)$)*.
+> *(Poiché $\mathrm{supp}\varphi$ è compatto e interamente contenuto nell'aperto $\Omega'$, l'estensione $\widetilde{\varphi}$ preserva la regolarità $C^\infty$ e ha supporto compatto in $\Omega$, dunque $\widetilde{\varphi} \in \mathcal{D}(\Omega)$)*.
 >
 ### Prodotto tensoriale di distribuzioni
 
@@ -697,7 +697,7 @@ Consideriamo inizialmente il caso unidimensionale $n = 1$, con $\Omega \subset \
 > Per dimostrare che $T'$ è a tutti gli effetti un elemento del duale $\mathcal{D}^*(\Omega)$, verifichiamo le tre proprietà fondamentali:
 > 1. **Stabilità dello spazio dei test:** Se $\varphi \in \mathcal{D}(\Omega) = C_0^\infty(\Omega)$, allora per le proprietà delle funzioni regolari a supporto compatto si ha $\varphi' \in C^\infty(\Omega)$ e:
 >    $$
->    \operatorname{supp}(\varphi') \subseteq \operatorname{supp}(\varphi) \subset \Omega
+>    \mathrm{supp}(\varphi') \subseteq \mathrm{supp}(\varphi) \subset \Omega
 >    $$
 >    Dunque $\varphi' \in \mathcal{D}(\Omega)$, e la valutazione $\langle T, \varphi' \rangle$ è ben definita.
 > 2. **Linearità:** Siano $\varphi_1, \varphi_2 \in \mathcal{D}(\Omega)$ e $\alpha, \beta \in \mathbb{R}$. Per la linearità della derivata ordinaria e del funzionale $T$:
@@ -714,7 +714,7 @@ Consideriamo inizialmente il caso unidimensionale $n = 1$, con $\Omega \subset \
 >    $$
 >    \varphi_n \xrightarrow{n \to +\infty} 0 \text{ in } \mathcal{D}(\Omega) \implies \varphi_n' \xrightarrow{n \to +\infty} 0 \text{ in } \mathcal{D}(\Omega)
 >    $$
->    essendo $\operatorname{supp}(\varphi_n') \subseteq \operatorname{supp}(\varphi_n)$. Dalla continuità di $T \in \mathcal{D}^*(\Omega)$ segue:
+>    essendo $\mathrm{supp}(\varphi_n') \subseteq \mathrm{supp}(\varphi_n)$. Dalla continuità di $T \in \mathcal{D}^*(\Omega)$ segue:
 >    $$
 >    \langle T', \varphi_n \rangle = - \langle T, \varphi_n' \rangle \xrightarrow{n \to +\infty} 0
 >    $$
@@ -806,11 +806,11 @@ Possiamo generalizzare la nozione a funzioni e distribuzioni in dimensione $n \g
 > [!example] Derivata debole del valore assoluto
 > Sia $u(x) = |x|$ definita sull'intervallo aperto $\Omega = (-1, 1) \subset \mathbb{R}$.
 > La funzione $u$ non è derivabile nell'origine nel senso classico dell'analisi matematica.
-> La sua derivata debole è data dalla funzione segno $v(x) = \operatorname{sgn}(x)$:
+> La sua derivata debole è data dalla funzione segno $v(x) = \mathrm{sgn}(x)$:
 > $$
-> v(x) = \operatorname{sgn}(x) = \begin{cases} 1 & \text{se } x > 0 \\ -1 & \text{se } x < 0 \end{cases}
+> v(x) = \mathrm{sgn}(x) = \begin{cases} 1 & \text{se } x > 0 \\ -1 & \text{se } x < 0 \end{cases}
 > $$
-> ovvero $T_{|x|}' = T_{\operatorname{sgn}(x)}$ in $\mathcal{D}^*((-1, 1))$.
+> ovvero $T_{|x|}' = T_{\mathrm{sgn}(x)}$ in $\mathcal{D}^*((-1, 1))$.
 > 
 > Verifichiamolo esplicitamente applicando la definizione: per ogni $\varphi \in \mathcal{D}((-1, 1))$:
 > $$
@@ -827,23 +827,23 @@ Possiamo generalizzare la nozione a funzioni e distribuzioni in dimensione $n \g
 > \int_{-1}^0 x \varphi'(x)\,dx &= [x \varphi(x)]_{-1}^0 - \int_{-1}^0 \varphi(x)\,dx = (0 \cdot \varphi(0) - (-1)\varphi(-1)) - \int_{-1}^0 \varphi(x)\,dx = - \int_{-1}^0 \varphi(x)\,dx
 > \end{aligned}
 > $$
-> poiché $\varphi(1) = \varphi(-1) = 0$ essendo $\operatorname{supp}(\varphi) \subset (-1, 1)$. Sommando i due contributi:
+> poiché $\varphi(1) = \varphi(-1) = 0$ essendo $\mathrm{supp}(\varphi) \subset (-1, 1)$. Sommando i due contributi:
 > $$
-> \langle T_{|x|}', \varphi \rangle = \int_0^1 \varphi(x)\,dx - \int_{-1}^0 \varphi(x)\,dx = \int_{-1}^1 \operatorname{sgn}(x) \varphi(x)\,dx = \langle T_{\operatorname{sgn}(x)}, \varphi \rangle
+> \langle T_{|x|}', \varphi \rangle = \int_0^1 \varphi(x)\,dx - \int_{-1}^0 \varphi(x)\,dx = \int_{-1}^1 \mathrm{sgn}(x) \varphi(x)\,dx = \langle T_{\mathrm{sgn}(x)}, \varphi \rangle
 > $$
-> Pertanto $T_{|x|}' = T_{\operatorname{sgn}(x)}$.
+> Pertanto $T_{|x|}' = T_{\mathrm{sgn}(x)}$.
 
 > [!example] Derivata distribuzionale della funzione segno: comparsa della delta di Dirac
-> Si consideri la funzione $u(x) = \operatorname{sgn}(x)$ su $\Omega = (-1, 1)$.
+> Si consideri la funzione $u(x) = \mathrm{sgn}(x)$ su $\Omega = (-1, 1)$.
 > Qual è la sua derivata debole?
 > La funzione presenta un salto di ampiezza $2$ in $x = 0$. La sua derivata nel senso delle distribuzioni è:
 > $$
-> (T_{\operatorname{sgn}(x)})' = 2 \delta_0
+> (T_{\mathrm{sgn}(x)})' = 2 \delta_0
 > $$
 > Infatti, per ogni funzione test $\varphi \in \mathcal{D}((-1, 1))$:
 > $$
 > \begin{aligned}
-> \langle T_{\operatorname{sgn}(x)}', \varphi \rangle &= - \langle T_{\operatorname{sgn}(x)}, \varphi' \rangle = - \int_{-1}^1 \operatorname{sgn}(x) \varphi'(x)\,dx \\
+> \langle T_{\mathrm{sgn}(x)}', \varphi \rangle &= - \langle T_{\mathrm{sgn}(x)}, \varphi' \rangle = - \int_{-1}^1 \mathrm{sgn}(x) \varphi'(x)\,dx \\
 > &= - \left( \int_{-1}^0 (-1) \varphi'(x)\,dx + \int_0^1 (+1) \varphi'(x)\,dx \right) \\
 > &= \int_{-1}^0 \varphi'(x)\,dx - \int_0^1 \varphi'(x)\,dx \\
 > &= [\varphi(x)]_{-1}^0 - [\varphi(x)]_0^1 \\
@@ -852,13 +852,13 @@ Possiamo generalizzare la nozione a funzioni e distribuzioni in dimensione $n \g
 > $$
 > Ricordando che $\varphi(1) = \varphi(-1) = 0$:
 > $$
-> \langle T_{\operatorname{sgn}(x)}', \varphi \rangle = \varphi(0) - 0 - (0 - \varphi(0)) = 2\varphi(0) = \langle 2\delta_0, \varphi \rangle
+> \langle T_{\mathrm{sgn}(x)}', \varphi \rangle = \varphi(0) - 0 - (0 - \varphi(0)) = 2\varphi(0) = \langle 2\delta_0, \varphi \rangle
 > $$
 > Dunque:
 > $$
-> (T_{\operatorname{sgn}(x)})' = 2\delta_0
+> (T_{\mathrm{sgn}(x)})' = 2\delta_0
 > $$
-> In particolare, per la funzione gradino di Heaviside $H(x) = \frac{1 + \operatorname{sgn}(x)}{2}$ si ottiene la celebre relazione:
+> In particolare, per la funzione gradino di Heaviside $H(x) = \frac{1 + \mathrm{sgn}(x)}{2}$ si ottiene la celebre relazione:
 > $$
 > H' = \delta_0
 > $$

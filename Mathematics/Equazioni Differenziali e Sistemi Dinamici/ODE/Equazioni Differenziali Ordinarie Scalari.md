@@ -925,7 +925,7 @@ Dal teorema di struttura delle soluzioni di un sistema lineare si deriva il segu
 > $$
 > Ma per costruzione $z_1(t_0) = 1 \ne 0$, il che conduce a un assurdo ($1 = 0$). Di conseguenza, $z_1$ e $z_2$ sono linearmente indipendenti.
 > 
-> Dimostriamo ora che $z_1$ e $z_2$ generano l'intero nucleo, ovvero che $\ker L = \operatorname{Span}\{z_1, z_2\}$.
+> Dimostriamo ora che $z_1$ e $z_2$ generano l'intero nucleo, ovvero che $\ker L = \mathrm{Span}\{z_1, z_2\}$.
 > Sia $z \in \ker L$ una generica soluzione dell'omogenea. Valutando $z$ e la sua derivata prima nel punto iniziale $t_0$, siano:
 > $$
 > z(t_0) = c_1 \in \mathbb{R}, \quad z'(t_0) = c_2 \in \mathbb{R}
@@ -954,7 +954,7 @@ Dal teorema di struttura delle soluzioni di un sistema lineare si deriva il segu
 > $$
 > \forall z \in \ker L, \; \exists c_1, c_2 \in \mathbb{R} : z(t) = c_1 z_1(t) + c_2 z_2(t)
 > $$
-> il che prova che $\ker L = \operatorname{Span}\{z_1, z_2\}$, e dunque $\dim(\ker L) = 2$.
+> il che prova che $\ker L = \mathrm{Span}\{z_1, z_2\}$, e dunque $\dim(\ker L) = 2$.
 > 
 > **Punto 2:**
 > - $(\Leftarrow)$ Sia $y(t) = z(t) + y_p(t)$, con $z \in \ker L$ e $y_p$ tale che $L(y_p) = f(t)$. Applicando l'operatore $L$ e sfruttandone la linearità:
@@ -1244,7 +1244,7 @@ Si applica quando la forzante $f(t)$ assume forme analitiche elementari. Si cerc
 
 Sia nota una base dello spazio delle soluzioni dell'omogenea:
 $$
-\ker L = \operatorname{Span}\{z_1, z_2\}
+\ker L = \mathrm{Span}\{z_1, z_2\}
 $$
 dove $z_1(t), z_2(t)$ sono due soluzioni linearmente indipendenti di $L(z) = 0$.
 L'integrale generale dell'omogenea è $z(t) = c_1 z_1(t) + c_2 z_2(t)$ con $c_1, c_2 \in \mathbb{R}$.

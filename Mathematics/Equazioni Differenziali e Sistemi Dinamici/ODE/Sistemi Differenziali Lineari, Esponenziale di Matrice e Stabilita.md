@@ -84,8 +84,8 @@ Una **soluzione locale** del sistema è una funzione $\mathbf{y} \in C^1(I_\delt
 >   $$
 >   \mathbf{\dot{y}}(t) = A(t) \mathbf{y}(t) + \mathbf{b}(t)
 >   $$
->   dove $A(t) \in \operatorname{Mat}_{\mathbb{R}}(n, n)$ è la matrice dei coefficienti e $\mathbf{b}(t) \in \mathbb{R}^n$ è il vettore dei termini noti.
-> - I sistemi che sono contemporaneamente **autonomi e lineari** sono a **coefficienti costanti** ($A(t) \equiv A \in \operatorname{Mat}_\mathbb{R}(n, n)$ e $\mathbf{b}(t) \equiv \mathbf{b} \in \mathbb{R}^n$).
+>   dove $A(t) \in \mathrm{Mat}_{\mathbb{R}}(n, n)$ è la matrice dei coefficienti e $\mathbf{b}(t) \in \mathbb{R}^n$ è il vettore dei termini noti.
+> - I sistemi che sono contemporaneamente **autonomi e lineari** sono a **coefficienti costanti** ($A(t) \equiv A \in \mathrm{Mat}_\mathbb{R}(n, n)$ e $\mathbf{b}(t) \equiv \mathbf{b} \in \mathbb{R}^n$).
 >
 ### Riduzione di equazioni e sistemi di ordine superiore a sistemi lineari del I ordine
 
@@ -117,7 +117,7 @@ A_m & A_{m-1} & \dots & A_2 & A_1
 +
 \begin{pmatrix} \mathbf{0} \\ \mathbf{0} \\ \vdots \\ \mathbf{0} \\ \mathbf{b}(t) \end{pmatrix}
 $$
-Posta la matrice a blocchi $A^* \in \operatorname{Mat}_{\mathbb{R}}(mn, mn)$ e il vettore forzante esteso $\mathbf{b}^* \in \mathbb{R}^{mn}$:
+Posta la matrice a blocchi $A^* \in \mathrm{Mat}_{\mathbb{R}}(mn, mn)$ e il vettore forzante esteso $\mathbf{b}^* \in \mathbb{R}^{mn}$:
 $$
 \mathbf{w}'(t) = A^*(t) \mathbf{w}(t) + \mathbf{b}^*(t)
 $$
@@ -163,7 +163,7 @@ $$
 > $$
 > \mathbf{\dot{z}} = A(t) \mathbf{z} \tag{b}
 > $$
-> con $A \in C^0(I; \operatorname{Mat}_{\mathbb{R}}(n, n))$ e $\mathbf{b} \in C^0(I; \mathbb{R}^n)$.
+> con $A \in C^0(I; \mathrm{Mat}_{\mathbb{R}}(n, n))$ e $\mathbf{b} \in C^0(I; \mathbb{R}^n)$.
 > 
 > Allora:
 > 1. **Struttura affine dell'integrale generale:**
@@ -198,7 +198,7 @@ se $\lambda_1 = \overline{\lambda}_2$, allora il corrispondente autovettore sodd
 
 Inoltre, per qualsiasi matrice $A \in \mathrm{Mat}_{\mathbb{C}}(n, n)$, il determinante e la traccia sono legati allo spettro degli autovalori dalle relazioni fondamentali:
 $$
-\det A = \prod_{i=1}^n \lambda_i, \qquad \operatorname{tr} A = \sum_{i=1}^n \lambda_i
+\det A = \prod_{i=1}^n \lambda_i, \qquad \mathrm{tr} A = \sum_{i=1}^n \lambda_i
 $$
 
 ### Norma matriciale e convergenza
@@ -275,7 +275,7 @@ Pertanto la serie converge assolutamente per qualsiasi matrice quadrata $A \in \
 > $$
 > Poiché $D$ è diagonale, le sue potenze sono le potenze dei singoli elementi diagonali:
 > $$
-> D^k = \operatorname{diag}(\lambda_1^k, \lambda_2^k, \dots, \lambda_n^k) \implies \sum_{k=0}^{+\infty} \frac{D^k}{k!} = \operatorname{diag}\left( \sum_{k=0}^{+\infty} \frac{\lambda_1^k}{k!}, \dots, \sum_{k=0}^{+\infty} \frac{\lambda_n^k}{k!} \right) = \operatorname{diag}(e^{\lambda_1}, \dots, e^{\lambda_n})
+> D^k = \mathrm{diag}(\lambda_1^k, \lambda_2^k, \dots, \lambda_n^k) \implies \sum_{k=0}^{+\infty} \frac{D^k}{k!} = \mathrm{diag}\left( \sum_{k=0}^{+\infty} \frac{\lambda_1^k}{k!}, \dots, \sum_{k=0}^{+\infty} \frac{\lambda_n^k}{k!} \right) = \mathrm{diag}(e^{\lambda_1}, \dots, e^{\lambda_n})
 > $$
 > Ne segue immediatamente la formula enunciata. $\blacksquare$
 >
@@ -292,7 +292,7 @@ $$
 $$
 Poiché lo spazio delle soluzioni dell'equazione omogenea, denotato con $\mathcal{Z}$, è uno spazio vettoriale di dimensione $n$, se le soluzioni appartenenti a $\mathcal{B}$ sono linearmente indipendenti, allora $\mathcal{B}$ costituisce una base di $\mathcal{Z}$ (detta **sistema fondamentale di soluzioni**), e si ha:
 $$
-\mathcal{Z} = \operatorname{Span}\mathcal{B}
+\mathcal{Z} = \mathrm{Span}\mathcal{B}
 $$
 
 > [!definition] Matrice Wronskiana e Wronskiano
@@ -386,7 +386,7 @@ L'insieme $\{\mathbf{z}_i(t)\}_{i=1,\dots,n}$ costituisce un sistema fondamental
 $$
 |W(t)| = \det\big( S e^{t\widetilde{A}} \big) = \det(S) \cdot \det\big( e^{t\widetilde{A}} \big) = \det(S) e^{t \sum_{i=1}^n \lambda_i} \ne 0
 $$
-poiché $\operatorname{rk}(S) = n \implies \det(S) \ne 0$.
+poiché $\mathrm{rk}(S) = n \implies \det(S) \ne 0$.
 
 L'**integrale generale** è dato da tutte le combinazioni lineari:
 $$
@@ -444,7 +444,7 @@ $$
 > $$
 > Le prime due righe sono linearmente indipendenti e la terza è la somma delle prime due:
 > $$
-> \operatorname{rk}(A - 2I) = 2 \implies \dim\ker(A - 2I) = 3 - 2 = 1 \implies m_g(2) = 1 < m_a(2) = 2
+> \mathrm{rk}(A - 2I) = 2 \implies \dim\ker(A - 2I) = 3 - 2 = 1 \implies m_g(2) = 1 < m_a(2) = 2
 > $$
 > La matrice non è diagonalizzabile. L'integrale generale ha dunque la forma:
 > $$
@@ -477,7 +477,7 @@ in cui il campo vettoriale $\mathbf{f}: D \subseteq \mathbb{R}^n \to \mathbb{R}^
 > [!definition] Orbita (traiettoria di fase)
 > Si definisce **orbita** (o traiettoria nello spazio delle fasi) associata a una soluzione $\mathbf{y}(t)$ del sistema l'insieme immagine:
 > $$
-> \operatorname{Im}\mathbf{y} = \big\{ \mathbf{y}(t) \in \mathbb{R}^n : t \in I \big\} \subset D
+> \mathrm{Im}\mathbf{y} = \big\{ \mathbf{y}(t) \in \mathbb{R}^n : t \in I \big\} \subset D
 > $$
 
 > [!note] Invarianza temporale e principio di non intersezione
@@ -528,7 +528,7 @@ Un concetto cardine nello studio geometrico e qualitativo dei sistemi dinamici �
 > $$
 > Geometricamente, le orbite del sistema sono interamente vincolate a giacere sulle superfici di livello dell'integrale primo:
 > $$
-> \operatorname{Im}\mathbf{y} \subseteq \big\{ \mathbf{x} \in D : E(\mathbf{x}) = c \big\}
+> \mathrm{Im}\mathbf{y} \subseteq \big\{ \mathbf{x} \in D : E(\mathbf{x}) = c \big\}
 > $$
 
 > [!example] Esempio (Equazioni canoniche di Hamilton e conservazione dell'Hamiltoniana)
@@ -602,15 +602,15 @@ Lo studio della stabilità dell'equilibrio $\mathbf{0}$ è completamente risolto
 > Siano $\lambda_1, \dots, \lambda_k$ gli autovalori distinti della matrice $A$. L'origine $\mathbf{0}$ è un punto di equilibrio:
 > - **Asintoticamente stabile** se e solo se tutti gli autovalori hanno parte reale strettamente negativa:
 >   $$
->   \operatorname{Re}(\lambda_i) < 0, \quad \forall i = 1, \dots, k
+>   \mathrm{Re}(\lambda_i) < 0, \quad \forall i = 1, \dots, k
 >   $$
 > - **Stabile (semplicemente stabile secondo Lyapunov)** se e solo se tutti gli autovalori hanno parte reale minore o uguale a zero, e per ciascun autovalore a parte reale nulla la molteplicità algebrica coincide con la molteplicità geometrica:
 >   $$
->   \operatorname{Re}(\lambda_i) \le 0, \quad \forall i = 1, \dots, k \quad \land \quad \Big( \operatorname{Re}(\lambda_i) = 0 \implies m_a(\lambda_i) = m_g(\lambda_i) \Big)
+>   \mathrm{Re}(\lambda_i) \le 0, \quad \forall i = 1, \dots, k \quad \land \quad \Big( \mathrm{Re}(\lambda_i) = 0 \implies m_a(\lambda_i) = m_g(\lambda_i) \Big)
 >   $$
 > - **Instabile** in tutti gli altri casi, ovvero se:
->   - esiste almeno un autovalore con $\operatorname{Re}(\lambda_i) > 0$;
->   - oppure esiste un autovalore con $\operatorname{Re}(\lambda_i) = 0$ avente molteplicità algebrica strettamente maggiore della molteplicità geometrica ($m_a(\lambda_i) > m_g(\lambda_i)$), che genera termini secolari polinomiali divergenti del tipo $t^m$.
+>   - esiste almeno un autovalore con $\mathrm{Re}(\lambda_i) > 0$;
+>   - oppure esiste un autovalore con $\mathrm{Re}(\lambda_i) = 0$ avente molteplicità algebrica strettamente maggiore della molteplicità geometrica ($m_a(\lambda_i) > m_g(\lambda_i)$), che genera termini secolari polinomiali divergenti del tipo $t^m$.
 >
 ### Classificazione topologica delle orbite nel piano ($n = 2$)
 

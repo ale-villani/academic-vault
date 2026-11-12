@@ -2348,9 +2348,9 @@ La convessità di una funzione reale a variabile reale viene formalizzata traduc
 
 > [!definition] Epigrafico di una funzione
 > Sia $I \subseteq \mathbb{R}$ un intervallo e sia $f: I \to \mathbb{R}$ una funzione reale.
-> Si definisce **epigrafico** di $f$, denotato con $\operatorname{epi}(f)$, il sottoinsieme del piano $\mathbb{R}^2$ costituito da tutti i punti che si trovano al di sopra o sul grafico di $f$:
+> Si definisce **epigrafico** di $f$, denotato con $\mathrm{epi}(f)$, il sottoinsieme del piano $\mathbb{R}^2$ costituito da tutti i punti che si trovano al di sopra o sul grafico di $f$:
 > $$
-> \operatorname{epi}(f) := \big\{ (x, y) \in \mathbb{R}^2 : x \in I, \; y \ge f(x) \big\}
+> \mathrm{epi}(f) := \big\{ (x, y) \in \mathbb{R}^2 : x \in I, \; y \ge f(x) \big\}
 > $$
 >
 ```
@@ -2368,30 +2368,30 @@ La convessità di una funzione reale a variabile reale viene formalizzata traduc
           0     x     x           x
 ```
 
-La definizione analitica e geometrica di **funzione convessa** discende direttamente da questa costruzione: una funzione $f$ si dirà convessa su un intervallo $I$ se e solo se il suo epigrafico $\operatorname{epi}(f)$ è un **insieme convesso** in $\mathbb{R}^2$.
+La definizione analitica e geometrica di **funzione convessa** discende direttamente da questa costruzione: una funzione $f$ si dirà convessa su un intervallo $I$ se e solo se il suo epigrafico $\mathrm{epi}(f)$ è un **insieme convesso** in $\mathbb{R}^2$.
 
 ### Definizione di Funzione Convessa e Concava tramite Epigrafico
 
 Richiamata la nozione di insieme convesso in $\mathbb{R}^n$ e la definizione di epigrafico di una funzione $f: I \subseteq \mathbb{R} \to \mathbb{R}$:
 $$
-\operatorname{epi}(f) := \left\{ (x, y) \in \mathbb{R}^2 : x \in I, \; y \ge f(x) \right\}
+\mathrm{epi}(f) := \left\{ (x, y) \in \mathbb{R}^2 : x \in I, \; y \ge f(x) \right\}
 $$
 si introduce la definizione formale di convessità e concavità per una funzione reale di variabile reale.
 
 > [!definition] Definizione: Funzione Convessa e Concava
 > Sia $I \subseteq \mathbb{R}$ un intervallo e sia $f: I \to \mathbb{R}$.
-> 1. La funzione $f$ si dice **convessa** su $I$ se il suo epigrafico $\operatorname{epi}(f)$ è un insieme convesso in $\mathbb{R}^2$:
+> 1. La funzione $f$ si dice **convessa** su $I$ se il suo epigrafico $\mathrm{epi}(f)$ è un insieme convesso in $\mathbb{R}^2$:
 >    $$
->    \forall P_1, P_2 \in \operatorname{epi}(f), \quad (1-t)P_1 + t P_2 \in \operatorname{epi}(f) \quad \forall t \in [0, 1]
+>    \forall P_1, P_2 \in \mathrm{epi}(f), \quad (1-t)P_1 + t P_2 \in \mathrm{epi}(f) \quad \forall t \in [0, 1]
 >    $$
-> 2. La funzione $f$ si dice **concava** su $I$ se l'epigrafico della funzione opposta, $\operatorname{epi}(-f)$, è un insieme convesso in $\mathbb{R}^2$, ovvero se l'insieme dei punti che giacciono al di sotto del grafico (talvolta detto *ipografico*):
+> 2. La funzione $f$ si dice **concava** su $I$ se l'epigrafico della funzione opposta, $\mathrm{epi}(-f)$, è un insieme convesso in $\mathbb{R}^2$, ovvero se l'insieme dei punti che giacciono al di sotto del grafico (talvolta detto *ipografico*):
 >    $$
->    \operatorname{hypo}(f) := \left\{ (x, y) \in \mathbb{R}^2 : x \in I, \; y \le f(x) \right\}
+>    \mathrm{hypo}(f) := \left\{ (x, y) \in \mathbb{R}^2 : x \in I, \; y \le f(x) \right\}
 >    $$
 >    è un insieme convesso. Equivalentemente, $f$ è concava su $I$ se e solo se $-f$ è convessa su $I$.
 
 > [!note] Osservazione: Funzioni né convesse né concave
-> Una generica funzione $f: I \to \mathbb{R}$ può non essere né convessa né concava sull'intero intervallo $I$. In tal caso l'epigrafico $\operatorname{epi}(f)$ non è convesso e neppure $\operatorname{epi}(-f)$ lo è (esistono segmenti congiungenti punti dell'epigrafico che fuoriescono da esso).
+> Una generica funzione $f: I \to \mathbb{R}$ può non essere né convessa né concava sull'intero intervallo $I$. In tal caso l'epigrafico $\mathrm{epi}(f)$ non è convesso e neppure $\mathrm{epi}(-f)$ lo è (esistono segmenti congiungenti punti dell'epigrafico che fuoriescono da esso).
 
 > [!note] Osservazione: Convessità e Derivabilità
 > La convessità di una funzione è una proprietà globale di tipo geometrico/insiemistico e **non implica affatto la derivabilità** della funzione.
