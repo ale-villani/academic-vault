@@ -24,7 +24,7 @@ $$f: \mathbb{C} \longrightarrow \mathbb{C}$$
 > [!note] Forme di rappresentazione di un numero complesso
 > Un generico punto $z \in \mathbb{C}$ può essere espresso in tre forme equivalenti:
 > 1. **Forma algebrica:**
->    $$z = x + iy, \quad x = \operatorname{Re}(z) \in \mathbb{R}, \quad y = \operatorname{Im}(z) \in \mathbb{R}$$
+>    $$z = x + iy, \quad x = \mathrm{Re}(z) \in \mathbb{R}, \quad y = \mathrm{Im}(z) \in \mathbb{R}$$
 > 2. **Forma trigonometrica:**
 >    $$z = \rho (\cos\theta + i\sin\theta), \quad \rho = |z| > 0, \quad \theta \in \mathbb{R}$$
 > 3. **Forma esponenziale:**
@@ -41,10 +41,10 @@ $$f: \mathbb{C} \longrightarrow \mathbb{C}$$
 
 > [!note] Rappresentazione grafica del dominio e delle componenti
 > Il grafico di una funzione complessa $f$ è un sottoinsieme dello spazio a 4 dimensioni reali:
-> $$\operatorname{graf}(f) = \{(z, f(z)) \in \mathbb{C} \times \mathbb{C}\} \cong \mathbb{R}^4$$
-> Pertanto $\operatorname{graf}(f)$ non può essere visualizzato direttamente nel nostro spazio tridimensionale.
+> $$\mathrm{graf}(f) = \{(z, f(z)) \in \mathbb{C} \times \mathbb{C}\} \cong \mathbb{R}^4$$
+> Pertanto $\mathrm{graf}(f)$ non può essere visualizzato direttamente nel nostro spazio tridimensionale.
 > Al contrario, le due funzioni scalari componenti possiedono grafici in $\mathbb{R}^3$:
-> $$\operatorname{graf}(u) \subseteq \mathbb{R}^3, \qquad \operatorname{graf}(v) \subseteq \mathbb{R}^3$$
+> $$\mathrm{graf}(u) \subseteq \mathbb{R}^3, \qquad \mathrm{graf}(v) \subseteq \mathbb{R}^3$$
 > e possono quindi essere rappresentate singolarmente come superfici cartesiane sopra il dominio $\Omega \subseteq \mathbb{R}^2$.
 >
 ## 1.2. Rassegna delle funzioni elementari nel campo complesso
@@ -55,17 +55,17 @@ $$f: \mathbb{C} \longrightarrow \mathbb{C}$$
 Sia $z_0 \in \mathbb{C}$ fissato.
 $$f(z) = z_0, \quad \forall z \in \Omega \subseteq \mathbb{C}$$
 Le relative componenti reali sono costanti:
-$$u(z) = \operatorname{Re}(z_0), \qquad v(z) = \operatorname{Im}(z_0)$$
+$$u(z) = \mathrm{Re}(z_0), \qquad v(z) = \mathrm{Im}(z_0)$$
 
 **2. Funzione identità:**
 $$f(z) = z, \quad \forall z \in \Omega \subseteq \mathbb{C}$$
-$$z = x + iy \implies u(z) = \operatorname{Re}(z) = x, \qquad v(z) = \operatorname{Im}(z) = y$$
+$$z = x + iy \implies u(z) = \mathrm{Re}(z) = x, \qquad v(z) = \mathrm{Im}(z) = y$$
 
 **3. Funzione parte reale:**
-$$f(z) = \operatorname{Re}(z) = x \implies u(z) = \operatorname{Re}(z) = x, \qquad v(z) = 0$$
+$$f(z) = \mathrm{Re}(z) = x \implies u(z) = \mathrm{Re}(z) = x, \qquad v(z) = 0$$
 
 **4. Funzione parte immaginaria:**
-$$f(z) = \operatorname{Im}(z) = y \implies u(z) = \operatorname{Im}(z) = y, \qquad v(z) = 0$$
+$$f(z) = \mathrm{Im}(z) = y \implies u(z) = \mathrm{Im}(z) = y, \qquad v(z) = 0$$
 
 **5. Funzione modulo:**
 $$f(z) = |z| = \sqrt{x^2 + y^2} \implies u(z) = \sqrt{x^2 + y^2}, \qquad v(z) = 0$$
@@ -431,22 +431,22 @@ Nel campo complesso, invece, la richiesta che il rapporto incrementale ammetta l
 
 > [!warning] La non-derivabilità complessa di parte immaginaria, reale e coniugato
 > Consideriamo la funzione:
-> $$f(z) = \operatorname{Im}(z)$$
+> $$f(z) = \mathrm{Im}(z)$$
 > Le sue componenti reali sono $u(x,y) = y$ e $v(x,y) = 0$, le quali appartengono a $C^\infty(\mathbb{R}^2)$.
 > Ciononostante, $f(z)$ **NON è derivabile in senso complesso in alcun punto**, ad esempio in $z_0 = 0$.
 > 
 > Verifichiamo direttamente il limite del rapporto incrementale per $z \to 0$:
-> $$\lim_{z \to 0} \frac{f(z) - f(0)}{z - 0} = \lim_{z \to 0} \frac{\operatorname{Im}(z)}{z}$$
+> $$\lim_{z \to 0} \frac{f(z) - f(0)}{z - 0} = \lim_{z \to 0} \frac{\mathrm{Im}(z)}{z}$$
 > - **Restrizione lungo l'asse reale ($z = x + 0i \in \mathbb{R}$ con $x \to 0$):**
->   $$\lim_{x \to 0} \frac{\operatorname{Im}(x + 0i)}{x} = \lim_{x \to 0} \frac{0}{x} = 0$$
+>   $$\lim_{x \to 0} \frac{\mathrm{Im}(x + 0i)}{x} = \lim_{x \to 0} \frac{0}{x} = 0$$
 > - **Restrizione lungo l'asse immaginario puro ($z = 0 + iy \in i\mathbb{R}$ con $y \to 0$):**
->   $$\lim_{y \to 0} \frac{\operatorname{Im}(0 + iy)}{iy} = \lim_{y \to 0} \frac{y}{iy} = \frac{1}{i} = -i$$
+>   $$\lim_{y \to 0} \frac{\mathrm{Im}(0 + iy)}{iy} = \lim_{y \to 0} \frac{y}{iy} = \frac{1}{i} = -i$$
 > 
 > Poiché i due limiti direzionali sono distinti:
-> $$0 \neq -i \implies \nexists \lim_{z \to 0} \frac{\operatorname{Im}(z)}{z}$$
-> Dunque $f(z) = \operatorname{Im}(z)$ non ammette derivata complessa.
+> $$0 \neq -i \implies \nexists \lim_{z \to 0} \frac{\mathrm{Im}(z)}{z}$$
+> Dunque $f(z) = \mathrm{Im}(z)$ non ammette derivata complessa.
 > Il medesimo identico risultato di non-derivabilità si ottiene per:
-> $$f(z) = \operatorname{Re}(z) \qquad \text{e} \qquad f(z) = \bar{z} = x - iy$$
+> $$f(z) = \mathrm{Re}(z) \qquad \text{e} \qquad f(z) = \bar{z} = x - iy$$
 
 > [!note] Problema centrale
 > È falso che se $f(z) = u(x,y) + iv(x,y)$ con $u, v$ differenziabili in senso reale in $(x_0, y_0)$, allora $f$ è derivabile in senso complesso.
@@ -474,11 +474,11 @@ Nel campo complesso, invece, la richiesta che il rapporto incrementale ammetta l
 > [!note] Forma matriciale conforme dello Jacobiano
 > Riscrivendo le condizioni di Cauchy-Riemann in termini della matrice Jacobiana del campo vettoriale associato $\boldsymbol{\Phi}(x,y) = \begin{pmatrix} u(x,y) \\ v(x,y) \end{pmatrix}$:
 > $$J_{\boldsymbol{\Phi}}(x_0, y_0) = \begin{pmatrix} \dfrac{\partial u}{\partial x} & \dfrac{\partial u}{\partial y} \\[1.5ex] \dfrac{\partial v}{\partial x} & \dfrac{\partial v}{\partial y} \end{pmatrix} = \begin{pmatrix} \alpha & -\beta \\ \beta & \alpha \end{pmatrix}$$
-> dove $\alpha = \operatorname{Re}(f'(z_0))$ e $\beta = \operatorname{Im}(f'(z_0))$.
+> dove $\alpha = \mathrm{Re}(f'(z_0))$ e $\beta = \mathrm{Im}(f'(z_0))$.
 > Una matrice con questa specifica simmetria rappresenta una **roto-dilatazione** (matrice conforme): conserva gli angoli e preserva l'orientazione.
 
 > [!example] Esempio di verifica negativa
-> Per $f(z) = \operatorname{Im}(z)$, si ha $u(x,y) = y$ e $v(x,y) = 0$.
+> Per $f(z) = \mathrm{Im}(z)$, si ha $u(x,y) = y$ e $v(x,y) = 0$.
 > Calcolando le derivate parziali nell'origine $(0,0)$:
 > $$\frac{\partial u}{\partial x}(0,0) = 0, \quad \frac{\partial u}{\partial y}(0,0) = 1, \quad \frac{\partial v}{\partial x}(0,0) = 0, \quad \frac{\partial v}{\partial y}(0,0) = 0$$
 > Verificando Cauchy-Riemann:
@@ -762,7 +762,7 @@ $$
 > Si consideri $f(z) = \frac{1}{z}$. Si verifica che $\frac{1}{z}$ è olomorfa in $\mathbb{C} \setminus \{0\}$.
 > Siano:
 > $$
-> \Omega_1 = \{z \in \mathbb{C} : \operatorname{Re} z > 0\}, \quad \Omega_2 = \{z \in \mathbb{C} : \operatorname{Re} z < 0\}
+> \Omega_1 = \{z \in \mathbb{C} : \mathrm{Re} z > 0\}, \quad \Omega_2 = \{z \in \mathbb{C} : \mathrm{Re} z < 0\}
 > $$
 > (entrambi domini semplicemente connessi).
 > Essendo $f$ olomorfa e $\Omega_1, \Omega_2$ semplicemente connessi, $f$ ammette primitive in $\Omega_1$ e $\Omega_2$ separatamente.
@@ -1307,7 +1307,7 @@ Partendo dalla formula di Cauchy si dimostra il seguente teorema cardine dell'an
 > $$
 > è detto **residuo** di $f$ nel punto singolare isolato $z_0$, e si denota con:
 > $$
-> \operatorname{Res}(f, z_0) := c_{-1}
+> \mathrm{Res}(f, z_0) := c_{-1}
 > $$
 
 > [!example] Residuo dei monomi fratti
@@ -1318,7 +1318,7 @@ Partendo dalla formula di Cauchy si dimostra il seguente teorema cardine dell'an
 > $$
 > Di conseguenza, il residuo vale:
 > $$
-> \operatorname{Res}(f, 0) = c_{-1} = \begin{cases} 1 & \text{se } r = 1 \\ 0 & \text{se } r \ge 2 \end{cases}
+> \mathrm{Res}(f, 0) = c_{-1} = \begin{cases} 1 & \text{se } r = 1 \\ 0 & \text{se } r \ge 2 \end{cases}
 > $$
 >
 ### Diagnosi delle singolarità isolate tramite la serie di Laurent
@@ -1577,7 +1577,7 @@ Come riconoscere la natura delle singolarità isolate analizzando la serie di La
 > - **Polo di ordine $r$:**
 >   Per $f(z) = \dfrac{1}{z^r}$, si ha un polo di ordine $r$, e:
 >   $$
->   \operatorname{Res}(f, 0) = \begin{cases} 1 & \text{se } r = 1 \\ 0 & \text{se } r \ge 2 \end{cases}
+>   \mathrm{Res}(f, 0) = \begin{cases} 1 & \text{se } r = 1 \\ 0 & \text{se } r \ge 2 \end{cases}
 >   $$
 > 
 > - **Singolarità essenziale:**
@@ -1585,7 +1585,7 @@ Come riconoscere la natura delle singolarità isolate analizzando la serie di La
 >   $$
 >   f(z) = \sum_{n=0}^{+\infty} \frac{1}{z^n n!} = 1 + \overbrace{\sum_{n=1}^{+\infty} \frac{z^{-n}}{n!}}^{\text{parte singolare infinita}} = 1 + \frac{1}{z} + \frac{1}{2 z^2} + \frac{1}{6 z^3} + \dots
 >   $$
->   Il residuo è il coefficiente di $z^{-1}$, ossia $\operatorname{Res}(e^{1/z}, 0) = c_{-1} = 1$.
+>   Il residuo è il coefficiente di $z^{-1}$, ossia $\mathrm{Res}(e^{1/z}, 0) = c_{-1} = 1$.
 >
 ### Comportamento degli ordini sotto derivazione
 
@@ -1726,7 +1726,7 @@ Come riconoscere la natura delle singolarità isolate analizzando la serie di La
 >
 Si ricorda che se $f$ ammette una singolarità isolata in $z_0 \in \Omega$, integrando lungo una circonferenza $C_r(z_0)$ di raggio sufficientemente piccolo percorsa in senso antiorario:
 $$
-\oint_{C_r(z_0)} f(z)\,dz = 2\pi i \operatorname{Res}(f, z_0)
+\oint_{C_r(z_0)} f(z)\,dz = 2\pi i \mathrm{Res}(f, z_0)
 $$
 Per il teorema di Cauchy, il valore dell'integrale non muta per qualunque circuito $\gamma$ omotopo a $C_r(z_0)$ in $\Omega \setminus \{z_0\}$. Ci si domanda ora: più in generale, come si opera in presenza di più singolarità isolate all'interno del dominio?
 
@@ -1739,14 +1739,14 @@ Come si calcolano agevolmente i residui di una funzione olomorfa in una singolar
 > 
 > 1. **Singolarità eliminabile:** Tutti i coefficienti della parte principale dello sviluppo di Laurent si annullano ($c_{-n} = 0 \quad \forall n \in \mathbb{N}$). Di conseguenza:
 >    $$
->    \operatorname{Res}(f, z_0) = c_{-1} = 0
+>    \mathrm{Res}(f, z_0) = c_{-1} = 0
 >    $$
 > 
 > 2. **Singolarità essenziale:** La parte principale contiene infiniti termini non nulli. Non esistono formule sintetiche chiuse: è necessario calcolare direttamente lo sviluppo in serie di Laurent centrato in $z_0$ per estrarne il coefficiente $c_{-1}$.
 > 
 > 3. **Polo di ordine $r \in \mathbb{N}$:** La funzione ammette un polo di ordine $r$ se e solo se la serie di Laurent presenta potenze negative fino all'ordine $-r$. In tal caso vale la formula:
 >    $$
->    \operatorname{Res}(f, z_0) = \lim_{z \to z_0} \frac{1}{(r-1)!} \frac{d^{r-1}}{dz^{r-1}} \left[ (z-z_0)^r f(z) \right]
+>    \mathrm{Res}(f, z_0) = \lim_{z \to z_0} \frac{1}{(r-1)!} \frac{d^{r-1}}{dz^{r-1}} \left[ (z-z_0)^r f(z) \right]
 >    $$
 
 > [!quote]- Dimostrazione della formula per poli di ordine $r$
@@ -1770,9 +1770,9 @@ Come si calcolano agevolmente i residui di una funzione olomorfa in una singolar
 > $$
 > \lim_{z \to z_0} \frac{d^{r-1}}{dz^{r-1}} \left[ (z-z_0)^r f(z) \right] = c_{-1} (r-1)!
 > $$
-> Isolando il coefficiente $c_{-1}$, che coincide per definizione con il residuo $\operatorname{Res}(f, z_0)$:
+> Isolando il coefficiente $c_{-1}$, che coincide per definizione con il residuo $\mathrm{Res}(f, z_0)$:
 > $$
-> c_{-1} = \frac{1}{(r-1)!} \lim_{z \to z_0} \frac{d^{r-1}}{dz^{r-1}} \left[ (z-z_0)^r f(z) \right] = \operatorname{Res}(f, z_0) \quad \blacksquare
+> c_{-1} = \frac{1}{(r-1)!} \lim_{z \to z_0} \frac{d^{r-1}}{dz^{r-1}} \left[ (z-z_0)^r f(z) \right] = \mathrm{Res}(f, z_0) \quad \blacksquare
 > $$
 
 > [!example] Esempi notevoli di calcolo dei residui
@@ -1784,7 +1784,7 @@ Come si calcolano agevolmente i residui di una funzione olomorfa in una singolar
 > $$
 > il limite esiste finito e $z_0 = 0$ è una singolarità eliminabile. Pertanto:
 > $$
-> \operatorname{Res}(f, 0) = 0
+> \mathrm{Res}(f, 0) = 0
 > $$
 > 
 > **Esempio 2 (Singolarità essenziale):**
@@ -1795,7 +1795,7 @@ Come si calcolano agevolmente i residui di una funzione olomorfa in una singolar
 > $$
 > La singolarità è essenziale poiché compaiono infiniti termini con potenze negative. Il residuo è il coefficiente di $z^{-1}$ ($n = 1$):
 > $$
-> \operatorname{Res}(f, 0) = \frac{1}{1!} = 1
+> \mathrm{Res}(f, 0) = \frac{1}{1!} = 1
 > $$
 > 
 > **Esempio 3 (Singolarità essenziale con sole potenze pari):**
@@ -1806,7 +1806,7 @@ Come si calcolano agevolmente i residui di una funzione olomorfa in una singolar
 > $$
 > Poiché compaiono esclusivamente potenze pari di $z$, il coefficiente del termine dispari $z^{-1}$ è nullo:
 > $$
-> c_{-1} = 0 \implies \operatorname{Res}(f, 0) = 0
+> c_{-1} = 0 \implies \mathrm{Res}(f, 0) = 0
 > $$
 > 
 > **Esempio 4 (Polo di ordine 2):**
@@ -1819,7 +1819,7 @@ Come si calcolano agevolmente i residui di una funzione olomorfa in una singolar
 > 
 > $$
 > \begin{align}
-> \operatorname{Res}(f, 0) &= \lim_{z \to 0} \frac{1}{(2-1)!} \frac{d}{dz} \left[ z^2 f(z) \right] \\
+> \mathrm{Res}(f, 0) &= \lim_{z \to 0} \frac{1}{(2-1)!} \frac{d}{dz} \left[ z^2 f(z) \right] \\
 > &= \lim_{z \to 0} \frac{d}{dz} \left[ \frac{\sin z}{z} \right] \\
 > &= \lim_{z \to 0} \left[ \frac{z \cos z - \sin z}{z^2} \right]
 > \end{align}
@@ -1831,7 +1831,7 @@ Come si calcolano agevolmente i residui di una funzione olomorfa in una singolar
 > $$
 > Dunque:
 > $$
-> \operatorname{Res}(f, 0) = 0
+> \mathrm{Res}(f, 0) = 0
 > $$
 > 
 > **Esempio 5 (Funzione cotangente modulata):**
@@ -1846,7 +1846,7 @@ Come si calcolano agevolmente i residui di una funzione olomorfa in una singolar
 >   $$
 >   Dunque $z_0 = 0$ è una singolarità eliminabile, da cui:
 >   $$
->   \operatorname{Res}(f, 0) = 0
+>   \mathrm{Res}(f, 0) = 0
 >   $$
 > - Per $k \neq 0$ ($z_k = k\pi$):
 >   Poiché $z \cos z \to k\pi (-1)^k \neq 0$ e $\sin z \to 0$, $f(z) \to \infty$: $z_k$ è un polo di ordine $r = 1$. Verifichiamolo calcolando:
@@ -1864,7 +1864,7 @@ Come si calcolano agevolmente i residui di una funzione olomorfa in una singolar
 >   $$
 >   Essendo un polo semplice ($r = 1$):
 >   $$
->   \operatorname{Res}(f, k\pi) = \lim_{z \to k\pi} (z - k\pi) f(z) = k\pi \quad \forall k \in \mathbb{Z} \setminus \{0\}
+>   \mathrm{Res}(f, k\pi) = \lim_{z \to k\pi} (z - k\pi) f(z) = k\pi \quad \forall k \in \mathbb{Z} \setminus \{0\}
 >   $$
 
 > [!lemma] Calcolo rapido del residuo per poli semplici di funzioni quoziente
@@ -1874,7 +1874,7 @@ Come si calcolano agevolmente i residui di una funzione olomorfa in una singolar
 > $$
 > Se $h$ possiede uno zero di ordine $1$ in $z_0$ (ossia $h(z_0) = 0$ e $h'(z_0) \neq 0$), allora:
 > $$
-> \operatorname{Res}(f, z_0) = \frac{g(z_0)}{h'(z_0)}
+> \mathrm{Res}(f, z_0) = \frac{g(z_0)}{h'(z_0)}
 > $$
 
 > [!quote]- Dimostrazione
@@ -1894,7 +1894,7 @@ Come si calcolano agevolmente i residui di una funzione olomorfa in una singolar
 > $$
 > Poiché $g(z_0) \neq 0$ e $h'(z_0) \neq 0$, il limite è un numero complesso non nullo, provando che $z_0$ è un polo di ordine $r = 1$. Inoltre, tale limite coincide con il residuo:
 > $$
-> \operatorname{Res}(f, z_0) = \frac{g(z_0)}{h'(z_0)}
+> \mathrm{Res}(f, z_0) = \frac{g(z_0)}{h'(z_0)}
 > $$
 > 
 > **Caso 2: $g(z_0) = 0$.**
@@ -1904,9 +1904,9 @@ Come si calcolano agevolmente i residui di una funzione olomorfa in una singolar
 > $$
 > Il limite di $f(z)$ per $z \to z_0$ esiste finito, quindi $z_0$ è una singolarità eliminabile per $f$. Il residuo è nullo:
 > $$
-> \operatorname{Res}(f, z_0) = 0 = \frac{g(z_0)}{h'(z_0)} \quad (\text{essendo } g(z_0) = 0)
+> \mathrm{Res}(f, z_0) = 0 = \frac{g(z_0)}{h'(z_0)} \quad (\text{essendo } g(z_0) = 0)
 > $$
-> In entrambi i casi la formula $\operatorname{Res}(f, z_0) = \frac{g(z_0)}{h'(z_0)}$ è pienamente dimostrata. $\blacksquare$
+> In entrambi i casi la formula $\mathrm{Res}(f, z_0) = \frac{g(z_0)}{h'(z_0)}$ è pienamente dimostrata. $\blacksquare$
 
 > [!example] Applicazione del lemma al caso $f(z) = z \frac{\cos z}{\sin z}$
 > Si consideri nuovamente $f(z) = z \frac{\cos z}{\sin z}$ nei punti singolari $z_k = k\pi$ ($k \in \mathbb{Z}$).
@@ -1920,7 +1920,7 @@ Come si calcolano agevolmente i residui di una funzione olomorfa in una singolar
 > $$
 > $h$ ha zeri semplici in ogni $z_k$. Applicando direttamente il lemma:
 > $$
-> \operatorname{Res}(f, z_k) = \frac{g(k\pi)}{h'(k\pi)} = \frac{(-1)^k k\pi}{(-1)^k} = k\pi
+> \mathrm{Res}(f, z_k) = \frac{g(k\pi)}{h'(k\pi)} = \frac{(-1)^k k\pi}{(-1)^k} = k\pi
 > $$
 > Si ritrova istantaneamente il risultato senza dover espandere il limite goniometrico.
 >
@@ -1940,7 +1940,7 @@ Per calcolare integrali di linea di funzioni olomorfe lungo curve chiuse generic
 > $$
 > Si definisce **indice di avvolgimento** (o *winding number*) di $\gamma$ rispetto a $z_0$:
 > $$
-> \operatorname{Ind}(\gamma, z_0) := \frac{\theta(b) - \theta(a)}{2\pi} \in \mathbb{Z}
+> \mathrm{Ind}(\gamma, z_0) := \frac{\theta(b) - \theta(a)}{2\pi} \in \mathbb{Z}
 > $$
 
 > [!note] Significato geometrico e proprietà fondamentali
@@ -1957,7 +1957,7 @@ Per calcolare integrali di linea di funzioni olomorfe lungo curve chiuse generic
 >   $$
 >   Ne consegue rigorosamente che:
 >   $$
->   \operatorname{Ind}(\gamma, z_0) = \frac{2k\pi}{2\pi} = k \in \mathbb{Z}
+>   \mathrm{Ind}(\gamma, z_0) = \frac{2k\pi}{2\pi} = k \in \mathbb{Z}
 >   $$
 > - **Invarianza:** Parametrizzazioni equivalenti di $\gamma$ che preservano l'orientazione forniscono il medesimo indice di avvolgimento.
 > - **Curve con auto-intersezioni:** La curva non deve essere necessariamente semplice: può intrecciarsi o percorrere cappi multipli.
@@ -1966,23 +1966,23 @@ Per calcolare integrali di linea di funzioni olomorfe lungo curve chiuse generic
 > Si consideri la circonferenza centrata nell'origine di raggio $r > 0$:
 > 
 > 1. **Orientazione antioraria:** $\gamma = C_r(0)$ con parametrizzazione $r(t) = r e^{it}$ per $t \in [0, 2\pi]$:
->    - Per ogni punto interno $z_1 \in \mathbb{C}$ con $|z_1| < r$: $\operatorname{Ind}(\gamma, z_1) = 1$;
->    - Per ogni punto esterno $z_2 \in \mathbb{C}$ con $|z_2| > r$: $\operatorname{Ind}(\gamma, z_2) = 0$.
+>    - Per ogni punto interno $z_1 \in \mathbb{C}$ con $|z_1| < r$: $\mathrm{Ind}(\gamma, z_1) = 1$;
+>    - Per ogni punto esterno $z_2 \in \mathbb{C}$ con $|z_2| > r$: $\mathrm{Ind}(\gamma, z_2) = 0$.
 > 
 > 2. **Orientazione oraria:** $\gamma = -C_r(0)$ con parametrizzazione $r(t) = r e^{-it}$ per $t \in [0, 2\pi]$:
->    - Per ogni punto interno $|z_1| < r$: $\operatorname{Ind}(\gamma, z_1) = -1$;
->    - Per ogni punto esterno $|z_2| > r$: $\operatorname{Ind}(\gamma, z_2) = 0$.
+>    - Per ogni punto interno $|z_1| < r$: $\mathrm{Ind}(\gamma, z_1) = -1$;
+>    - Per ogni punto esterno $|z_2| > r$: $\mathrm{Ind}(\gamma, z_2) = 0$.
 > 
 > 3. **Avvolgimenti multipli:** Se la stessa traiettoria oraria viene percorsa per $t \in [0, 14\pi]$, essa compie $7$ rivoluzioni complete in senso orario:
 >    $$
->    \operatorname{Ind}(\gamma, z_1) = -7, \quad \operatorname{Ind}(\gamma, z_2) = 0
+>    \mathrm{Ind}(\gamma, z_1) = -7, \quad \mathrm{Ind}(\gamma, z_2) = 0
 >    $$
 >    Pertanto, a parità di sostegno geometrico $\gamma$, la specifica parametrizzazione e la molteplicità di percorrenza determinano il valore dell'indice.
 
 > [!theorem] Formula analitica per il calcolo dell'indice di avvolgimento
 > Sia $\gamma = r([a, b])$ una curva chiusa di classe $C^1$ a tratti, e sia $z_0 \in \mathbb{C} \setminus \gamma$. Allora l'indice di avvolgimento coincide con il seguente integrale di linea complesso:
 > $$
-> \operatorname{Ind}(\gamma, z_0) = \frac{1}{2\pi i} \int_\gamma \frac{dz}{z - z_0}
+> \mathrm{Ind}(\gamma, z_0) = \frac{1}{2\pi i} \int_\gamma \frac{dz}{z - z_0}
 > $$
 
 > [!quote]- Dimostrazione
@@ -2009,7 +2009,7 @@ Per calcolare integrali di linea di funzioni olomorfe lungo curve chiuse generic
 > $$
 > Dividendo per $2\pi i$:
 > $$
-> \frac{1}{2\pi i} \int_\gamma \frac{dz}{z - z_0} = \frac{\theta(b) - \theta(a)}{2\pi} = \operatorname{Ind}(\gamma, z_0) \quad \blacksquare
+> \frac{1}{2\pi i} \int_\gamma \frac{dz}{z - z_0} = \frac{\theta(b) - \theta(a)}{2\pi} = \mathrm{Ind}(\gamma, z_0) \quad \blacksquare
 > $$
 
 > [!note] Invarianza per omotopia
@@ -2023,10 +2023,10 @@ Per calcolare integrali di linea di funzioni olomorfe lungo curve chiuse generic
 > Sia $f: \Omega \setminus S \to \mathbb{C}$ una funzione olomorfa.
 > 
 > Allora:
-> 1. L'indice di avvolgimento $\operatorname{Ind}(\gamma, z_0)$ è non nullo al più per un numero finito di punti $z_0 \in S$;
+> 1. L'indice di avvolgimento $\mathrm{Ind}(\gamma, z_0)$ è non nullo al più per un numero finito di punti $z_0 \in S$;
 > 2. Vale la formula fondamentale dei residui:
 >    $$
->    \int_\gamma f(z)\,dz = 2\pi i \sum_{z_0 \in S} \operatorname{Res}(f, z_0) \operatorname{Ind}(\gamma, z_0)
+>    \int_\gamma f(z)\,dz = 2\pi i \sum_{z_0 \in S} \mathrm{Res}(f, z_0) \mathrm{Ind}(\gamma, z_0)
 >    $$
 
 > [!note] Vincolo essenziale sull'omotopia
@@ -2034,9 +2034,9 @@ Per calcolare integrali di linea di funzioni olomorfe lungo curve chiuse generic
 
 > [!example] Esempi di integrazione con il teorema dei residui
 > **Esempio 1 (Singolarità singola e circonferenza standard):**
-> Sia $z_0$ l'unica singolarità isolata contenuta all'interno di $\gamma = C_r(z_0)$ orientata positivamente, con $r > 0$ tale che $C_r(z_0) \subset \Omega \setminus \{z_0\}$. Poiché $\operatorname{Ind}(\gamma, z_0) = 1$, si ritrova immediatamente la formula nota:
+> Sia $z_0$ l'unica singolarità isolata contenuta all'interno di $\gamma = C_r(z_0)$ orientata positivamente, con $r > 0$ tale che $C_r(z_0) \subset \Omega \setminus \{z_0\}$. Poiché $\mathrm{Ind}(\gamma, z_0) = 1$, si ritrova immediatamente la formula nota:
 > $$
-> \oint_{C_r(z_0)} f(z)\,dz = 2\pi i \operatorname{Res}(f, z_0)
+> \oint_{C_r(z_0)} f(z)\,dz = 2\pi i \mathrm{Res}(f, z_0)
 > $$
 > 
 > **Esempio 2 (Integrazione di funzione razionale con poli multipli):**
@@ -2051,12 +2051,12 @@ Per calcolare integrali di linea di funzioni olomorfe lungo curve chiuse generic
 > $$
 > Per un raggio $r$ tale che $C_r(2i)$ separi le singolarità (ad esempio $r = 1.5$), si ha:
 > $$
-> \operatorname{Ind}(\gamma, i) = 1, \quad \operatorname{Ind}(\gamma, -i) = 0, \quad \operatorname{Ind}(\gamma, 3) = 0, \quad \operatorname{Ind}(\gamma, -3) = 0
+> \mathrm{Ind}(\gamma, i) = 1, \quad \mathrm{Ind}(\gamma, -i) = 0, \quad \mathrm{Ind}(\gamma, 3) = 0, \quad \mathrm{Ind}(\gamma, -3) = 0
 > $$
 > Il circuito $C_r(2i)$ è omotopo a una piccola circonferenza $C_{r'}(i)$ attorno al punto $i$. La singolarità $z = i$ è un polo semplice ($r = 1$), dunque:
 > $$
 > \begin{align}
-> \operatorname{Res}(f, i) &= \lim_{z \to i} (z - i) f(z) \\
+> \mathrm{Res}(f, i) &= \lim_{z \to i} (z - i) f(z) \\
 > &= \lim_{z \to i} \frac{z - i}{(z - i)(z + i)(z^2 - 9)} \\
 > &= \lim_{z \to i} \frac{1}{(z + i)(z^2 - 9)} \\
 > &= \frac{1}{(2i)(i^2 - 9)} = \frac{1}{(2i)(-10)} = -\frac{1}{20i} = \frac{i}{20}
@@ -2064,7 +2064,7 @@ Per calcolare integrali di linea di funzioni olomorfe lungo curve chiuse generic
 > $$
 > Applicando il teorema dei residui:
 > $$
-> I = 2\pi i \operatorname{Res}(f, i) = 2\pi i \left( \frac{i}{20} \right) = \frac{2\pi i^2}{20} = -\frac{\pi}{10}
+> I = 2\pi i \mathrm{Res}(f, i) = 2\pi i \left( \frac{i}{20} \right) = \frac{2\pi i^2}{20} = -\frac{\pi}{10}
 > $$
 >
 ## 1.17. Applicazioni del Teorema dei Residui agli integrali in $\mathbb{R}$
@@ -2093,7 +2093,7 @@ g(z) = f\left( \frac{z + z^{-1}}{2}, \frac{z - z^{-1}}{2i} \right) \frac{1}{iz}
 $$
 l'integrale reale diviene un integrale di linea su $C_1(0)$:
 $$
-\int_0^{2\pi} f(\cos t, \sin t)\,dt = \oint_{C_1(0)} g(z)\,dz = 2\pi i \sum_{z_0 \in S(g), |z_0| < 1} \operatorname{Res}(g, z_0)
+\int_0^{2\pi} f(\cos t, \sin t)\,dt = \oint_{C_1(0)} g(z)\,dz = 2\pi i \sum_{z_0 \in S(g), |z_0| < 1} \mathrm{Res}(g, z_0)
 $$
 
 > [!example] Calcolo esplicito di $\int_0^{2\pi} \frac{dt}{2 + \sin t}$
@@ -2126,12 +2126,12 @@ $$
 > 
 > Poiché le radici non giacciono sulla frontiera ($|z_{1,2}| \neq 1$), applichiamo il teorema dei residui considerando esclusivamente la singolarità interna $z_1$:
 > $$
-> I = 2\pi i \operatorname{Res}(g, z_1)
+> I = 2\pi i \mathrm{Res}(g, z_1)
 > $$
 > Trattandosi di un polo semplice:
 > $$
 > \begin{align}
-> \operatorname{Res}(g, z_1) &= \lim_{z \to z_1} (z - z_1) \frac{2}{(z - z_1)(z - z_2)} \\
+> \mathrm{Res}(g, z_1) &= \lim_{z \to z_1} (z - z_1) \frac{2}{(z - z_1)(z - z_2)} \\
 > &= \lim_{z \to i(\sqrt{3}-2)} \frac{2}{z - i(-\sqrt{3}-2)} \\
 > &= \frac{2}{i(\sqrt{3}-2) - i(-\sqrt{3}-2)} \\
 > &= \frac{2}{i(\sqrt{3} - 2 + \sqrt{3} + 2)} = \frac{2}{2\sqrt{3} i} = \frac{1}{\sqrt{3} i}
@@ -2202,7 +2202,7 @@ $$
 I = \text{P.V.} \int_{-\infty}^{+\infty} f(x)\,dx
 $$
 sotto le seguenti ipotesi:
-1. $f$ è estendibile analiticamente al semipiano superiore chiuso $\{ z \in \mathbb{C} : \operatorname{Im} z \ge 0 \}$ in maniera olomorfa, salvo al più un numero finito di singolarità isolate $S(f)$;
+1. $f$ è estendibile analiticamente al semipiano superiore chiuso $\{ z \in \mathbb{C} : \mathrm{Im} z \ge 0 \}$ in maniera olomorfa, salvo al più un numero finito di singolarità isolate $S(f)$;
 2. $f$ non ammette singolarità sull'asse reale ($S(f) \cap \mathbb{R} = \varnothing$);
 3. $f$ è una funzione temperata per $|z| \to +\infty$, ossia esistono costanti $\alpha > 1$ e $C > 0$ tali che:
    $$
@@ -2211,7 +2211,7 @@ sotto le seguenti ipotesi:
 
 Sotto tali ipotesi, l'integrale improprio converge assolutamente e coincide con il suo Valore Principale, ed è calcolabile tramite i residui:
 $$
-I = \int_{-\infty}^{+\infty} f(x)\,dx = 2\pi i \sum_{z_0 \in S(f), \operatorname{Im} z_0 > 0} \operatorname{Res}(f, z_0)
+I = \int_{-\infty}^{+\infty} f(x)\,dx = 2\pi i \sum_{z_0 \in S(f), \mathrm{Im} z_0 > 0} \mathrm{Res}(f, z_0)
 $$
 
 > [!quote]- Dimostrazione
@@ -2219,20 +2219,20 @@ $$
 > 
 > Poiché le singolarità di $f$ sono isolate e in numero finito, per $R$ sufficientemente grande la palla $B_R(0)$ contiene tutte le singolarità a parte immaginaria positiva:
 > $$
-> \{ z_0 \in S(f) : \operatorname{Im} z_0 > 0 \} \subset B_R(0)
+> \{ z_0 \in S(f) : \mathrm{Im} z_0 > 0 \} \subset B_R(0)
 > $$
-> L'indice di avvolgimento della semicirconferenza chiusa rispetto a ciascuna di tali singolarità è unitario: $\operatorname{Ind}(\gamma_R, z_0) = 1$.
+> L'indice di avvolgimento della semicirconferenza chiusa rispetto a ciascuna di tali singolarità è unitario: $\mathrm{Ind}(\gamma_R, z_0) = 1$.
 > Applicando il teorema dei residui al circuito chiuso $\gamma_R$:
 > $$
-> \oint_{\gamma_R} f(z)\,dz = \int_{-R}^R f(x)\,dx + \int_{C_R^+(0)} f(z)\,dz = 2\pi i \sum_{z_0 \in S(f), \operatorname{Im} z_0 > 0} \operatorname{Res}(f, z_0)
+> \oint_{\gamma_R} f(z)\,dz = \int_{-R}^R f(x)\,dx + \int_{C_R^+(0)} f(z)\,dz = 2\pi i \sum_{z_0 \in S(f), \mathrm{Im} z_0 > 0} \mathrm{Res}(f, z_0)
 > $$
 > Isolando l'integrale reale sul segmento:
 > $$
-> \int_{-R}^R f(x)\,dx = 2\pi i \sum_{z_0 \in S(f), \operatorname{Im} z_0 > 0} \operatorname{Res}(f, z_0) - \int_{C_R^+(0)} f(z)\,dz
+> \int_{-R}^R f(x)\,dx = 2\pi i \sum_{z_0 \in S(f), \mathrm{Im} z_0 > 0} \mathrm{Res}(f, z_0) - \int_{C_R^+(0)} f(z)\,dz
 > $$
 > Passando al limite per $R \to +\infty$:
 > $$
-> I = \lim_{R \to +\infty} \int_{-R}^R f(x)\,dx = 2\pi i \sum_{z_0 \in S(f), \operatorname{Im} z_0 > 0} \operatorname{Res}(f, z_0) - \lim_{R \to +\infty} \int_{C_R^+(0)} f(z)\,dz
+> I = \lim_{R \to +\infty} \int_{-R}^R f(x)\,dx = 2\pi i \sum_{z_0 \in S(f), \mathrm{Im} z_0 > 0} \mathrm{Res}(f, z_0) - \lim_{R \to +\infty} \int_{C_R^+(0)} f(z)\,dz
 > $$
 > La tesi segue immediatamente dimostrando che il contributo dell'arco semicircolare $C_R^+(0)$ tende a zero al divergere di $R$. $\blacksquare$
 
@@ -2265,13 +2265,13 @@ $$
 > $$
 
 > [!note] Chiusura alternativa nel semipiano inferiore
-> Un risultato analogo si ottiene chiudendo il contorno nel semipiano inferiore $\{ z \in \mathbb{C} : \operatorname{Im} z \le 0 \}$. Tuttavia, per preservare l'orientazione coerente con il verso di percorrenza dell'asse reale da $-R$ a $+R$, la semicirconferenza inferiore $-C_R^-(0)$ deve essere percorsa in **senso orario**:
+> Un risultato analogo si ottiene chiudendo il contorno nel semipiano inferiore $\{ z \in \mathbb{C} : \mathrm{Im} z \le 0 \}$. Tuttavia, per preservare l'orientazione coerente con il verso di percorrenza dell'asse reale da $-R$ a $+R$, la semicirconferenza inferiore $-C_R^-(0)$ deve essere percorsa in **senso orario**:
 > $$
 > -C_R^-(0) : r(t) = R e^{-it}, \quad t \in [0, \pi]
 > $$
-> In tal caso, per ogni singolarità interna al semipiano inferiore si ha $\operatorname{Ind}(\gamma, z_0) = -1$, conducendo alla formula con segno opposto:
+> In tal caso, per ogni singolarità interna al semipiano inferiore si ha $\mathrm{Ind}(\gamma, z_0) = -1$, conducendo alla formula con segno opposto:
 > $$
-> I = -2\pi i \sum_{z_0 \in S(f), \operatorname{Im} z_0 < 0} \operatorname{Res}(f, z_0)
+> I = -2\pi i \sum_{z_0 \in S(f), \mathrm{Im} z_0 < 0} \mathrm{Res}(f, z_0)
 > $$
 
 > [!example] Esempi notevoli di integrali di Tipo II
@@ -2295,13 +2295,13 @@ $$
 >   \left| \frac{1}{1 + z^2} \right| = \frac{1}{|1 + z^2|} \le \frac{1}{|z|^2 - 1} \le \frac{C}{|z|^2}
 >   $$
 >   La condizione è verificata con $\alpha = 2 > 1$.
->   L'unica singolarità contenuta nel semipiano superiore $\operatorname{Im} z > 0$ è il polo semplice $z_0 = i$. Calcoliamo il relativo residuo:
+>   L'unica singolarità contenuta nel semipiano superiore $\mathrm{Im} z > 0$ è il polo semplice $z_0 = i$. Calcoliamo il relativo residuo:
 >   $$
->   \operatorname{Res}(f, i) = \lim_{z \to i} (z - i) \frac{1}{(z - i)(z + i)} = \frac{1}{2i}
+>   \mathrm{Res}(f, i) = \lim_{z \to i} (z - i) \frac{1}{(z - i)(z + i)} = \frac{1}{2i}
 >   $$
 >   Applicando la formula dei residui nel semipiano superiore:
 >   $$
->   I = 2\pi i \operatorname{Res}(f, i) = 2\pi i \left( \frac{1}{2i} \right) = \pi
+>   I = 2\pi i \mathrm{Res}(f, i) = 2\pi i \left( \frac{1}{2i} \right) = \pi
 >   $$
 >   Il risultato coincide perfettamente con il calcolo dell'integrale elementare reale.
 > 
@@ -2323,7 +2323,7 @@ $$
 I = \text{P.V.} \int_{-\infty}^{+\infty} f(x) e^{i\omega x}\,dx, \quad \omega \in (0, +\infty)
 $$
 sotto le seguenti ipotesi preliminari:
-- $f$ è estesa al semipiano superiore $\{ z \in \mathbb{C} : \operatorname{Im} z \ge 0 \}$ in maniera olomorfa, tranne al più per un numero finito di singolarità isolate;
+- $f$ è estesa al semipiano superiore $\{ z \in \mathbb{C} : \mathrm{Im} z \ge 0 \}$ in maniera olomorfa, tranne al più per un numero finito di singolarità isolate;
 - $f$ non ammette singolarità sull'asse reale ($S(f) \cap \mathbb{R} = \varnothing$).
 
 - $f$ soddisfa la condizione di annullamento asintotico sul semicerchio superiore:
@@ -2332,7 +2332,7 @@ sotto le seguenti ipotesi preliminari:
   $$
 Sotto tali ipotesi, l'integrale a valor principale converge ed è dato dalla formula:
 $$
-I = \text{P.V.} \int_{-\infty}^{+\infty} f(x) e^{i\omega x}\,dx = 2\pi i \sum_{\substack{z_0 \in S(f) \\ \operatorname{Im} z_0 > 0}} \operatorname{Res}\left( f(z) e^{i\omega z}, z_0 \right), \quad \omega > 0
+I = \text{P.V.} \int_{-\infty}^{+\infty} f(x) e^{i\omega x}\,dx = 2\pi i \sum_{\substack{z_0 \in S(f) \\ \mathrm{Im} z_0 > 0}} \mathrm{Res}\left( f(z) e^{i\omega z}, z_0 \right), \quad \omega > 0
 $$
 
 > [!note] Osservazione (Singolarità del nucleo di Fourier)
@@ -2341,7 +2341,7 @@ $$
 ### Lemma di Jordan
 
 > [!lemma] Lemma di Jordan
-> Sia $f: \{ z \in \mathbb{C} : \operatorname{Im} z > 0 \} \setminus \{z_1, \dots, z_n\} \to \mathbb{C}$ una funzione olomorfa con singolarità isolate $z_1, \dots, z_n$.
+> Sia $f: \{ z \in \mathbb{C} : \mathrm{Im} z > 0 \} \setminus \{z_1, \dots, z_n\} \to \mathbb{C}$ una funzione olomorfa con singolarità isolate $z_1, \dots, z_n$.
 > Se $f$ si annulla uniformemente sul semicerchio superiore all'infinito:
 > $$
 > \lim_{R \to +\infty} \sup_{z \in C_R^+(0)} |f(z)| = 0
@@ -2402,22 +2402,22 @@ $$
 >
 Vale allora che, similmente alla costruzione per gli integrali di tipo razionale:
 $$
-I = \text{P.V.} \int_{-\infty}^{+\infty} f(x) e^{i\omega x}\,dx = 2\pi i \sum_{\substack{z_0 \in S(f) \\ \operatorname{Im} z_0 > 0}} \operatorname{Res}\left( f(z) e^{i\omega z}, z_0 \right)
+I = \text{P.V.} \int_{-\infty}^{+\infty} f(x) e^{i\omega x}\,dx = 2\pi i \sum_{\substack{z_0 \in S(f) \\ \mathrm{Im} z_0 > 0}} \mathrm{Res}\left( f(z) e^{i\omega z}, z_0 \right)
 $$
 
 > [!note] Osservazione (Integrazione nel semipiano inferiore per $\omega < 0$)
-> È possibile ripetere la medesima costruzione nel semipiano inferiore $\{ z \in \mathbb{C} : \operatorname{Im} z \le 0 \}$ per frequenze negative $\omega < 0$.
+> È possibile ripetere la medesima costruzione nel semipiano inferiore $\{ z \in \mathbb{C} : \mathrm{Im} z \le 0 \}$ per frequenze negative $\omega < 0$.
 > In tal caso, chiudendo il contorno con la semicirconferenza inferiore $C_R^-(0)$ orientata in senso orario (che introduce un segno negativo rispetto al senso convenzionale antiorario):
 > $$
-> I = -2\pi i \sum_{\substack{z_0 \in S(f) \\ \operatorname{Im} z_0 < 0}} \operatorname{Res}\left( f(z) e^{i\omega z}, z_0 \right)
+> I = -2\pi i \sum_{\substack{z_0 \in S(f) \\ \mathrm{Im} z_0 < 0}} \mathrm{Res}\left( f(z) e^{i\omega z}, z_0 \right)
 > $$
 > Infatti, ponendo $z = x + iy$:
 > $$
 > e^{i\omega z} = e^{i\omega(x + iy)} = e^{i\omega x} e^{-\omega y}
 > $$
 > Affinché il fattore esponenziale rimanga limitato e decada per $|z| \to +\infty$ ($e^{-\omega y} \le 1$), occorre che $\omega$ e $y$ abbiano segno concorde:
-> - se $\omega > 0 \implies y = \operatorname{Im} z \ge 0$ (semipiano superiore);
-> - se $\omega < 0 \implies y = \operatorname{Im} z \le 0$ (semipiano inferiore).
+> - se $\omega > 0 \implies y = \mathrm{Im} z \ge 0$ (semipiano superiore);
+> - se $\omega < 0 \implies y = \mathrm{Im} z \le 0$ (semipiano inferiore).
 
 > [!example] Esempio (Integrale di Fourier con nucleo trigonometrico)
 > Si calcoli l'integrale:
@@ -2426,7 +2426,7 @@ $$
 > $$
 > Si nota che sull'asse reale:
 > $$
-> \frac{\cos x}{1 + x^2} = \operatorname{Re}\left( \frac{e^{ix}}{1 + x^2} \right)
+> \frac{\cos x}{1 + x^2} = \mathrm{Re}\left( \frac{e^{ix}}{1 + x^2} \right)
 > $$
 > Inoltre, la funzione integranda con il seno è dispari su $\mathbb{R}$:
 > $$
@@ -2448,11 +2448,11 @@ $$
 > $$
 > Applicando la formula dei residui per il nucleo di Fourier:
 > $$
-> I = 2\pi i \operatorname{Res}\left( \frac{e^{iz}}{1 + z^2}, i \right)
+> I = 2\pi i \mathrm{Res}\left( \frac{e^{iz}}{1 + z^2}, i \right)
 > $$
 > Poiché $z_0 = i$ è un polo semplice:
 > $$
-> \operatorname{Res}\left( \frac{e^{iz}}{1 + z^2}, i \right) = \lim_{z \to i} (z - i) \frac{e^{iz}}{(z - i)(z + i)} = \lim_{z \to i} \frac{e^{iz}}{z + i} = \frac{e^{i(i)}}{2i} = \frac{e^{-1}}{2i}
+> \mathrm{Res}\left( \frac{e^{iz}}{1 + z^2}, i \right) = \lim_{z \to i} (z - i) \frac{e^{iz}}{(z - i)(z + i)} = \lim_{z \to i} \frac{e^{iz}}{z + i} = \frac{e^{i(i)}}{2i} = \frac{e^{-1}}{2i}
 > $$
 > Sostituendo nell'integrale:
 > $$
@@ -2467,7 +2467,7 @@ $$
 I = \text{P.V.} \int_{-\infty}^{+\infty} f(x)\,dx
 $$
 sotto le seguenti ipotesi:
-- $f$ è estendibile in maniera olomorfa al semipiano superiore $\{ z \in \mathbb{C} : \operatorname{Im} z > 0 \}$ tranne per un numero finito di singolarità isolate;
+- $f$ è estendibile in maniera olomorfa al semipiano superiore $\{ z \in \mathbb{C} : \mathrm{Im} z > 0 \}$ tranne per un numero finito di singolarità isolate;
 - $f$ ammette un numero finito di **poli semplici** ($r = 1$) appartenenti all'asse reale $\mathbb{R}$, indicati con $x_1, x_2, \dots, x_n \in \mathbb{R}$;
 - L'integrale lungo la semicirconferenza all'infinito si annulla:
   $$
@@ -2487,7 +2487,7 @@ I = \lim_{R \to +\infty} \lim_{\varepsilon \to 0^+} \left[ \int_{-R}^{x_1 - \var
 $$
 Per il teorema dei residui applicato al cammino chiuso $\gamma_{\varepsilon, R}$ (il quale racchiude unicamente le singolarità isolate a parte immaginaria strettamente positiva):
 $$
-\oint_{\gamma_{\varepsilon, R}} f(z)\,dz = 2\pi i \sum_{\substack{z_0 \in S(f) \\ \operatorname{Im} z_0 > 0}} \operatorname{Res}(f, z_0)
+\oint_{\gamma_{\varepsilon, R}} f(z)\,dz = 2\pi i \sum_{\substack{z_0 \in S(f) \\ \mathrm{Im} z_0 > 0}} \mathrm{Res}(f, z_0)
 $$
 D'altra parte, decomponendo l'integrale curvilineo lungo i tratti costituenti:
 $$
@@ -2498,9 +2498,9 @@ Isolando l'integrale sui segmenti reali e passando ai limiti per $\varepsilon \t
 $$
 I = \lim_{R \to +\infty} \lim_{\varepsilon \to 0^+} \left[ \oint_{\gamma_{\varepsilon, R}} f(z)\,dz - \sum_{i=1}^n \int_{C_\varepsilon^+(x_i)} f(z)\,dz - \int_{C_R^+(0)} f(z)\,dz \right]
 $$
-Poiché $\lim_{R \to +\infty} \int_{C_R^+(0)} f(z)\,dz = 0$, e applicando il lemma del polo semplice ad ogni arco semicircolare $C_\varepsilon^+(x_i)$ (con apertura angolare da $0$ a $\pi$ percorsa in senso antiorario, che restituisce $i(\pi - 0) \operatorname{Res}(f, x_i) = \pi i \operatorname{Res}(f, x_i)$):
+Poiché $\lim_{R \to +\infty} \int_{C_R^+(0)} f(z)\,dz = 0$, e applicando il lemma del polo semplice ad ogni arco semicircolare $C_\varepsilon^+(x_i)$ (con apertura angolare da $0$ a $\pi$ percorsa in senso antiorario, che restituisce $i(\pi - 0) \mathrm{Res}(f, x_i) = \pi i \mathrm{Res}(f, x_i)$):
 $$
-I = 2\pi i \sum_{\substack{z_0 \in S(f) \\ \operatorname{Im} z_0 > 0}} \operatorname{Res}(f, z_0) + \pi i \sum_{x_0 \in S(f) \cap \mathbb{R}} \operatorname{Res}(f, x_0)
+I = 2\pi i \sum_{\substack{z_0 \in S(f) \\ \mathrm{Im} z_0 > 0}} \mathrm{Res}(f, z_0) + \pi i \sum_{x_0 \in S(f) \cap \mathbb{R}} \mathrm{Res}(f, x_0)
 $$
 
 ### Lemma del polo semplice (Lemma del piccolo cerchio)
@@ -2515,7 +2515,7 @@ $$
 > con $\gamma_\varepsilon = r_\varepsilon([\theta_1, \theta_2]) \subset \Omega$.
 > Allora:
 > $$
-> \lim_{\varepsilon \to 0^+} \int_{\gamma_\varepsilon} f(z)\,dz = i (\theta_2 - \theta_1) \operatorname{Res}(f, z_0)
+> \lim_{\varepsilon \to 0^+} \int_{\gamma_\varepsilon} f(z)\,dz = i (\theta_2 - \theta_1) \mathrm{Res}(f, z_0)
 > $$
 
 > [!quote]- Dimostrazione
@@ -2523,7 +2523,7 @@ $$
 > $$
 > f(z) = \frac{c_{-1}}{z - z_0} + g(z) \quad \forall z \in B_{R_1}(z_0) \setminus \{z_0\}
 > $$
-> con $c_{-1} = \operatorname{Res}(f, z_0)$ e $g(z)$ olomorfa in $B_{R_1}(z_0)$.
+> con $c_{-1} = \mathrm{Res}(f, z_0)$ e $g(z)$ olomorfa in $B_{R_1}(z_0)$.
 > Integrando termine a termine lungo l'arco $\gamma_\varepsilon$ (con $\varepsilon < R_1$):
 > $$
 > \int_{\gamma_\varepsilon} f(z)\,dz = \int_{\gamma_\varepsilon} \frac{c_{-1}}{z - z_0}\,dz + \int_{\gamma_\varepsilon} g(z)\,dz
@@ -2551,7 +2551,7 @@ $$
 > $$
 > Poiché tale valore è indipendente da $\varepsilon$, passando al limite per $\varepsilon \to 0^+$:
 > $$
-> \lim_{\varepsilon \to 0^+} \int_{\gamma_\varepsilon} f(z)\,dz = i (\theta_2 - \theta_1) c_{-1} = i (\theta_2 - \theta_1) \operatorname{Res}(f, z_0)
+> \lim_{\varepsilon \to 0^+} \int_{\gamma_\varepsilon} f(z)\,dz = i (\theta_2 - \theta_1) c_{-1} = i (\theta_2 - \theta_1) \mathrm{Res}(f, z_0)
 > $$
 > $\blacksquare$
 
@@ -2579,7 +2579,7 @@ $$
 > $$
 > Dunque:
 > $$
-> \operatorname{Res}(f, 0) = -2i
+> \mathrm{Res}(f, 0) = -2i
 > $$
 > La funzione non presenta altre singolarità nell'intero piano complesso.
 > Inoltre, si verifica facilmente che lungo la semicirconferenza all'infinito:
@@ -2588,7 +2588,7 @@ $$
 > $$
 > Applicando la formula di integrazione per poli semplici sull'asse reale:
 > $$
-> \text{P.V.} \int_{-\infty}^{+\infty} \frac{1 - \cos 2x}{x^2}\,dx = \pi i \operatorname{Res}(f, 0) = \pi i (-2i) = 2\pi
+> \text{P.V.} \int_{-\infty}^{+\infty} \frac{1 - \cos 2x}{x^2}\,dx = \pi i \mathrm{Res}(f, 0) = \pi i (-2i) = 2\pi
 > $$
 >
 [!note] Osservazione sulle tecniche di integrazione complessa
@@ -2633,19 +2633,19 @@ $$
 > Il coefficiente del termine singolare $\frac{1}{z} = z^{-1}$ si ottiene imponendo l'esponente $-k - 2 = -1 \iff k = -1$, ed è pari a $c_{-1}$.
 > Dunque:
 > $$
-> \operatorname{Res}\left( \frac{1}{z^2} f\left(\frac{1}{z}\right), 0 \right) = c_{-1} = -\operatorname{Res}(f, \infty)
+> \mathrm{Res}\left( \frac{1}{z^2} f\left(\frac{1}{z}\right), 0 \right) = c_{-1} = -\mathrm{Res}(f, \infty)
 > $$
 
 > [!definition] Residuo all'infinito
 > Se il punto $\infty$ è una singolarità isolata per $f$, si definisce il **residuo all'infinito** di $f$ come:
 > $$
-> \operatorname{Res}(f, \infty) := \operatorname{Res}\left( -\frac{1}{z^2} f\left(\frac{1}{z}\right), 0 \right) = -c_{-1}
+> \mathrm{Res}(f, \infty) := \mathrm{Res}\left( -\frac{1}{z^2} f\left(\frac{1}{z}\right), 0 \right) = -c_{-1}
 > $$
 
 > [!theorem] Teorema globale dei residui (Somma totale dei residui)
 > Sia $f: \mathbb{C} \setminus \{z_1, \dots, z_n\} \to \mathbb{C}$ una funzione olomorfa con un numero finito di singolarità isolate $z_1, \dots, z_n \in \mathbb{C}$. Allora la somma di tutti i residui, inclusa la singolarità all'infinito, è identicamente nulla:
 > $$
-> \sum_{k=1}^n \operatorname{Res}(f, z_k) + \operatorname{Res}(f, \infty) = 0
+> \sum_{k=1}^n \mathrm{Res}(f, z_k) + \mathrm{Res}(f, \infty) = 0
 > $$
 
 > [!quote]- Dimostrazione
@@ -2653,7 +2653,7 @@ $$
 > Allora $f(z)$ è olomorfa nella regione esterna $\{ z \in \mathbb{C} : |z| \ge R \}$, e la funzione trasformata $f\left(\frac{1}{z}\right)$ è olomorfa in $B_{1/R}(0) \setminus \{0\}$.
 > Per la formula integrale di Cauchy applicata al residuo nell'origine:
 > $$
-> \operatorname{Res}(f, \infty) = \operatorname{Res}\left( -\frac{1}{z^2} f\left(\frac{1}{z}\right), 0 \right) = -\frac{1}{2\pi i} \oint_{C_{1/R}(0)} \frac{1}{z^2} f\left(\frac{1}{z}\right)\,dz
+> \mathrm{Res}(f, \infty) = \mathrm{Res}\left( -\frac{1}{z^2} f\left(\frac{1}{z}\right), 0 \right) = -\frac{1}{2\pi i} \oint_{C_{1/R}(0)} \frac{1}{z^2} f\left(\frac{1}{z}\right)\,dz
 > $$
 > dove $C_{1/R}(0)$ è la circonferenza di raggio $\frac{1}{R}$ percorsa in senso antiorario standard $z(t) = \frac{1}{R} e^{it}$ per $t \in [0, 2\pi]$, con $dz = \frac{i e^{it}}{R}\,dt$.
 > Eseguiamo il cambio di variabile conforme:
@@ -2673,19 +2673,19 @@ $$
 > dove $-C_R(0)$ è la circonferenza di centro $0$ e raggio $R$ percorsa in senso orario.
 > Si ottiene quindi la relazione fondamentale:
 > $$
-> \operatorname{Res}(f, \infty) = \frac{1}{2\pi i} \oint_{-C_R(0)} f(z)\,dz = -\frac{1}{2\pi i} \oint_{C_R(0)} f(z)\,dz
+> \mathrm{Res}(f, \infty) = \frac{1}{2\pi i} \oint_{-C_R(0)} f(z)\,dz = -\frac{1}{2\pi i} \oint_{C_R(0)} f(z)\,dz
 > $$
 > da cui:
 > $$
-> \oint_{C_R(0)} f(z)\,dz = -2\pi i \operatorname{Res}(f, \infty)
+> \oint_{C_R(0)} f(z)\,dz = -2\pi i \mathrm{Res}(f, \infty)
 > $$
 > D'altra parte, per il classico teorema dei residui applicato alla curva chiusa $C_R(0)$ (che racchiude tutte e sole le singolarità finite $z_1, \dots, z_n$):
 > $$
-> \oint_{C_R(0)} f(z)\,dz = 2\pi i \sum_{k=1}^n \operatorname{Res}(f, z_k)
+> \oint_{C_R(0)} f(z)\,dz = 2\pi i \sum_{k=1}^n \mathrm{Res}(f, z_k)
 > $$
 > Uguagliando le due identità:
 > $$
-> 2\pi i \sum_{k=1}^n \operatorname{Res}(f, z_k) = -2\pi i \operatorname{Res}(f, \infty) \iff \sum_{k=1}^n \operatorname{Res}(f, z_k) + \operatorname{Res}(f, \infty) = 0
+> 2\pi i \sum_{k=1}^n \mathrm{Res}(f, z_k) = -2\pi i \mathrm{Res}(f, \infty) \iff \sum_{k=1}^n \mathrm{Res}(f, z_k) + \mathrm{Res}(f, \infty) = 0
 > $$
 > $\blacksquare$
 >
@@ -2724,7 +2724,7 @@ $$
 > $$
 > Pertanto sia la parte reale $u$ sia la parte immaginaria $v$ di una qualunque funzione olomorfa sono funzioni armoniche in $\Omega$.
 >
-Consideriamo ora il problema inverso: data una funzione armonica $u: \Omega \to \mathbb{R}$, esiste una funzione olomorfa $f: \Omega \to \mathbb{C}$ tale che $u = \operatorname{Re}(f)$?
+Consideriamo ora il problema inverso: data una funzione armonica $u: \Omega \to \mathbb{R}$, esiste una funzione olomorfa $f: \Omega \to \mathbb{C}$ tale che $u = \mathrm{Re}(f)$?
 La risposta è affermativa purché l'aperto $\Omega$ sia semplicemente connesso.
 
 > [!proposition] Esistenza dell'armonica coniugata
