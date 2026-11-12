@@ -9,15 +9,13 @@ tags:
   - math/statistics/hypothesis-testing
   - math/statistics/linear-regression
 ---
-
-# 4. Statistica Inferenziale: Stima Puntuale e Intervallare
-
+# 4 - Statistica e Stimatori
 ## Statistiche e Stimatori Puntuali
 
 ### Campione Statistico e Definizione di Statistica
 
 > [!definition] Statistica
-> Siano $X_1, \dots, X_n$ un $n$-campione di variabili aleatorie estratte da una popolazione con densità $f(\cdot, \underline{\theta})$, dove $\underline{\theta} \subseteq \mathbb{R}^k$ rappresenta il vettore dei parametri incogniti del modello.
+> Siano $X_1, \dots, X_n$ un $n$-campione di variabili aleatorie estratte da una popolazione con densità $f(\cdot, \boldsymbol{\theta})$, dove $\boldsymbol{\theta} \subseteq \mathbb{R}^k$ rappresenta il vettore dei parametri incogniti del modello.
 > Si definisce **statistica** una qualsiasi funzione a valori reali o vettoriali del campione aleatorio:
 > $$
 > \begin{aligned}
@@ -443,7 +441,7 @@ In alternativa alla stima puntuale del parametro incognito $\theta$, si ricorre 
 > L'intervallo aleatorio:
 > $$
 > \begin{aligned}
-> I_{1-\alpha} = [A(\underline{X}), B(\underline{X})]
+> I_{1-\alpha} = [A(\mathbf{X}), B(\mathbf{X})]
 > \end{aligned}
 > $$
 > si definisce **intervallo di confidenza bilatero per $\theta$ al livello di confidenza $1-\alpha$** (notazione: $\mathrm{IC}_\theta(1-\alpha)$) se soddisfa la condizione:
@@ -455,17 +453,17 @@ In alternativa alla stima puntuale del parametro incognito $\theta$, si ricorre 
 > La quantità $\alpha \in (0, 1)$ prende il nome di livello di significatività.
 
 > [!note] Indipendenza dal Parametro
-> Le funzioni $A(\underline{X})$ e $B(\underline{X})$ devono dipendere unicamente dai dati campionari e non possono contenere il parametro incognito $\theta$.
+> Le funzioni $A(\mathbf{X})$ e $B(\mathbf{X})$ devono dipendere unicamente dai dati campionari e non possono contenere il parametro incognito $\theta$.
 
 ### Intervallo di Confidenza per la Media con Varianza Nota
 
-Si consideri un $n$-campione $\underline{X}$ estratto da una distribuzione normale $N(\mu, \sigma^2)$ con parametro $\mu$ incognito.
+Si consideri un $n$-campione $\mathbf{X}$ estratto da una distribuzione normale $N(\mu, \sigma^2)$ con parametro $\mu$ incognito.
 
 Una scelta naturale per la costruzione dell'intervallo consiste nell'individuare un intorno simmetrico attorno alla media campionaria $\overline{X}_n$:
 $$
 \begin{aligned}
-A(\underline{X}) &= \overline{X}_n - \delta \\
-B(\underline{X}) &= \overline{X}_n + \delta, \quad \delta > 0
+A(\mathbf{X}) &= \overline{X}_n - \delta \\
+B(\mathbf{X}) &= \overline{X}_n + \delta, \quad \delta > 0
 \end{aligned}
 $$
 
@@ -803,10 +801,10 @@ $$
 I test d'ipotesi costituiscono una procedura inferenziale sistematica volta a stabilire se una determinata congettura o affermazione riguardante i parametri di una distribuzione di probabilità sia compatibile con i dati empirici osservati nel campione.
 
 > [!definition] Ipotesi Statistica
-> Si definisce **ipotesi statistica** una qualsiasi affermazione concernente i parametri $\underline{\theta}$ della funzione di densità o di probabilità di una popolazione.
+> Si definisce **ipotesi statistica** una qualsiasi affermazione concernente i parametri $\boldsymbol{\theta}$ della funzione di densità o di probabilità di una popolazione.
 
 > [!example] Esempi di Ipotesi Statistica
-> Sia $\underline{X}$ un $n$-campione estratto da una distribuzione gaussiana $N(\mu, \sigma^2)$ e sia fissato un valore di riferimento $\mu_0 \in \mathbb{R}$.
+> Sia $\mathbf{X}$ un $n$-campione estratto da una distribuzione gaussiana $N(\mu, \sigma^2)$ e sia fissato un valore di riferimento $\mu_0 \in \mathbb{R}$.
 > Costituiscono esempi di ipotesi nulla $H_0$:
 > - Ipotesi puntuale (semplice per la media):
 > $$
@@ -824,7 +822,7 @@ I test d'ipotesi costituiscono una procedura inferenziale sistematica volta a st
 ### Definizione di Test d'Ipotesi
 
 > [!definition] Test d'Ipotesi
-> Si definisce **test d'ipotesi statistica** una regola di decisione quantitativa che, in base al valore assunto da una specifica statistica test calcolata sul campione di dati osservato, stabilisce se accettare o rifiutare l'ipotesi nulla $H_0$ sui parametri $\underline{\theta}$ della popolazione.
+> Si definisce **test d'ipotesi statistica** una regola di decisione quantitativa che, in base al valore assunto da una specifica statistica test calcolata sul campione di dati osservato, stabilisce se accettare o rifiutare l'ipotesi nulla $H_0$ sui parametri $\boldsymbol{\theta}$ della popolazione.
 
 ## Teoria dei Test Statistici
 
@@ -845,13 +843,13 @@ La struttura logica delle decisioni e dei possibili errori è riassunta nella ma
 | **Rifiuto $H_0$** | Errore di Tipo I | Decisione corretta ($\checkmark$) |
 
 Più formalmente, la formulazione di un **test d'ipotesi** consiste nella specificazione di:
-1. Una **statistica test** $T = t(\underline{X})$, ovvero una funzione del campione di dati osservati $\underline{X} = (X_1, \dots, X_n)$.
+1. Una **statistica test** $T = t(\mathbf{X})$, ovvero una funzione del campione di dati osservati $\mathbf{X} = (X_1, \dots, X_n)$.
 2. Una **regione di rifiuto** (o **regione critica**) $C \subset \mathbb{R}$.
 
 In base a tali elementi, la regola decisionale stabilisce:
 $$
 \begin{aligned}
-\text{Rifiuto } H_0 \iff t(\underline{X}) \in C
+\text{Rifiuto } H_0 \iff t(\mathbf{X}) \in C
 \end{aligned}
 $$
 
@@ -861,7 +859,7 @@ $$
 > Si definisce **livello di significatività** (indicato comunemente con $\alpha$) la probabilità massima di commettere un errore di tipo I:
 > $$
 > \begin{aligned}
-> \alpha = \mathbb{P}_{H_0}(\text{rifiutare } H_0) = \mathbb{P}_{H_0}(t(\underline{X}) \in C)
+> \alpha = \mathbb{P}_{H_0}(\text{rifiutare } H_0) = \mathbb{P}_{H_0}(t(\mathbf{X}) \in C)
 > \end{aligned}
 > $$
 > calcolata sotto la condizione che $H_0$ sia vera.
@@ -891,7 +889,7 @@ $$
 
 ### Test Z Bilaterale sulla Media con Varianza Nota
 
-Si consideri un campione casuale $\underline{X} = (X_1, \dots, X_n)$ estratto da una distribuzione normale $N(\mu, \sigma_0^2)$, con deviazione standard $\sigma_0$ nota e fissa.
+Si consideri un campione casuale $\mathbf{X} = (X_1, \dots, X_n)$ estratto da una distribuzione normale $N(\mu, \sigma_0^2)$, con deviazione standard $\sigma_0$ nota e fissa.
 Si intende saggiare il sistema di ipotesi:
 $$
 \begin{aligned}
@@ -1095,7 +1093,7 @@ $$
 Si considerino due campioni casuali indipendenti:
 $$
 \begin{aligned}
-\underline{X} = (X_1, \dots, X_n) \sim N(\mu_X, \sigma_X^2), \qquad \underline{Y} = (Y_1, \dots, Y_m) \sim N(\mu_Y, \sigma_Y^2)
+\mathbf{X} = (X_1, \dots, X_n) \sim N(\mu_X, \sigma_X^2), \qquad \mathbf{Y} = (Y_1, \dots, Y_m) \sim N(\mu_Y, \sigma_Y^2)
 \end{aligned}
 $$
 con medie campionarie rispettive:
@@ -1255,7 +1253,7 @@ $$
 Per determinare il punto di minimo, si calcola il gradiente di $L(a, b)$ rispetto ai parametri $b$ e $a$ e lo si impone uguale al vettore nullo:
 $$
 \begin{aligned}
-\nabla L = \begin{pmatrix} \frac{\partial L}{\partial b} \\ \frac{\partial L}{\partial a} \end{pmatrix} = \begin{pmatrix} 2 \sum_{i=1}^n x_i (b x_i + a - y_i) \\ 2 \sum_{i=1}^n (b x_i + a - y_i) \end{pmatrix} = \underline{0}
+\nabla L = \begin{pmatrix} \frac{\partial L}{\partial b} \\ \frac{\partial L}{\partial a} \end{pmatrix} = \begin{pmatrix} 2 \sum_{i=1}^n x_i (b x_i + a - y_i) \\ 2 \sum_{i=1}^n (b x_i + a - y_i) \end{pmatrix} = \mathbf{0}
 \end{aligned}
 $$
 
@@ -1275,7 +1273,7 @@ $$
 il sistema assume la forma:
 $$
 \begin{aligned}
-\nabla L = 2 \begin{pmatrix} b \sum_{i=1}^n x_i^2 - \sum_{i=1}^n x_i y_i + a n \overline{x} \\ b n \overline{x} + n a - n \overline{y} \end{pmatrix} = \underline{0}
+\nabla L = 2 \begin{pmatrix} b \sum_{i=1}^n x_i^2 - \sum_{i=1}^n x_i y_i + a n \overline{x} \\ b n \overline{x} + n a - n \overline{y} \end{pmatrix} = \mathbf{0}
 \end{aligned}
 $$
 
@@ -1508,7 +1506,7 @@ L'errore medio commesso associato agli stimatori ottimali $\hat{a}$ e $\hat{b}$ 
 ### Modello Probabilistico Normale
 
 > [!definition] Modello di Regressione Lineare Semplice
-> Sia $\underline{Y} : \Omega \to \mathbb{R}^n$ un vettore aleatorio di osservazioni sperimentali corrispondenti a livelli fissati deterministici $x_1, \dots, x_n$. Si assume il modello:
+> Sia $\mathbf{Y} : \Omega \to \mathbb{R}^n$ un vettore aleatorio di osservazioni sperimentali corrispondenti a livelli fissati deterministici $x_1, \dots, x_n$. Si assume il modello:
 > $$
 > \begin{aligned}
 > Y_i = b x_i + a + E_i \quad \forall i = 1, \dots, n
@@ -1704,7 +1702,7 @@ L'errore medio commesso associato agli stimatori ottimali $\hat{a}$ e $\hat{b}$ 
 ### Formulazione Vettoriale e Matriciale
 
 > [!definition] Modello di Regressione Lineare Multipla
-> Sia $\underline{Y} \in \mathbb{R}^n$ un vettore aleatorio di dati sperimentali di dimensione $n$. Si suppone una relazione lineare con $k$ regressori:
+> Sia $\mathbf{Y} \in \mathbb{R}^n$ un vettore aleatorio di dati sperimentali di dimensione $n$. Si suppone una relazione lineare con $k$ regressori:
 > $$
 > \begin{aligned}
 > Y_i = \beta_0 + \beta_1 x_{i,1} + \beta_2 x_{i,2} + \dots + \beta_k x_{i,k} + E_i \quad \forall i = 1, \dots, n
@@ -1726,20 +1724,20 @@ L'errore medio commesso associato agli stimatori ottimali $\hat{a}$ e $\hat{b}$ 
 > - il **vettore degli errori**:
 >   $$
 >   \begin{aligned}
->   \underline{E} = \begin{bmatrix} E_1 \\ \vdots \\ E_n \end{bmatrix} \in \mathbb{R}^n
+>   \mathbf{E} = \begin{bmatrix} E_1 \\ \vdots \\ E_n \end{bmatrix} \in \mathbb{R}^n
 >   \end{aligned}
 >   $$
 > - il **vettore dei coefficienti di regressione**:
 >   $$
 >   \begin{aligned}
->   \underline{\beta} = \begin{bmatrix} \beta_0 \\ \beta_1 \\ \vdots \\ \beta_k \end{bmatrix} \in \mathbb{R}^{k+1}
+>   \boldsymbol{\beta} = \begin{bmatrix} \beta_0 \\ \beta_1 \\ \vdots \\ \beta_k \end{bmatrix} \in \mathbb{R}^{k+1}
 >   \end{aligned}
 >   $$
 > 
 > Il modello si esprime nella **forma vettoriale compatta**:
 > $$
 > \begin{aligned}
-> \underline{Y} = X \underline{\beta} + \underline{E}
+> \mathbf{Y} = X \boldsymbol{\beta} + \mathbf{E}
 > \end{aligned}
 > $$
 
@@ -1749,19 +1747,19 @@ L'errore medio commesso associato agli stimatori ottimali $\hat{a}$ e $\hat{b}$ 
 > Assumendo che la matrice $X$ abbia rango massimo per colonne pari a $k+1$ (ossia che $X^T X$ sia invertibile), il vettore degli stimatori di minimi quadrati dei parametri $(\beta_0, \dots, \beta_k)$ è dato da:
 > $$
 > \begin{aligned}
-> \underline{\hat{B}} = (X^T X)^{-1} X^T \underline{Y}
+> \mathbf{\hat{B}} = (X^T X)^{-1} X^T \mathbf{Y}
 > \end{aligned}
 > $$
 
 > [!note] Corrispondenza con il Caso Monodimensionale ($k=1$)
 > La formulazione matriciale generalizza direttamente il caso della regressione semplice $k=1$:
-> - $X^T \underline{Y}$ ricopre lo stesso ruolo del termine di covarianza $S_{xy}$;
+> - $X^T \mathbf{Y}$ ricopre lo stesso ruolo del termine di covarianza $S_{xy}$;
 > - $X^T X$ ricopre lo stesso ruolo della varianza del regressore $S_{xx}$.
 > 
-> Infatti, per $k=1$, calcolando esplicitamente la matrice $(X^T X)^{-1} X^T \underline{Y}$, si ritrova:
+> Infatti, per $k=1$, calcolando esplicitamente la matrice $(X^T X)^{-1} X^T \mathbf{Y}$, si ritrova:
 > $$
 > \begin{aligned}
-> (X^T X)^{-1} X^T \underline{Y} = \begin{bmatrix} \hat{A} \\ \hat{B} \end{bmatrix} = \begin{bmatrix} \bar{y} - \frac{S_{xy}}{S_{xx}}\bar{x} \\ \frac{S_{xy}}{S_{xx}} \end{bmatrix}
+> (X^T X)^{-1} X^T \mathbf{Y} = \begin{bmatrix} \hat{A} \\ \hat{B} \end{bmatrix} = \begin{bmatrix} \bar{y} - \frac{S_{xy}}{S_{xx}}\bar{x} \\ \frac{S_{xy}}{S_{xx}} \end{bmatrix}
 > \end{aligned}
 > $$
 
@@ -1772,7 +1770,7 @@ L'errore medio commesso associato agli stimatori ottimali $\hat{a}$ e $\hat{b}$ 
 > - la somma dei quadrati residui:
 >   $$
 >   \begin{aligned}
->   SS_e := \sum_{i=1}^n (Y_i - \hat{Y}_i)^2 = (\underline{Y} - X \underline{\hat{B}})^T (\underline{Y} - X \underline{\hat{B}})
+>   SS_e := \sum_{i=1}^n (Y_i - \hat{Y}_i)^2 = (\mathbf{Y} - X \mathbf{\hat{B}})^T (\mathbf{Y} - X \mathbf{\hat{B}})
 >   \end{aligned}
 >   $$
 > - la somma dei quadrati della regressione:
@@ -1792,16 +1790,16 @@ L'errore medio commesso associato agli stimatori ottimali $\hat{a}$ e $\hat{b}$ 
 
 > [!theorem] Proprietà degli Stimatori nel Modello Multiplo
 > Sotto le ipotesi gaussiane standard per il modello di regressione multipla:
-> 1. $\underline{\hat{B}}$ è uno **stimatore non distorto** del vettore dei coefficienti $\underline{\beta}$:
+> 1. $\mathbf{\hat{B}}$ è uno **stimatore non distorto** del vettore dei coefficienti $\boldsymbol{\beta}$:
 >    $$
 >    \begin{aligned}
->    \mathbb{E}[\hat{B}_j] = \beta_j \quad \forall j = 0, \dots, k \implies \mathbb{E}[\underline{\hat{B}}] = \underline{\beta}
+>    \mathbb{E}[\hat{B}_j] = \beta_j \quad \forall j = 0, \dots, k \implies \mathbb{E}[\mathbf{\hat{B}}] = \boldsymbol{\beta}
 >    \end{aligned}
 >    $$
-> 2. La **matrice di covarianza** di $\underline{\hat{B}}$ è data da:
+> 2. La **matrice di covarianza** di $\mathbf{\hat{B}}$ è data da:
 >    $$
 >    \begin{aligned}
->    \mathbb{V}[\underline{\hat{B}}] = \sigma^2 (X^T X)^{-1}
+>    \mathbb{V}[\mathbf{\hat{B}}] = \sigma^2 (X^T X)^{-1}
 >    \end{aligned}
 >    $$
 > 3. Lo stimatore non distorto della varianza $\sigma^2$ è dato da:

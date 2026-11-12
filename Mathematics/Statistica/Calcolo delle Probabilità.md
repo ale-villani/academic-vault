@@ -8,9 +8,6 @@ tags:
   - math/probability/distributions
   - math/probability/limit-theorems
 ---
-
-# 2. Calcolo delle Probabilità e Variabili Aleatorie
-
 ## Spazio Campionario ed Eventi
 
 ### Concetti Primitivi ed Esperimenti Aleatori
@@ -1693,10 +1690,10 @@ $$
 
 > [!definition] Vettore Aleatorio
 > Siano $X_1, \dots, X_n: \Omega \to \mathbb{R}$ variabili aleatorie definite sul medesimo spazio di probabilità $(\Omega, \mathcal{F}, \mathbb{P})$.
-> Si definisce **vettore aleatorio** $\underline{X}$ l'applicazione:
+> Si definisce **vettore aleatorio** $\mathbf{X}$ l'applicazione:
 > $$
 > \begin{aligned}
-> \underline{X} := (X_1, \dots, X_n): \Omega \to \mathbb{R}^n
+> \mathbf{X} := (X_1, \dots, X_n): \Omega \to \mathbb{R}^n
 > \end{aligned}
 > $$
 
@@ -1737,44 +1734,44 @@ $$
 
 > [!definition] Densità Congiunta di un Vettore Aleatorio Discreto
 > Siano $X_1, \dots, X_n$ variabili aleatorie discrete aventi densità marginali rispettivamente $f_{X_1}, \dots, f_{X_n}$.
-> Si definisce **densità congiunta** del vettore aleatorio $\underline{X} = (X_1, \dots, X_n)$ la funzione:
+> Si definisce **densità congiunta** del vettore aleatorio $\mathbf{X} = (X_1, \dots, X_n)$ la funzione:
 > $$
 > \begin{aligned}
-> f_{\underline{X}}(x_1, \dots, x_n) &:= \mathbb{P}\left( \bigcap_{i=1}^n \{X_i = x_i\} \right) \\
-> &= \mathbb{P}\{\underline{X} = \underline{x}\}
+> f_{\mathbf{X}}(x_1, \dots, x_n) &:= \mathbb{P}\left( \bigcap_{i=1}^n \{X_i = x_i\} \right) \\
+> &= \mathbb{P}\{\mathbf{X} = \mathbf{x}\}
 > \end{aligned}
 > $$
-> dove $\underline{x} = (x_1, \dots, x_n) \in \mathbb{R}^n$.
+> dove $\mathbf{x} = (x_1, \dots, x_n) \in \mathbb{R}^n$.
 
 > [!note] Fattorizzazione della Densità Congiunta sotto Indipendenza
 > Se le variabili aleatorie $X_1, \dots, X_n$ sono tra loro indipendenti, la densità congiunta coincide con il prodotto delle densità marginali:
 > $$
 > \begin{aligned}
-> f_{\underline{X}}(\underline{x}) = \prod_{i=1}^n \mathbb{P}\{X_i = x_i\} = \prod_{i=1}^n f_{X_i}(x_i)
+> f_{\mathbf{X}}(\mathbf{x}) = \prod_{i=1}^n \mathbb{P}\{X_i = x_i\} = \prod_{i=1}^n f_{X_i}(x_i)
 > \end{aligned}
 > $$
 
 ### Funzioni Scalari di Vettori Aleatori
 
 > [!definition] Funzioni Scalari di Vettori Aleatori
-> Sia $\underline{X}: \Omega \to \mathbb{R}^n$ un vettore aleatorio.
+> Sia $\mathbf{X}: \Omega \to \mathbb{R}^n$ un vettore aleatorio.
 > Qualsiasi funzione boreliana $g: \mathbb{R}^n \to \mathbb{R}$ definisce una **funzione scalare di vettore aleatorio**.
 
 > [!note] Valore Atteso di Funzioni Scalari
-> La composizione $Y = g(\underline{X})$ è a sua volta una variabile aleatoria scalare reale, di cui è possibile calcolare i momenti (valore atteso, varianza, ecc.).
+> La composizione $Y = g(\mathbf{X})$ è a sua volta una variabile aleatoria scalare reale, di cui è possibile calcolare i momenti (valore atteso, varianza, ecc.).
 > Nel caso discreto, il valore atteso è dato da:
 > $$
 > \begin{aligned}
-> \mathbb{E}[g(\underline{X})] = \sum_{\underline{x}} g(\underline{x}) \mathbb{P}\{\underline{X} = \underline{x}\}
+> \mathbb{E}[g(\mathbf{X})] = \sum_{\mathbf{x}} g(\mathbf{x}) \mathbb{P}\{\mathbf{X} = \mathbf{x}\}
 > \end{aligned}
 > $$
 
 > [!example] Linearità del Valore Atteso per una Somma
-> Sia data la funzione somma $g(\underline{X}) = \sum_{i=1}^n X_i$.
+> Sia data la funzione somma $g(\mathbf{X}) = \sum_{i=1}^n X_i$.
 > Per la linearità dell'operatore valore atteso:
 > $$
 > \begin{aligned}
-> \mathbb{E}[g(\underline{X})] = \mathbb{E}\left[ \sum_{i=1}^n X_i \right] = \sum_{i=1}^n \mathbb{E}[X_i]
+> \mathbb{E}[g(\mathbf{X})] = \mathbb{E}\left[ \sum_{i=1}^n X_i \right] = \sum_{i=1}^n \mathbb{E}[X_i]
 > \end{aligned}
 > $$
 > Si noti che la linearità del valore atteso vale sempre, senza richiedere alcuna ipotesi di indipendenza tra le variabili aleatorie.
@@ -2224,10 +2221,10 @@ $$
 > Siano $X_1, \dots, X_n$ variabili aleatorie indipendenti e identicamente distribuite (i.i.d.), aventi tutte la medesima densità di probabilità:
 > $$
 > \begin{aligned}
-> x \mapsto f(x, \underline{\theta}), \qquad \underline{\theta} \in \mathbb{R}^m \text{ parametri}
+> x \mapsto f(x, \boldsymbol{\theta}), \qquad \boldsymbol{\theta} \in \mathbb{R}^m \text{ parametri}
 > \end{aligned}
 > $$
-> L'insieme delle variabili $(X_1, \dots, X_n)$ viene definito **$n$-campione** della densità $f(\cdot, \underline{\theta})$.
+> L'insieme delle variabili $(X_1, \dots, X_n)$ viene definito **$n$-campione** della densità $f(\cdot, \boldsymbol{\theta})$.
 
 > [!definition] Media Campionaria
 > Dato un $n$-campione $X_1, \dots, X_n$, si definisce **media campionaria** la statistica:
@@ -2414,7 +2411,7 @@ $$
 ### Legge Forte dei Grandi Numeri
 
 > [!theorem] Legge Forte dei Grandi Numeri (SLLN)
-> Sia $\{X_n\}_{n \in \mathbb{N}}$ un campione aleatorio di variabili indipendenti e identicamente distribuite con densità $f(\cdot, \underline{\theta})$ e valore atteso finito:
+> Sia $\{X_n\}_{n \in \mathbb{N}}$ un campione aleatorio di variabili indipendenti e identicamente distribuite con densità $f(\cdot, \boldsymbol{\theta})$ e valore atteso finito:
 > $$
 > \begin{aligned}
 > \mathbb{E}[X_n] = \mu < +\infty
@@ -2474,7 +2471,7 @@ $$
 ### Enunciato e Standardizzazione
 
 > [!theorem] Teorema del Limite Centrale (TLC)
-> Sia $\{X_n\}_{n \in \mathbb{N}}$ un campione aleatorio di variabili indipendenti e identicamente distribuite con densità $f(\cdot, \underline{\theta})$, aventi valore atteso e varianza finiti:
+> Sia $\{X_n\}_{n \in \mathbb{N}}$ un campione aleatorio di variabili indipendenti e identicamente distribuite con densità $f(\cdot, \boldsymbol{\theta})$, aventi valore atteso e varianza finiti:
 > $$
 > \begin{aligned}
 > \mathbb{E}[X_n] = \mu, \quad \mathbb{V}[X_n] = \sigma^2 < +\infty \quad \forall n \in \mathbb{N}

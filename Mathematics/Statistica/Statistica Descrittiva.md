@@ -9,8 +9,6 @@ tags:
   - math/statistics/chebyshev
 ---
 
-# 1. Statistica Descrittiva
-
 La statistica descrittiva è la scienza che si occupa di descrivere con poche quantità sintetiche un fenomeno complesso.
 
 ## Dati Statistici e Distribuzioni di Frequenza
