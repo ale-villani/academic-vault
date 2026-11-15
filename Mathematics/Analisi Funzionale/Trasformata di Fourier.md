@@ -123,6 +123,51 @@ $$
 > $\hookrightarrow$ Dunque $\hat{\hat{u}}(x) = 2\pi u(x)$, essendo in questo caso $u(x)$ una funzione pari.
 > Tuttavia, in generale tale identità non vale per ogni funzione $u \in L^1(\mathbb{R}^n)$: affinché l'operatore di Fourier possa essere iterato o invertito puntualmente, è necessario che anche $\hat{u} \in L^1(\mathbb{R}^n)$.
 >
+
+> [!example] Funzione caratteristica del cerchio
+> Sia $f(x,y)=\chi_{\Omega}$ dove $\Omega=\left\{ \mathbf{x}\in \mathbb{R}^2:||\mathbf{x}||\leq 1\right\}$ è il cerchio unitario. La sua trasformata è $$\begin{align}  \hat{f}(\xi, \eta) & =\int_{\mathbb{R}^2}f(x,y)e^{ -i(x \xi + y \eta) }dxdy  \\   & =\int_{0}^{+\infty}  \int_{0}^{2\pi} f(\rho, \theta)e^{ -i(\rho \xi \cos \theta + \rho \eta \sin\theta) } \rho d\rho d\theta  \\  & = \int_{0}^1 \rho\int_{0}^{2\pi} e^{ -i\rho(\xi \cos \theta +\eta \sin\theta)  } d\theta d\rho  \end{align}$$
+> Scrivendo le coordinate della trasformata in polari $$(\xi, \eta) \mapsto (k, \varphi) $$vale che $$\xi=k \cos \varphi, \,\, \eta=k \sin \varphi$$quindi $$\begin{align}  & \int_{0}^{2\pi}e^{ -i\rho k( \cos\theta \cos \varphi + \sin\theta \sin \varphi) }d\theta   \\    = & \int_{0}^{2\pi}e^{ -i\rho k \cos(\theta-\varphi) }d\theta  \\   = & \int_{0}^{2\pi}e^{ -i\rho k \cos \theta } d\theta \end{align}$$per periodicità
+> Usando il [[Analisi Complessa#Tipo I Integrali trigonometrici su $[0, 2 pi]$|metodo dei Residui]] sia $$g(z)= \frac{1}{iz} f\left( \frac{z+z^{-1}}{2} \right)=\frac{1}{iz} e^{ -i\rho k(z+z^{-1})/2  }$$dove $f(\cos\theta)=e^{ -i\rho k \cos \theta }$, allora $$\int_{0}^{2\pi }e^{ -i\rho k \cos\theta }d\theta=2\pi i \sum_{z_{0} \in S(f), |z_{0}|<1} \mathrm{Res}(g, z_{0})$$
+> La funzione $g$ è singolare solo in $z=0$, con singolarità essenziale. Sviluppando in serie di Laurent il prodotto dei due esponenziali:
+> $$
+> \begin{align}
+> g(z) &= \frac{1}{iz} e^{-\frac{1}{2}i\rho k z} e^{-\frac{1}{2}i\rho k z^{-1}} \\
+> &= \frac{1}{iz} \left[ \sum_{n=0}^{+\infty} \frac{\left( -\frac{1}{2}i\rho k z \right)^n}{n!} \right] \left[ \sum_{m=0}^{+\infty} \frac{\left( -\frac{1}{2}i\rho k z^{-1} \right)^m}{m!} \right] \\
+> &= \frac{1}{iz} \left[ \sum_{n=0}^{+\infty} (-i)^n \left( \frac{\rho k}{2} \right)^n \frac{z^n}{n!} \right] \left[ \sum_{m=0}^{+\infty} (-i)^m \left( \frac{\rho k}{2} \right)^m \frac{z^{-m}}{m!} \right] \\
+> &= \frac{1}{i} \sum_{n=0}^{+\infty} \sum_{m=0}^{+\infty} (-i)^{n+m} \left( \frac{\rho k}{2} \right)^{n+m} \frac{z^{n - m - 1}}{n! \, m!}
+> \end{align}
+> $$
+> Il residuo in $z_0 = 0$ corrisponde per definizione al coefficiente del termine con potenza $z^{-1}$. Dobbiamo quindi imporre:
+> $$
+> n - m - 1 = -1 \iff n = m
+> $$
+> Selezionando i soli termini con $n = m$:
+> $$
+> \begin{align}
+> \mathrm{Res}(g, 0) &= \frac{1}{i} \sum_{n=0}^{+\infty} (-i)^{2n} \left( \frac{\rho k}{2} \right)^{2n} \frac{1}{(n!)^2} \\
+> &= \frac{1}{i} \sum_{n=0}^{+\infty} (-1)^n \left( \frac{\rho k}{2} \right)^{2n} \frac{1}{(n!)^2}
+> \end{align}
+> $$
+> Riconoscendo la serie di potenze che definisce la **funzione di Bessel di prima specie di ordine zero** $$J_0(x) := \sum_{n=0}^{+\infty} \frac{(-1)^n}{(n!)^2} \left( \frac{x}{2} \right)^{2n}$$per cui
+> $$\int_{0}^{2\pi}e^{ -i\rho k\cos\theta }d\theta = 2\pi i \mathrm{Res}(g, 0) = 2\pi J_0(\rho k) $$
+> Segue che la trasformata della funzione completa è:
+> $$
+> \hat{f}(\xi, \eta) = 2\pi \int_0^1 \rho J_0(\rho k) \, d\rho
+> $$
+> Operando il cambio di variabile $u = \rho k \implies \rho = \frac{u}{k}, \; d\rho = \frac{du}{k}$:
+> $$
+> \hat{f}(\xi, \eta) = \frac{2\pi}{k^2} \int_0^k u J_0(u) \, du
+> $$
+> Ricordando l'identità differenziale fondamentale delle funzioni di Bessel: $$\frac{d}{du}[u J_1(u)] = u J_0(u)$$vale che
+> $$
+> \int_0^k u J_0(u) \, du = \Big[ u J_1(u) \Big]_0^k = k J_1(k)
+> $$
+> Si conclude pertanto che la trasformata di Fourier della funzione caratteristica del disco unitario è il celebre **profilo di Airy**:
+> $$
+> \hat{f}(\xi, \eta) = 2\pi \frac{J_1(k)}{k} = 2\pi \frac{J_1\left( \sqrt{\xi^2 + \eta^2} \right)}{\sqrt{\xi^2 + \eta^2}}
+> $$
+> 
+
 ## 4.3. Il Teorema di Riemann-Lebesgue
 
 > [!theorem] Teorema di Riemann-Lebesgue
@@ -327,6 +372,14 @@ $$
 >   $$
 >   La trasformata è dunque **immaginaria pura e dispari**.
 >
+
+> [!proposition] Separabilità della trasformata di Fourier
+> Sia $f\in L^1(\mathbb{R}^n)$ a variabili separabili $$f(\mathbf{x})=\prod_{i=1}^n f_{i}(x_{i})$$allora la sua trasformata di Fourier è $$\hat{f}(\mathbf{\xi})= \prod_{i=1}^n \hat{f_{i}}(\xi_{i})$$
+
+> [!quote]- Dimostrazione
+> Vale che dalla definizione $$\begin{align}  \hat{f}(\mathbf{\xi}) & =\int_{\mathbb{R}^n}f(\mathbf{x})e^{ -i(\mathbf{x} \cdot \mathbf{\xi}) }d\mathbf{x}  \\   & =\int_{\mathbb{R}^n} \prod_{i=1}^n (f_{i}(x_{i})e^{ -ix_{i}\xi_{i} }) d\mathbf{x} \\  & =\prod_{i=1}^n \int_{\mathbb{R}}f_{i}(x_{i})e^{ -ix_{i}\xi_{i} }dx_{i} \\  & =\prod_{i=1}^n \hat{f_{i}}(\xi_{i}) \end{align}$$dal teorema di Fubini ($||e^{ -i\mathbf{x} \cdot \mathbf{\xi} }||_{1}=1)$
+>$\blacksquare$
+
 ## 4.5. Proprietà Differenziali della Trasformata
 
 > [!proposition] Trasformata della derivata in $\mathbb{R}$
@@ -1082,6 +1135,17 @@ L'identità di Plancherel ammette una generalizzazione fondamentale: la trasform
 > \check{u} = \lim_{m \to +\infty} \check{u}_m = \frac{1}{(2\pi)^n} \lim_{m \to +\infty} \widehat{\widehat{u}}_m = \frac{1}{(2\pi)^n} \widehat{\widehat{u}}. \quad \blacksquare
 > $$
 >
+### Definizioni diverse della trasformata di Fourier
+
+> [!note] Convenzioni della trasformata di Fourier
+> Esistono oltre a quella qui utilizzata altre 2 convenzioni molto utilizzate per la trasformata di fourier
+> 1. Convenzione "democratica" $$\hat{f}(\mathbf{\xi})=\frac{1}{(2\pi)^{n/2}}\int_{\mathbb{R}^n}f(\mathbf{x})e^{ -i\mathbf{\xi} \cdot \mathbf{x} } d\mathbf{x}$$dove l'inversa è data da $${f}(\mathbf{x})=\hat{\hat{f}}(-\mathbf{x})=\frac{1}{(2\pi)^{n/2}}\int_{\mathbb{R}^n}\hat{f}(\mathbf{\xi })e^{ i \mathbf{\xi} \cdot \mathbf{x}}d\xi$$
+>    Peculiarità di questa definizione è che, vedendo $\mathcal{  F  }$ come operatore  $$\mathcal{  F  }:L^2(\mathbb{R}^n) \to L^2(\mathbb{R}^n)$$è un'operatore lineare **unitario**, ovvero $$||\mathcal{  F  }||=1$$
+> 2. Convenzione in frequenza $$\hat{f}(\mathbf{f})=\int_{\mathbb{R}^n}f(\mathbf{x})e^{ -2\pi i \mathbf{f} \cdot \mathbf{x} }d\mathbf{x}$$con inversa $${f}(\mathbf{x})=\hat{\hat{f}}(-\mathbf{x})=\int_{\mathbb{R}^n}\hat{f}(\mathbf{f})e^{ 2\pi i \mathbf{f} \cdot \mathbf{x} }d\mathbf{f}$$che non ha costanti nei due casi, quindi anch'essa è unitaria
+> Come posso convertire i risultati noti con la convenzione utilizzata in queste due definizioni alternative?
+> Democratica → è banale perchè $$\hat{f}_{dem}(\mathbf{\xi})=\frac{1}{(2\pi)^{n/2}} \hat{f}_{analisi}(\mathbf{\xi})$$
+> Frequenza → basta effettuare la trasformazione $$\mathbf{\xi}=2\pi \mathbf{f} \implies \hat{f}_{freq}(\mathbf{f})=\hat{f}_{analisi}\left( 2\pi\mathbf{\xi} \right)$$
+
 ### Esempio Notevole: Trasformata di Fourier di $\frac{\sin x}{x}$ e Integrale di Dirichlet
 
 > [!example] Calcolo della Trasformata di $u(x) = \frac{\sin x}{x}$
@@ -1395,8 +1459,6 @@ Diventa quindi necessario formalizzare accuratamente la topologia di $\mathcal{S
 > $$
 > \int_{\mathbb{R}^n} |u \varphi| \, d\mathbf{x} \le \int_{\mathbb{R}^n} |P \varphi| \, d\mathbf{x} \le \sup_{\mathbf{x} \in \mathbb{R}^n} |q \varphi| \int_{\mathbb{R}^n} \left| \frac{P}{q} \right| \, d\mathbf{x}
 > $$
-
-> [!example] Esempio 2: Funzioni a Crescita Lenta
 
 > [!definition] Funzione a Crescita Lenta
 > Una funzione misurabile $u: \mathbb{R}^n \to \mathbb{R}$ si dice **a crescita lenta** se esistono una funzione $w \in L^1(\mathbb{R}^n)$ e un polinomio $q$ su $\mathbb{R}^n$ tali che:
@@ -1726,7 +1788,6 @@ Diventa quindi necessario formalizzare accuratamente la topologia di $\mathcal{S
 > \mathcal{F}(f * g) = \hat{f} \cdot \hat{g}
 > $$
 > dove il prodotto a secondo membro è inteso nel senso naturale di moltiplicazione tra la distribuzione temperata $\hat{f} \in \mathcal{S}'(\mathbb{R}^n)$ e la funzione liscia a decrescita rapida $\hat{g} \in \mathcal{S}(\mathbb{R}^n)$.
->
 ## 4.11. Applicazioni delle Trasformate di Fourier alle Equazioni a Derivate Parziali
 
 ### Equazione del Calore: Problema di Cauchy in $\mathbb{R}$
@@ -2165,7 +2226,7 @@ Sommando le soluzioni parziali $v(x, t)$ e $w(x, t)$, perveniamo al risultato fo
 >
 ## 4.14. Proprietà della Trasformata di Fourier
 
-> [!proposition] Proprietà Algebriche, Differenziali e di Inversione
+> [!note] Proprietà Algebriche, Differenziali e di Inversione
 > 
 > ### Proprietà Algebriche
 > - **Traslazione nello spazio (Shift temporale/spaziale):**
@@ -2203,4 +2264,5 @@ Sommando le soluzioni parziali $v(x, t)$ e $w(x, t)$, perveniamo al risultato fo
 > $$
 > \mathcal{F}^{-1}[\hat{u}](\mathbf{x}) = \frac{1}{(2\pi)^n} \int_{\mathbb{R}^n} \hat{u}(\boldsymbol{\xi}) \, e^{i \boldsymbol{\xi} \cdot \mathbf{x}} \, d\boldsymbol{\xi} = \frac{1}{(2\pi)^n} \, \mathcal{F}[\hat{u}](-\mathbf{x})
 > $$
->
+
+

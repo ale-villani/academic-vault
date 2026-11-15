@@ -359,7 +359,7 @@ tags:
 > il che produce la contraddizione $0 = \varphi(\mathbf{x}_0) \ne 0$.
 > Dunque non esiste alcuna funzione $u \in L^1_{\text{loc}}(\Omega)$ rappresentante la delta di Dirac, confermando che $\delta_{\mathbf{x}_0}$ è una **distribuzione singolare**.
 
-> [!theorem] La Delta di Dirac come limite distribuzionale di funzioni $L^1$
+> [!note] La Delta di Dirac come limite distribuzionale di funzioni $L^1$
 > Sebbene non sia rappresentabile da alcuna funzione integrabile, la delta di Dirac $\delta_{\mathbf{x}_0}$ può essere ottenuta come **limite debole** nello spazio $\mathcal{D}^*(\Omega)$ di una successione di distribuzioni regolari associate a funzioni integrabili $\{u_n\}_{n \in \mathbb{N}} \subset L^1(\Omega)$ aventi norma unitaria $\|u_n\|_1 = 1$:
 > $$
 > T_{u_n} \xrightarrow{n \to +\infty} \delta_{\mathbf{x}_0} \quad \text{in } \mathcal{D}^*(\Omega)
@@ -1051,11 +1051,8 @@ appartenesse allo spazio delle funzioni test $\mathcal{D}(\Omega^2) = C_c^\infty
 > \varphi(x + y) \notin \mathcal{D}(\mathbb{R}^2)
 > $$
 >
-Per risolvere questa difficoltà è necessario imporre un vincolo geometrico sui supporti: supponendo che almeno una delle due distribuzioni (ad esempio $S$) abbia **supporto compatto**, è possibile moltiplicare la funzione $\varphi(\mathbf{x} + \mathbf{y})$ per un'opportuna funzione di cutoff $\xi(\mathbf{y})$ a supporto compatto, ponendo:
-$$
-\psi(\mathbf{x}, \mathbf{y}) := \xi(\mathbf{y}) \varphi(\mathbf{x} + \mathbf{y})
-$$
-dove $\xi = 1$ su un intorno aperto del supporto di $S$. In questo modo $\psi$ ha supporto compatto in $\mathbb{R}^{2n}$ rispetto alle variabili congiunte.
+Per risolvere questa difficoltà è necessario imporre un vincolo geometrico sui supporti: supponendo che almeno una delle due distribuzioni (ad esempio $S$) abbia **supporto compatto**, è possibile moltiplicare la funzione $\varphi(\mathbf{x} + \mathbf{y})$ per un'opportuna funzione di cutoff $\xi(\mathbf{y})$ a supporto compatto, ponendo: $$
+\psi(\mathbf{x}, \mathbf{y}) := \xi(\mathbf{y}) \varphi(\mathbf{x} + \mathbf{y}) $$ dove $\xi = 1$ su un intorno aperto del supporto di $S$. In questo modo $\psi$ ha supporto compatto in $\mathbb{R}^{2n}$ rispetto alle variabili congiunte.
 
 ### Definizione di convoluzione tra distribuzioni
 

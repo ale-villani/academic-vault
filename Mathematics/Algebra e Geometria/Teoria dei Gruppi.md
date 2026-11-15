@@ -115,6 +115,7 @@ La simmetria nella nostra realtà fisica non è un'intuizione visiva, ma la prop
 > $g=2$: $$2+H=\left\{ 0,2,4 \right\}=H$$
 > Quindi ho solo 2 classi distinte $$G/H=\left\{ \left\{ 0,2,4 \right\}, \left\{ 1,3,5 \right\} \right\}\implies \lvert G / H \rvert=2 $$
 > Infatti da Lagrange $$\lvert G/H \rvert = \lvert G \rvert / \lvert H \rvert  =2$$
+> Quindi $G/H$ si può interpretare come l'insieme di scatole isolate in cui posso dividere $G$, in modo che per spostarmi all'interno della scatola posso usare solo operazioni con elementi di $H$
 
 ## 3. Sottogruppi Normali, Coniugazione ed Equazione delle Classi
 
@@ -122,8 +123,15 @@ La simmetria nella nostra realtà fisica non è un'intuizione visiva, ma la prop
 > Sia $(G, \star)$ un gruppo. Due elementi $a,b \in G$ si dicono **coniugati** ($a \sim b$) se esiste $x \in G$ tale che $$b=x \star a\star x^{-1}$$
 > La classe di equivalenza associata ad $a$ è detta **classe di coniugo** $$\mathcal{  C  } (a):= \left\{ x \star  a \star  x^{-1}: x \in G \right\}$$
 
+> [!note] Osservazione
+> L'idea fisica (prendendo come esempio le matrici di $GL(3)$ o $O(3)$) è che due elementi del gruppo $a$ e $b$ (isometrie) sono equivalenti se si equivalgono cambiando riferimento (tramite le "matrici di transizione" $x$)
+
 > [!definition] Centralizzatore e centro di un gruppo
 > Sia $(G, \star)$ un gruppo. Si dice **centralizzatore** di $a\in G$ il sottogruppo degli elementi che commutano con a: $$C_{G}(a):=\left\{ g\in G: g\star a=a\star g \right\}\leq G$$mentre **centro** del gruppo $$Z(G):=\left\{ z\in G: z\star g=g\star z, \, \forall g\in G \right\}$$
+
+> [!note] Identità
+> Per ogni gruppo $e\in Z(G)$
+
 
 > [!theorem] Equazione delle classi
 > Per ogni gruppo finito $(G, \star)$, la cardinalità di ogni classe di coniugio coincide con l'
