@@ -65,6 +65,38 @@ La **Discrete-Time Fourier Transform (DTFT)** costituisce il ponte naturale tra 
 > La Serie di Fourier e la DTFT rappresentano la medesima relazione di dualità di Pontryagin tra il gruppo discreto $\mathbb{Z}$ e il gruppo compatto $S^1 \cong \mathbb{R}/2\pi\mathbb{Z}$:
 > - **Serie di Fourier:** continua nei tempi $t \in [-\pi, \pi]$, discreta nelle frequenze $k \in \mathbb{Z}$.
 > - **DTFT:** discreta nei tempi $k \in \mathbb{Z}$, continua e periodica nelle frequenze $\omega \in [-\pi, \pi]$.
+### Trasformata di Fourier a Tempo e Valori Discreti (DFT)
+
+> [!note] Trasformata di Fourier a tempo e valori discreti
+> La DTFT associa alla successione discreta $\{x_k\} \in \ell^2(\mathbb{Z})$ una funzione continua $X(\Omega) \in L^2_{2\pi}(\mathbb{R})$. Su un calcolatore numerico la variabile continua $\Omega$ non può essere rappresentata; è necessario campionare anche lo spettro in frequenza.
+> L'idea allora è di selezionare le frequenze in $N$ punti equidistanti sulla circonferenza unitaria $$\omega_k = k \frac{2\pi}{N}, \qquad k \in \{0, 1, \dots, N-1\}$$
+> Per cui ottengo un'immagine discreta $$ \mathbf{X}:= (X(\omega_{0}), \dots, X(\omega_{N-1}))$$a partire da un dominio discreto $$\left\{ x_{0}, \dots, x_{N-1}  \right\}\subseteq \mathbb{C}^N$$
+> Pertanto si ottiene una trasformazione del tipo 
+> $$
+> X_k := \sum_{n=0}^{N-1} x_n e^{-i \frac{2\pi}{N} k n} \qquad \forall k \in \{0, 1, \dots, N-1\}
+> $$
+> Essendo lineare, la trasformata di Fourier Discreta è rappresentata da una matrice
+
+> [!definition] Trasformata di Fourier Discreta (DFT)
+> Sia $\mathbf{x} = (x_0, x_1, \dots, x_{N-1}) \in \mathbb{C}^N$. Si definisce **DFT** di $\mathbf{x}$ l'operatore lineare:
+> $$ \mathcal{F}_N : \mathbb{C}^N \longrightarrow \mathbb{C}^N, \qquad \mathbf{X} = \mathcal{F}_N(\mathbf{x})$$
+> dato da $$ \mathrm{ F}_{N}:= \begin{pmatrix}  1 & 1 & 1 & \dots & 1 \\  1 & W_{N} & W_{N}^2 & \dots & W_{N}^{N-1} \\  1 & W_{N}^2 & W_{N}^4  & \dots & W_{N}^{2(N-1)} \\  \vdots  & \vdots & \vdots  & \ddots  & \vdots \\  1 & W_{N}^{N-1} & W_{N}^{2(N-1)} & \dots & W_{N}^{(N-1)(N-1)}  \end{pmatrix} $$dove $W_{N}:= e^{ -i 2\pi/N }$ è una radice $N$-esima dell'unità
+
+> [!note] Osservazione
+> La matrice $\mathrm{F}_{N}$ è simmetrica, infatti gli indici $k$ e $n$ nella sommatoria scritta sopra sono interscambiabili. 
+
+> [!proposition] Formula di Inversione della DFT
+> $\mathcal{  F  }_{N}:\mathbb{C}^N \to \mathbb{C}^{N}$ è un isomorfismo lineare invertibile, rappresentato da una matrice simmetrica e ortogonale.  L'operatore inverso è dato da $$x_{n}=(\mathcal{  F  }_{N}^{-1}[\mathbf{X}])_{n}=\frac{1}{N} \sum_{k=0}^{N-1}X_{k}e^{ i \frac{2\pi}{N}kn} =\frac{1}{N} \sum_{k=0}^{N-1}X_{k}W_{N}^{-kn} $$e rappresentato dalla matrice $$\mathrm{F}_{N}^{-1}= \frac{1}{N}\mathrm{F}_{N}^{^{\dagger}}$$
+
+> [!quote]- Dimostrazione
+>Sostituendo l'espressione di $X_{k}$ nella sommatoria $$\frac{1}{N} \sum_{k=0}^{N-1}\left[ \sum_{m=0}^{N-1} x_{m} e^{ -i \frac{2\pi}{N} km } \right]e^{ i \frac{2\pi }{N}kn }=\frac{1}{N}\sum_{m=0}^{N-1}x_{m}\left[ \sum_{k=0}^{N-1}e^{ -i  \frac{2\pi}{N}k(m-n)} \right]$$
+> Si osservi che nella somma interna:
+> 1. Per $k=m$ ottengo $$\sum_{n=0}^{N-1}W_{N}^0=N$$
+> 2. Per $k≠n$ ponendo $q=W_{N}^{k-m}$ ottengo $$\sum_{n=0}^{N-1}q^n= \frac{1-q^N}{1-q}= \frac{1-e^{ -i \frac{2\pi}{N}(k-m)N }}{1-q}=0$$siccome $k-m \in \mathbb{Z}$
+> 
+> Ponendo la sommatoria interna pari a $N \delta_{nm}$ si ottiene $$(\mathcal{  F  } _{N}[\mathbf{X}])_{n}=x_{n}$$
+> Inoltre ricordando che $\mathrm{F}_{N}^T=\mathrm{F_{N}}$ vale che $$(\mathrm{F}_{N}^{-1})_{nk}=\frac{1}{N} W_{N}^{-nk}=\frac{1}{N} \left( e^{ -i \frac{2\pi}{N} } \right)^{-nk}=\frac{1}{N}(W_{N}^{nk})^*=\frac{1}{N}(\mathrm{F}_{N}^{\dagger})_{nk}$$
+>$\blacksquare$
 
 ## 11.2. La Trasformata di Laplace Unilaterale
 

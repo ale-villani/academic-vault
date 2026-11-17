@@ -20,14 +20,11 @@ tags:
 > $$
 > W^{1, p}(\Omega) = \left\{ u \in L^p(\Omega) : \exists v \in L^p(\Omega) \text{ tale che } v \text{ è la derivata debole di } u \right\}
 > $$
-> Poiché $\Omega$ è limitato, $u \in L^p(\Omega) \subseteq L^1_{\text{loc}}(\Omega)$, per cui $u$ definisce la distribuzione regolare:
-> $$
-> \langle T_u, \varphi \rangle = \int_\Omega u(x) \varphi(x)\,dx
-> $$
-> La condizione che $v = u'$ in senso debole equivale a:
-> $$
-> (T_u)' = T_v \iff \forall \varphi \in \mathcal{D}(\Omega), \quad \langle T_u', \varphi \rangle = - \langle T_u, \varphi' \rangle = \langle T_v, \varphi \rangle
-> $$
+
+Poiché $\Omega$ è limitato, $u \in L^p(\Omega) \subseteq L^1_{\text{loc}}(\Omega)$, per cui $u$ definisce la distribuzione regolare:
+ $$\langle T_u, \varphi \rangle = \int_\Omega u(x) \varphi(x)\,dx$$
+La condizione che $v = u'$ in senso debole equivale a:
+ $$(T_u)' = T_v \iff \forall \varphi \in \mathcal{D}(\Omega), \quad \langle T_u', \varphi \rangle = - \langle T_u, \varphi' \rangle = \langle T_v, \varphi \rangle$$
 
 > [!note] Inclusione delle funzioni $C_0^1$
 > Per ogni aperto $\Omega$, lo spazio delle funzioni $C^1$ a supporto compatto è contenuto in ogni spazio di Sobolev:
