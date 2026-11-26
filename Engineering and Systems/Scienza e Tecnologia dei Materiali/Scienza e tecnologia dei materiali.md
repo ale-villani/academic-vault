@@ -1152,6 +1152,19 @@ es. 1 Problema vibrazionale della molecola di $CO_{2}$
 		- Ho $3N-6=3$ modi normali → troverò $3$ frequenze, ma ho $4$ incognite
 			- Soluzione → se l'$H$ dell'acqua diventa neuterio le costanti di forza non cambiano anche se ho frequenze diverse → posso trovare le $4$ incognite
 
+### Esercitazione 2
+
+- Come si scrivono i gruppi di rappresentazione irriducibili?
+
++ es. Naftalene 
+	+ Pongo il piano della molecola con $x,y$ e $z$ uscente
+	+ 1) Assegno il gruppo puntuale di simmetria alla molecola
+		+ Mi concentro sui $CH$ stretching
+		+ 
+	+ 2) Determino i set equivalenti
+		+ .
+	+ 3) 
+
 # 7. Struttura elettronica dei materiali
 
 ## 7.1 Teoria di campo medio
@@ -1168,4 +1181,25 @@ es. 1 Problema vibrazionale della molecola di $CO_{2}$
 				- Quest'idea è verificata sperimentalmente, è un buon modello
 			- La loro hamiltoniana efficace è del tipo $$\hat{H}_{eff}=- \frac{\hbar^2}{2m} \nabla^2+ \frac{Z_{eff}}{4\pi \varepsilon_{0}} \frac{1}{\lvert\lvert \mathbf{r}-\mathbf{R} \rvert\rvert }$$
 	- Storicamente, la prima idea è stato di sviluppare un modello di densità elettronica
-		- 
+		- Ciò significa calcolare un *campo medio* che ogni particella sente per effetto delle altre $$\sum_{ij} \hat{V}_{ij}(\lvert\lvert \mathbf{r}_{i}-\mathbf{r}_{j} \rvert\rvert ) \mapsto V_{eff, i}(\lvert\lvert \mathbf{r}_{i} \rvert\rvert )$$
+			- Ogni elettrone interagisce con il campo nel proprio intorno
+			- Matematicamente è una semplificazione importante → si sostituisce l'operatore a due corpi con l'operatore ad un corpo
+				- È la stessa operazione fatta con Madelung
+		- L'hamiltoniana complessiva del sistema diventa quindi $$\hat{H}_{eff}=\sum_{i}\left[\hat{T}+ \hat{V}_{en}(\lvert\lvert \mathbf{r}_{i} -\mathbf{R}\rvert\rvert )+\hat{V}_{eff}(\lvert\lvert \mathbf{r}_{i} \rvert\rvert )\right]=\sum_{i}\hat{h}_{eff}$$
+			- Da Born-Oppenheimer supponiamo $\mathbf{R}=\mathbf{0}$ costante
+			- La soluzione dell'hamiltoniana separata è data da $$\hat{h}_{eff} \ket{\psi_{i}}=E_{i}\ket{\psi_{i}}  $$è detta *orbitale atomico*
+				- Si noti che l'hamiltoniana efficace $\hat{h}_{eff}$ è la stessa per tutti gli atomi
+				- Oss: dalla IUPAC la funzione d'onda si dice orbitale solo quando si usa l'approssimazione di campo medio
+			- La simmetria sferica è inoltre conservata, perchè tutti i singoli potenziali sono a simmetria sferica 
+				- Dal teorema di Noether / si dimostra che $$[\hat{H}, \hat{L}^2]=0  \quad   \quad [\hat{H}, \hat{L}_{z}]=0$$
+				- L'hamiltoniana efficace si può scrivere dividendo l'energia cinetica in componente radiale e angolare $$\hat{h}_{eff}=\frac{\hat{P}_{r}^2}{2m}+ \frac{L^2}{2m \lvert\lvert \mathbf{r}_{i} \rvert\rvert^2 }+ \frac{e^2Z}{4\varepsilon_{0}\lvert\lvert \mathbf{r}_{i} \rvert\rvert }+V(\lvert\lvert \mathbf{r}_{i} \rvert\rvert )$$
+			- Se invece considero il problema globale, dovrrebbe valere che $$\hat{H} \ket{\Psi}=E \ket{\Psi}  \quad \text{dove} \quad  \begin{cases}  \ket{\Psi}=\ket{\psi_{1}} \otimes \ket{\psi_{2}} \otimes \dots \otimes \ket{\psi_{n}}     \\  E=E_{1}+E_{2}+\dots+E_{n}  \end{cases}$$dove la definizione di $\ket{\Psi}$ è detta *prodotto di Hartree*
+		- Problema → non stiamo considerando l'indistinguibilità degli elettroni!
+			- Deve infatti valere che essendo gli elettroni fermioni $$\hat{P}_{i \to j}\ket{\Psi}= - \ket{\Psi}   $$
+			- Per fare ciò posso utilizzare il determinante di Slater $$\ket{\Psi_{-}}= \frac{1}{\sqrt{ N! }} \begin{vmatrix} \ket{\psi_{a_{1}}}(1) & \ket{\psi_{a_{2}}}(1) & \dots & \ket{\psi_{a_{n}}}(1) \\  \ket{\psi_{a_{1}}}(2) & \ket{\psi_{a_{2}}}(2)  & \dots & \ket{\psi_{a_{n}}}(2)   \\  \vdots  & \vdots & \ddots & \vdots  \\  \ket{\psi_{a_{1}}}(n) & \ket{\psi_{a_{2}}}(n) & \dots & \ket{\psi_{a_{n}}}(n)       \end{vmatrix} $$
+				- Oss: scambiare due particelle significa scambiare due righe della matrice, che equivale a un segno meno per la proprietà alternante del determinante
+			- Le configurazioni elettroniche sono un modo compatto per scrivere il determinante di Slater 
+				- es. $1s^2 2s^2 2p^1$ → la matrice di Slater sarà $$\ket{\Psi}=\frac{1}{\sqrt{5!}} \begin{vmatrix} \ket{1s}\otimes\ket{\uparrow}(1) & \ket{1s}\otimes\ket{\downarrow}(1) & \ket{2s}\otimes\ket{\uparrow}(1) & \ket{2s}\otimes\ket{\downarrow}(1) & \ket{2p}\otimes\ket{\uparrow}(1) \\ \ket{1s}\otimes\ket{\uparrow}(2) & \ket{1s}\otimes\ket{\downarrow}(2) & \ket{2s}\otimes\ket{\uparrow}(2) & \ket{2s}\otimes\ket{\downarrow}(2) & \ket{2p}\otimes\ket{\uparrow}(2) \\ \ket{1s}\otimes\ket{\uparrow}(3) & \ket{1s}\otimes\ket{\downarrow}(3) & \ket{2s}\otimes\ket{\uparrow}(3) & \ket{2s}\otimes\ket{\downarrow}(3) & \ket{2p}\otimes\ket{\uparrow}(3) \\ \ket{1s}\otimes\ket{\uparrow}(4) & \ket{1s}\otimes\ket{\downarrow}(4) & \ket{2s}\otimes\ket{\uparrow}(4) & \ket{2s}\otimes\ket{\downarrow}(4) & \ket{2p}\otimes\ket{\uparrow}(4) \\ \ket{1s}\otimes\ket{\uparrow}(5) & \ket{1s}\otimes\ket{\downarrow}(5) & \ket{2s}\otimes\ket{\uparrow}(5) & \ket{2s}\otimes\ket{\downarrow}(5) & \ket{2p}\otimes\ket{\uparrow}(5) \end{vmatrix}$$
+			- Si dimostra che $$E=\underset{\left\{ \psi_{k} \right\}}{\text{min}} \bra{\Psi}\hat{H}\ket{\Psi}$$
+		- Questo metodo permette di rendere facilmente computabili gli integrali atomici, sia analiticamente che numericamente
+	- 
