@@ -1029,7 +1029,143 @@ es. Cristallo ionico 2D
 				+ Anche in questo caso le rappresentazioni $3 \times 3$ sono riducibili, introducendo le coordinate di simmetria $$\mathbf{S}=\mathrm{U}\mathbf{R}$$
 					+ Chimicamente $\alpha$ e $r_{i}$ saranno disaccoppiati (può trasformarsi solo in sé stessa)
 				+ Anche in questo caso proponiamo delle coordinate di questo tipo $$\begin{cases}  s_{1}=\frac{1}{\sqrt{ 2 }}(r_{1}+r_{2}) \\  s_{2}=\frac{1}{\sqrt{ 2 }}(r_{1}-r_{2}) \\  s_{3}=\alpha  \end{cases} \implies \mathrm{U}=\begin{pmatrix}  \frac{1}{\sqrt{ 2 }} & \frac{1}{\sqrt{ 2 }} & 0 \\  \frac{1}{\sqrt{ 2 }} & -\frac{1}{\sqrt{ 2 }} & 0 \\  0 & 0 & 1  \end{pmatrix}$$
+				+ Dobbiamo mostrare che applicando $$\mathrm{U}\mathrm{F_{R}}\mathrm{U}^T=\mathrm{F_{S}}$$dove $$(\mathrm{F_{S}})_{ij}=\left( \frac{ \partial ^2V }{ \partial S_{i}S_{j} }  \right)_{0}$$e tale che valga un'equazione del tipo $$\mathrm{G_{S}F_{S}L_{S}}=\mathrm{L_{S}\Lambda}$$
 				+ Calcoliamo quindi il prodotto matriciale esplicito per $C_{2}$: $$\begin{aligned} \mathrm{D}_{s}(C_{2}) &= \mathrm{U}\,\mathrm{D}_{r}(C_{2})\,\mathrm{U}^T \\ &= \begin{pmatrix}  \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} & 0 \\  \frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}} & 0 \\  0 & 0 & 1  \end{pmatrix} \begin{pmatrix} 0 & 1 & 0 \\ 1 & 0 & 0 \\ 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} & 0 \\ \frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}} & 0 \\ 0 & 0 & 1 \end{pmatrix} \\ &= \begin{pmatrix} \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} & 0 \\ \frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}} & 0 \\ 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} \frac{1}{\sqrt{2}} & -\frac{1}{\sqrt{2}} & 0 \\ \frac{1}{\sqrt{2}} & \frac{1}{\sqrt{2}} & 0 \\ 0 & 0 & 1 \end{pmatrix} \\ &= \begin{pmatrix}  1 & 0 & 0 \\  0 & -1 & 0 \\  0 & 0 & 1  \end{pmatrix} = \mathrm{diag}(1, \, -1, \, 1) \end{aligned}$$
 					+ Allo stesso modo $$\begin{align}  \mathrm{D}_{s}(E)=\text{diag}(1, 1, 1)   \\    \mathrm{D}_{s}(\sigma_{xz})=\text{diag}(1, 1, 1) \\    \mathrm{D}_{s}(\sigma_{yz})=\text{diag}(-1, 1, 1)    \end{align}$$
 				+ Ci accorgiamo quindi che $$\begin{align}  S_{1}\in A_{1}  & \to \text{stretching simmetrico} \\  S_{2}\in B_{1}  & \to \text{stretching antisimmetrico}  \\  S_{3} \in A_{1}  & \to \text{bending} \end{align}$$
-				+ 
+	+ Come si può generalizzare questo discorso?
+		+ Parto dal potenziale $V$ scritto in coordinate di simmetria $$V=\frac{1}{2}\mathbf{S}^T\mathrm{F_{S}}\mathbf{S}=\frac{1}{2}\sum_{ij}S_{i}(\mathrm{F_{S}})_{ij}S_{j}$$
+		+ Se voglio mostrare che per degli indici $k,l$ tali che $S_{k}\in \Gamma_{\alpha}$ e $S_{l}\in\Gamma_{\beta}$ rappresentazioni irriducibili diverse
+		+ Se il gruppo è abeliano, esiste un'operazione di simmetria $\hat{P}_{r}$ tale che $$\begin{cases}  \hat{P}_{r}S_{k}=S_{k} \\  \hat{P}_{r}S_{l}=-S_{l}  \end{cases}$$
+			+ → Distinguo con un operatore di simmetria i due caratteri della $S$
+			+ Ad esempio per l'acqua è $C_{2}$
+		+ Immagino allora di valutare il potenziale per $$V(S_{i≠k,l}=0; S_{k},S_{l})=\frac{1}{2}[f_{kk}S_{k}^2 + 2f_{kl}S_{k}S_{l}+ f_{ll}S_{l}^2]$$
+			+ Se la molecola è simmetrica, applicando l'operazione di simmetria al potenziale non mi devo accorgere di nulla $$\hat{P}_{r}V(\mathbf{S})=V(\mathbf{S})$$per cui $$\begin{align}  \hat{P}_{r}V(S_{k},S_{l}) & =\frac{1}{2}[f_{kk}S_{k}^2-2f_{kl}S_{k}S_{l}+f_{ll}S_{l}^2] \\   & =\frac{1}{2}[f_{kk}S_{k}^2+2f_{kl}S_{k}S_{l}+f_{ll}S_{l}^2]  \\   \implies f_{kl}&=0 \end{align}$$
+		+ → $\mathrm{F_S}$ è diagonale a blocchi dove ogni blocco è dato dalle righe con la stessa rappresentazione irriducibile di simmetria 
+			+ Si dimostra lo stesso anche per la $\mathrm{G_{S}}$, che esprime l'energia cinetica
+			+ → Il problema è interamente a blocchi $$\mathrm{(G_{S}F_{S}L_{S})_\gamma}=(\mathrm{L_{S}\Lambda})_{\gamma}$$dove $\gamma$ è l'indice che rappresenta una determinata rappresentazione irriducibile
+				+ Ho spezzettato un problema grosso $n \times n$ in un problema di un certo numero di blocchi più piccoli → migliora enormemente l'efficienza computazionale
+
+- La simmetria è fondamentale per comprendere quali vibrazioni molecolari sono visibili in IR e Raman
+	- 1) IR → l'intensità è data da $$I_{R} \propto \left( \frac{ \partial \mathbf{\mu} }{ \partial q_{k} }  \right)_{0}^2$$
+		- Si osservi che siccome $\hat{P}_{r}$ è un'operatore di simmetria deve valere che  $$\hat{P}_{r}\left( \frac{ \partial \mathbf{\mu} }{ \partial q_{k} }  \right)= \frac{ \partial \mu }{ \partial q_{k} } $$
+			- Approssimando alle differenze finite $$\hat{P}_{r}\left( \frac{\Delta \mathbf{\mu}}{\Delta q_{k}} \right)=\frac{\Delta \mathbf{\mu}}{\Delta q_{k}}$$
+			- So però che applicando l'operazione di simmetria al dipolo $$\begin{cases}  \hat{P}_{r}\Delta \mathbf{\mu}=\chi_{\gamma(\Delta \mu)}\Delta \mathbf{\mu} \\  \hat{P}_{r}\Delta q_{k}=\chi_{\gamma (\Delta \mu)}\Delta q_{k}  \end{cases}$$
+			- → Deve pertanto valere che $$IRREP(\Delta \mathbf{\mu})=IRREP(q_{k})$$condizione necessaria affinché la vibrazione si veda tramite IR
+		- I modi normali sono coordinate di simmetria molto particolari che rendono diagonali i blocchi $(\mathrm{G_{S}F_{S}})_{\gamma}$
+			- È quindi una base per una rappresentazione irriduibile
+	- 2) Raman → mi interessa il tensore di polarizzabilità $$\left( \frac{ \partial \mathrm{A}_{ij} }{ \partial q_{k} }  \right)_{0}$$
+		- Discretizzando ottengo il solito rapporto incrementale $\frac{\Delta A_{ij}}{\Delta q_{k}}$
+	- Vale un risultato fondamentale (*principio di mutua esclusione*) $$\text{Se per un gruppo puntuale }G\text{, }  i\in G \implies \text{Ho mutua esclusione tra IR e Raman}$$
+## Esercitazione
+
+### 1. Esercitazione ?
+
+es. 1 Problema vibrazionale della molecola di $CO_{2}$
+- Sia $r_{1}=||C - O_{1}||$ e $r_{2}=||C - O_{2}||$ → coordinate interne
+- La molecola ha $3N-5=4$ modi
+- Si risolve ponendo  $$\mathrm{GF}_{R}\mathrm{L}=\Lambda \mathrm{L}$$
+	- → Gli autovaloori $\det(\mathrm{GF_{R}}-\lambda \mathrm{I})=0$ sono $$ \begin{cases}  \lambda_{a}=\frac{k+f}{m}  &  & \mathrm{L_{1}=L_{2}}  & \text{ stretching simm.} \\  \lambda_{b}= \frac{k-f}{\mu}  & \text{dove } \mu= \frac{Mm}{M+2m}  & \mathrm{L_{1}}=-\mathrm{L_{2}}  & \text{ stretching antisimm.}\end{cases}$$
+- Dati sperimentali $\tilde{\nu}_{a}=1388 \text{cm}^{-1}$ e $\tilde{\nu}_{b}=2349\text{cm}^{-1}$ 
+- Calcolo di $f$ e $k$
+	- La matrice è data da $$\mathrm{F_{R}}=\begin{pmatrix}  k & f \\  f & k  \end{pmatrix}$$
+	- Posso scrivere che $$\begin{cases}  f=\frac{\lambda _{a}m -\lambda_{b}\mu}{2}  \\  k = \frac{\lambda_{a}m+\lambda_{b}\mu}{2}\end{cases}$$
+	- Le masse sono $m=16 amu=\frac{16g}{mol}= 2.6569\times 10^{-26} kg$ e $\mu=0.7246\times 10^{-26}kg$
+	- Calcoliamo gli autovalori $$\begin{align}  \lambda_{a} & =\omega_{a}^2=(2\pi c \tilde{\nu}_{a})^2 \implies \lambda_{a}m=1816.07 \frac{N}{m} \\  \lambda_{b} & = \omega_{b}^2=(2\pi c \tilde{\nu}_{b})^2\implies \lambda_{b}\mu= 1418.57  \frac{N}{m} \end{align}$$quindi $$\begin{align}  f & =198.722 \frac{N}{m} \\  k & = 1617.3 \frac{N}{m}  \end{align}$$
+- Se $f=0$ siamo in grado di trovare questi dati sperimentali?
+	- Vale che $$\begin{cases}  \lambda_{a}=\frac{k}{m} \\  \lambda_{b}=\frac{k}{\mu}  \end{cases} \implies  \frac{\lambda_{a}}{\lambda_{b}}=0.273$$
+	- Facendo la stessa cosa con i dati sperimentali ottengo $$\frac{\lambda_{a}}{\lambda_{b}}= \frac{k+f}{m} \frac{\mu}{k-f}=0.35$$
+	- → L'approssimazione $\mathrm{F_{R}}$ diagonale è molto forte e poco giustificata
+- Ci vengono fornite ora due nuove costanti di forza $$\begin{align}  k & =2848.3 \frac{N}{m}  \\  f & =2352.1 \frac{N}{m}  \end{align}$$
+	- Posso calcolare i nuovi numeri d'onda vibrazionali $$\begin{align}  \tilde{\nu}_{a} & =2349\text{cm}^{-1} \\  \tilde{\nu}_{b} & =1388\text{cm}^{-1}  \end{align}$$
+	- → Sono gli stessi numeri di prima solo invertiti
+		- Qual è la realtà fisica?
+		- Nella spettroscopia IR il modo è visibile solo se $\left( \frac{ \partial \mu }{ \partial q } \right)_{0}≠0$, in quella Raman se $\left( \frac{ \partial \mathrm{A} }{ \partial q } \right)_{0} ≠ \mathrm{O}$
+		- Si può dimostrare che se la molecola ha un centro di inversione, c'è mutua esclusione tra IR e Raman 
+			- Ciò avviene nel caso della $CO_{2}$ 
+		- Durante lo stretching:
+			- Simmetrico → la polarizzabilità cambia ma il momento di dipolo no
+			- Antisimmetrico → il momento di dipolo cambia ma la polarizzabilità no
+		- → Scambiando $\tilde{\nu}_{a}$ e $\tilde{\nu}_{b}$ si scambiano i picchi che vedo con Raman e IR
+- Cosa succede se metto un isotopo ${}^{13}_{6}C$?
+	- → Cambia la massa $\mu= 0.7676\times 10^{-26}kg$ 
+	- Siccome $$k= \left( \frac{ \partial ^2V }{ \partial r_{i}^2 }  \right)_{0}  \quad   \quad f=\left( \frac{ \partial ^2V }{ \partial r_{1}r_{2} }  \right)_{0}$$non cambiano le costanti di forza
+	- → Cambieranno le frequenze di vibrazione
+	- Siccome l'esercizio chiede solo IR, si vede solo stretching antisimmetrico $$\lambda_{b}=\frac{k-f}{\mu}=184.09\times 10^{-26} \frac{1}{s^2}\implies  \tilde{\nu}_{b}=2282\text{cm}^{-1}$$
+	- Oss: $\lvert \tilde{\nu}_{b, C_{12}} - \tilde{\nu}_{b, C_{13}} \rvert=67\text{cm}^{-1}>4\text{cm}^{-1}$ risoluzione dello spettrometro
+		- In realtà non si vede perchè ha intensità troppo bassa
+
++ Riconoscimento dei gruppi puntuali
+	+ es. Butadiene trans → $C_{2h}$
+		+ Sicuramente c'è $E$
+		+ Metto l'asse $z$ nel centro del legame $C-C$ singolo → c'è un $C_{2}(z)$
+		+ Inversione $i$ rispetto al centro del legame $C-C$
+			+ È identico a $S_{2}$
+		+ Riflessione rispetto a $\sigma_{xy}=\sigma_{h}$ siccome è $\perp$ all'asse di $C_{2}$
+	+ es. Butadiene cis → $C_{2v}$
+		+ C'è $E$
+		+ L'asse di simmetria è verticale NEL piano della molacola (non più uscente) → c'è $C_{2}$
+		+ C'è anche $\sigma_{yz}=\sigma_{v}$ perchè il piano include l'asse di simmetria $z$
+		+ C'è anche $\sigma_{xz}=\sigma_{v}$
+	+ es. Esatriene trans → $C_{2h}$
+	+ es. Esatriene cis → $C_{2v}$
+	+ es. Naftalene → $D_{3h}$
+		+ $E$
+		+ $i$ sul centro nel mezzo del $C-C$ centrale (asse $z$)
+		+ $C_{2}(z)$ sullo stesso asse, inoltre $C_{2}(y)$ e $C_{2}(x)$
+		+ $\sigma_{xz}=\sigma_{v}$, $\sigma_{yz}=\sigma_{v}$, $\sigma_{xy}=\sigma_{h}$
+		+ E se metto due $Cl$? (nei legami laterali in basso) → $C_{2v}$
+			+ Perdo $i$, il $C_{2}(z)$, il $C_{2}(x)$ e $\sigma_{xz}$ → ridefinisco $z$ dove stava prima $y$
+		+ E se li metto uno nel legame laterale in basso e uno in alto? → $C_{2h}$
+			+ Perdo $C_{2}(x)$ e $C_{2}(y)$, assieme a $\sigma_{xz}$ e $\sigma_{yz}$
+	+ es. Benzene → $D_{6h}$
+		+ $E$
+		+ $i$ rispetto al centro della molecola
+		+ Asse $z$ uscende → $C_{6}(z)$ (rotazione di $\frac{\pi}{3}$)
+			+ Quindi è anche $C_{3}(z)$ e $C_{2}(z)$ → quindi anche $C_{3}^2(z)$ e $C_{6}^5(z)$
+			+ Infatti $C_{6}^2=C_{3}$, $C_{6}^3=C_{2}$ e $C_{6}^4=C_{3}^2$
+		+ Ho altri 3 assi di rotazione $C_{2}^{\prime}$ lungo le congiungenti dei $C$ opposti e altri 3 $C_{2}^{\prime\prime}$ lungo gli assi dei legami singoli
+		+ Inoltre ho $S_{6}$ per cui $S_{6}^5$, $(S_{2}=i)$, $S_{3}$, $S_{3}^2$
+		+ Inoltre ci sono $\sigma_{h}$, 3$\sigma_{v}$ e 3$\sigma_{d}$
+		+  Nelle tabelle la notazione è $$E, 2C_{6},2C_{3},C_{2}, 3C_{2}^{\prime} ,3C_{2}^{\prime\prime}, i, 2S_{6},2S_{3},\sigma_{h},3\sigma_{v},3\sigma_{d} $$
+			+ Gli elementi preceduti da numeri sono *classi* di simmetria, ovvero sottoinsiemi di applicazioni che possono mutarsi l'una nell'altra classe da una terza operazione di simmetria
+	+ es. Tre benzeni attaccati per un lato (fenalene) → $D_{3h}$
+	+ Oss: se distorco una molecola dalla planarità, mi aspetto che la molecola "scenda" come gruppo di simmetria
+	+ es. Allene ($H_{2}C =C=CH_{2}$)
+		+ $E$ e $C_{2}$ attorno all'asse della molecola, $2\sigma_{d}$ diedri
+		+ Ci sono anche $2C_{2}^{\prime}$ a  $\frac{k\pi}{2}+ \frac{\pi}{4}$ nel piano $xy$ (ortogonale a $z$)
+		+ C'è una roto-riflessione $S_{4}$ (→ $2S_{4}$) 
+	+ es. Metano ($CH_{4}$) → $T_{d}$
+		+ Ogni legame $C-H$ è un'asse $2C_{3}$ di rotazione → per $4$ legami ho $8C_{3}$
+		+ Ci sono anche $3C_{2}$ che bisezionano gli angoli opposti
+		+ Inoltre $6\sigma_d$ (tutti i piani che contengono $C$ e una coppia di idrogeni)
+		+ Ci sono anche $6S_{4}$
+
+
+- Molecola di $H_{2}O$
+	- Le coordinate interne sono $r_{1}, r_{2}$ e $\alpha$
+	- Sia $\mathbf{R}=(r_{1},r_{2},\alpha)$
+	- Il potenziale è dato da $$V=\frac{1}{2}\mathbf{R}^T\mathrm{F}\mathbf{R}$$dove $$\mathrm{F}=\begin{pmatrix}  k & f & g \\  f & k & g \\  g & g & h  \end{pmatrix}$$
+		- Per cui $$V=\frac{1}{2}kr_{1}^2+\frac{1}{2}kr_{2}^2+\frac{1}{2}h\alpha^2+fr_{1}r_{2}+gr_{1}\alpha+gr_{2}\alpha$$
+	- Posso usare tecniche sperimentali per trovare il valore di $k,f,g,h$?
+		- → Spettroscopia Raman e IR
+		- Ho $3N-6=3$ modi normali → troverò $3$ frequenze, ma ho $4$ incognite
+			- Soluzione → se l'$H$ dell'acqua diventa neuterio le costanti di forza non cambiano anche se ho frequenze diverse → posso trovare le $4$ incognite
+
+# 7. Struttura elettronica dei materiali
+
+## 7.1 Teoria di campo medio
+
+- Come si trova la soluzione degli autostati di un atomo a più elettroni? 
+	- L'Hamiltoniana del sistema è $$\hat{H} = \hat{T}+\hat{V}_{en}+\hat{V}_{ee}=\sum_{i} - \frac{\hbar^2}{2m} \nabla^2_{i} + \frac{1}{4\pi \varepsilon_{0}} \sum_{i} \frac{ e^2Z}{||\mathbf{r}_{i}-\mathbf{R}||} + \frac{1}{2} \sum_{ij} \frac{e^2}{4\pi \varepsilon_{0}} \frac{1}{ \lvert\lvert \mathbf{r}_{i}-\mathbf{r}_{j} \rvert\rvert  }$$
+	- Si noti che il potenziale ha una simmetria centrale sferica → conservazione del momento angolare $\hat{{L}}^2, \hat{L}_{z}$
+		- Mi aspetto quindi che le coordinate sferiche $(r, \theta, \varphi)$ sono delle buone coordinate per risolvere $\hat{H}\ket{\psi}=E\ket{\psi}$
+	- Per l'atomo d'idrogeno avevamo trovato le soluzioni $$\ket{\psi}(r, \theta, \varphi)= R_{nl}(r) Y_{l}^m(\theta, \varphi )$$
+		- Gli autovalori sono dati da $$E_{n}=- \frac{RyZ^2}{n^2}$$
+		- In questo caso non c'è nessuna considerazione dello spin, bisogna aggiungere il termine di spin-orbita → anche nello studio delle molecole/materiali lo ignoreremo in prima approssimazione
+		- Oss: sono atomi ideogenoidi non solo $H$, $He^+$, ma anche $Li$ e $Na$ per i chimici
+			- Infatti l'ultimo atomo è debolmente legato rispetto a quelli di core, per cui l'approssimazione è ragionevole
+				- Quest'idea è verificata sperimentalmente, è un buon modello
+			- La loro hamiltoniana efficace è del tipo $$\hat{H}_{eff}=- \frac{\hbar^2}{2m} \nabla^2+ \frac{Z_{eff}}{4\pi \varepsilon_{0}} \frac{1}{\lvert\lvert \mathbf{r}-\mathbf{R} \rvert\rvert }$$
+	- Storicamente, la prima idea è stato di sviluppare un modello di densità elettronica
+		- 
